@@ -1,6 +1,9 @@
 import time
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 from numpy import linalg as la
 
 tol = 10.0 ** (-7)
@@ -17,9 +20,28 @@ sigma = 10
 b = 8./3
 r = 28
 
-y0 = np.array([-8, 8, r - 1])
+y0 = np.array([10, 1, r - 1])
 a = np.array([0, 1./2, 1./2, 1])
 c = np.array([1./6, 2./6, 2./6, 1./6])
+ans = []
+dataset = []
+
+
+def draw(dataset):
+    mpl.rcParams['legend.fontsize'] = 10
+
+    fig = plt.figure()
+    ax = fig.gca(projection=Axes3D.name)
+
+    for r in dataset:
+        x, y, z = r['data'][:, 0], r['data'][:, 1], r['data'][:, 2]
+        ax.plot(x, y, z, label=r['name'])
+        ax.legend()
+
+    ax.set_xlabel('y1')
+    ax.set_ylabel('y2')
+    ax.set_zlabel('y3')
+    plt.show()
 
 
 def f(y1, y2, y3):
@@ -31,8 +53,10 @@ def f(y1, y2, y3):
 
 
 def iterate(method, y, h, num=1):
+    ans.append(y)
     for i in range(num):
         y = method(y, h)
+        ans.append(y)
     return y
 
 
@@ -84,6 +108,7 @@ t_s = time.time()
 
 h_e, N = find_step(euler, EULER_ACCURACY, h0)
 n = int((B - A) / h_e)
+
 y_n = iterate(euler, np.array(y0), h_e, n)
 
 t_f = time.time()
@@ -94,6 +119,9 @@ print '\tn:\t{}'.format(n)
 print '\tN:\t{}'.format(N)
 print '\tyn:\t{}'.format(y_n)
 print '\tt:\t{}s\n'.format(t_f - t_s)
+
+dataset.append({'data': np.array(ans), 'name': 'euler'})
+ans = []
 
 print 'solve Runge-Kutta:'
 t_s = time.time()
@@ -110,3 +138,6 @@ print '\tn:\t{}'.format(n)
 print '\tN:\t{}'.format(N)
 print '\tyn:\t{}'.format(y_n)
 print '\tt:\t{}s\n'.format(t_f - t_s)
+
+dataset.append({'data': np.array(ans), 'name': 'runge-kutta'})
+draw(dataset)

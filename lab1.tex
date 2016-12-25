@@ -8,6 +8,9 @@
 \usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{subcaption}
+
 \usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
@@ -31,7 +34,7 @@
 \bigskip
 \vfill
 \begin{centering}
-  \large Лабараторная работа №1 \\ 
+  \large Лабараторная работа №1 \\
  ``Численное решение задачи Коши для ОДУ'' \\
   студента 3 курса 1 группы \\
   \bf Пажитных Ивана Павловича \\
@@ -111,15 +114,15 @@
 \subsection{Явный метод Рунге-Кутты 4-го порядка}
 \begin{equation}
 \begin{tabular}{c|c|c|c|c}
-    0           &   &   &   &                   \\\hline   
-$\frac{1}{2}$   & $\frac{1}{2}$  &   &   &      \\\hline 
-$\frac{1}{2}$   & 0  & $\frac{1}{2}$  &   &     \\\hline 
-    1           & 0  & 0  & 1  &                \\\hline 
+    0           &   &   &   &                   \\\hline
+$\frac{1}{2}$   & $\frac{1}{2}$  &   &   &      \\\hline
+$\frac{1}{2}$   & 0  & $\frac{1}{2}$  &   &     \\\hline
+    1           & 0  & 0  & 1  &                \\\hline
                 & $\frac{1}{6}$ & $\frac{2}{6}$ & $\frac{2}{6}$ & $\frac{1}{6}$\\
 \end{tabular}
 \end{equation}
 
-Подставляя коэффициенты: 
+Подставляя коэффициенты:
 \begin{equation}
     \begin{cases}
     k_1 = f(x_i, y_i) \\
@@ -134,32 +137,85 @@ y_i = y_{i-1} + ( \frac{1}{6} k_1 + \frac{2}{6} k_2 + \frac{2}{6} k_3 + \frac{1}
 \end{equation}
 
 \subsection{Правило Рунге}
-Для оценки требуется решить задачу на 2 сетках, один раз с шагом h и второй — с шагом h/2 Формула:
+Для оценки требуется решить задачу на 2 сетках: две итерации с шагом h ($y_1$, $y_2$)  и одна — с шагом 2h ($\overline{y_2}$), получаем оценку:
 
 \begin{equation}
-\varepsilon_i = \frac{|y_{i,h}-y_{i,h/2}|}{2^{p}-1}
+\varepsilon_i = \frac{y_2-\overline{y_2}}{2^p-1}
 \end{equation}
 
-дает погрешность решения $y_{i,h/2}$. Под p понимается порядок точности использованного численного метода. Например, для численного метода, имеющего четвёртый порядок точности, формула принимает вид:
+При подборе следующий шаг считается как $h_{new}<\delta h$, где $\delta$:
 
 \begin{equation}
-\varepsilon_i = \frac{1}{15} |y_{i,h}-y_{i,h/2}|
-\end{equation}
-
-для метода Эйдера:
-\begin{equation}
-\varepsilon_i = |y_{i,h}-y_{i,h/2}|
+\delta = \left(\frac{tol}{|\varepsilon|}\right)^{\frac{1}{p+1}}
 \end{equation}
 
 \section{Отчет}
+\subsection{$y(0)=(-8, -8, 27)$}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-tol         &   Метод       &   h   &   n   &   N   &   t   \\\hline 
-0.000001    &   Эйлера      &   6.103515625e-07   &   163840   &   14   &   123.845865965s   \\\hline
-0.000001    &   Рунге-Кутта &   9.765625e-06   &   10240   &   10   &   1.44045305252s   \\\hline
+tol     &   Метод       &   h   &   n   &   N   &   t   \\\hline
+1e-07   &   Эйлера      &   4.92014936374e-06   &   203245   &   2   &   0.96827507019s   \\\hline
+1e-07   &   Рунге-Кутта &   0.00222565354887   &   449   &   2   &   0.0159111022949s   \\\hline
 \end{tabular} \\ \\
-где n - кол-во итераций последнего вычисления для шага h, \\
-N - кол-во пересчётов шага h, для отрезка интегрирования [0, 0.1] \\
-$y_n = [1.41379517\tab6.53995157\tab19.22714435]$ - методом Эйлера \\
-$y_n = [1.41408783\tab6.53996586\tab19.2269111]$ - методом Рунге-Кутта \\
+где $n$ - кол-во итераций последнего вычисления для шага h, \\
+$N$ - кол-во пересчётов шага $h$, для отрезка интегрирования $[0, 1]$, для начально шага $h_0=0.1$ \\
+$y_n = [9.05401908\tab14.55586445\tab18.40818043]$ - методом Эйлера \\
+$y_n = [9.01971044\tab14.50963827\tab18.35917819]$ - методом Рунге-Кутта \\
+
+\subsection{$y(0)=(10, 1, 27)$}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+tol     &   Метод       &   h   &   n   &   N   &   t   \\\hline
+1e-07   &   Эйлера      &   8.0230021755e-06   &   124641   &   2   &   0.586709022522s   \\\hline
+1e-07   &   Рунге-Кутта &   0.00361778866086   &   276   &   2   &   0.0107769966125s   \\\hline
+\end{tabular} \\ \\
+где $n$ - кол-во итераций последнего вычисления для шага h, \\
+$N$ - кол-во пересчётов шага $h$, для отрезка интегрирования $[0, 1]$, для начально шага $h_0=0.1$ \\
+$y_n = [8.06618792\tab12.49772564\tab18.73044515]$ - методом Эйлера \\
+$y_n = [8.00373455\tab12.40821836\tab18.66281849]$ - методом Рунге-Кутта \\
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figure_2.png}
+        \caption{Эйлера}
+        \label{s1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figure_3.png}
+        \caption{Рунге-Кутты}
+        \label{s2}
+    \end{subfigure}
+     ~
+    \begin{subfigure}[h]{1\textwidth}
+        \includegraphics[width=\textwidth]{figure_1.png}
+        \caption{совместный}
+        \label{s2}
+    \end{subfigure}
+    \caption{Графики решения для 4.1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figure_5.png}
+        \caption{Эйлера}
+        \label{s1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figure_6.png}
+        \caption{Рунге-Кутты}
+        \label{s2}
+    \end{subfigure}
+     ~
+    \begin{subfigure}[h]{1\textwidth}
+        \includegraphics[width=\textwidth]{figure_4.png}
+        \caption{совместный}
+        \label{s2}
+    \end{subfigure}
+    \caption{Графики решения для 4.2}
+\end{figure}
+
 \end{document}
