@@ -1,0 +1,3 @@
+[submodule "algorithms"]
+	path = algorithms
+	url = https://github.com/Drapegnik/algorithms
