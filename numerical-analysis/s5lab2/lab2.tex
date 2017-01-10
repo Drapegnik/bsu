@@ -1,0 +1,191 @@
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{subcaption}
+
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\begin{titlepage}
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\large \bf МЕТОДЫ ЧИСЛЕННОГО АНАЛИЗА}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  \large Лабараторная работа №2 \\ 
+ ``Дифференциальные уравнения в частных производных'' \\
+  студента 3 курса 1 группы \\
+  \bf Пажитных Ивана Павловича \\
+\end{centering}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Бондарь Иван \\ Васильевич}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\large \bf Минск 2016}
+
+\end{titlepage}
+
+\restoregeometry
+
+\section{Условие}
+\begin{itemize}
+    \item Построить явную разностную схему
+    \item Аппроксимировать граничные условия со вторым порядком
+    \item Провести исследование порядка точности и устойчивости построенной разностной схемы
+    \item Выполнить программную реализацию построенной схемы:
+        \begin{itemize}
+            \item $N = 50, 100, 200$
+            \item Шаг $h$ определить из условий устойчивости
+            \item $T=[0,1]$
+            \item Построить графики
+            \item Проверить точность решения
+            \item Вывести время работы программы
+        \end{itemize}
+\end{itemize}
+
+\section{Вариант №5}
+
+\begin{equation}
+    \frac{\partial u}{\partial t}-25\frac{\partial^2 u}{\partial x^2} = f(t,x)
+\end{equation}
+
+\begin{equation}
+    f(t,x)=\pi(-12\pi(t-2)^2\sin(\pi(t-2)x)-x\cos(\pi(t-2)x))
+\end{equation}
+
+\begin{equation}
+    \begin{cases}
+        u(t,0)=0 \\
+        u(0,x)=sin(2\pi x)
+    \end{cases}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial u(t,1)}{\partial x} = -\pi(t-2)\cos(\pi(t-2))
+\end{equation}
+
+\begin{center}
+    \bf{Точное решение}: 
+\end{center}
+
+\begin{equation}
+    u(t,x)=-\sin(\pi(t-2)x)
+\end{equation}
+
+\section{Решение}
+
+\subsection{Явная разностная схема для (1):}
+\begin{equation}
+    \frac{u_i^{k+1}-u_i^k}{\tau}-25\frac{u_{i-1}^k-2u_i^k+u_{i+1}^k}{h^2} = f(t,x)
+\end{equation}
+
+\subsection{Аппроксимация граничного условия (4):}
+\subsubsection{с порядком точности $O(h)$:}
+\begin{equation}
+    \frac{u(t,1)-u(t,1-h)}{h} = -\pi(t-2)\cos(\pi(t-2))
+\end{equation}
+
+\subsubsection{с порядком точности $O(h^2)$:}
+\begin{equation*}
+    \psi = lhs(4) - lhs(7)
+\end{equation*}
+
+\begin{equation}
+\begin{split}
+    \psi = \frac{\partial u(t,1)}{\partial x} - \frac{u(t,1)-u(t,1-h)}{h} = \frac{\partial u(t,1)}{\partial x} - 
+    \\
+    -\frac{1}{h}\left(u(t,1) - u(t,1) + h\frac{\partial u(t,1)}{\partial x} - \frac{h^2}{2}\frac{\partial^2 u(t,1)}{\partial x^2} - O(h^3) \right) = \frac{h^}{2}\frac{\partial^2 u(t,1)}{\partial x^2} + O(h^2)
+\end{split}
+\end{equation}
+
+\subsection{Порядок точности и устойчивость:}
+\subsubsection{порядок точности (6):}
+\begin{equation*}
+    \psi = lhs(1) - lhs(6)
+\end{equation*}
+
+\begin{equation}
+\begin{split}
+    \psi = \frac{\partial u_i^k}{\partial t}-25\frac{\partial^2 u_i^k}{\partial x^2} - \left(\frac{u_i^{k+1}-u_i^k}{\tau}-25\frac{u_{i-1}^k-2u_i^k+u_{i+1}^k}{h^2}\right) = 
+    \\
+    =\frac{\partial u_i^k}{\partial t}-25\frac{\partial^2 u_i^k}{\partial x^2} 
+    - \frac{1}{\tau}\left(u_i^k + \tau\frac{\partial u_i^k}{\partial t} + \frac{\tau^2}{2}\frac{\partial^2 u_i^k}{\partial t^2} + O(\tau^3) - u_i^k \right) +
+    \\
+    + \frac{25}{h^2}\left(\left(u_i^k - h\frac{\partial u_i^k}{\partial x} + \frac{h^2}{2}\frac{\partial^2 u_i^k}{\partial x^2} + \frac{h^4}{4!}\frac{\partial^4 u_i^k}{\partial x^4} + O(h^5)\right) - 2u_i^k +
+    \\
+    + \left(u_i^k + h\frac{\partial u_i^k}{\partial x} + \frac{h^2}{2}\frac{\partial^2 u_i^k}{\partial x^2} + \frac{h^4}{4!}\frac{\partial^4 u_i^k}{\partial x^4} + O(h^5) \right) \right) = 
+    \\
+    = \frac{\tau}{2}\frac{\partial^2 u_i^k}{\partial t^2} + 50\frac{h^2}{4!}\frac{\partial^4 u_i^k}{\partial x^4} + O(\tau^2 + h^3)
+\end{split}
+\end{equation}
+\newline
+порядок точности (7): $\psi \sim O(h)$ \\
+порядок точности (8): $\psi \sim O(h^2)$ \\
+\textbf{Итого порядок точности (6) c (8)}: $O(\tau + h^2)$
+
+\subsubsection{устойчивость (6) методом гармоник:}
+\begin{equation}
+    \frac{\partial u}{\partial t}-25\frac{\partial^2 u}{\partial x^2} = 0
+\end{equation}
+
+\begin{equation}
+    \frac{u_i^{k+1}-u_i^k}{\tau}-25\frac{u_{i-1}^k-2u_i^k+u_{i+1}^k}{h^2} = 0
+\end{equation}
+
+\begin{equation}
+    u_i^k \sim q^ke^{i\phi_ih}
+\end{equation}
+
+подставляя (12) в (11):
+
+\begin{equation}
+\begin{split}
+    \frac{q^{k+1}e^{i\phi_i h}-q^k e^{i\phi_i h}}{\tau}-25\frac{q^k e^{(i-1)\phi_i h}-2q^k e^{i\phi_i h}+q^k e^{(i+1)\phi_i h}}{h^2} = \left[ /q^k e^{i\phi_i h} \right] =
+    \\
+    = \frac{q-1}{\tau} + \frac{25}{h^2}(e^{-i\phi h} - 2 + e^{i\phi h}) = 0
+\end{split}
+\end{equation}
+
+\begin{equation}
+ |q| = \left| 1 -\frac{25\tau}{h^2}(e^{-i\phi h} - 2 + e^{i\phi h}) \right| = \left| 1 -\frac{25\tau}{h^2}(2\cos{\phi h} - 2) \right|  < 1
+\end{equation}
+
+раскрывая модуль в (14):
+
+\begin{equation}
+    -\frac{1}{25} < \frac{\tau}{h^2}(\cos{\phi h} - 1) < 0
+\end{equation}
+
+\textbf{Итого (6) устойчива при}:
+\begin{equation}
+    \frac{\tau}{h^2} > -\frac{1}{25}
+\end{equation}
+
+\end{document}
