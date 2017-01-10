@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+\begin{titlepage}
+
+
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\Large \bf МЕТОДЫ ЧИСЛЕННОГО АНАЛИЗА}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  {\large
+  Лабараторная работа №4 \\
+  студента 2 курса 1 группы \\}
+\end{centering}
+\centerline{\large \bf Пажитных Ивана Павловича}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Полещук Максим \\ Александрович}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\Large \bf Минск 2016}
+
+\end{titlepage}
+
+\restoregeometry
+\begin{document}
+
+\section{Условие}
+В соответствии с вариантом, равным номеру в списке академической группы, значения функции $f(x)$, заданной на интервале $[a,b]$, даны в узлах $x_i = a + \frac{b-a}{n}*i, i = \overline{0,n}, n=50$. Значения функции и узлы сетки заданы c тремя значащими цифрами.
+Построить квадратичную функцию $P(x) = a_2x^2+a_1x+a_0$, которая даёт для $f(x)$ наилучшее приближение по методу наименьших квадратов. Вывести значения коэффициентов $a_0,a_1,a_2$ с тремя значащими цифрами и среднеквадратичного уклонения с произвольным числом значащих цифр. Для вычислений использовать тип float.
+
+\section{Вариант}
+    \begin{equation}
+    x*(3^x + 1)^{-1}, x\in[-2,2], n=50
+\end{equation}
+
+\section{Теория}
+\begin{center}
+Положим: $\phi_i = x^i, i \in [0,2]$
+\end{center}
+
+Вычисляя скалярное произведение по формуле:
+\begin{equation}
+    (f, \phi) = \sum\limits_{i=0}^n p(x_i)f(x_i)\phi(x_i)
+\end{equation}
+
+Составим систему линейных уравнений относительно коэффицентов $a_i$:
+\begin{equation}
+    \sum\limits_{i=0}^n a_m(\phi_k, \phi_m) = (f, \phi_k), k \in [0,2]
+\end{equation}
+Решив её находим многочлен $P(x)$ и считаем среднеквадратичное отклонение по формуле:
+\begin{equation}
+    r = \sqrt{\frac{1}{n} \sum\limits_{i=0}^n p(x_i)(f(x_i)-P(x_i))^2}
+\end{equation}
+
+\section{Отчет}
+\begin{center}
+    $ a_0 = -0.0256$\\
+    $ a_1 = 0.5$\\
+    $ a_2 = -0.205$\\
+    $ r = 0.020527$
+\end{center}
+
+\end{document}

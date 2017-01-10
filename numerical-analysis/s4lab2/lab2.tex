@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+\begin{titlepage}
+
+
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\Large \bf МЕТОДЫ ЧИСЛЕННОГО АНАЛИЗА}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  {\large
+  Лабараторная работа №2 \\
+  студента 2 курса 1 группы \\}
+\end{centering}
+\centerline{\large \bf Пажитных Ивана Павловича}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Полещук Максим \\ Александрович}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\Large \bf Минск 2016}
+
+\end{titlepage}
+
+\restoregeometry
+
+\begin{document}
+
+\section{Условие}
+Для функции , взятой в соответствии с вариантом задания из лабораторной работы №1, вычислить интеграл  по составным формулам средних прямоугольников, трапеций и Симпсона с точностью  $\dfrac{1}{2} 10^{-3}, \dfrac{1}{2} 10^{-5}, \dfrac{1}{2} 10^{-7}$. Величину шага определить, исходя из апостериорной оценки погрешности численного интегрирования. Уточнить значение интеграла по Ричардсону.
+В отчёте представить величину шага, значение вычисленного интеграла без уточнения по Ричардсону, значение вычисленного интеграла после уточнения по Ричардсону (для каждой величины точности и квадратурной формулы). Для вычислений использовать тип float.
+
+\section{Вариант}
+    \begin{equation}
+    \label{eq:variant2}
+    \int\limits_{-2}^{2} x \cdot x*(3^x + 1)^{-1} dx
+\end{equation}
+
+\section{Теория}
+
+\subsection{Формула средних прямоугольников:}
+\begin{equation}
+    \int\limits_a^b f(x) dx = h(f_{1/2}+f_{3/2}+f_{5/2}+\ldots+f_{{2n-3}\over{2}}+f_{{2n-1}\over{2}})+r_n, r_n = { (b-a)^3\over{24*n^2}}*f^{(2)}(x)
+\end{equation}
+
+\subsection{Формула трапеций:}
+\begin{equation}
+    \int\limits_a^b f(x) dx =  \frac{h}{2}(f_0+f_n+2(f_1+\ldots+f_{n-1}))+r_n, r_n = { (b-a)^3\over{12*n^2}}*f^{(2)}(x)
+\end{equation}
+
+\subsection{Формула Симпсона:}
+\begin{equation}
+    \int\limits_a^b f(x) dx =  \frac{2}{6}(f_0+f_n+4(f_1+f_3+\ldots+f_{2k-1})+2(f_2+f_4+\ldots+f_{2k}))+r_n, r_n = { (b-a)^5\over{180*n^4}}*f^{(4)}(x)
+\end{equation}
+
+\subsection{Оценка:}
+Будем использовать \textbf{апостериорную оценку}.
+Выбираем первоначально фиксированный шаг h=0.001, а затем производим вычисления до тех пор, пока величина $\Theta |I_{\frac{h}{2}}-I_{h}|,$ не станет меньше необходимой точности $\varepsilon$, где $\Theta = \dfrac{1}{3}$ или  $\Theta = \dfrac{1}{15}$ для формул средних прямоугольников и трапеций или формулы Симпсона соответственно. $I_h$ - значение интеграла, вычисленное по квадратурной формуле с шагом $h$, а - $I_\frac{h}{2}$ значение того же интеграла, вычисленное для шага $\frac{h}{2}$.
+
+\subsection{Уточнение по Ричардсону:}
+Будем использовать формулу:
+\begin{equation}
+    I = \frac{2^k \times I_{\frac{h}{2}}-I_{h}}{2^k-1}
+\end{equation}
+где $k=2$ для формул средних прямоугольников и трапеций, и $k=4$ для формулы Симпсона.
+
+\section{Отчет}
+Точное значение: $I = \int\limits_{-2}^{2} x \cdot (3^x + 1)^{-1} dx = -1.19996930377960344769866235500749140167423666013302060640$
+\begin{table}[H]
+\caption{Формула средних прямоугольников}
+\label{tabular:timesandtenses}
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+погрешность: & шаг: & значение: & по Ричардсону: \\ \hline
+$0.5*10^{-3}$ & 0.0005 & -1.19996929133 & -1.19996930378 \\
+$0.5*10^{-5}$ & 0.0005 & -1.19996929133 & -1.19996930378 \\
+$0.5*10^{-7}$ & 0.0005 & -1.19996929133 & -1.19996930129 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{Формула трапеций}
+\label{tabular:timesandtenses}
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+погрешность: & шаг: & значение: & по Ричардсону: \\ \hline
+$0.5*10^{-3}$ & 0.0005 & -1.19986934091 & -1.20000263304 \\
+$0.5*10^{-5}$ & $1.5625*10^{-5}$ & -1.1999693038 & -1.19996930377 \\
+$0.5*10^{-7}$ & $1.5625*10^{-5}$ & -1.1999693038 & -1.19996930378 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{Формула Симпсона}
+\label{tabular:timesandtenses}
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+погрешность: & шаг: & значение: & по Ричардсону: \\ \hline
+$0.5*10^{-3}$ & 0.0005 & -1.19990263711 & -1.19994708156 \\
+$0.5*10^{-5}$ & $3.125*10^{-5}$ & -1.19996930378 & -1.19996652601 \\
+$0.5*10^{-7}$ & $7.8125*10^{-6}$ & -1.19996930377 & -1.19996930377 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{document}
