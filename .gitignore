@@ -1,2 +1,8 @@
 # mac os temp files
 **.DS_Store
+
+# JetBrains IDE .idea/ folder
+**/.idea/
+
+# Pyton
+*.pyc

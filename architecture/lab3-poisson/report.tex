@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsthm,amsmath,amscd}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{float}
+\usepackage{listings}
+\usepackage{subcaption}
+
+\title{АК - Лабараторная работа 3}
+\author{Ivan Pazhitnykh}
+\date{December 2016}
+
+\begin{document}
+
+\maketitle
+\section{Условие}
+
+\begin{equation}
+    \frac{\partial^2u}{\partial x^2} + \frac{\partial^2u}{\partial y^2} = f(x,y)
+\end{equation}
+
+\begin{equation*}
+\begin{cases}
+    u(0,y)=f_1(y)=y^2 \\
+    u(a,y)=f_2(y)=sin(y) \\
+    u(x,0)=f_3(x)=x^3 \\
+    u(x,b)=f_4(x)=x^4  \\
+\end{cases}
+\end{equation*}
+
+\section{Запуск}
+\begin{lstlisting}[language=bash]
+    bash run.sh {num_of_procces} {rows} {cols}
+\end{lstlisting}
+
+\section{Решение Wolfram}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{solving.png}
+    \caption{График решения ДУ Пуассона (1)}
+    \label{wf}
+\end{figure}
+
+\section{Результаты}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{1x3x3.png}
+        \caption{1 процесс: 3х3}
+        \label{s1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{3x3x3.png}
+        \caption{3 процесса: 3х3}
+        \label{s2}
+    \end{subfigure}
+    \caption{Примеры работы}
+\end{figure}
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+num proc    &   rows    &   cols    &   topo    &   time     & iterations    &   \hline
+1           &   40      &   40      &   1D(1x1) &   14.126s  &   1598        &   \hline
+2           &   40      &   40      &   2D(1x2) &   7.112s   &   1635        &   \hline
+4           &   40      &   40      &   2D(1x4) &   8.605s   &   1670        &   \hline
+10          &   40      &   40      &   2D(2x5) &   12.180s  &   1725        &   \hline
+\end{tabular} \\
+
+\end{document}
