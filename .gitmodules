@@ -10,3 +10,9 @@
 [submodule "architecture/lab2-gauss-elimination"]
 	path = architecture/lab2-gauss-elimination
 	url = https://github.com/Drapegnik/Gauss-elimination
+[submodule "course-work/report"]
+	path = course-work/report
+	url = https://github.com/Drapegnik/bsu-cw
+[submodule "course-work/code"]
+	path = course-work/code
+	url = https://github.com/lybros/drone-vision
