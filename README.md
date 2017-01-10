@@ -1,5 +1,5 @@
 # bsu
-:mortar_board: Repository for university labs in FAMCS, BSU
+:mortar_board: Repository for university labs on FAMCS, BSU
 
 * [Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - C++
 * [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
