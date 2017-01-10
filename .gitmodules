@@ -1,3 +1,6 @@
 [submodule "algorithms"]
 	path = algorithms
 	url = https://github.com/Drapegnik/algorithms
+[submodule "educational-practice"]
+	path = educational-practice
+	url = https://github.com/Drapegnik/educational_practice
