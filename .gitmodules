@@ -4,3 +4,9 @@
 [submodule "educational-practice"]
 	path = educational-practice
 	url = https://github.com/Drapegnik/educational_practice
+[submodule "architecture/lab1-merge-sort"]
+	path = architecture/lab1-merge-sort
+	url = https://github.com/Drapegnik/merge_sort
+[submodule "architecture/lab2-gauss-elimination"]
+	path = architecture/lab2-gauss-elimination
+	url = https://github.com/Drapegnik/Gauss-elimination
