@@ -17,3 +17,5 @@
 14. [s4lab4](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s4lab4) - [Квадратичная аппроксимация (Quadratic approximation)](https://drapegnik.github.io/bsu/numerical-analysis/s4lab4/lab4.pdf)
 15. [s5lab1](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s5lab1) - [Методы Эйлера и Рунге-Кутты решения ОДУ (Euler & Runge–Kutta methods for solving ODEs)](https://drapegnik.github.io/bsu/numerical-analysis/s5lab1/lab1.pdf)
 16. [s5lab2](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s5lab2) - [Дифференциальные уравнения в частных производных (Partial differential equations)](https://drapegnik.github.io/bsu/numerical-analysis/s5lab2/lab2.pdf)
+
+*by [@drapegnik](https://github.com/Drapegnik), october'15 - december'16*

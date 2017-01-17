@@ -6,3 +6,4 @@
 * [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - Python, TeX
 * [Курсовая работа (Course work)](https://github.com/Drapegnik/bsu/tree/master/course-work) - C++, TeX
 * [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - C++, Python, [mpi](https://www.open-mpi.org/)
+* [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - R
