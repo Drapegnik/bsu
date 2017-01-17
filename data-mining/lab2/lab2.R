@@ -1,0 +1,19 @@
+dat<-read.table(file="in.txt", sep=",")
+d<-as.numeric(dat)
+mean(d)
+var(d)
+sd(d)
+which.max(table(d))
+median(d)
+a<-table(d)
+zn<-sort(unique(d))
+n<-length(d)
+disp<-var(d)
+sr_znach<-mean(d)
+sr_kvadr
+koeff_asimm<-sum((zn-sr_znach)^3*a)/(n*disp^3)
+koeff_excess<-sum((zn-sr_znach)^4*a)/(n*disp^4)-3
+sr_usech<-mean(d,trim=0,15)
+koeff_var<-disp/sr_znach*100
+sr_lin_otklon<-sum(abs(d-sr_znach))/n
+otos_lin_otklon<-sr_lin_otklon/sr_znach*100
