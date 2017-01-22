@@ -10,7 +10,7 @@ int main()
     int a[10]={},n,ans=0;
     cin>>n;
 
-    while (n)
+    while (n) // привет
     {
         int x=n%10;
         n/=10;
