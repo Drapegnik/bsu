@@ -1,0 +1,10 @@
+4
+Smith	1	41	7.5	1	inf	400
+Ivanov	1	30	2.0	3	pm	120
+Petrova	0	27	5.0	4	ek	300 
+Willams	0	30	1.5	1	inf	235 
+4
+User1	1	30	9.0	2002	inf	700
+User2	0	30	7.8	2012	am	460
+User3	0	27	2.2	2005	pm	555
+User4	1	41	10.0	1997	ek	123

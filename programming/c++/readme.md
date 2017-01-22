@@ -10,5 +10,7 @@
 * [lab7](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/lab7) - Классы, объекты, конструкторы (*Classes, objects, constructors*)
 * [lab8](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/lab8) - Перегрузка операций. Массивы объектов класса (*Operator Overloading. Arrays of class objects*)
 * [lab9](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/lab9) - Полиморфные классы. Виртуальные функции (*Polymorphic classes. Virtual functions*)
+* [test](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/test) - Контрольная работа(*Test work*)
+* [exam](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/exam) - Экзаменационная задача (*Exam task*)
 
 *by [@drapegnik](https://github.com/Drapegnik), september'14 - january'15*
