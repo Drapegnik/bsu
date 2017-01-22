@@ -1,0 +1,7 @@
+6
+minsk 05 1
+gomel 13 0
+minsk 14 1
+minsk 01 0
+gomel 17 1
+grodna 02 1

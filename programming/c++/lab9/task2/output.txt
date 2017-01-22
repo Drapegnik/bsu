@@ -1,0 +1,8 @@
+Smith 1 41 90 
+Ivanov 1 30 70 
+Petrova 0 27 65 
+Willams 0 30 50 
+Username1 1 30 89 2002
+Username2 0 30 40 2001
+Username3 0 27 45 2002
+Username4 1 41 100 2007
