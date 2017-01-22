@@ -6,7 +6,7 @@
 #include <iomanip>
 using namespace std;
 
-int comon(int &a,int &b,bool change) //ололо
+int comon(int &a,int &b,bool change) //функция для получения у двух чисел одинакового кол-ва знаков после запяттой
 {
     int temp,numa=0,numb=0;
     temp=fabs(a);
@@ -42,28 +42,28 @@ class Fraction
     public:
 
         int intp, fract;
-        Fraction(): intp(0),fract(0) {}
-        Fraction(double a)
+        Fraction(): intp(0),fract(0) {} //конструктор без параметров
+        Fraction(double a)   //конструктор переводит double к нашему типу
         {
-            intp=int(a);
+            intp=int(a);  //получение целой части
             double b;
             double* c=&b;
-            fract=modf(a,c)*1000000000;
-            if (fract!=0)
+            fract=modf(a,c)*1000000000;   //получение дробной части (с этим есть некоторые проблемы из-за округления doubla
+            if (fract!=0)                 //как я не пытался их решить, я не смог. расммотрел много способов...
                 while (fmod(fract,10)==0)
                     fract/=10;
             fract=fabs(fract);
         }
-        Fraction(int a): intp(a),fract(0) {}
-        Fraction(int a,int b): intp(a),fract(b) {}
-        Fraction(const Fraction &obj)
+        Fraction(int a): intp(a),fract(0) {} //конструктор с одним параметром для перевода int в Fractional
+        Fraction(int a,int b): intp(a),fract(b) {} //конструктор с двумя параметрами
+        Fraction(const Fraction &obj) //конструктор копирования
         {
             intp=obj.intp;
             fract=obj.fract;
         }
 
-        friend bool operator <= (Fraction, Fraction);
-        friend bool operator >= (Fraction, Fraction);
+        friend bool operator <= (Fraction, Fraction); //операторы перегрузки дружественные для того,
+        friend bool operator >= (Fraction, Fraction); //чтобы работала запись 10+a, где a-Fractional
         friend Fraction operator + (Fraction, Fraction);
         friend Fraction operator - (Fraction, Fraction);
         friend void operator += (Fraction&, Fraction&);
@@ -78,7 +78,7 @@ bool operator <= (Fraction f1, Fraction f2)
         return true;
     if (f1.intp==f2.intp)
         if (f1.fract<=f2.fract)
-            return ((f1.intp>=0) ? true : false);
+            return ((f1.intp>=0) ? true : false);     //если числа отрицательные всё наоборот
         else
             return ((f1.intp>=0) ? false : true);
     return false;
@@ -91,7 +91,7 @@ bool operator >= (Fraction f1, Fraction f2)
         return true;
     if (f1.intp==f2.intp)
         if (f1.fract>=f2.fract)
-            return ((f1.intp>0) ? true : false);
+            return ((f1.intp>0) ? true : false); //если числа отрицательные всё наоборот
         else
             return ((f1.intp>0) ? false : true);
     return false;
@@ -100,15 +100,15 @@ bool operator >= (Fraction f1, Fraction f2)
 
 Fraction operator + (Fraction f1, Fraction f2)
 {
-    if (f1<=0)
+    if (f1<=0) //для отрицательных
         return (f2-Fraction(fabs(f1.intp),fabs(f1.fract)));
-    if (f2<=0)
+    if (f2<=0) //для отрицательных
         return (f1-Fraction(fabs(f2.intp),fabs(f2.fract)));
 
     int n=comon(f1.fract,f2.fract,true);
     Fraction temp(f1.intp+f2.intp+(f1.fract+f2.fract)/n,(f1.fract+f2.fract)%n);
 
-    if (temp.fract<0)
+    if (temp.fract<0) //случай из-за хранения знака в дробной части
     {
         temp.intp--;
         int tmp=1;
@@ -134,9 +134,9 @@ Fraction operator - (Fraction f1, Fraction f2)
         temp.fract+=tmp*comon(temp.fract,tmp,false);
     }
     if (temp.intp!=0)
-        temp.intp*=sign;
+        temp.intp*=sign; //знак
     else
-        temp.fract*=sign;
+        temp.fract*=sign; //если целая часть 0, то знак храниться в дробной
     return temp;
 }
 
@@ -199,10 +199,10 @@ void operator += (Fraction& f1, Fraction& f2)
 
 istream& operator >> (istream& os, Fraction& obj)
 {
-    double a;
+    double a;  //чтение как double
     os>>a;
     obj=a;
-    //os>>obj.intp>>obj.fract;
+    //os>>obj.intp>>obj.fract;  // - вот так через int'ы
 }
 ostream& operator << (ostream& os, const Fraction& obj)
 {

@@ -109,7 +109,7 @@ Set operator -(const Set& a1,const Set& a2)
     return Set(s);
 }
 
-bool operator ==(const Set& a1,const Set& a2) //эквивалентность реализована в понимании равенства двух множеств
+bool operator ==(const Set& a1,const Set& a2) //СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚СЊ СЂРµР°Р»РёР·РѕРІР°РЅР° РІ РїРѕРЅРёРјР°РЅРёРё СЂР°РІРµРЅСЃС‚РІР° РґРІСѓС… РјРЅРѕР¶РµСЃС‚РІ
 {
     if (a1.k!=a2.k)
         return false;

@@ -10,7 +10,7 @@
 using namespace std;
 ifstream fin("input.txt");
 
-int gcd(int a,int b) //для сокращения обычных дробей
+int gcd(int a,int b) //РґР»СЏ СЃРѕРєСЂР°С‰РµРЅРёСЏ РѕР±С‹С‡РЅС‹С… РґСЂРѕР±РµР№
 {
     if (a<b)
         swap(a,b);
@@ -19,7 +19,7 @@ int gcd(int a,int b) //для сокращения обычных дробей
     return gcd(b,a%b);
 }
 
-int comon(int &a,int &b,bool change) //функция для получения у двух чисел одинакового кол-ва знаков после запяттой
+int comon(int &a,int &b,bool change) //С„СѓРЅРєС†РёСЏ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ Сѓ РґРІСѓС… С‡РёСЃРµР» РѕРґРёРЅР°РєРѕРІРѕРіРѕ РєРѕР»-РІР° Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ Р·Р°РїСЏС‚С‚РѕР№
 {
     int temp,numa=0,numb=0;
     temp=fabs(a);
@@ -55,28 +55,28 @@ class Fraction
     public:
 
         int intp, fract;
-        Fraction(): intp(0),fract(0) {} //конструктор без параметров
-        Fraction(double a)   //конструктор переводит double к нашему типу
+        Fraction(): intp(0),fract(0) {} //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+        Fraction(double a)   //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРµСЂРµРІРѕРґРёС‚ double Рє РЅР°С€РµРјСѓ С‚РёРїСѓ
         {
-            intp=int(a);  //получение целой части
+            intp=int(a);  //РїРѕР»СѓС‡РµРЅРёРµ С†РµР»РѕР№ С‡Р°СЃС‚Рё
             double b;
             double* c=&b;
-            fract=modf(a,c)*1000000000;   //получение дробной части (с этим есть некоторые проблемы из-за округления doubla
-            if (fract!=0)                 //как я не пытался их решить, я не смог. расммотрел много способов...
+            fract=modf(a,c)*1000000000;   //РїРѕР»СѓС‡РµРЅРёРµ РґСЂРѕР±РЅРѕР№ С‡Р°СЃС‚Рё (СЃ СЌС‚РёРј РµСЃС‚СЊ РЅРµРєРѕС‚РѕСЂС‹Рµ РїСЂРѕР±Р»РµРјС‹ РёР·-Р·Р° РѕРєСЂСѓРіР»РµРЅРёСЏ doubla
+            if (fract!=0)                 //РєР°Рє СЏ РЅРµ РїС‹С‚Р°Р»СЃСЏ РёС… СЂРµС€РёС‚СЊ, СЏ РЅРµ СЃРјРѕРі. СЂР°СЃРјРјРѕС‚СЂРµР» РјРЅРѕРіРѕ СЃРїРѕСЃРѕР±РѕРІ...
                 while (fmod(fract,10)==0)
                     fract/=10;
             fract=fabs(fract);
         }
-        Fraction(int a): intp(a),fract(0) {} //конструктор с одним параметром для перевода int в Fractional
-        Fraction(int a,int b): intp(a),fract(b) {} //конструктор с двумя параметрами
-        Fraction(const Fraction &obj) //конструктор копирования
+        Fraction(int a): intp(a),fract(0) {} //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РѕРґРЅРёРј РїР°СЂР°РјРµС‚СЂРѕРј РґР»СЏ РїРµСЂРµРІРѕРґР° int РІ Fractional
+        Fraction(int a,int b): intp(a),fract(b) {} //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РґРІСѓРјСЏ РїР°СЂР°РјРµС‚СЂР°РјРё
+        Fraction(const Fraction &obj) //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
         {
             intp=obj.intp;
             fract=obj.fract;
         }
 
-        friend bool operator <= (Fraction, Fraction); //операторы перегрузки дружественные для того,
-        friend bool operator >= (Fraction, Fraction); //чтобы работала запись 10+a, где a-Fractional
+        friend bool operator <= (Fraction, Fraction); //РѕРїРµСЂР°С‚РѕСЂС‹ РїРµСЂРµРіСЂСѓР·РєРё РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рµ РґР»СЏ С‚РѕРіРѕ,
+        friend bool operator >= (Fraction, Fraction); //С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р»Р° Р·Р°РїРёСЃСЊ 10+a, РіРґРµ a-Fractional
         friend Fraction operator + (Fraction, Fraction);
         friend Fraction operator - (Fraction, Fraction);
         friend istream& operator >> (istream& os, Fraction& obj);
@@ -88,7 +88,7 @@ class Fraction
             fract=obj.fract;
             return *this;
         }
-        virtual void func() //функция для того, чтобы сделать классы полиморфными
+        virtual void func() //С„СѓРЅРєС†РёСЏ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ РєР»Р°СЃСЃС‹ РїРѕР»РёРјРѕСЂС„РЅС‹РјРё
         {
 
         };
@@ -96,10 +96,10 @@ class Fraction
 
 istream& operator >> (istream& os, Fraction& obj)
 {
-    double a;  //чтение как double
+    double a;  //С‡С‚РµРЅРёРµ РєР°Рє double
     os>>a;
     obj=a;
-    //os>>obj.intp>>obj.fract;  // - вот так через int'ы
+    //os>>obj.intp>>obj.fract;  // - РІРѕС‚ С‚Р°Рє С‡РµСЂРµР· int'С‹
     return os;
 }
 ostream& operator << (ostream& os, const Fraction& obj)
@@ -121,7 +121,7 @@ bool operator <= (Fraction f1, Fraction f2)
         return true;
     if (f1.intp==f2.intp)
         if (f1.fract<=f2.fract)
-            return ((f1.intp>=0) ? true : false);     //если числа отрицательные всё наоборот
+            return ((f1.intp>=0) ? true : false);     //РµСЃР»Рё С‡РёСЃР»Р° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ РІСЃС‘ РЅР°РѕР±РѕСЂРѕС‚
         else
             return ((f1.intp>=0) ? false : true);
     return false;
@@ -134,7 +134,7 @@ bool operator >= (Fraction f1, Fraction f2)
         return true;
     if (f1.intp==f2.intp)
         if (f1.fract>=f2.fract)
-            return ((f1.intp>0) ? true : false); //если числа отрицательные всё наоборот
+            return ((f1.intp>0) ? true : false); //РµСЃР»Рё С‡РёСЃР»Р° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ РІСЃС‘ РЅР°РѕР±РѕСЂРѕС‚
         else
             return ((f1.intp>0) ? false : true);
     return false;
@@ -143,15 +143,15 @@ bool operator >= (Fraction f1, Fraction f2)
 
 Fraction operator + (Fraction f1, Fraction f2)
 {
-    if (f1<=0) //для отрицательных
+    if (f1<=0) //РґР»СЏ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С…
         return (f2-Fraction(fabs(f1.intp),fabs(f1.fract)));
-    if (f2<=0) //для отрицательных
+    if (f2<=0) //РґР»СЏ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С…
         return (f1-Fraction(fabs(f2.intp),fabs(f2.fract)));
 
     int n=comon(f1.fract,f2.fract,true);
     Fraction temp(f1.intp+f2.intp+(f1.fract+f2.fract)/n,(f1.fract+f2.fract)%n);
 
-    if (temp.fract<0) //случай из-за хранения знака в дробной части
+    if (temp.fract<0) //СЃР»СѓС‡Р°Р№ РёР·-Р·Р° С…СЂР°РЅРµРЅРёСЏ Р·РЅР°РєР° РІ РґСЂРѕР±РЅРѕР№ С‡Р°СЃС‚Рё
     {
         temp.intp--;
         int tmp=1;
@@ -177,30 +177,30 @@ Fraction operator - (Fraction f1, Fraction f2)
         temp.fract+=tmp*comon(temp.fract,tmp,false);
     }
     if (temp.intp!=0)
-        temp.intp*=sign; //знак
+        temp.intp*=sign; //Р·РЅР°Рє
     else
-        temp.fract*=sign; //если целая часть 0, то знак храниться в дробной
+        temp.fract*=sign; //РµСЃР»Рё С†РµР»Р°СЏ С‡Р°СЃС‚СЊ 0, С‚Рѕ Р·РЅР°Рє С…СЂР°РЅРёС‚СЊСЃСЏ РІ РґСЂРѕР±РЅРѕР№
     return temp;
 }
 
-class comfract: public Fraction //производный класс
+class comfract: public Fraction //РїСЂРѕРёР·РІРѕРґРЅС‹Р№ РєР»Р°СЃСЃ
 {
     public:
         int osn;
 
-        friend void reduce(comfract&); //собс-но функция сокращения обычных дробей
-        comfract()      //конструктор без параметров
+        friend void reduce(comfract&); //СЃРѕР±СЃ-РЅРѕ С„СѓРЅРєС†РёСЏ СЃРѕРєСЂР°С‰РµРЅРёСЏ РѕР±С‹С‡РЅС‹С… РґСЂРѕР±РµР№
+        comfract()      //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
         {
             Fraction();
             osn=1;
         }
-        comfract(int a,int b,int c)         //конструктор с трюмя параметрами
+        comfract(int a,int b,int c)         //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ С‚СЂСЋРјСЏ РїР°СЂР°РјРµС‚СЂР°РјРё
         {
             intp=a;
             fract=b;
             osn=c;
         }
-        comfract(Fraction obj)              //конструктор приведения
+        comfract(Fraction obj)              //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїСЂРёРІРµРґРµРЅРёСЏ
         {
             int temp=1;
             intp=obj.intp;
@@ -208,13 +208,13 @@ class comfract: public Fraction //производный класс
             osn=comon(temp,fract,false);
             reduce(*this);
         }
-        comfract(comfract const &obj)        //конструктор копированя
+        comfract(comfract const &obj)        //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅСЏ
         {
             intp=obj.intp;
             fract=obj.fract;
             osn=obj.osn;
         }
-        comfract(int a)                     // перевод из int'a
+        comfract(int a)                     // РїРµСЂРµРІРѕРґ РёР· int'a
         {
             intp=a;
             fract=0;
@@ -242,7 +242,7 @@ class comfract: public Fraction //производный класс
 
         friend istream& operator >> (istream& os, comfract& obj);
         friend ostream& operator << (ostream& os, const comfract& obj);
-        void func() //функция для того, чтобы сделать классы полиморфными
+        void func() //С„СѓРЅРєС†РёСЏ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ РєР»Р°СЃСЃС‹ РїРѕР»РёРјРѕСЂС„РЅС‹РјРё
         {
 
         };
