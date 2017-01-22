@@ -1,5 +1,5 @@
 # Java labs
-Лабараторные по Java
+Лабораторные по Java
 
 * [s3lab1](https://github.com/Drapegnik/bsu/tree/master/programming/java/s3lab1) - Вычисление суммы ряда (*Calculating the sum of the series*)
 

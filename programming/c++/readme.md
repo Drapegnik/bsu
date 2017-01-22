@@ -1,5 +1,5 @@
 # C++ labs
-Лабараторные по C++
+Лабораторные по C++
 
 * [lab1](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/lab1) - Целочисленная арифметика (*Integer arithmetic*)
 * [lab2](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/lab2) - Операции с массивами (*Array Operations*)
