@@ -1,4 +1,4 @@
-#!/usr/bin/env bash#!/usr/bin/env bash
+#!/usr/bin/env bash
 man arp
 man ipconfig
 man netstat
