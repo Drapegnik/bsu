@@ -5,9 +5,9 @@ echo '```'
 netstat -p TCP
 echo '```'
 
-echo ' * `netstat -n -p TCP`'
+echo ' * `netstat -np TCP`'
 echo '```'
-netstat -p -n TCP
+netstat -np TCP
 echo '```'
 
 echo -e ' * `netstat –a –s –r`\n\n'
