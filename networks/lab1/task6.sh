@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo '## 4. `netstat`'
+echo '## 6. `netstat`'
 echo ' * `netstat -p TCP`'
 echo '```'
 netstat -p TCP

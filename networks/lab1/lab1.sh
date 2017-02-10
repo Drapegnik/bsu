@@ -6,4 +6,5 @@ bash task3.sh
 bash task4.sh
 bash task5.sh
 bash task6.sh
+bash task7.sh
 bash task8.sh
