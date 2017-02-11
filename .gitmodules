@@ -16,3 +16,6 @@
 [submodule "course-work/code"]
 	path = course-work/code
 	url = https://github.com/lybros/drone-vision
+[submodule "programming/java/sem3/lab4"]
+	path = programming/java/sem3/lab4
+	url = https://github.com/Drapegnik/BST.git

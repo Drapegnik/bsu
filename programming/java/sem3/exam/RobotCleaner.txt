@@ -1,0 +1,6 @@
+1
+SONY    blue    img/space.jpeg      15    1
+First   yellow  img/space.jpeg      8   0
+INTEL   red     img/space.jpeg      10   0
+Boash   blue    img/space.jpeg      19    1
+Boash   blue    img/space.jpeg      20    1

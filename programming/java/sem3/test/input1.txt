@@ -1,0 +1,5 @@
+fortree1  24  list    100
+fortree3  30  list    200
+fortree2  12  list    50
+fortree1  24  list    100
+fortree1  25  list    100

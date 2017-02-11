@@ -1,0 +1,6 @@
+fruttree2  2   list 5   10
+fruttree3  31  list 4   11
+fruttree4  50  list 6   12
+fruttree1  13  list 7   14
+fruttree4  50  list 6   12
+fruttree4  50  list 6   12

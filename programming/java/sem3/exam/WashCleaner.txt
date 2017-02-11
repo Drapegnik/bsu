@@ -1,0 +1,4 @@
+0
+Boash   blue    img/space.jpeg    12    100
+First   green   img/space.jpeg   14     200
+Vitek   red     img/space.jpeg     7    300
