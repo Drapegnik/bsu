@@ -59,5 +59,5 @@ $ 10.150.3.30
 ## Выполнение
 
 * run `bash task0.sh` for reading manuals
-* run `bash run.sh` for executing labs task and generating report into `report.md`
+* run `bash run.sh` for executing labs task and generating report into [`report.md`](https://github.com/Drapegnik/bsu/blob/master/networks/lab1/report.md)
 

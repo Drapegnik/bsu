@@ -8,3 +8,4 @@
 * [Курсовая работа (Course work)](https://github.com/Drapegnik/bsu/tree/master/course-work) - C++, TeX
 * [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - C++, Python
 * [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - R
+* [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - bash, Cisco Packet Tracer
