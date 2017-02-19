@@ -9,21 +9,22 @@
 #######################################################
 import Figure
 
+
 class Line(Figure):
-    def __init__(location, border_color, start_point, end_point):
+    def __init__(self, location, border_color, start_point, end_point):
         pass
 
-    def get_end_point():
+    def get_end_point(self):
         pass
 
-    def get_start_point():
+    def get_start_point(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_end_point(point):
+    def set_end_point(self, point):
         pass
 
-    def set_start_point(point):
+    def set_start_point(self, point):
         pass

@@ -9,15 +9,16 @@
 #######################################################
 import Figure
 
+
 class Shape(Figure):
-    def __init__(location, border_color, bg_color):
+    def __init__(self, location, border_color, bg_color):
         pass
 
-    def get_bg_color():
+    def get_bg_color(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_bg_color(color):
+    def set_bg_color(self, color):
         pass

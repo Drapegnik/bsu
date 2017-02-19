@@ -9,15 +9,16 @@
 #######################################################
 import RegularShape
 
+
 class SymmetricShape(RegularShape):
-    def __init__(location, border_color, bg_color, count, second_point, third_point):
+    def __init__(self, location, border_color, bg_color, count, second_point, third_point):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_third_point(point):
+    def set_third_point(self, point):
         pass
 
-    def set_third_point():
+    def set_third_point(self):
         pass

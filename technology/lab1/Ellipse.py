@@ -9,6 +9,7 @@
 #######################################################
 import SymmetricShape
 
+
 class Ellipse(SymmetricShape):
-    def render():
+    def render(self):
         pass

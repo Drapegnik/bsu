@@ -10,20 +10,20 @@
 
 
 class Figure:
-    def __init__(location, border_color):
+    def __init__(self, location, border_color):
         pass
 
-    def get_border_color():
+    def get_border_color(self):
         pass
 
-    def get_location():
+    def get_location(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_border_color(color):
+    def set_border_color(self, color):
         pass
 
-    def set_location(point):
+    def set_location(self, point):
         pass

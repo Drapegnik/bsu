@@ -9,15 +9,16 @@
 #######################################################
 import Line
 
+
 class Ray(Line):
-    def __init__(location, border_color, start_point, end_point, direction):
+    def __init__(self, location, border_color, start_point, end_point, direction):
         pass
 
-    def get_direction():
+    def get_direction(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_direction(direction):
+    def set_direction(self, direction):
         pass

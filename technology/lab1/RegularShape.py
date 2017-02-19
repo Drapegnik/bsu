@@ -9,21 +9,22 @@
 #######################################################
 import Shape
 
+
 class RegularShape(Shape):
-    def get_count():
+    def get_count(self):
         pass
 
-    def get_second_point():
+    def get_second_point(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_count(count):
+    def set_count(self, count):
         pass
 
-    def set_second_point(point):
+    def set_second_point(self, point):
         pass
 
-    def __init__(location, border_color, bg_color, count, second_point):
+    def __init__(self, location, border_color, bg_color, count, second_point):
         pass

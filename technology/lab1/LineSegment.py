@@ -9,6 +9,7 @@
 #######################################################
 import Line
 
+
 class LineSegment(Line):
-    def render():
+    def render(self):
         pass

@@ -9,15 +9,16 @@
 #######################################################
 import Shape
 
+
 class AsymmetricShape(Shape):
-    def __init__(location, border_color, bg_color, point):
+    def __init__(self, location, border_color, bg_color, point):
         pass
 
-    def get_points():
+    def get_points(self):
         pass
 
-    def render():
+    def render(self):
         pass
 
-    def set_point(index, point):
+    def set_point(self, index, point):
         pass
