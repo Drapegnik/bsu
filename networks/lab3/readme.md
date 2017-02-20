@@ -6,5 +6,5 @@
 * [`task2.doc`](https://drapegnik.github.io/bsu/networks/lab3/task2.doc)
 
 ### Выполнение
-* [`report.md`](hhttps://github.com/drapegnik/bsu/tree/master/networks/lab3/report.md) - отчёт
+* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab3/report.md) - отчёт
 * [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab3/src) - `.pkt` сценарии для ***Packet Tracer'a***
