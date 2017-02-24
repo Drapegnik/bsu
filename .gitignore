@@ -3,6 +3,3 @@
 
 # JetBrains IDE .idea/ folder
 **/.idea/
-
-# Pyton
-*.pyc
