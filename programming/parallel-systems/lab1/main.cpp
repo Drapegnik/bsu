@@ -54,21 +54,22 @@ int main(int argc, char *argv[]) {
 
     // create child thread and passing params
     HANDLE hThread = (HANDLE) _beginthreadex(NULL, 0, ThreadFunction, (void *) &params, 0, NULL);
+    // error handling
+    if (hThread == NULL) {
+        cout << "(main): Create Thread Error: " << GetLastError() << endl;
+        return -1;
+    }
+
     string promt;
     if (params.k == 0) {
         cin >> promt;
         bTerminate = true;
     }
 
-    // error handling
-    if (hThread == NULL) {
-        printf("Create Thread Error=%d\n", GetLastError());
-        return -1;
-    }
 
     // wait for child thread terminating
     WaitForSingleObject(hThread, INFINITE);
-    cout<<"(main): Child thread terminate successfully";
+    cout << "(main): Child thread terminate successfully";
 
     // close thread object
     CloseHandle(hThread);
