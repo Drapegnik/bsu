@@ -13,4 +13,6 @@
 * [test](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/test) - Контрольная работа(*Test work*)
 * [exam](https://github.com/Drapegnik/bsu/tree/master/programming/c%2B%2B/exam) - Экзаменационная задача (*Exam task*)
 
+***
+
 *by [@drapegnik](https://github.com/Drapegnik), september'14 - january'15*

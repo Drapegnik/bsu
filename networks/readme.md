@@ -6,4 +6,6 @@
 * [lab3](https://github.com/Drapegnik/bsu/tree/master/networks/lab3) - [Проектирование *VLAN*](https://drapegnik.github.io/bsu/networks/lab3/Lab3_PazhitnykhIP.pdf)
 * [lab4](https://github.com/Drapegnik/bsu/tree/master/networks/lab4) - [Работа с сетевыми адресами](https://drapegnik.github.io/bsu/networks/lab4/Lab4_PazhitnykhIP.pdf)
 
+***
+
 *by [@drapegnik](https://github.com/Drapegnik), february'17 - now*

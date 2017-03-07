@@ -6,4 +6,6 @@
 * [Java](https://github.com/Drapegnik/bsu/tree/master/programming/java) - Разработка **Java**-приложений, **Java** и сетевые технологии, Клиент-серверное программирование
 * [Parallel Systems](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems) - Распределенные и параллельные системы (**WinAPI** *Threads*, **POSIX** *Threads*) - **C++**
 
+***
+
 *by [@drapegnik](https://github.com/Drapegnik), september'14 - now*

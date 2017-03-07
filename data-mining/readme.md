@@ -8,4 +8,6 @@
 * [lab5](https://github.com/Drapegnik/bsu/tree/master/data-mining/lab5) - Кластерный анализ. Алгоритм K-means (*Cluster analysis. K-means algorithm*)
 * [lab6](https://github.com/Drapegnik/bsu/tree/master/data-mining/lab6) - Моделирование. Дискриминантный анализ (*Modeling. Discriminant analysis*)
 
+***
+
 *by [@drapegnik](https://github.com/Drapegnik), october'15 - november'15*

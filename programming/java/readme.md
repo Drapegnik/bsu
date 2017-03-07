@@ -1,6 +1,8 @@
 # Java labs
 Лабораторные по Java
 
+<details>
+<summary>Sem3 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)</summary>
 * [s3lab1](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab1) - Вычисление суммы ряда (*Calculating the sum of the series*)
 * [s3lab2](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab2) - Строки (*Strings*)
 * [s3lab3](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab3) - Матрицы (*Matrices*)
@@ -12,5 +14,16 @@
 * [s3lab9](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab9) - Оконные приложения: контейнеры, итераторы, компараторы (*Window applications: containers, iterators, comparators*)
 * [s3test](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/test) - Контрольная работа(*Test work*)
 * [s3exam](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/exam) - Экзаменационная задача (*Exam task*)
+</details>
+
+<details>
+<summary>Sem5 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)</summary>
+</details>
+
+<details>
+<summary>Sem6 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6)</summary>
+</details>
+
+***
 
 *by [@drapegnik](https://github.com/Drapegnik), october'15 - now*

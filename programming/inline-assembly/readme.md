@@ -10,4 +10,6 @@
 * [lab7](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/lab7) - Длинная арифметика (*Long arithmetic*)
 * [exam](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/exam) - Экзаменационная задача (*Exam task)
 
+***
+
 *by [@drapegnik](https://github.com/Drapegnik), may'15 - june'15*
