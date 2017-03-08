@@ -11,12 +11,12 @@ public class Client {
     }
 
     public static void main(String[] args) {
-        int port = Integer.parseInt(System.getenv().get("RMI_PORT"));
+        int port = Integer.parseInt(System.getenv().get(Options.PORT_ENV_NAME));
+        String host = System.getenv().get(Options.HOST_ENV_NAME);
 
-        String host = (args.length < 1) ? null : args[0];
         try {
             Registry registry = LocateRegistry.getRegistry(host, port);
-            Hello stub = (Hello) registry.lookup("Hello");
+            RemoteService stub = (RemoteService) registry.lookup("RemoteService");
             String response = stub.sayHello();
             System.out.println("response: " + response);
         } catch (Exception e) {
