@@ -16,4 +16,5 @@ public class Options {
     static final String DB_PASS = "";
     static final String PORT_ENV_NAME = "RMI_PORT";
     static final String HOST_ENV_NAME = "RMI_HOST";
+    static final String STUDENTS_FILE_NAME = "students.binary";
 }

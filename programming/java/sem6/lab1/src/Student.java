@@ -2,6 +2,11 @@
  * Created by Drapegnik on 07.03.17.
  */
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.UUID;
 
 /**
@@ -10,7 +15,7 @@ import java.util.UUID;
  * @author Ivan Pazhitnykh
  * @version 1.0
  */
-public class Student {
+public class Student implements Serializable {
     private String name;
     private int group;
     private String id;
@@ -21,7 +26,7 @@ public class Student {
     }
 
     public Student(String name, int group) {
-        super();
+        this();
         this.name = name;
         this.group = group;
     }
@@ -56,6 +61,30 @@ public class Student {
         if (group != student.group) {return false;}
 
         return name.equals(student.name);
+    }
+
+    /**
+     * Method for reading students info from binary file
+     *
+     * @param filename - String filename
+     * @see Options#STUDENTS_FILE_NAME
+     * @return {@link ArrayList} of {@link Student}s
+     */
+    public static ArrayList<Student> readFromFile(String filename) {
+        ArrayList<Student> data = new ArrayList<>();
+        try {
+            FileInputStream fis = new FileInputStream(filename);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            data = new ArrayList<>((ArrayList<Student>) ois.readObject());
+
+            ois.close();
+            fis.close();
+        } catch (IOException | ClassNotFoundException err) {
+            System.out.println(err);
+            System.err.println("Error while read data!");
+        }
+        return data;
     }
 }
 

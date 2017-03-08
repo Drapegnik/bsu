@@ -21,3 +21,15 @@
 * Показать полное описание метода (параметры, исключения, результат). 
 * Использовать ссылки (`@link`), *HTML*. 
 * Должны работать ссылки на стандартную документацию.
+
+***
+## Setup
+* set `RMI_PORT` and `RMI_HOST` environment variables
+* create out dir (default `out/production/lab1`)
+
+## Run
+* run `dbDriver.main()` for creating database
+* run `run_rmi.sh` for start rmi (you can specifie out dir or use default `out/production/lab1`)
+* start `Server` (`java path/to/outdir/Server`)
+* after message `Server ready` start `Client` (`java path/to/outdir/Client`)
+
