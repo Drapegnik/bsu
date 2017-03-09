@@ -2,12 +2,8 @@
  * Created by Drapegnik on 07.03.17.
  */
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.ArrayList;
 
 public class Client {
 

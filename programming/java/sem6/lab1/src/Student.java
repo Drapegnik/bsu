@@ -47,7 +47,13 @@ public class Student implements Serializable {
     public String getId() {return id;}
 
     @Override
-    public String toString() {return "Name: " + name + ", group: " + group;}
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ",\tname='" + name + '\'' +
+                ",\tgroup=" + group +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -66,9 +72,9 @@ public class Student implements Serializable {
     /**
      * Method for reading students info from binary file
      *
-     * @param filename - String filename
-     * @see Options#STUDENTS_FILE_NAME
+     * @param filename String filename
      * @return {@link ArrayList} of {@link Student}s
+     * @see Options#STUDENTS_FILE_NAME
      */
     public static ArrayList<Student> readFromFile(String filename) {
         ArrayList<Student> data = new ArrayList<>();

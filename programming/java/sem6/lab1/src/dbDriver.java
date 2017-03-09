@@ -3,6 +3,8 @@
  */
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * <p>Class for connecting to database</p>
@@ -13,7 +15,19 @@ import java.sql.*;
 public class dbDriver {
     private Connection conn = null;
     private Statement stmt = null;
+    private PreparedStatement pstmt = null;
     private String sql;
+
+    /**
+     * SQL requests
+     */
+    private static final String CREATE_STUDENT = "INSERT INTO " +
+            Options.DB_NAME + "." + Student.class.getSimpleName() +
+            " (id, s_name, s_group) VALUES(?, ?, ?)";
+
+    private static final String CREATE_MARK = "INSERT INTO " +
+            Options.DB_NAME + "." + Mark.class.getSimpleName() +
+            " (id, subject, grade, studentId) VALUES(?, ?, ?, ?)";
 
     /**
      * Create new database connection
@@ -78,6 +92,7 @@ public class dbDriver {
         String sql = "CREATE TABLE " + Options.DB_NAME + "." + Mark.class.getSimpleName() +
                 "(id VARCHAR(255) not NULL, " +
                 " subject VARCHAR(255), " +
+                " grade INTEGER, " +
                 " studentId VARCHAR(255) not NULL, " +
                 " PRIMARY KEY ( id ))";
         createTable(Mark.class.getSimpleName(), sql);
@@ -100,6 +115,70 @@ public class dbDriver {
             System.out.println("Database '" + Options.DB_NAME + "' created successfully.");
         } catch (Exception se) {
             se.printStackTrace();
+        }
+    }
+
+    /**
+     * Insert {@link Student} object into table
+     *
+     * @param student {@link Student} instance
+     */
+    public void createStudent(Student student) {
+        try {
+            stmt = conn.createStatement();
+            pstmt = conn.prepareStatement(CREATE_STUDENT);
+            pstmt.setString(1, student.getId());
+            pstmt.setString(2, student.getName());
+            pstmt.setInt(3, student.getGroup());
+            pstmt.executeUpdate();
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+    }
+
+    /**
+     * Insert {@link Mark} object into table
+     *
+     * @param mark {@link Mark} instance
+     */
+    public void createMark(Mark mark) {
+        try {
+            stmt = conn.createStatement();
+            pstmt = conn.prepareStatement(CREATE_MARK);
+            pstmt.setString(1, mark.getId());
+            pstmt.setString(2, mark.getSubject().toString());
+            pstmt.setInt(3, mark.getGrade());
+            pstmt.setString(4, mark.getStudentId());
+            pstmt.executeUpdate();
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+    }
+
+    /**
+     * Fetch {@link Student}s data from {@link Options#STUDENTS_FILE_NAME}
+     * Generate random {@link Mark}s with {@link Subject}s
+     * Save all data into db
+     *
+     * @see dbDriver#createMark(Mark)
+     * @see dbDriver#createStudent(Student)
+     * @see Options#STUDENTS_FILE_NAME
+     */
+    public void initDB() {
+        System.out.println("Init database...");
+        ArrayList<Student> data = Student.readFromFile(Options.STUDENTS_FILE_NAME);
+        Random random = new Random();
+
+        for (Student student : data) {
+            System.out.println('\t' + student.toString());
+            createStudent(student);
+
+            for (Subject subject : Subject.values()) {
+                Mark mark = new Mark(subject, random.nextInt(10) + 1, student.getId());
+                System.out.println('\t' + mark.toString());
+                createMark(mark);
+            }
+            System.out.println();
         }
     }
 
@@ -139,6 +218,7 @@ public class dbDriver {
     public static void main(String[] args) {
         dbDriver db = new dbDriver();
         db.createDB();
+        db.initDB();
         db.close();
     }
 }
