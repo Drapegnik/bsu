@@ -3,6 +3,7 @@
  */
 
 import java.sql.*;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,18 +17,28 @@ public class dbDriver {
     private Connection conn = null;
     private Statement stmt = null;
     private PreparedStatement pstmt = null;
+    private ResultSet res = null;
     private String sql;
 
+    private static String StudentsTable = Student.class.getSimpleName();
+    private static String MarksTable = Mark.class.getSimpleName();
     /**
      * SQL requests
      */
-    private static final String CREATE_STUDENT = "INSERT INTO " +
-            Options.DB_NAME + "." + Student.class.getSimpleName() +
-            " (id, s_name, s_group) VALUES(?, ?, ?)";
+    private static final String CREATE_STUDENT = MessageFormat.format(
+            "INSERT INTO {0} (id, s_name, s_group) VALUES(?, ?, ?);", StudentsTable);
 
-    private static final String CREATE_MARK = "INSERT INTO " +
-            Options.DB_NAME + "." + Mark.class.getSimpleName() +
-            " (id, subject, grade, studentId) VALUES(?, ?, ?, ?)";
+    private static final String CREATE_MARK = MessageFormat.format(
+            "INSERT INTO {0} (id, subject, grade, studentId) VALUES(?, ?, ?, ?);", MarksTable);
+
+    private static final String GET_STUDENTS = MessageFormat.format(
+            "SELECT * FROM {0} INNER JOIN {1} ON {1}.studentId={0}.id;", StudentsTable, MarksTable);
+
+    private static final String GET_BAD_STUDENTS = MessageFormat.format(
+            "SELECT {0}.id, {0}.s_name, COUNT(*) as bad_marks_count FROM {0} " +
+                    "INNER JOIN {1} ON {0}.id={1}.studentId" +
+                    " WHERE {1}.grade < 5 GROUP BY {0}.id" +
+                    " HAVING COUNT(*) > 2;", StudentsTable, MarksTable);
 
     /**
      * Create new database connection
@@ -41,9 +52,9 @@ public class dbDriver {
         try {
             Class.forName(Options.JDBC_DRIVER);
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(Options.DB_URL, Options.DB_USER, Options.DB_PASS);
+            conn = DriverManager.getConnection(Options.DB_URL + Options.DB_NAME, Options.DB_USER, Options.DB_PASS);
             stmt = conn.createStatement();
-            System.out.println("Successfully connect to " + Options.DB_URL);
+            System.out.println("Successfully connect to " + Options.DB_URL + Options.DB_NAME);
         } catch (Exception se) {
             System.out.println("Some problem with db connection");
             se.printStackTrace();
@@ -74,7 +85,7 @@ public class dbDriver {
      * @see Options#DB_NAME
      */
     public void createStudentsTable() {
-        String sql = "CREATE TABLE " + Options.DB_NAME + "." + Student.class.getSimpleName() +
+        String sql = "CREATE TABLE " + StudentsTable +
                 "(id VARCHAR(255) not NULL, " +
                 " s_name VARCHAR(255), " +
                 " s_group INTEGER, " +
@@ -89,7 +100,7 @@ public class dbDriver {
      * @see Options#DB_NAME
      */
     private void createMarkTable() {
-        String sql = "CREATE TABLE " + Options.DB_NAME + "." + Mark.class.getSimpleName() +
+        String sql = "CREATE TABLE " + MarksTable +
                 "(id VARCHAR(255) not NULL, " +
                 " subject VARCHAR(255), " +
                 " grade INTEGER, " +
@@ -134,6 +145,30 @@ public class dbDriver {
         } catch (Exception se) {
             se.printStackTrace();
         }
+    }
+
+    /**
+     * Select all {@link Student}'s objects from db
+     *
+     * @return ArrayList<String> students_ids
+     */
+    public ArrayList<String> getBadStudents() {
+        System.out.println("Select bad students...");
+        ArrayList<String> data = new ArrayList<>();
+        try {
+            res = stmt.executeQuery(GET_BAD_STUDENTS);
+            while (res.next()) {
+                data.add(res.getString("id"));
+                System.out.println("\t#" + res.getRow()
+                        + "\t" + res.getString("s_name")
+                        + "\t" + res.getString("bad_marks_count")
+                        + "\t" + res.getString("id"));
+            }
+
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+        return data;
     }
 
     /**
@@ -201,6 +236,13 @@ public class dbDriver {
         try {
             if (stmt != null)
                 stmt.close();
+        } catch (SQLException se2) {
+            System.out.println(se2.getMessage());
+        }
+
+        try {
+            if (pstmt != null)
+                pstmt.close();
         } catch (SQLException se2) {
             System.out.println(se2.getMessage());
         }
