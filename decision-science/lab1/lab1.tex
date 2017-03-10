@@ -29,6 +29,46 @@ $n=m$ и для любых $\forall i, j, k$  $1 \leqslant i, j, k \leqslant m$,
     h_{ij}+h_{jk} + h_{ki} = 0
 \end{equation*}
 
+\subsection{Решение}
+Найдём верхнее и нижние значения задачи:
+\begin{equation}
+    \alpha = \max_i\min_jH(i,j)
+\end{equation}
+\begin{equation}
+    \beta = \min_j\max_iH(i,j)
+\end{equation}
+
+Учитывая, что $h_{ij}=-h_{jk}-h_{ki}$:
+\begin{equation}
+\begin{split}
+    \alpha = \max_i\min_j(h_{ij}) = \max_i\min_j(-h_{jk} - h_{ki}) \\ = \max_i(-\min_j(h_{jk}) - h_{ki}) = -\min_j(h_{jk}) - \max_i(h_{ki})
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+    \beta = \min_j\max_i(h_{ij}) = \min_j\max_i(-h_{jk} - h_{ki}) \\ = \min_j(-h_{jk} -\max_i(h_{ki})) = -\min_j(h_{jk}) - \max_i(h_{ki})
+\end{split}
+\end{equation}
+
+\begin{equation}
+    \alpha (1.3) = \beta (1.4)
+\end{equation}
+из этого следует, что существует решение в чистых стратегиях.
+
+\subsection{Пример}
+\begin{equation*}
+    H = \begin{pmatrix} 
+            0 & 4 & 2 \\
+            -4 & 0 & -2 \\
+            -2 & 2 & 0
+        \end{pmatrix}
+\end{equation*}
+
+Верхние и нижние значения совпадают:
+\begin{equation}
+    \alpha = \beta = 0
+\end{equation}
+
 \section{Задача 2d}
 \subsection{Условие}
 
@@ -40,6 +80,31 @@ $n=m$ и для любых $\forall i, j, k$  $1 \leqslant i, j, k \leqslant m$,
             2 & -2 & 4 & -3 & 0
         \end{pmatrix}
 \end{equation*}
+
+\subsection{Решение}
+Найдём минимумы по строкам и максимумы по столбцам:
+\begin{equation}
+    \alpha_1 = 1, 
+    \alpha_2 = -1,
+    \alpha_3 = -3, 
+\end{equation}
+\begin{equation}
+    \beta_1 = 5,
+    \beta_2 = 4,
+    \beta_3 = 4,
+    \beta_4 = 5,
+    \beta_5 = 1
+\end{equation}
+
+Найдём $max(\alpha_i), i=\overline{1, 3}$ и $min(\beta_j), j=\overline{1, 4} $:
+\begin{equation}
+    \alpha = 1, i_0 = 1
+    \beta = 1, j_0 = 5
+\end{equation}
+
+Верхнее и нижние значения игры совпадают, \par
+следовательно задача разрешима в чистых стратегиях. \par
+Оптимальные стратегия для первого - 1, для второго - 5
 
 \chapter{Смешанные стратегии}
 \section{Задача 9}
@@ -59,4 +124,24 @@ $n=m$ и для любых $\forall i, j, k$  $1 \leqslant i, j, k \leqslant m$,
             2& 8 & 2
         \end{pmatrix}
 \end{equation*}
+
+\subsection{Решение}
+Найдём верхние и нижние значения игры по формулe:
+\begin{equation}
+    \beta(\overline{p}, \overline{q}) = \alpha(\overline{p}, \overline{q}) = \sum_{i=1}^n\sum_{j=1}^mH(i,j) p_i q_j
+\end{equation}
+
+\begin{equation}
+\begin{split}
+    \alpha(p, q) = \beta(p, q) = (14*0.25*0.33) + (-4*0.25*0.33) + (2*0.25*0.33) + \\
+    + (-4*0*0.33) + (8*0*0.33) + (8*0*0.33) + \\
+    + (4*0.25*0.33) + (4*0.25*0.33) + (4*0.25*0.33) + \\ + (2*0.5*0.33) + (8*0.5*0.33) + (2*0.5*0.33) = 4
+\end{split}
+\end{equation}
+
+\begin{equation}
+    \alpha(p, q) = \beta(p, q) = I
+\end{equation}
+Поэтому стратегии $p$ и $q$ являются решением матричной игры для $H$
+
 \end{document}
