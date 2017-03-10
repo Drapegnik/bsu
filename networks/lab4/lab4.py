@@ -97,7 +97,7 @@ def address_to_bin(address):
     """
     convert address to binary
     :param address: string address
-    :return: binary string addres s
+    :return: binary string address
     """
     address_list = map(lambda x: int(x), address.split('.'))
     bin_list = map(_to_bin, address_list)
@@ -120,26 +120,24 @@ def get_type(address):
     return type
 
 
-def get_addres_parts(ip, mask):
+def get_address_parts(ip, mask):
     """
     extract net and host parts of ip with mask info
     :param ip: string
     :param mask: string
     :return: string net, string host, int net_count, string count_string
     """
-    ip_list = ip.split('.')
-    mask_list = mask.split('.')
-    net_size = 0
-    for octet in mask_list:
-        if octet != '255':
-            break
-        net_size += 1
 
-    net = '.'.join(ip_list[:net_size])
-    host = '.'.join(ip_list[net_size:])
-    bit_count = OCTET_LEN * (4 - net_size)
-    net_count = 2 ** bit_count - 2
-    count_string = '2^{0}-2'.format(bit_count)
+    ip_bin_str = address_to_bin(ip).replace('.', '')
+    mask_bin_str = address_to_bin(mask).replace('.', '')
+
+    net_size = mask_bin_str.rfind('1') + 1
+    host_size = ADDR_LEN - net_size
+
+    net = _address_from_bin_list(_split_bin_str_on_ocsets(ip_bin_str[:net_size] + '0' * host_size))
+    host = _address_from_bin_list(_split_bin_str_on_ocsets('0' * net_size + ip_bin_str[-host_size:]))
+    net_count = 2 ** host_size - 2
+    count_string = '2^{0}-2'.format(host_size)
     return net, host, net_count, count_string
 
 
@@ -271,9 +269,9 @@ for i in range(n):
     out_file.write('ip | `{0}` | `{1}`\n'.format(ip, address_to_bin(ip)))
     out_file.write('mask | `{0}` | `{1}`\n'.format(mask, address_to_bin(mask)))
 
-    net, host, net_count, count_string = get_addres_parts(ip, mask)
+    net, host, net_count, count_string = get_address_parts(ip, mask)
     out_file.write('net part | `{0}` | `{1}`\n'.format(net, address_to_bin(net)))
-    out_file.write('host part | `.{0}` | `.{1}`\n'.format(host, address_to_bin(host)))
+    out_file.write('host part | `{0}` | `{1}`\n'.format(host, address_to_bin(host)))
     out_file.write('count of nets | `{0}` | `{1}`\n'.format(net_count, count_string))
 
 # task4
