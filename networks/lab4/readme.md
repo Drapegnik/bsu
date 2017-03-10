@@ -34,7 +34,7 @@
 * Результаты представить в виде таблицы.
 
 ## Выполнение
-
+* required `python` ~ `2.7.10`
 * create `input.txt` for your option in the following format:
 ```
 4 <-- number of inputs for task1

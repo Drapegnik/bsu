@@ -1,0 +1,57 @@
+\newcommand*{\jobtitle}[1]{\gdef\@jobtitle{#1}}
+\newcommand*{\@jobtitle}{}
+
+\newcommand*{\labnum}[1]{\gdef\@labnum{#1}}
+\newcommand*{\@labnum}{}
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+    \begin{center}
+         \textbf{МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+    \end{center}
+    \begin{center}
+         \textbf{БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+    \end{center}
+    \begin{center}
+         \textbf{Факультет прикладной математики и информатики}
+    \end{center}
+    \begin{center}
+        Кафедра многопроцессорных систем и сетей
+    \end{center}
+    
+    \vspace{9em}
+    
+    \begin{center}
+        \textbf{\@jobtitle}
+    \end{center}
+    
+    \vspace{2em}
+    
+    \begin{center}
+        Лабораторная работа №{\@labnum}
+    \end{center}
+    
+    \vspace{4em}
+    
+    \begin{flushright}
+        Пажитных Ивана Павловича\\
+        студента 3 курса 1 группы\\
+        специальность "информатика"\\
+    \end{flushright}
+    
+    \vspace{1em}
+    
+    \begin{flushright}
+         \textbf{Преподаватель}:\\
+        Синяк Василий Сергеевич\\
+    \end{flushright}
+    
+    \vfill
+    
+    \begin{center}
+        Минск, 2016
+    \end{center}
+\end{titlepage}
+\newpage
+}

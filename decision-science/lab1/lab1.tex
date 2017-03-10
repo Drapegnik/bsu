@@ -1,0 +1,62 @@
+\documentclass[a4paper,14pt]{extreport}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[figure,table]{totalcount}
+\usepackage{subcaption}
+
+\usepackage{../packages/bsumain}
+\usepackage{../packages/titlepage}
+\usepackage{blindtext}
+
+% \newcommand{\quotes}[1]{``#1''}
+
+\jobtitle{Матричные игры}
+\labnum{1}
+
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+
+\chapter{Разрешимость в чистых стратегиях}
+\section{Задача 1f}
+\subsection{Условие}
+
+Показать, что матричная игра с матрицей $H=(h_{ij})_{nxm}$ имеет решение \par
+в чистых стратегиях, и найти такое решение, если: \par 
+$n=m$ и для любых $\forall i, j, k$  $1 \leqslant i, j, k \leqslant m$, имеет место тождество: \par
+\begin{equation*}
+    h_{ij}+h_{jk} + h_{ki} = 0
+\end{equation*}
+
+\section{Задача 2d}
+\subsection{Условие}
+
+Найти решение матричной игры с с матрицей $H=(h_{ij})_{nxm}$, если: 
+\begin{equation*}
+    H = \begin{pmatrix} 
+            2 & 4 & 1 & 5 & 1 \\ 
+            5 & 2 & 3 & 0 & -1 \\
+            2 & -2 & 4 & -3 & 0
+        \end{pmatrix}
+\end{equation*}
+
+\chapter{Смешанные стратегии}
+\section{Задача 9}
+\subsection{Условие}
+Проверить, являются ли данные смешанные стратегии и значение игры:
+\begin{equation*}
+    p = \begin{pmatrix}\frac{1}{4} & 0 & \frac{1}{4} & \frac{1}{2} \end{pmatrix}, 
+    q = \begin{pmatrix}\frac{1}{3} & \frac{1}{3} & \frac{1}{3} \end{pmatrix},
+    I = 4.
+\end{equation*} \par
+решением матричной игры с выигрышами:
+\begin{equation*}
+    H = \begin{pmatrix} 
+            14 & -4 & 2 \\
+            -4 & 8 & 8 \\
+            4 & 4 & 4 \\
+            2& 8 & 2
+        \end{pmatrix}
+\end{equation*}
+\end{document}
