@@ -6312,20 +6312,6 @@
 								"$ref": "AAAAAAFaxEdyzROVfiI="
 							},
 							"visibility": "public"
-						},
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFaxGuAWRniqnY=",
-							"_parent": {
-								"$ref": "AAAAAAFaxGEdvBVRyYA="
-							},
-							"source": {
-								"$ref": "AAAAAAFaxGEdvBVRyYA="
-							},
-							"target": {
-								"$ref": "AAAAAAFaxGoryBkd8QA="
-							},
-							"visibility": "public"
 						}
 					],
 					"visibility": "public",

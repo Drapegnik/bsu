@@ -1,19 +1,19 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from Figure import Figure
-from AsymmetricShape import AsymmetricShape
 
-class Shape(Figure, AsymmetricShape):
-    def __init__(self):
-        self.bg_color = None
 
-    def render(self, ):
+class Shape(Figure):
+    def __init__(self, location=None, border_color=None, bg_color=None):
+        Figure.__init__(self, location, border_color)
+        self.bg_color = bg_color
+
+    def render(self):
         pass
 
-    def get_bg_color(self, ):
-        pass
+    def get_bg_color(self):
+        return self.bg_color
 
     def set_bg_color(self, value):
-        pass
-
+        self.bg_color = value

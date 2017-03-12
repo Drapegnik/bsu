@@ -1,23 +1,23 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+
 
 class Figure:
-    def __init__(self):
-        self.location = None
-        self.border_color = None
+    def __init__(self, location=None, border_color=None):
+        self.location = location
+        self.border_color = border_color
 
-    def render(self, ):
+    def render(self):
         pass
 
-    def get_location(self, ):
-        pass
+    def get_location(self):
+        return self.location
 
     def set_location(self, value):
-        pass
+        self.location = value
 
-    def get_border_color(self, ):
-        pass
+    def get_border_color(self):
+        return self.border_color
 
     def set_border_color(self, value):
-        pass
-
+        self.border_color = value
