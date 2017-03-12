@@ -1,9 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from LineSegment import LineSegment
+from RegularShape import RegularShape
 
-class Ray(LineSegment):
+class Circle(RegularShape):
     def __init__(self):
         pass
 
