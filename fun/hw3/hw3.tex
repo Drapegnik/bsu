@@ -1,0 +1,228 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[document]{ragged2e}
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+
+\begin{titlepage}
+
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\Large \bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  {\large
+  Домашняя работа №3 \\
+  студента 2 курса 1 группы \\}
+\end{centering}
+\centerline{\large \bf Пажитных Ивана Павловича}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Дайняк Виктор \\ Владимирович}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\Large \bf Минск 2016}
+
+\end{titlepage}
+
+\begin{document}
+	\section*{1.
+	$$x_0=(4,-1,2,0,\dots); L=\{x|\sum_{k=1}^{\infty}\frac{x_k}{2^k}=x_1-2x_2=0 \}$$}
+	\textbf{Решение}\\ \\
+\begin{equation}
+	\begin{cases}
+		$$x_1 \frac{1}{2}+x_2 \frac{1}{4}+\dots+x_k \frac{x_k}{2^k}+\dots=0$$\\
+		$$x_1 -2x_2 =0$$\\
+	\end{cases}
+	\end{equation}
+	$a=\left(\frac{1}{2}, \frac{1}{4},\dots, \frac{1}{2^k},\dots \right) $\\ \\
+	$b=(1, -2,0,\dots,0,\dots)$\\ \\
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=2$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=6$\\ \\
+	$(a,a)=\sum_{k=1}^{\infty}\frac{x_k}{2^{2k}}=\frac{1}{3} $\\ \\
+	$(b,b)=1+4=5$\\ \\
+	$(a,b)=\frac{1}{2}-2*\frac{1}{4} =0$\\ \\
+	$\alpha=6,\ \ \beta=\frac{6}{5}$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=\left(-\frac{1}{5};-\frac{1}{10};\frac{5}{4};\dots;-\frac{3}{2^k};\dots \right)$
+	
+	\section*{2.
+	$$x_0=(-2,1,0,2,0,-18,0,\dots); L=\{x|\sum_{k=1}^{\infty}\frac{x_k}{3^k}=x_1-x_4+9x_6=0 \}$$}
+	\textbf{Решение}\\ \\
+	$a=\left(\frac{1}{3}, \frac{1}{9},\dots, \frac{1}{3^k},\dots \right) $\\
+	\\
+	$b=(1, 0,0,-1,0,9,0\dots,0,\dots)$\\ \\
+	
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=-\frac{5}{9}$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=-166$\\ \\
+	$(a,a)=\sum_{k=1}^{\infty}\frac{x_k}{3^{2k}}=\frac{1}{8} $ \\ \\
+	$(a,b)=\frac{1}{3}$
+	$(b,b)=1+1+81=83 $\\ \\
+	$\alpha=0,\ \ \beta=-2$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(0,-1,0,\dots,0,\dots)$
+	
+	
+	\section*{3.
+	$$x_0=(1,1,0,0,\dots); L=\{x|x_1+x_3=x_2-x_4=0 \};\ P_k=\frac{1}{2^k}$$}
+	\textbf{Решение}\\ \\
+	$a=(2,0,8,0,\dots)$\\ \\
+	$b=(0,4,0,-16,0,\dots)$\\ \\
+		
+		$(x_0, a)=\alpha(a,a)+\beta(a,b)=1$\\ \\
+		$(x_0, b)=\alpha(a,b)+\beta(b,b)=1$\\ \\
+		$(a,a)=4*\frac{1}{2}+64*\frac{1}{8}=10 $
+		$(b,b)=16*\frac{1}{4}+256*\frac{1}{16}=20$\\ \\
+		$(a,b)=0$\\ \\
+		$\alpha=1/20,\ \ \beta=1/20$\\ \\
+		$x = x_0 - (\alpha a+\beta b)$\\ \\
+		\textbf{Ответ}\\ \\
+		$x=(4/5,4/5,-4/5,4/5,0,\dots,0,\dots)$
+	
+	
+	\section*{4.
+	$$x_0=(1,1,1,0,\dots); L=\{x|\sum_{k=1}^{\infty}\frac{x_k}{3^k}=x_2-3x_3=0 \}$$}
+	\textbf{Решение}\\ \\
+	$a=(1/3,1/9,1/27,0,\dots)$\\ \\
+	$b=(0,1,-3,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=13/27$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=-2$\\ \\
+	$(a,a)=1/8 $
+	$(b,b)=1+9=10$\\ \\
+	$(a,b)=\frac{1}{9}-3*\frac{1}{27}=0$\\ \\
+	$\alpha=104/27,\ \ \beta=-1/5$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(1-\frac{104}{3^4},\frac{6}{5}-\frac{104}{3^5},\frac{2}{5}-\frac{104}{3^6},-\frac{104}{3^7},\dots)$	
+	
+	
+	\section*{5.
+	$$x_0=(1,1/2,1/4,\dots,1/2^k,\dots); L=\{x|x_1-x_2=x_3+4x_5=0 \}$$}
+	\textbf{Решение}\\ \\
+	$a=(1,-1,0,\dots)$\\ \\
+	$b=(0,0,1,0,4,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=1/2$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=1/2$\\ \\
+	$(a,a)=1+1=2 $
+	$(b,b)=1+16=17$\\ \\
+	$(a,b)=0$\\ \\
+	$\alpha=1/2,\ \ \beta=1/68$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(1/2,1,1/4,7/68,1/16,-47/64,1/2^6\dots)$	
+	
+	
+	\section*{6.
+	$$x_0=(1,1,1,0,\dots); L=\{x|x_1-x_3=x_2+x_5=0 \};\ P_k=2^k;$$}
+	\textbf{Решение}\\ \\
+	$a=(1/2,0,-1/8,\dots)$\\ \\
+	$b=(0,1/4,0,0,1/32,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=0$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=1$\\ \\
+	$(a,a)=\frac{1}{2}*\frac{1}{4}+\frac{1}{8}*\frac{1}{64}=\frac{5}{8} $
+	$(b,b)=\frac{1}{4}*\frac{1}{16}+\frac{1}{32}*\frac{1}{1024}=\frac{9}{32}$\\ \\
+	$(a,b)=0$\\ \\
+	$\alpha=0,\ \ \beta=32/9$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(1,1/9,1,0,-1/9,0,\dots)$	
+		
+	
+	\section*{7.
+	$$x_0=(1,1,1,0,\dots); L=\{x|\sum_{k=3}^{\infty}\frac{x_k}{5^k}=x_1-3x_2=0 \};$$}
+	\textbf{Решение}\\ \\
+	$a=(0,0,1/5^3,\dots)$\\ \\
+	$b=(1,-3,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=1/5^3$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=-2$\\ \\
+	$(a,a)=1/5^4 24 $
+	$(b,b)=10$\\ \\
+	$(a,b)=0$\\ \\
+	$\alpha=120,\ \ \beta=-1/5$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(6/5,2/5,1/25,-24/5^3,-24/5^4,\dots)$
+	
+	
+	\section*{8.
+	$$x_0=(1,1,0,1,0,\dots); L=\{x|\sum_{k=3}^{\infty}\frac{x_k}{2^k}=x_1+x_2=0 \};$$}
+	\textbf{Решение}\\ \\
+	$a=(0,0,1/2^3,1/2^4\dots)$\\ \\
+	$b=(1,1,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=1/2^4$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=2$\\ \\
+	$(a,a)=1/48 $
+	$(b,b)=1+1=2$\\ \\
+	$(a,b)=0$\\ \\
+	$\alpha=3,\ \ \beta=1$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(0,0,-3/8,13/16,-3/25,\dots)$		
+	
+	
+	\section*{9.
+	$$x_0=(1/2,1/4,1/8,\dots); L=\{x|\sum_{k=1}^{\infty}\frac{x_k}{3^k}=x_1-9x_5=0 \};$$}
+	\textbf{Решение}\\ \\
+	$a=(1/3,1/9,1/3^3,\dots)$\\ \\
+	$b=(1,0,9,0\dots)$\\ \\
+	
+	$(x_0, a)=\alpha(a,a)+\beta(a,b)=1/5$\\ \\
+	$(x_0, b)=\alpha(a,b)+\beta(b,b)=-5/8$\\ \\
+	$(a,a)=1/8 $
+	$(b,b)=1+81=82$\\ \\
+	$(a,b)=0$\\ \\
+	$\alpha=8/5,\ \ \beta=-5/656$\\ \\
+	$x = x_0 - (\alpha a+\beta b)$\\ \\
+	\textbf{Ответ}\\ \\
+	$x=(-506/19680,13/180,27/20,\dots)$	
+		
+		
+		\section*{10.
+		$$x_0=(-3,7,0,1,0,\dots); L=\{x|\sum_{k=1}^{\infty}\frac{x_k}{2^k}=x_1+x_2=0 \};$$}
+		\textbf{Решение}\\ \\
+		$a=(1/2,1/4,1/8,\dots)$\\ \\
+		$b=(1,1,0\dots)$\\ \\
+		
+		$(x_0, a)=\alpha(a,a)+\beta(a,b)=5/16$\\ \\
+		$(x_0, b)=\alpha(a,b)+\beta(b,b)=4$\\ \\
+		$(a,a)=1/3   $
+		$(b,b)=1+1=2   $
+		$(a,b)=3/4$\\ \\
+		$\alpha=-114/5,\ \ \beta=211/20$\\ \\
+		$x = x_0 - (\alpha a+\beta b)$\\ \\
+		\textbf{Ответ}\\ \\
+		$x=(-43/20,43/20,-114/40,194/80,\dots)$	
+\end{document}

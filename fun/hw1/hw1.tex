@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+\begin{titlepage}
+
+
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\Large \bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  {\large
+  Домашняя работа №1 \\
+  студента 2 курса 1 группы \\}
+\end{centering}
+\centerline{\large \bf Пажитных Ивана Павловича}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Дайняк Виктор \\ Владимирович}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\Large \bf Минск 2016}
+
+\end{titlepage}
+
+\restoregeometry
+\begin{document}
+
+\section{№1.8}
+
+\begin{equation*}
+    \int_0^1 |x(t)| dt + max_{t\in[0;1]}|x'(t)|
+\end{equation*}
+
+\noindent 1)
+\begin{aligned}
+\begin{equation*}
+    \int_0^1 |x(t)| dt + max_{t\in[0;1]}|x'(t)| = 0 \Leftrightarrow x = 0
+\end{equation*}
+\end{aligned}
+
+\noindent 2)
+\begin{aligned}
+\begin{equation*}
+    \int_0^1 |\alpha x(t)| dt + max_{t\in[0;1]}|\alpha x'(t)| = |\alpha| \left( \int_0^1 |x(t)| dt + max_{t\in[0;1]}|x'(t)| \right)
+\end{equation*}
+\end{aligned}
+
+\noindent 3)
+\begin{aligned}
+\begin{equation*}
+    \int_0^1 |x(t)+y(t)| dt + max_{t\in[0;1]}|x'(t)+y'(t)| \leq \int_0^1 |x(t)| dt + max_{t\in[0;1]}|x'(t)| + \int_0^1 |y(t)| dt + max_{t\in[0;1]}|y'(t)|
+\end{equation*}
+\end{aligned}
+\\
+\\
+\\
+\section{№2.8}
+\begin{equation*}
+    x_n(t) = \sqrt[n]{1+t^{2n}}, t \in [0;2]
+\end{equation*}
+
+\begin{aligned}
+\begin{equation*}
+    \forall $ fix $ t \in [0;2] x_n(t) = \sqrt[n]{1+t^{2n}} \xrightarrow[n \to \infty] {} t^2 = a(t) \\
+    
+    \begin{center}
+    ||x_n-a||_{C[0;2]}=max_{t\in[0;2]}|\sqrt[n]{1+t^{2n}}-t^2| \\
+    \end{center}
+    
+    (\sqrt[n]{1+t^{2n}}-t^2)' = \frac{1}{n}(1+t^{2n})^{\frac{1}{n}-1}*2nt^{2n-1}-2t=2t^{2n-1}*(1+t^{2n})^{\frac{1}{n}-1}-2t \\
+    
+    2t^{2n-1}*(1+t^{2n})^{\frac{1}{n}-1}-2t = 0 \Rightarrow t_1=0, t_2=2 \\
+   
+    \begin{center}
+    |\sqrt[n]{1+t^{2n}}-t^2|_{t=0} = 1 \Rightarrow x_n{t} $ в C[0;2] не сходится к $a(t)=t^2 \\
+    \end{center}
+\end{equation*}
+\end{aligned}
+\\
+\\
+\\
+\section{№3.8}
+\begin{equation*}
+    x_n = \left(\frac{n}{1+n},\frac{n}{1+2n},\ldots,\frac{n}{1+kn},\ldots\right)
+\end{equation*}
+
+\begin{aligned}
+\begin{equation*}
+    x_n = \left(\frac{n}{1+n},\frac{n}{1+2n},\ldots,\frac{n}{1+kn},\ldots\right) = \left(\frac{1}{\frac{1}{n}+1},\frac{1}{\frac{1}{n}+2},\ldots,\frac{1}{\frac{1}{n}+k},\ldots\right) \Rightarrow \\ \Rightarrow x_n $ покординатно сходится к $ a = (1, \frac{1}{2}, \ldots, \frac{1}{k}, \ldots) a \not\in l_5, $ т.к. $ \sum\limits_{i=1}^\infty |\frac{1}{i}|^5 \Rightarrow x_n $ расходится в $ l_5
+\end{equation*}
+\end{aligned}
+
+\end{document}

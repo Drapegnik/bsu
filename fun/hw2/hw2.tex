@@ -1,0 +1,171 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[document]{ragged2e}
+\documentclass[oneside, final, 11pt]{article}
+\usepackage[paper=a4paper, margin=2cm, bottom=2cm]{geometry}
+\begin{titlepage}
+
+
+\newgeometry{margin=1cm}
+
+\centerline{\large \bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+\bigskip
+\bigskip
+\centerline{\large \bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+\bigskip
+\bigskip
+\centerline{\large \bf ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}
+\vfill
+\vfill
+\vfill
+\centerline{\Large \bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ}
+\bigskip
+\bigskip
+\vfill
+\begin{centering}
+  {\large
+  Домашняя работа №2 \\
+  студента 2 курса 1 группы \\}
+\end{centering}
+\centerline{\large \bf Пажитных Ивана Павловича}
+\vfill
+\vfill
+\hfill
+\begin{minipage}{0.25\textwidth}
+  {\large{\bf Преподаватель} \\
+{\it Дайняк Виктор \\ Владимирович}}
+\end{minipage}
+\vfill
+\vfill
+\centerline{\Large \bf Минск 2016}
+
+\end{titlepage}
+
+\restoregeometry
+\begin{document}
+
+\section{№1.8}
+\begin{equation*}
+    a=1, b=1, x(t) = \lambda \int_{-1}^1(t^2-1)sx(s) ds+t
+\end{equation*}
+
+\begin{flushleft}
+\begin{equation*}
+  F(x) = \lambda \int_{-1}^1(t^2-1)sx(s) ds+t \\
+  
+  \begin{itemize}
+    \item C[-1,1]: \\
+  \end{itemize}
+  {max}_{t\in[-1,1]} |F(x)-F(y)| = {max}_{t\in[-1,1]} \left|\int_{-1}^1(t^2-1)s(x(s)-y(s) ds\right| \leq \\
+  \leq |\lambda| \int_{-1}^1|s|*{max}_{s\in[-1,1]}|x(s)-y(s)| ds = \lambda {max}_{s\in[-1,1]}|(x(s)-y(s)| = \lambda ||x(s)-y(s)|| \\
+  \alpha = |\lambda| < 1 \\
+  \text{Пусть} \lambda = \frac{1}{14} \\
+  ||x_n - a|| \leq \frac{\alpha^n}{1-\alpha}||x_0 - x_1|| \\
+  x_0 = 0 \\
+  x_1 = F(x_0) = t \\
+  \alpha = \frac{1}{14}\\
+  ||x_0 - x_1|| = {max}_{t\in[-1,1]}|t-0| = 1 \\
+  \left(\frac{1}{14}\right)^n\frac{14}{13} < 0.001 \\
+  n > \left(\frac{\ln{\frac{13}{14}*0.001}}{\ln{14}}\right) \approx 2.645 \\
+  n = 3 \\
+  x_2 = F(x_1) = F(t) = \frac{1}{14}(t^2-1)\int_{-1}^1 s^2 ds +t = \frac{1}{14}(t^2-1) \left[\frac{s^3}{3}\right]_{-1}^1 +t = \frac{1}{21}(t^2-1)+t\\
+  x_3 = F(x_2) = F\left(\frac{1}{21}(t^2-1)+s\right) = \frac{1}{14}(t^2-1)\int_{-1}^1 s\left(\frac{1}{21}(s^2-1)+t\right) ds = \frac{1}{21*14}(t^2-1)\left[\frac{s^4}{4}-\frac{s^2}{2}+21\frac{s^3}{3}\right]_{-1}^1 \Rightarrow\\
+  x_3 = \frac{1}{21}(t^2-1)+t\\
+  
+  \begin{itemize}
+    \item \text{Точное:}\\
+  \end{itemize}
+  x(t) = \lambda(t^2-1) \int_{-1}^1sx(s) ds+t \\
+  c = \int_{-1}^1sx(s) ds \Rightarrow \\
+  x(t) =  \lambda(t^2-1)c+t \\
+  c = \int_{-1}^1s\left(\lambda(s^2-1)c+s\right)ds = \left[c\lambda\frac{s^4}{4}-c\lambda\frac{s^2}{2}+\frac{s^3}{3}\right]_{-1}^1 = \frac{2}{3} \Rightarrow \\
+  x(t)_ = \frac{1}{14}(t^2-1)\frac{2}{3}+t = \frac{1}{21}(t^2-1)+t\\
+  ||x-x_3|| = {max}_{t\in[-1,1]}\left(\frac{1}{21}(t^2-1)+t-\frac{1}{21}(t^2-1)-t\right)=0\\
+  
+  \begin{itemize}
+    \item L_2[-1,1]: \\
+  \end{itemize}
+  K(t,s) = \lambda(t^2-1)s \\
+  \int_{-1}^1 \int_{-1}^1 \left|K(t,s)\right|^2 ds dt = \lambda^2 \int_{-1}^1 \int_{-1}^1 (t^2-1)^2 s^2 ds dt = \lambda^2 \int_{-1}^1 (t^2-1)^2 dt \int_{-1}^1 s^2 ds = \frac{2}{3}\lambda^2*\frac{16}{15} = \frac{32}{45}\lambda^2 < + \infty \\
+  \text{F(x) является сжимающим, если }_{} \frac{4\sqrt{2}|\lambda|}{3\sqrt{3}} < 1 \Rightarrow |\lambda| < \frac{3\sqrt{3}}{4\sqrt{2}} \\
+  \text{Пусть }\lambda = \frac{1}{14} \\
+  _{}\frac{\left(\frac{4\sqrt{2}}{3\sqrt{3}}\frac{1}{14}\right)^n}{1-\frac{4\sqrt{2}}{3\sqrt{3}}\frac{1}{14}} \left(\int_{-1}^1(x_1(t)-x_0(t))^2dt\right)^{1\over2} < 0.001 \Rightarrow\\
+  _{}\frac{\left(\frac{2\sqrt{2}}{21\sqrt{3}}\frac{1}{14}\right)^n}{1-\frac{2\sqrt{2}}{21\sqrt{3}}\frac{1}{14}}*\sqrt{\frac{2}{3}} < 0.001 \\
+  n > 2.486 \\
+  n = 3 \\
+  
+\end{equation*}
+\end{flushleft}
+
+\section{№2.8}
+\begin{flushleft}
+\begin{equation*}
+    g(x) = 2x^2+8x-3=0 \\
+    x = - \frac{2x^2-3}{8} \\
+    F(x) = - \frac{2x^2-3}{8} \\
+    \alpha = max_{x\in[a;b]}|F'(x)|\\
+    F^{'}(x) = -\frac{4x}{8} = - \frac{x}{2}\\
+    |F^{'}(x)| < 1, |x| < 2 \\
+    \begin{cases}
+    ||x_0 - F(x_0)|| \leq r(1-\alpha(r)) \\
+    \alpha(r) < 1 \\
+    \end{cases}\\
+    \alpha(r) = max_{x\in[-r;r]}|F^{'}(x)| = \frac{r}{2},\\
+    x_1 = F(x_0) = \frac{3}{8} \\
+    \begin{cases}
+    \frac{3}{8} \leq r(1-\frac{r}{2})\\
+    \frac{r}{2} < 1\\
+    \end{cases}\\
+    $ Пусть $ r=1 \Rightarrow $ F - сжимающее, $ \alpha \leq \frac{1}{2} \\
+    ||x_n - \alpha|| \leq \frac{\alpha^n}{1-\alpha}||x_1 - x_0||\leq \left(\frac{1}{2}\right)^n*2*\frac{3}{8}\leq \frac{1}{100}\\
+    2^{-n} \leq 75^{-1} \\
+    n\ln{2} \geq \ln{75} \\
+    n \geq \frac{\ln{75}}{\ln{2}} \approx 6,229 \\
+    n = 7 \Rightarrow x_7 \text{является приближённым решением уравнения с заданной точностью, равной 0,01}\\
+    ||x||_p = (\int_a^b |x(t)|^p dt)^{\frac{1}{p}}, p \geq 1 \\
+\end{equation*}
+\end{flushleft}
+
+\section{№3.8}
+\begin{flushleft}
+\begin{equation*}
+    f(x)(t) = t \int_0^1 \frac{x(s)}{\sqrt[4]{s}} ds \\
+    f: E \rightarrow E, E = L_2[0;1]\\
+    ||F(x)-F(y)||_{L_2[0;1]} = \left( \int_0^1 \left|t \int_0^1 \frac{x(s)-y(s)}{\sqrt[4]{s}} ds \right|^2 dt\right)^{1\over2} \leq \left( \int_0^1 t^2 \left(\int_0^1 |x(s)-y(s)|^2 \frac{1}{\sqrt{s}} ds \right)dt\right)^{1\over2} \leq \\
+    \leq \left( \int_0^1 t^2 \left(\int_0^1 |x(s)-y(s)|^2 {max}_{s\in[0;1]} s^{1\over2} ds \right)dt\right)^{1\over2} = \left( \int_0^1 t^2 dt \right)^{1\over2} ||x-y|| = \frac{1}{\sqrt{3}} ||x-y||\\
+    \alpha = \frac{1}{\sqrt{3}} \\
+    x_0 = 0 \\
+    x_3=x_2=x_1=F(x_0) = 0\\
+    ||x_3 - a|| \left \frac{\alpha^3}{1-\alpha}||x_0 - x_1|| = 0
+\end{equation*}
+\end{flushleft}
+
+\section{№4.8}
+\begin{flushleft}
+\begin{equation*}
+    F: X \rightarrow Y \\
+    X = L_2[0;1], Y = L_2[0;1]\\
+    F(x) = tx(t^2) = [r=t^2] = \sqrt{r}x(r) \\
+    ||F(x)||_{L_2[0;1]} = \left( \int_0^1 |r^{1\over2}x(r)|^2dr\right)^{1\over2} = \left( \int_0^1 |r||x(r)|^2dr\right)^{1\over2} \leq \left( \int_0^1 {max}_{r\in[0;1]} |r||x(r)|^2dr\right)^{1\over2} = \left( \int_0^1 |x(r)|^2dr\right)^{1\over2} = \\
+    = ||x||_{L_2[0;1]} \Rightarrow \text{ если } ||x||_{L_2[0;1]} < \sigma, \text{ то }  ||F(x)||_{L_2[0;1]} < \sigma \Rightarrow \text{F непрервына в точке }x_0 \\
+    \varepsilon > 0, \text{покажем, что }\exists r(\varepsilon):\\
+    \forall x(t), y(t) \in L_2[0;1]\text{ таких, что }||x-y|| = \left( \int_0^1 |x(t)-y(t)|^2dt\right)^{1\over2} < \sigma, \text{ выполняется:}\\
+    ||F(x)-F(y)|| = \left( \int_0^1 |F(x)-F(y)|^2dt\right)^{1\over2} = \left( \int_0^1 |r^{1\over2}(x(r)-y(r))|^2 dr\right)^{1\over2}\\
+    |F(x)-F(y)| = |r^{1\over2}(x(r)-y(r))| \leq |x(r)-y(r)| \Rightarrow \varepsilon \leq \sigma \Rightarrow \text{F равномерно непрерывна} \\
+    ||F(x)-F(y)||_{L_2[0;1]} \leq c||x-y||_{L_2[0;1]} \\
+    ||F(x)-F(y)||_{L_2[0;1]} = \left( \int_0^1 |r^{1\over2}(x(r)-y(r))|^2 dr\right)^{1\over2} = \left( \int_0^1 |r||x(r)-y(r)|^2 dr\right)^{1\over2} \leq \\ 
+    \leq \left(\int_0^1 {max}_{z\in[0;1]}|r||x(r)-y(r)|^2 dr\right)^{1\over2} = ||x-y||, \\
+    \text{где с=1, таким образом F удовелтворяет условию Липшица}
+\end{equation*}
+\end{flushleft}
+
+\end{document}
