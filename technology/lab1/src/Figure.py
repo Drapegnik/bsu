@@ -7,7 +7,7 @@ class Figure:
         self.location = location
         self.border_color = border_color
 
-    def render(self):
+    def render(self, qp):
         pass
 
     def get_location(self):

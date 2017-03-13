@@ -13,7 +13,7 @@ class AsymmetricShape(Shape):
     def name():
         return 'Asymmetric Shape'
 
-    def render(self, ):
+    def render(self, qp):
         pass
 
     def get_points(self, ):

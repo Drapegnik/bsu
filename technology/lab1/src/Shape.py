@@ -9,7 +9,7 @@ class Shape(Figure):
         Figure.__init__(self, location, border_color)
         self.bg_color = bg_color
 
-    def render(self):
+    def render(self, qp):
         pass
 
     def get_bg_color(self):

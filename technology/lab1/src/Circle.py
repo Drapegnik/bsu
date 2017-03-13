@@ -12,5 +12,5 @@ class Circle(RegularShape):
     def name():
         return 'Circle'
 
-    def render(self):
+    def render(self, qp):
         pass

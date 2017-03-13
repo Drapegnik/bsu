@@ -12,5 +12,5 @@ class Ellipse(SymmetricShape):
     def name():
         return 'Ellipse'
 
-    def render(self):
+    def render(self, qp):
         pass

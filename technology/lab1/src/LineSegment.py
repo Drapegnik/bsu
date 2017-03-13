@@ -1,11 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPen
 
 from src.Figure import Figure
+from utils import midpoint
 
 
 class LineSegment(Figure):
-    def __init__(self, location=None, border_color=None, start_point=None, end_point=None):
+    def __init__(self, start_point=None, end_point=None, border_color=Qt.black):
+        location = midpoint(start_point, end_point)
         Figure.__init__(self, location, border_color)
         self.start_point = start_point
         self.end_point = end_point
@@ -14,8 +18,10 @@ class LineSegment(Figure):
     def name():
         return 'Segment'
 
-    def render(self):
-        pass
+    def render(self, qp):
+        pen = QPen(self.border_color, 2, Qt.SolidLine)
+        qp.setPen(pen)
+        qp.drawLine(self.start_point, self.end_point)
 
     def get_start_point(self):
         return self.start_point
