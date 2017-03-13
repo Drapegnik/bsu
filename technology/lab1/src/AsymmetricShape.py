@@ -15,4 +15,5 @@ class AsymmetricShape(Shape):
 
     def render(self, qp):
         qp.setPen(self.get_pen())
+        qp.setBrush(self.get_bg_color())
         qp.drawPolygon(QPolygon(self.points))
