@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Figure import Figure
+from src.Figure import Figure
 
 
 class LineSegment(Figure):
@@ -9,6 +9,10 @@ class LineSegment(Figure):
         Figure.__init__(self, location, border_color)
         self.start_point = start_point
         self.end_point = end_point
+
+    @staticmethod
+    def name():
+        return 'Segment'
 
     def render(self):
         pass

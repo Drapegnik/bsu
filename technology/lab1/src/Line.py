@@ -1,8 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from LineSegment import LineSegment
+from src.LineSegment import LineSegment
 
 
 class Line(LineSegment):
-    pass
+    @staticmethod
+    def name():
+        return 'Line'

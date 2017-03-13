@@ -2,18 +2,67 @@
 # -*- coding: utf-8 -*-
 
 from PyQt5.QtGui import QColor
-
+from PyQt5.QtWidgets import QLabel
+from PyQt5.QtWidgets import QRadioButton
+from PyQt5.QtWidgets import QVBoxLayout
 from PyQt5.QtWidgets import QWidget
+
+from src import *
 
 
 class SideBar(QWidget):
     def __init__(self, parent):
         super().__init__(parent)
-        p = self.palette()
-        p.setColor(self.backgroundRole(), QColor('lightgray'))
-        self.setPalette(p)
-        self.setAutoFillBackground(True)
+        self.parent = parent
+        self.parent.active = None
+        self.set_bg_color(QColor('lightgray'))
+        self.radios = self.get_buttons()
+        self.render_buttons()
         self.show()
 
-    def mousePressEvent(self, event):
-        print(event.pos())
+    @staticmethod
+    def get_buttons():
+        segment = QRadioButton(LineSegment.name())
+        line = QRadioButton(Line.name())
+        ray = QRadioButton(Ray.name())
+        polyline = QRadioButton(PolyLine.name())
+
+        asym = QRadioButton(AsymmetricShape.name())
+        reg = QRadioButton(RegularShape.name())
+        sym = QRadioButton(SymmetricShape.name())
+
+        circle = QRadioButton(Circle.name())
+        ellipse = QRadioButton(Ellipse.name())
+        return [segment, ray, line, polyline, asym, reg, sym, circle, ellipse]
+
+    def render_buttons(self):
+        layout = QVBoxLayout()
+        self.radios[0].setChecked(True)
+        self.parent.active = self.radios[0].text()
+        layout.addStretch(0)
+        layout.addWidget(QLabel('Figure:', self))
+
+        for btn in self.radios:
+            layout.addWidget(btn)
+
+        self.radios[0].toggled.connect(lambda: self.on_select(self.radios[0]))
+        self.radios[1].toggled.connect(lambda: self.on_select(self.radios[1]))
+        self.radios[2].toggled.connect(lambda: self.on_select(self.radios[2]))
+        self.radios[3].toggled.connect(lambda: self.on_select(self.radios[3]))
+        self.radios[4].toggled.connect(lambda: self.on_select(self.radios[4]))
+        self.radios[5].toggled.connect(lambda: self.on_select(self.radios[5]))
+        self.radios[6].toggled.connect(lambda: self.on_select(self.radios[6]))
+        self.radios[7].toggled.connect(lambda: self.on_select(self.radios[7]))
+        self.radios[8].toggled.connect(lambda: self.on_select(self.radios[8]))
+        self.setLayout(layout)
+
+    def on_select(self, btn):
+        if btn.isChecked():
+            self.parent.active = btn.text()
+            print(btn.text() + ': ' + str(btn.isChecked()))
+
+    def set_bg_color(self, color=QColor('white')):
+        p = self.palette()
+        p.setColor(self.backgroundRole(), color)
+        self.setPalette(p)
+        self.setAutoFillBackground(True)

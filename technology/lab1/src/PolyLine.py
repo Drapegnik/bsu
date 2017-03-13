@@ -6,6 +6,10 @@ class PolyLine:
     def __init__(self, segments=[]):
         self.segments = segments
 
+    @staticmethod
+    def name():
+        return 'Poly Line'
+
     def render(self):
         pass
 
