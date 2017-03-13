@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from src.AsymmetricShape import AsymmetricShape
 from src.Circle import Circle
 from src.Ellipse import Ellipse

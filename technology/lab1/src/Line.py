@@ -1,6 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
-from PyQt5.QtCore import Qt
 
 from src.LineSegment import LineSegment
 from utils import *

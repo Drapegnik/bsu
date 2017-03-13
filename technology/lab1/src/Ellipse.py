@@ -5,17 +5,21 @@ import math
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPen
 
-from src.Circle import Circle
+from src.Shape import Shape
 
 
-class Ellipse(Circle):
+class Ellipse(Shape):
     def __init__(self, location=None, point2=None, point3=None, border_color=None, bg_color=None):
-        Circle.__init__(self, location, point2, border_color, bg_color)
-        self.points.append(point3)
-        self.rady = math.hypot(
-            self.points[1].x() - self.get_location().x(),
-            self.points[1].y() - self.get_location().y()
+        Shape.__init__(self, location, border_color, bg_color, [point2, point3])
+        self.radx = math.hypot(
+            self.points[0].x() - self.get_location().x(),
+            self.points[0].y() - self.get_location().y()
         )
+        if point3 is not None:
+            self.rady = math.hypot(
+                self.points[1].x() - self.get_location().x(),
+                self.points[1].y() - self.get_location().y()
+            )
 
     @staticmethod
     def name():
