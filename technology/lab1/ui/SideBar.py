@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QInputDialog
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QRadioButton
 from PyQt5.QtWidgets import QVBoxLayout
@@ -39,6 +40,7 @@ class SideBar(QWidget):
         layout = QVBoxLayout()
         self.radios[0].setChecked(True)
         self.parent.active = self.radios[0].text()
+        self.parent.num = 3
         layout.addStretch(0)
         layout.addWidget(QLabel('Figure:', self))
 
@@ -58,8 +60,15 @@ class SideBar(QWidget):
 
     def on_select(self, btn):
         if btn.isChecked():
+            ok = False
+            if btn.text() in [PolyLine.name(), AsymmetricShape.name(), RegularShape.name(), SymmetricShape.name()]:
+                num, ok = QInputDialog.getInt(
+                    self, 'points dialog', 'enter a number of points', min=3)
+            if not ok:
+                num = 3
+            self.parent.num = num
+            print(self.parent.num)
             self.parent.active = btn.text()
-            print(btn.text() + ': ' + str(btn.isChecked()))
 
     def set_bg_color(self, color=QColor('white')):
         p = self.palette()

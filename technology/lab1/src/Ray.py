@@ -13,7 +13,5 @@ class Ray(LineSegment):
     def render(self, qp):
         super().render(qp)
 
-        pen = QPen(self.get_border_color())
-        pen.setWidth(10)
-        qp.setPen(pen)
+        qp.setPen(QPen(self.get_border_color(), 10))
         qp.drawPoint(self.get_end_point())

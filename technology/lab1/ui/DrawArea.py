@@ -54,6 +54,8 @@ class DrawArea(QWidget):
                 self.figures.append(Line(*self.points, self.geometry()))
             elif self.parent.active == Circle.name():
                 self.figures.append(Circle(*self.points))
+            elif self.parent.active == RegularShape.name():
+                self.figures.append(RegularShape(*self.points, self.parent.num))
             else:
                 self.update()
                 return
@@ -61,6 +63,16 @@ class DrawArea(QWidget):
         elif len(self.points) == 3:
             if self.parent.active == Ellipse.name():
                 self.figures.append(Ellipse(*self.points))
+            else:
+                self.update()
+                return
             self.drawling = False
-            pass
+        elif len(self.points) == self.parent.num:
+            if self.parent.active == AsymmetricShape.name():
+                self.figures.append(AsymmetricShape(self.points))
+            else:
+                self.update()
+                return
+            self.drawling = False
+
         self.update()

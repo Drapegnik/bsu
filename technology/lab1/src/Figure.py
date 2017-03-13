@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPen
 
 
 class Figure:
@@ -10,6 +11,9 @@ class Figure:
 
     def render(self, qp):
         pass
+
+    def get_pen(self):
+        return QPen(self.get_border_color(), 2, Qt.SolidLine)
 
     def get_location(self):
         return self.location

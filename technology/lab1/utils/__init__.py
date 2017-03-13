@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import math
+
 from PyQt5.QtCore import QPoint
 
 
@@ -17,3 +19,7 @@ def get_perpendicular_line(line, p):
 
 def get_y_from_x(line, x):
     return -(line[0]*x + line[2])/line[1]
+
+
+def get_distance(p1, p2):
+    return math.hypot(p1.x() - p2.x(), p1.y() - p2.y())

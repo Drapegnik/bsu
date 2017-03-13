@@ -19,9 +19,8 @@ class LineSegment(Figure):
         return 'Segment'
 
     def render(self, qp):
-        pen = QPen(self.border_color, 2, Qt.SolidLine)
-        qp.setPen(pen)
-        qp.drawLine(self.start_point, self.end_point)
+        qp.setPen(self.get_pen())
+        qp.drawLine(self.get_start_point(), self.get_end_point())
 
     def get_start_point(self):
         return self.start_point
