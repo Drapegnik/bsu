@@ -15,6 +15,7 @@ class DrawArea(QWidget):
         self.setToolTip('This is a Draw Area!')
         self.points = []
         self.figures = []
+        self.last_point = None
         self.drawling = False
         self.show()
 
@@ -45,7 +46,19 @@ class DrawArea(QWidget):
             self.drawling = True
 
         self.points.append(event.pos())
-        if len(self.points) == 2:
+        if len(self.points) > 2 and self.parent.active == PolyLine.name():
+            if len(self.points) <= self.parent.num:
+                self.figures[-1].add_segment(LineSegment(self.points[-2], self.points[-1]))
+            if len(self.points) == self.parent.num:
+                self.drawling = False
+        elif (len(self.points) - 1)*2 == self.parent.num:
+            if self.parent.active == SymmetricShape.name():
+                self.figures.append(SymmetricShape(self.points[0], self.points[1:], self.parent.num))
+            else:
+                self.update()
+                return
+            self.drawling = False
+        elif len(self.points) == 2:
             if self.parent.active == LineSegment.name():
                 self.figures.append(LineSegment(*self.points))
             elif self.parent.active == Ray.name():
@@ -55,7 +68,11 @@ class DrawArea(QWidget):
             elif self.parent.active == Circle.name():
                 self.figures.append(Circle(*self.points))
             elif self.parent.active == RegularShape.name():
-                self.figures.append(RegularShape(*self.points, self.parent.num))
+                self.figures.append(RegularShape(self.points[0], [self.points[1]], self.parent.num))
+            elif self.parent.active == PolyLine.name():
+                self.figures.append(PolyLine([LineSegment(*self.points)]))
+                self.update()
+                return
             else:
                 self.update()
                 return
@@ -67,7 +84,7 @@ class DrawArea(QWidget):
                 self.update()
                 return
             self.drawling = False
-        elif len(self.points) == self.parent.num:
+        if len(self.points) >= self.parent.num:
             if self.parent.active == AsymmetricShape.name():
                 self.figures.append(AsymmetricShape(self.points))
             else:

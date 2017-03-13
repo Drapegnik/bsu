@@ -4162,6 +4162,37 @@
 									"model": {
 										"$ref": "AAAAAAFaxHIC3x2ClKQ="
 									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFaxxMWkJRl5AU=",
+											"_parent": {
+												"$ref": "AAAAAAFaxHIC4h2LOtw="
+											},
+											"model": {
+												"$ref": "AAAAAAFaxxMWWpRfF6Y="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 517,
+											"top": 440,
+											"width": 175,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+_count_points()",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										}
+									],
 									"visible": true,
 									"enabled": true,
 									"lineColor": "#000000",
@@ -4174,7 +4205,7 @@
 									"left": 512,
 									"top": 435,
 									"width": 185,
-									"height": 10,
+									"height": 23,
 									"autoResize": false
 								},
 								{
@@ -4238,7 +4269,7 @@
 							"left": 512,
 							"top": 400,
 							"width": 185,
-							"height": 57,
+							"height": 58,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -5024,6 +5055,37 @@
 									"model": {
 										"$ref": "AAAAAAFaxHVZ8R+NQvc="
 									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFaxxNSMJSTxMA=",
+											"_parent": {
+												"$ref": "AAAAAAFaxHVZ8h+WR5g="
+											},
+											"model": {
+												"$ref": "AAAAAAFaxxNSApSNwV0="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 517,
+											"top": 536,
+											"width": 175,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+_count_points()",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										}
+									],
 									"visible": true,
 									"enabled": true,
 									"lineColor": "#000000",
@@ -5036,7 +5098,7 @@
 									"left": 512,
 									"top": 531,
 									"width": 185,
-									"height": 10,
+									"height": 23,
 									"autoResize": false
 								},
 								{
@@ -5100,7 +5162,7 @@
 							"left": 512,
 							"top": 496,
 							"width": 185,
-							"height": 57,
+							"height": 58,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -5258,7 +5320,7 @@
 								"$ref": "AAAAAAFaxHVZ8R+Pxvc="
 							},
 							"lineStyle": 1,
-							"points": "604:495;604:457",
+							"points": "604:495;604:458",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -6660,6 +6722,22 @@
 						}
 					],
 					"visibility": "public",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFaxxMWWpRfF6Y=",
+							"_parent": {
+								"$ref": "AAAAAAFaxHIC3x2ClKQ="
+							},
+							"name": "_count_points",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"concurrency": "sequential",
+							"isQuery": false,
+							"isAbstract": false
+						}
+					],
 					"isAbstract": false,
 					"isFinalSpecialization": false,
 					"isLeaf": false,
@@ -6718,6 +6796,22 @@
 						}
 					],
 					"visibility": "public",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFaxxNSApSNwV0=",
+							"_parent": {
+								"$ref": "AAAAAAFaxHVZ8R+NQvc="
+							},
+							"name": "_count_points",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"concurrency": "sequential",
+							"isQuery": false,
+							"isAbstract": false
+						}
+					],
 					"isAbstract": false,
 					"isFinalSpecialization": false,
 					"isLeaf": false,

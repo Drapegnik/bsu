@@ -10,8 +10,12 @@ class PolyLine:
     def name():
         return 'Poly Line'
 
-    def render(self):
-        pass
+    def render(self, qp):
+        for seg in self.segments:
+            seg.render(qp)
+
+    def add_segment(self, value):
+        self.segments.append(value)
 
     def get_segments(self):
         return self.segments

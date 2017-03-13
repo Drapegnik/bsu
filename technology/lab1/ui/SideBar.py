@@ -61,9 +61,13 @@ class SideBar(QWidget):
     def on_select(self, btn):
         if btn.isChecked():
             ok = False
+            min, step = 3, 1
+
             if btn.text() in [PolyLine.name(), AsymmetricShape.name(), RegularShape.name(), SymmetricShape.name()]:
+                if btn.text() == SymmetricShape.name():
+                    min, step = 4, 2
                 num, ok = QInputDialog.getInt(
-                    self, 'points dialog', 'enter a number of points', min=3)
+                    self, 'points dialog', 'enter a number of points', min=min, step=step)
             if not ok:
                 num = 3
             self.parent.num = num
