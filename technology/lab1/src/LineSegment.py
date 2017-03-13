@@ -8,7 +8,7 @@ from utils import midpoint
 
 
 class LineSegment(Figure):
-    def __init__(self, start_point=None, end_point=None, border_color=Qt.black):
+    def __init__(self, start_point=None, end_point=None, border_color=None):
         location = midpoint(start_point, end_point)
         Figure.__init__(self, location, border_color)
         self.start_point = start_point

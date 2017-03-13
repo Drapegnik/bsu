@@ -15,7 +15,7 @@ class DrawArea(QWidget):
         self.setToolTip('This is a Draw Area!')
         self.points = []
         self.figures = []
-        self.moving = False
+        self.drawling = False
         self.show()
 
     def paintEvent(self, e):
@@ -39,29 +39,28 @@ class DrawArea(QWidget):
             fig.render(qp)
 
     def mousePressEvent(self, event):
-        if not self.moving:
+        if not self.drawling:
             self.points = []
             self.update()
+            self.drawling = True
 
-    def mouseMoveEvent(self, event):
-        if not self.moving:
-            self.points = []
-            self.points.append(event.pos())
-            self.update()
-            self.moving = True
-            # print('move')
-
-    def mouseReleaseEvent(self, event):
-        if self.moving:
-            self.points.append(event.pos())
-            if len(self.points) == 2:
-                if self.parent.active == LineSegment.name():
-                    self.figures.append(LineSegment(*self.points))
-                elif self.parent.active == Ray.name():
-                    self.figures.append(Ray(*self.points))
-                elif self.parent.active == Line.name():
-                    self.figures.append(Line(*self.points, self.geometry()))
-                elif self.parent.active == Circle.name():
-                    print('circle')
-            self.moving = False
-            self.update()
+        self.points.append(event.pos())
+        if len(self.points) == 2:
+            if self.parent.active == LineSegment.name():
+                self.figures.append(LineSegment(*self.points))
+            elif self.parent.active == Ray.name():
+                self.figures.append(Ray(*self.points))
+            elif self.parent.active == Line.name():
+                self.figures.append(Line(*self.points, self.geometry()))
+            elif self.parent.active == Circle.name():
+                self.figures.append(Circle(*self.points))
+            else:
+                self.update()
+                return
+            self.drawling = False
+        elif len(self.points) == 3:
+            if self.parent.active == Ellipse.name():
+                self.figures.append(Ellipse(*self.points))
+            self.drawling = False
+            pass
+        self.update()
