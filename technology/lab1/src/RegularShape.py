@@ -11,8 +11,6 @@ from utils import get_distance
 
 class RegularShape(AsymmetricShape):
     def __init__(self, location=None, points=None, num=3, border_color=None, bg_color=None):
-        print(location)
-        print(points)
         super().__init__(points, border_color, bg_color, location)
         self._count_points(num)
 

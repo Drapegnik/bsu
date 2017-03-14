@@ -1,4 +1,9 @@
 # Лабораторная работа 1
+## demo
+![Demo gif](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489526127/tp-lab1.gif)
+
+## uml
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1489524936/tp_uml.png" width=700px/>
 
 ## Задача
 * Смоделировать и реализовать программу, которая должна отображать на экране различные фигуры (линия, отрезок, луч, треугольник, прямоугольник, круг, ромб, эллипс, круг и другие необходимые фигуры). 
