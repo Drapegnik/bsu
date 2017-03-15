@@ -2,7 +2,10 @@
  * Created by Drapegnik on 07.03.17.
  */
 
+package common;
+
 import config.Options;
+import ui.MainWindow;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -18,9 +21,7 @@ public class Client {
 
         try {
             Registry registry = LocateRegistry.getRegistry(host, port);
-            RemoteService stub = (RemoteService) registry.lookup(RemoteService.class.getSimpleName());
-            String response = stub.sayHello();
-            System.out.println("response: " + response);
+            new MainWindow("Students", (RemoteService) registry.lookup(RemoteService.class.getSimpleName()));
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();

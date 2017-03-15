@@ -74,7 +74,7 @@ public class dbDriver {
             System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(Options.DB_URL + Options.DB_NAME, Options.DB_USER, Options.DB_PASS);
             stmt = conn.createStatement();
-            System.out.println("Successfully connect to " + Options.DB_URL + Options.DB_NAME);
+            System.out.println("Successfully connect to " + conn.getMetaData().getURL());
         } catch (Exception se) {
             System.out.println("Some problem with db connection");
             se.printStackTrace();
@@ -186,7 +186,7 @@ public class dbDriver {
     /**
      * Select all {@link Student}'s objects from db
      *
-     * @return <pre> {@code ArrayList<Student>}</pre> {@link Student}'s objects
+     * @return <pre>{@code ArrayList<Student>}</pre> {@link Student}'s objects
      */
     public ArrayList<Student> getStudents() {
         System.out.println("Select students...");

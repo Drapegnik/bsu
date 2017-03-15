@@ -2,6 +2,9 @@
  * Created by Drapegnik on 07.03.17.
  */
 
+package common;
+
+import backend.dbDriver;
 import config.Options;
 
 import java.rmi.registry.Registry;
@@ -10,7 +13,10 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class Server implements RemoteService {
 
+    private dbDriver db;
+
     public Server() {
+        db = new dbDriver();
     }
 
     public String sayHello() {

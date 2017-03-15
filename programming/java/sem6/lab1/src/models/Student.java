@@ -68,7 +68,7 @@ public class Student implements Serializable {
             marksString.append(mark.shortToString());
         }
 
-        return "models.Student{" +
+        return "Student{" +
                 "id='" + id + '\'' +
                 ",\tname='" + name + '\'' +
                 ",\tgroup=" + group +
@@ -76,8 +76,17 @@ public class Student implements Serializable {
                 "} }";
     }
 
+    public String formattedToString() {
+        StringBuilder str = new StringBuilder(name + " - " + group + "       |");
+        for (Mark mark : marks) {
+            str.append("       ").append(mark.getGrade());
+        }
+
+        return str.toString();
+    }
+
     public String shortToString() {
-        return "models.Student{" +
+        return "Student{" +
                 "id='" + id + '\'' +
                 ",\tname='" + name + '\'' +
                 ",\tgroup=" + group +
@@ -163,6 +172,20 @@ public class Student implements Serializable {
         data.add(new Student("Sophia Simpson", 1));
         data.add(new Student("Wade Maxwell", 2));
         return data;
+    }
+
+    /**
+     * Method for generate tittle for {@link Student}s table in {@link ui}
+     * with correct {@link Subject}'s name
+     *
+     * @return {@link String} tittle
+     */
+    public static String getTittle() {
+        StringBuilder tittle = new StringBuilder("name:   group:   |   ");
+        for (Subject subj : Subject.values()) {
+            tittle.append(subj.toString().toLowerCase()).append(":   ");
+        }
+        return tittle.toString();
     }
 }
 

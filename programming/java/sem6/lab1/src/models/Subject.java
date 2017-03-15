@@ -10,5 +10,5 @@ package models;
  * @version 1.0
  */
 public enum Subject {
-    ALGEBRA, GEOMETRY, JAVA, CPP, HISTORY
+    ALGEBRA, GEOMETRY, JAVA, CPP, HISTORY;
 }

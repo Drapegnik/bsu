@@ -44,7 +44,7 @@ public class Mark implements Serializable {
 
     @Override
     public String toString() {
-        return "models.Mark{" +
+        return "Mark{" +
                 "studentId='" + studentId + '\'' +
                 ",\tsubject=" + subject +
                 ",\tgrade=" + grade +
