@@ -13,18 +13,17 @@ import java.rmi.registry.Registry;
 public class Client {
 
     private Client() {
-    }
-
-    public static void main(String[] args) {
         int port = Integer.parseInt(System.getenv().get(Options.PORT_ENV_NAME));
         String host = System.getenv().get(Options.HOST_ENV_NAME);
 
         try {
             Registry registry = LocateRegistry.getRegistry(host, port);
-            new MainWindow("Students", (RemoteService) registry.lookup(RemoteService.class.getSimpleName()));
-        } catch (Exception e) {
-            System.err.println("Client exception: " + e.toString());
-            e.printStackTrace();
+            new MainWindow((RemoteService) registry.lookup(RemoteService.class.getSimpleName()));
+        } catch (Exception ex) {
+            System.err.println("Client exception: " + ex.toString());
+            ex.printStackTrace();
         }
     }
+
+    public static void main(String[] args) {new Client();}
 }

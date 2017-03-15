@@ -6,10 +6,13 @@ package common;
 
 import backend.dbDriver;
 import config.Options;
+import models.Student;
 
+import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 
 public class Server implements RemoteService {
 
@@ -19,8 +22,24 @@ public class Server implements RemoteService {
         db = new dbDriver();
     }
 
-    public String sayHello() {
+    @Override
+    public String sayHello() throws RemoteException {
         return "Hello, world!";
+    }
+
+    @Override
+    public ArrayList<Student> getStudents() throws RemoteException {
+        return db.getStudents();
+    }
+
+    @Override
+    public ArrayList<String> getBadStudentsIds() throws RemoteException {
+        return db.getBadStudentsIds();
+    }
+
+    @Override
+    public void deleteStudent(String id) throws RemoteException {
+        db.deleteStudent(id);
     }
 
     public static void main(String args[]) {
@@ -36,9 +55,9 @@ public class Server implements RemoteService {
             registry.bind(RemoteService.class.getSimpleName(), stub);
 
             System.err.println("Server ready");
-        } catch (Exception e) {
-            System.err.println("Server exception: " + e.toString());
-            e.printStackTrace();
+        } catch (Exception ex) {
+            System.err.println("Server exception: " + ex.toString());
+            ex.printStackTrace();
         }
     }
 }

@@ -10,6 +10,7 @@ import models.Student;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -27,12 +28,15 @@ public class MainWindow extends JFrame implements ActionListener {
     private JButton getBad = new JButton("Get Bad");
     private JButton addStudent = new JButton("Add Student");
     private JButton deleteStudent = new JButton("Delete Student");
-    private ArrayList<Student> data = new ArrayList<>();
+    private ArrayList<Student> data;
+    private ArrayList<Student> badData;
     private RemoteService rmi;
 
-    public MainWindow(String title, RemoteService rmi) {
-        super(title);
-        this.rmi = rmi;
+    public MainWindow(RemoteService service) {
+        super("Students");
+        rmi = service;
+        data = new ArrayList<>();
+        badData = new ArrayList<>();
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         Container container = this.getContentPane();
@@ -77,13 +81,55 @@ public class MainWindow extends JFrame implements ActionListener {
     private void checkConnection() {
         try {
             System.out.println(rmi.sayHello());
-        } catch (Exception e) {
-            System.err.println("RMI exception: " + e.toString());
-            e.printStackTrace();
+            data = rmi.getStudents();
+        } catch (Exception ex) {
+            System.err.println("RMI exception: " + ex.toString());
+            ex.printStackTrace();
         }
     }
 
     public void actionPerformed(ActionEvent e) {
+        try {
+            if (e.getSource() == getAll) {
+                data = rmi.getStudents();
+                render(studentsList, data);
+            } else if (e.getSource() == getBad) {
+                badData = getBadStudents();
+                render(badStudentsList, badData);
+            } else if (e.getSource() == deleteStudent) {
+                int ind = badStudentsList.getSelectedIndex();
+                if (ind == -1) {
+                    JOptionPane.showMessageDialog(this, "Select bad student!", "Error!", JOptionPane.PLAIN_MESSAGE);
+                    return;
+                }
+                rmi.deleteStudent(badData.get(ind).getId());
+                renderAll();
+            }
+        } catch (Exception ex) {
+            System.err.println("RMI exception: " + ex.toString());
+            ex.printStackTrace();
+        }
+    }
+
+    private ArrayList<Student> getBadStudents() throws RemoteException {
+        ArrayList<String> badIds = rmi.getBadStudentsIds();
+        ArrayList<Student> badData = new ArrayList<>();
+        for (Student st : data) {
+            if (badIds.contains(st.getId())) {
+                badData.add(st);
+            }
+        }
+        return badData;
+    }
+
+    /**
+     * Method for render {@link Student}s data into {@link java.awt.List}
+     */
+    private void renderAll() throws RemoteException {
+        data = rmi.getStudents();
+        badData = getBadStudents();
+        render(studentsList, data);
+        render(badStudentsList, badData);
     }
 
     /**
