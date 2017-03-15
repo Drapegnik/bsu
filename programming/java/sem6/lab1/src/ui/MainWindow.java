@@ -103,7 +103,19 @@ public class MainWindow extends JFrame implements ActionListener {
                     return;
                 }
                 rmi.deleteStudent(badData.get(ind).getId());
+                data = rmi.getStudents();
+                badData = getBadStudents();
                 renderAll();
+            } else if (e.getSource() == addStudent) {
+                Student tempStudent = new Student();
+                new NewStudentDialog(this, "add student", tempStudent);
+
+                if (!tempStudent.equals(new Student())) {
+                    rmi.addStudent(tempStudent);
+                    data = rmi.getStudents();
+                    badData.clear();
+                    renderAll();
+                }
             }
         } catch (Exception ex) {
             System.err.println("RMI exception: " + ex.toString());
@@ -126,8 +138,6 @@ public class MainWindow extends JFrame implements ActionListener {
      * Method for render {@link Student}s data into {@link java.awt.List}
      */
     private void renderAll() throws RemoteException {
-        data = rmi.getStudents();
-        badData = getBadStudents();
         render(studentsList, data);
         render(badStudentsList, badData);
     }

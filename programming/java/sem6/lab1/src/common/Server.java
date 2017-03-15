@@ -6,6 +6,7 @@ package common;
 
 import backend.dbDriver;
 import config.Options;
+import models.Mark;
 import models.Student;
 
 import java.rmi.RemoteException;
@@ -40,6 +41,14 @@ public class Server implements RemoteService {
     @Override
     public void deleteStudent(String id) throws RemoteException {
         db.deleteStudent(id);
+    }
+
+    @Override
+    public void addStudent(Student student) throws RemoteException {
+        db.createStudent(student);
+        for (Mark mark : student.getMarks()) {
+            db.createMark(mark);
+        }
     }
 
     public static void main(String args[]) {

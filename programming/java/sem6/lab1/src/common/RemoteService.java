@@ -19,4 +19,6 @@ public interface RemoteService extends Remote {
     ArrayList<String> getBadStudentsIds() throws RemoteException;
 
     void deleteStudent(String id) throws RemoteException;
+
+    void addStudent(Student student) throws RemoteException;
 }

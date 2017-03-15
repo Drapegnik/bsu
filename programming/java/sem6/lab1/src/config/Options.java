@@ -17,4 +17,5 @@ public class Options {
     public static final String PORT_ENV_NAME = "RMI_PORT";
     public static final String HOST_ENV_NAME = "RMI_HOST";
     public static final String STUDENTS_FILE_NAME = "students.binary";
+    public static final Boolean DEBUG = false;
 }

@@ -203,18 +203,23 @@ public class dbDriver {
 
                 st.addMark(new Mark(res.getString("subject"), Integer.parseInt(res.getString("grade")), id));
                 map.put(id, st);
-                System.out.println("\t#" + res.getRow()
-                        + "\t" + res.getString("s_name")
-                        + "\t" + res.getString("subject")
-                        + "\t" + res.getString("grade")
-                        + "\t" + res.getString("id"));
+                if (Options.DEBUG) {
+                    System.out.println("\t#" + res.getRow()
+                            + "\t" + res.getString("s_name")
+                            + "\t" + res.getString("subject")
+                            + "\t" + res.getString("grade")
+                            + "\t" + res.getString("id"));
+                }
             }
 
             for (Map.Entry<String, Student> entry : map.entrySet()) {
                 Student st = entry.getValue();
                 data.add(st);
-                System.out.println(st);
+                if (Options.DEBUG) {
+                    System.out.println(st);
+                }
             }
+            System.out.println("Successfully select " + data.size() + " students.");
 
         } catch (Exception se) {
             se.printStackTrace();
@@ -235,12 +240,14 @@ public class dbDriver {
             res = stmt.executeQuery(GET_BAD_STUDENTS);
             while (res.next()) {
                 data.add(res.getString("id"));
-                System.out.println("\t#" + res.getRow()
-                        + "\t" + res.getString("s_name")
-                        + "\t" + res.getString("bad_marks_count")
-                        + "\t" + res.getString("id"));
+                if (Options.DEBUG) {
+                    System.out.println("\t#" + res.getRow()
+                            + "\t" + res.getString("s_name")
+                            + "\t" + res.getString("bad_marks_count")
+                            + "\t" + res.getString("id"));
+                }
             }
-
+            System.out.println("Successfully select " + data.size() + " bad students.");
         } catch (Exception se) {
             se.printStackTrace();
         }
