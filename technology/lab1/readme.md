@@ -3,7 +3,7 @@
 ![Demo gif](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489526127/tp-lab1.gif)
 
 ## uml
-I use [StarUML](http://staruml.io/). Model saved in ['lab1.mdj'](https://github.com/Drapegnik/bsu/tree/master/technology/lab1/lab1.mdj)
+I use [StarUML](http://staruml.io/). Model saved in [`lab1.mdj`](https://github.com/Drapegnik/bsu/tree/master/technology/lab1/lab1.mdj)
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1489524936/tp_uml.png" width=700px/>
 
 ## Задача

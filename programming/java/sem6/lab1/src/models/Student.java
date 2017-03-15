@@ -1,8 +1,10 @@
 /**
  * Created by Drapegnik on 07.03.17.
  */
+package models;
 
-import javax.swing.*;
+import config.Options;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -66,7 +68,7 @@ public class Student implements Serializable {
             marksString.append(mark.shortToString());
         }
 
-        return "Student{" +
+        return "models.Student{" +
                 "id='" + id + '\'' +
                 ",\tname='" + name + '\'' +
                 ",\tgroup=" + group +
@@ -75,7 +77,7 @@ public class Student implements Serializable {
     }
 
     public String shortToString() {
-        return "Student{" +
+        return "models.Student{" +
                 "id='" + id + '\'' +
                 ",\tname='" + name + '\'' +
                 ",\tgroup=" + group +

@@ -1,6 +1,7 @@
 /**
  * Created by Drapegnik on 08.03.17.
  */
+package models;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -43,7 +44,7 @@ public class Mark implements Serializable {
 
     @Override
     public String toString() {
-        return "Mark{" +
+        return "models.Mark{" +
                 "studentId='" + studentId + '\'' +
                 ",\tsubject=" + subject +
                 ",\tgrade=" + grade +

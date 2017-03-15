@@ -2,6 +2,8 @@
  * Created by Drapegnik on 07.03.17.
  */
 
+import config.Options;
+
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;

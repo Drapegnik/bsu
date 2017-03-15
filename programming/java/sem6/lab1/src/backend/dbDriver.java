@@ -1,6 +1,10 @@
 /**
  * Created by Drapegnik on 08.03.17.
  */
+package backend;
+
+import models.*;
+import config.Options;
 
 import java.sql.*;
 import java.text.MessageFormat;
@@ -182,7 +186,7 @@ public class dbDriver {
     /**
      * Select all {@link Student}'s objects from db
      *
-     * @return ArrayList<Student> {@link Student}'s objects
+     * @return <pre> {@code ArrayList<Student>}</pre> {@link Student}'s objects
      */
     public ArrayList<Student> getStudents() {
         System.out.println("Select students...");
@@ -220,9 +224,9 @@ public class dbDriver {
 
     /**
      * Select all {@link Student}'s objects from db
-     * that have 3 and more bad (<4) marks
+     * that have 3 and more bad (1, 2, 3) marks
      *
-     * @return ArrayList<String> students_ids
+     * @return <pre>{@code ArrayList<String>} students_ids</pre>
      */
     public ArrayList<String> getBadStudentsIds() {
         System.out.println("Select bad students...");
@@ -340,5 +344,6 @@ public class dbDriver {
         db.initDB();
         db.getStudents();
         db.close();
+//        Student.writeInFile(config.Options.STUDENTS_FILE_NAME, Student.generateFakeData());
     }
 }
