@@ -2,8 +2,7 @@
  * Created by Drapegnik on 08.03.17.
  */
 
-import org.omg.PortableInterceptor.SUCCESSFUL;
-
+import java.io.Serializable;
 import java.util.UUID;
 
 /**
@@ -13,7 +12,7 @@ import java.util.UUID;
  * @author Ivan Pazhitnykh
  * @version 1.0
  */
-public class Mark {
+public class Mark implements Serializable {
     private String id;
     private Subject subject;
     private int grade;
@@ -49,5 +48,12 @@ public class Mark {
                 ",\tsubject=" + subject +
                 ",\tgrade=" + grade +
                 '}';
+    }
+
+    public String shortToString() {
+        return '{' +
+                "subject=" + subject +
+                ",\tgrade=" + grade +
+                "} ";
     }
 }

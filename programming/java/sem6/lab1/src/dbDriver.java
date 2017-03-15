@@ -5,6 +5,8 @@
 import java.sql.*;
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -35,10 +37,24 @@ public class dbDriver {
             "SELECT * FROM {0} INNER JOIN {1} ON {1}.studentId={0}.id;", StudentsTable, MarksTable);
 
     private static final String GET_BAD_STUDENTS = MessageFormat.format(
-            "SELECT {0}.id, {0}.s_name, COUNT(*) as bad_marks_count FROM {0} " +
-                    "INNER JOIN {1} ON {0}.id={1}.studentId" +
-                    " WHERE {1}.grade < 5 GROUP BY {0}.id" +
+            "SELECT {0}.id, {0}.s_name, COUNT(*) as bad_marks_count FROM {0}" +
+                    " INNER JOIN {1} ON {0}.id={1}.studentId" +
+                    " WHERE {1}.grade < 4 GROUP BY {0}.id" +
                     " HAVING COUNT(*) > 2;", StudentsTable, MarksTable);
+
+    private static final String DELETE_STUDENT = MessageFormat.format(
+            "DELETE st, mrk FROM {0} st" +
+                    " INNER JOIN {1} mrk ON st.id=mrk.studentId" +
+                    " WHERE st.id=?;", StudentsTable, MarksTable);
+
+    /**
+     * Wrapper on {@link dbDriver#connect()}
+     *
+     * @see dbDriver#connect()
+     */
+    public dbDriver() {
+        connect();
+    }
 
     /**
      * Create new database connection
@@ -48,7 +64,7 @@ public class dbDriver {
      * @see Options#DB_USER
      * @see Options#DB_PASS
      */
-    public dbDriver() {
+    private void connect() {
         try {
             Class.forName(Options.JDBC_DRIVER);
             System.out.println("Connecting to database...");
@@ -136,7 +152,6 @@ public class dbDriver {
      */
     public void createStudent(Student student) {
         try {
-            stmt = conn.createStatement();
             pstmt = conn.prepareStatement(CREATE_STUDENT);
             pstmt.setString(1, student.getId());
             pstmt.setString(2, student.getName());
@@ -148,11 +163,68 @@ public class dbDriver {
     }
 
     /**
+     * Remove {@link Student} and all his {@link Mark}s from db
+     *
+     * @param id {@link Student#id}
+     */
+    public void deleteStudent(String id) {
+        try {
+            System.out.println("Delete student...");
+            pstmt = conn.prepareStatement(DELETE_STUDENT);
+            pstmt.setString(1, id);
+            pstmt.executeUpdate();
+            System.out.println("Successfully delete student with id=" + id);
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+    }
+
+    /**
      * Select all {@link Student}'s objects from db
+     *
+     * @return ArrayList<Student> {@link Student}'s objects
+     */
+    public ArrayList<Student> getStudents() {
+        System.out.println("Select students...");
+        ArrayList<Student> data = new ArrayList<>();
+        try {
+            res = stmt.executeQuery(GET_STUDENTS);
+            HashMap<String, Student> map = new HashMap<>();
+            while (res.next()) {
+                String id = res.getString("id");
+                Student st = map.get(id);
+                if (st == null) {
+                    st = new Student(id, res.getString("s_name"), Integer.parseInt(res.getString("s_group")));
+                }
+
+                st.addMark(new Mark(res.getString("subject"), Integer.parseInt(res.getString("grade")), id));
+                map.put(id, st);
+                System.out.println("\t#" + res.getRow()
+                        + "\t" + res.getString("s_name")
+                        + "\t" + res.getString("subject")
+                        + "\t" + res.getString("grade")
+                        + "\t" + res.getString("id"));
+            }
+
+            for (Map.Entry<String, Student> entry : map.entrySet()) {
+                Student st = entry.getValue();
+                data.add(st);
+                System.out.println(st);
+            }
+
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+        return data;
+    }
+
+    /**
+     * Select all {@link Student}'s objects from db
+     * that have 3 and more bad (<4) marks
      *
      * @return ArrayList<String> students_ids
      */
-    public ArrayList<String> getBadStudents() {
+    public ArrayList<String> getBadStudentsIds() {
         System.out.println("Select bad students...");
         ArrayList<String> data = new ArrayList<>();
         try {
@@ -205,7 +277,7 @@ public class dbDriver {
         Random random = new Random();
 
         for (Student student : data) {
-            System.out.println('\t' + student.toString());
+            System.out.println('\t' + student.shortToString());
             createStudent(student);
 
             for (Subject subject : Subject.values()) {
@@ -215,6 +287,10 @@ public class dbDriver {
             }
             System.out.println();
         }
+    }
+
+    private void dumpStudentsIntoFule() {
+        Student.writeInFile(Options.STUDENTS_FILE_NAME, getStudents());
     }
 
     /**
@@ -228,6 +304,7 @@ public class dbDriver {
      */
     public void createDB() {
         dropDB();
+        connect();
         createStudentsTable();
         createMarkTable();
     }
@@ -261,6 +338,7 @@ public class dbDriver {
         dbDriver db = new dbDriver();
         db.createDB();
         db.initDB();
+        db.getStudents();
         db.close();
     }
 }

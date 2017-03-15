@@ -2,10 +2,8 @@
  * Created by Drapegnik on 07.03.17.
  */
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -19,10 +17,12 @@ public class Student implements Serializable {
     private String name;
     private int group;
     private String id;
+    private ArrayList<Mark> marks;
 
     public Student() {
         this.name = "";
         this.id = UUID.randomUUID().toString();
+        this.marks = new ArrayList<>();
     }
 
     public Student(String name, int group) {
@@ -31,9 +31,16 @@ public class Student implements Serializable {
         this.group = group;
     }
 
+    public Student(String id, String name, int group) {
+        this(name, group);
+        this.id = id;
+    }
+
     public Student(Student o) {
+        this.id = o.id;
         this.name = o.name;
         this.group = o.group;
+        this.marks = o.marks;
     }
 
     public String getName() {return name;}
@@ -46,13 +53,33 @@ public class Student implements Serializable {
 
     public String getId() {return id;}
 
+    public ArrayList<Mark> getMarks() {return marks;}
+
+    public void setMarks(ArrayList<Mark> marks) {this.marks = marks;}
+
+    public void addMark(Mark mark) {this.marks.add(mark);}
+
     @Override
     public String toString() {
+        StringBuilder marksString = new StringBuilder();
+        for (Mark mark : marks) {
+            marksString.append(mark.shortToString());
+        }
+
         return "Student{" +
                 "id='" + id + '\'' +
                 ",\tname='" + name + '\'' +
                 ",\tgroup=" + group +
-                '}';
+                ",\tmarks={" + marksString +
+                "} }";
+    }
+
+    public String shortToString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ",\tname='" + name + '\'' +
+                ",\tgroup=" + group +
+                "} }";
     }
 
     @Override
@@ -90,6 +117,49 @@ public class Student implements Serializable {
             System.out.println(err);
             System.err.println("Error while read data!");
         }
+        return data;
+    }
+
+    /**
+     * Method for writing students into binary file
+     *
+     * @param filename String filename
+     * @param data     {@link ArrayList} of {@link Student}s
+     * @see Options#STUDENTS_FILE_NAME
+     */
+    public static void writeInFile(String filename, ArrayList<Student> data) {
+        try {
+            FileOutputStream fos = new FileOutputStream(filename);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(data);
+            oos.flush();
+
+            oos.close();
+            fos.close();
+        } catch (IOException err) {
+            System.out.println(err);
+            System.err.println("Error while write data!");
+        }
+    }
+
+    /**
+     * Method for init dummy students data
+     *
+     * @return {@link ArrayList} of {@link Student}s
+     */
+    public static ArrayList<Student> generateFakeData() {
+        ArrayList<Student> data = new ArrayList<>();
+        data.add(new Student("Perry Hodges", 1));
+        data.add(new Student("Patrick Richardson", 2));
+        data.add(new Student("Doug Evans", 3));
+        data.add(new Student("Cathy Russell", 4));
+        data.add(new Student("Cecil Murphy", 1));
+        data.add(new Student("Roberto Ball", 2));
+        data.add(new Student("Glenda Romero", 3));
+        data.add(new Student("Tomas King", 4));
+        data.add(new Student("Sophia Simpson", 1));
+        data.add(new Student("Wade Maxwell", 2));
         return data;
     }
 }
