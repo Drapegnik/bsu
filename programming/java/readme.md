@@ -2,7 +2,8 @@
 Лабораторные по Java
 
 <details>
-<summary>Sem3 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)</summary>
+<summary>Sem3 - 9 labs</summary>
+
 * [s3lab1](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab1) - Вычисление суммы ряда (*Calculating the sum of the series*)
 * [s3lab2](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab2) - Строки (*Strings*)
 * [s3lab3](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab3) - Матрицы (*Matrices*)
@@ -17,11 +18,13 @@
 </details>
 
 <details>
-<summary>Sem5 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)</summary>
+<summary>Sem5</summary>
 </details>
 
 <details>
-<summary>Sem6 - [code](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6)</summary>
+<summary>Sem6</summary>
+
+* [s6lab1](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6/lab1) - *RMI*-технология (*RMI-technology*)
 </details>
 
 ***
