@@ -2,17 +2,16 @@
  * Created by Drapegnik on 15.03.17.
  */
 
-package ui;
+package app.ui;
 
-import models.Mark;
-import models.Student;
-import models.Subject;
+import app.models.Mark;
+import app.models.Student;
+import app.models.Subject;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Arc2D;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.DataFormatException;

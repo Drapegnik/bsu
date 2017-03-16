@@ -2,15 +2,20 @@
  * Created by Drapegnik on 07.03.17.
  */
 
-package common;
+package app;
 
-import models.Student;
+import app.models.Student;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-
+/**
+ * <p>Interface for RMI</p>
+ *
+ * @author Ivan Pazhitnykh
+ * @version 1.0
+ */
 public interface RemoteService extends Remote {
     String sayHello() throws RemoteException;
 

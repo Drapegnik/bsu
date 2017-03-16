@@ -1,7 +1,8 @@
 /**
  * Created by Drapegnik on 08.03.17.
  */
-package models;
+
+package app.models;
 
 import java.io.Serializable;
 import java.util.UUID;

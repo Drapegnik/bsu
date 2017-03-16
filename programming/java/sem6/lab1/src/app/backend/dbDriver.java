@@ -1,10 +1,10 @@
 /**
  * Created by Drapegnik on 08.03.17.
  */
-package backend;
+package app.backend;
 
-import models.*;
-import config.Options;
+import app.models.*;
+import app.config.Options;
 
 import java.sql.*;
 import java.text.MessageFormat;
@@ -351,6 +351,6 @@ public class dbDriver {
         db.initDB();
         db.getStudents();
         db.close();
-//        Student.writeInFile(config.Options.STUDENTS_FILE_NAME, Student.generateFakeData());
+//        Student.writeInFile(app.config.Options.STUDENTS_FILE_NAME, Student.generateFakeData());
     }
 }

@@ -1,11 +1,10 @@
 /**
  * Created by Drapegnik on 15.03.17.
  */
-package ui;
+package app.ui;
 
-import backend.dbDriver;
-import common.RemoteService;
-import models.Student;
+import app.RemoteService;
+import app.models.Student;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * <p>Main ui window for client</p>
+ * <p>Main app.ui window for client</p>
  *
  * @author Ivan Pazhitnykh
  * @version 1.0

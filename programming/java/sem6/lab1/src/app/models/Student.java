@@ -1,9 +1,10 @@
 /**
  * Created by Drapegnik on 07.03.17.
  */
-package models;
 
-import config.Options;
+package app.models;
+
+import app.config.Options;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -175,7 +176,7 @@ public class Student implements Serializable {
     }
 
     /**
-     * Method for generate tittle for {@link Student}s table in {@link ui}
+     * Method for generate tittle for {@link Student}s table in {@link app.ui}
      * with correct {@link Subject}'s name
      *
      * @return {@link String} tittle

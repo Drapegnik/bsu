@@ -1,6 +1,8 @@
-package config; /**
+/**
  * Created by Drapegnik on 08.03.17.
  */
+
+package app.config;
 
 /**
  * <p>Class for storing setting and constants</p>

@@ -2,12 +2,12 @@
  * Created by Drapegnik on 07.03.17.
  */
 
-package common;
+package app;
 
-import backend.dbDriver;
-import config.Options;
-import models.Mark;
-import models.Student;
+import app.backend.dbDriver;
+import app.config.Options;
+import app.models.Mark;
+import app.models.Student;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
@@ -15,6 +15,13 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+/**
+ * <p>Class wrapper on backend functional</p>
+ * implements {@link RemoteService}
+ *
+ * @author Ivan Pazhitnykh
+ * @version 1.0
+ */
 public class Server implements RemoteService {
 
     private dbDriver db;
@@ -59,7 +66,6 @@ public class Server implements RemoteService {
             Server obj = new Server();
             RemoteService stub = (RemoteService) UnicastRemoteObject.exportObject(obj, 0);
 
-            // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry(host, port);
             registry.bind(RemoteService.class.getSimpleName(), stub);
 

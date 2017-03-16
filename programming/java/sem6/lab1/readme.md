@@ -28,8 +28,9 @@
 * create out dir (default `out/production/lab1`)
 
 ## Run
+* compile all classes from `src/` in out dir (default is `out/production/lab1`)
 * run `dbDriver.main()` for creating database
-* run `run_rmi.sh` for start rmi (you can specifie out dir or use default `out/production/lab1`)
+* run `run_rmi.sh` for start rmi (you can specify out dir or use default)
 * start `Server` (`java path/to/outdir/Server`)
 * after message `Server ready` start `Client` (`java path/to/outdir/Client`)
 

@@ -2,14 +2,20 @@
  * Created by Drapegnik on 07.03.17.
  */
 
-package common;
+package app;
 
-import config.Options;
-import ui.MainWindow;
+import app.config.Options;
+import app.ui.MainWindow;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+/**
+ * <p>Class for handling client ui</p>
+ *
+ * @author Ivan Pazhitnykh
+ * @version 1.0
+ */
 public class Client {
 
     private Client() {
