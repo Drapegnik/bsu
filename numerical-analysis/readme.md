@@ -3,6 +3,7 @@
 
 <details>
 <summary>Sem3</summary>
+
 * [s3lab1](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s3lab1) - [Метод Гаусса (Gauss method)](https://drapegnik.github.io/bsu/numerical-analysis/s3lab1/lab1.pdf)
 * [s3lab2](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s3lab2) - [Метод квадратного корня (The method of square root)](https://drapegnik.github.io/bsu/numerical-analysis/s3lab2/lab2.pdf)
 * [s3lab3](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s3lab3) - [Метод левой прогонки (Tridiagonal matrix algorithm)](https://drapegnik.github.io/bsu/numerical-analysis/s3lab3/lab3.docx)
@@ -17,6 +18,7 @@
 
 <details>
 <summary>Sem4</summary>
+
 * [s4lab1](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s4lab1) - [Интерполяционный многочлен Ньютона (Newton polynomial)](https://drapegnik.github.io/bsu/numerical-analysis/s4lab1/lab1.pdf)
 * [s4lab2](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s4lab2) - [Квадратурные формулы для интегралов (The definite integral approximating)](https://drapegnik.github.io/bsu/numerical-analysis/s4lab2/lab2.pdf)
 * [s4lab3](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s4lab3) - [Кубический сплайн (Cybic spline interpolation)](https://drapegnik.github.io/bsu/numerical-analysis/s4lab3/lab3.pdf)
@@ -25,6 +27,7 @@
 
 <details>
 <summary>Sem5</summary>
+
 * [s5lab1](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s5lab1) - [Методы Эйлера и Рунге-Кутты решения ОДУ (Euler & Runge–Kutta methods for solving ODEs)](https://drapegnik.github.io/bsu/numerical-analysis/s5lab1/lab1.pdf)
 * [s5lab2](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/s5lab2) - [Дифференциальные уравнения в частных производных (Partial differential equations)](https://drapegnik.github.io/bsu/numerical-analysis/s5lab2/lab2.pdf)
 </details>
