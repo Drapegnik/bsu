@@ -3,8 +3,9 @@
 * *3 курс, 1 группа, МСС*
 * [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab5)
 
+# part1
 ## task1
-photo
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489702414/networks-4-1.png)
 
 * `net1`:
     * ip/mask: `176.141.64.0/26`
@@ -21,7 +22,7 @@ photo
 
 ## task2
 
-### 1. Routers Serial config for `net2`
+### Routers Serial config for `net2`
 
 #### R1
 ```
@@ -50,7 +51,7 @@ R2(config)#exit
 %SYS-5-CONFIG_I: Configured from console by console
 ```
 
-#### check connection:
+#### Check connection:
 ```
 R1#ping 176.141.0.2
 
@@ -69,7 +70,7 @@ Sending 5, 100-byte ICMP Echos to 176.141.0.1, timeout is 2 seconds:
 Success rate is 100 percent (5/5), round-trip min/avg/max = 31/31/32 ms
 ```
 
-### 2. Routers FastEthernet config
+### Routers FastEthernet config
 
 #### R1 with `net1`
 
@@ -97,7 +98,7 @@ Building configuration...
 [OK]
 ```
 
-#### check connection for `PC1` in `net1`
+#### Check connection for `PC1` in `net1`
 ```
 PC>ipconfig
 IP Address......................: 176.141.64.1
@@ -117,7 +118,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 31ms, Maximum = 63ms, Average = 39ms
 ```
 
-#### check connection for `PC2` in `net3`
+#### Check connection for `PC2` in `net3`
 
 ```
 PC>ipconfig
