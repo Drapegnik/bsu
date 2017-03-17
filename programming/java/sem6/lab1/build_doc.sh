@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+javadoc -protected -splitindex -use -author -version -link http://docs.oracle.com/javase/8/docs/api -sourcepath @sources.txt -d /Users/Drapegnik/projects/bsu/programming/java/sem6/lab1/docs

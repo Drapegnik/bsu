@@ -1,6 +1,11 @@
 # Лабораторная работа 1
 «*RMI*-технология»
 
+## demo
+[documentation](https://drapegnik.github.io/bsu/programming/java/sem6/lab1/docs/index.html)
+
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1489673732/javasem6lab1.png" width="700px"/>
+
 ## task1 Проектирование приложений на базе *RMI*
 * Информация хранится в базе данных. 
 * Реализовать несколько методов изменения содержимого базы данных. 
@@ -27,10 +32,12 @@
 * set `RMI_PORT` and `RMI_HOST` environment variables
 * create out dir (default `out/production/lab1`)
 
+## Build
+* `bash build.sh` for build all classes from `src/`
+* `bash build_doc.sh` for generate documentation
+
 ## Run
-* compile all classes from `src/` in out dir (default is `out/production/lab1`)
-* run `dbDriver.main()` for creating database
-* run `run_rmi.sh` for start rmi (you can specify out dir or use default)
-* start `Server` (`java path/to/outdir/Server`)
-* after message `Server ready` start `Client` (`java path/to/outdir/Client`)
+* start *RMI* `bash run_rmi.sh`
+* start *Server* `bash run_server.sh`
+* start *Client* `bash run_client.sh`
 

@@ -58,6 +58,17 @@ public class Server implements RemoteService {
         }
     }
 
+    /**
+     * <b>Main method</b>
+     * <pre style="background-color: lightgray">{@code
+     * Server obj = new Server();
+     * RemoteService stub = (RemoteService) UnicastRemoteObject.exportObject(obj, 0);
+     * Registry registry = LocateRegistry.getRegistry(host, port);
+     * registry.bind(RemoteService.class.getSimpleName(), stub);
+     * }</pre>
+     *
+     * @param args args
+     */
     public static void main(String args[]) {
         int port = Integer.parseInt(System.getenv().get(Options.PORT_ENV_NAME));
         String host = System.getenv().get(Options.HOST_ENV_NAME);

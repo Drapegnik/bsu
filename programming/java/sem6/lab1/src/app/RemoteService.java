@@ -19,11 +19,31 @@ import java.util.ArrayList;
 public interface RemoteService extends Remote {
     String sayHello() throws RemoteException;
 
+    /**
+     * SELECT ALL
+     * @return <pre> {@code ArrayList<Student>}</pre> {@link Student}s list
+     * @throws RemoteException rmi exception
+     */
     ArrayList<Student> getStudents() throws RemoteException;
 
+    /**
+     * SELECT WHERE
+     * @return <pre> {@code ArrayList<String>}</pre> {@link Student}s ids list
+     * @throws RemoteException rmi exception
+     */
     ArrayList<String> getBadStudentsIds() throws RemoteException;
 
+    /**
+     * DELETE
+     * @param id {@link Student} id
+     * @throws RemoteException rmi exception
+     */
     void deleteStudent(String id) throws RemoteException;
 
+    /**
+     * CREATE
+     * @param student {@link Student} object
+     * @throws RemoteException rmi exception
+     */
     void addStudent(Student student) throws RemoteException;
 }
