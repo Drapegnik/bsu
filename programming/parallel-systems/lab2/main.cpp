@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <windows.h>
 #include <process.h>
 #include <cmath>
@@ -8,9 +9,9 @@
 #define CHECK(condition) if (!condition) std::cerr
 
 using namespace std;
-double *pi;
-int n;
-int threads_num;
+FILE *file = fopen("report.tex", "w");
+double one_time, *pi;
+int n, threads_num;
 
 unsigned int WINAPI ThreadFunction(void *param) {
     int index = (int) param;
@@ -66,23 +67,55 @@ double count_pi() {
     QueryPerformanceCounter(&hq_end_time);
     double hq_elapsed = 1000. * (hq_end_time.QuadPart - hq_start_time.QuadPart) / freq.QuadPart;
 
+    if (threads_num == 1) {
+        one_time = hq_elapsed;
+    }
+
     cout << "pi=" << sum << endl;
     cout << "GetTickCount time=" << win_elapsed << " ms" << endl;
     cout << "cpp1 time=" << cpp11_elapsed << " ms" << endl;
     cout << "QueryPerformance time=" << hq_elapsed << " ms" << endl;
+
+    fprintf(file, " & %.3f & %.3f & %.3f", hq_elapsed, one_time / hq_elapsed, hq_elapsed / threads_num);
     return sum;
+}
+
+void print_table_header(int threads) {
+    fprintf(file, "\\begin{tabular}{|");
+    for (int i = 0; i < threads * 3 + 1; i++) {
+        fprintf(file, "l|");
+    }
+    fprintf(file, "}\\hline\n");
+    fprintf(file, "\\multicolumn{1}{|c|}{\\textbf{dimensions}} ");
+
+    for (int i = 0; i < threads; i++) {
+        fprintf(file, "& \\multicolumn{3}{c|}{\\textbf{%d Thread%s}} ", i + 1, i == 0 ? "" : "s");
+    }
+    fprintf(file, "\\\\ \\hline\n");
+
+    for (int i = 0; i < threads; i++) {
+        fprintf(file, " & \\textbf{time} & \\textbf{acc} & \\textbf{eff}");
+    }
+    fprintf(file, "\\\\ \\hline\n");
+    return;
 }
 
 int main(int argc, char *argv[]) {
     int dims[4] = {100000, 1000000, 10000000, 100000000};
+    int dims_num = 4;
+    int threads = 4;
 
-    for (int i = 0; i < 4; i++) {
+    fprintf(file, "\\documentclass{article}\n\\usepackage[a4paper, left=0.5cm]{geometry}\n\\begin{document}\n\\begin{table}[]");
+    print_table_header(threads);
+    for (int i = 0; i < dims_num; i++) {
         n = dims[i];
-        for (int j = 1; j < 5; j++) {
-            threads_num = j;
+        fprintf(file, "%d\n", n);
+        for (int j = 0; j < threads; j++) {
+            threads_num = j + 1;
             count_pi();
         }
+        fprintf(file, "\\\\ \\hline\n");
     }
-    
+    fprintf(file, "\\end{tabular}\n\\end{table}\n\\end{document}");
     return 0;
 }
