@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <cmath>
 
+#define CHECK(condition) if (!condition) std::cerr
+
 using namespace std;
 bool bTerminate = false;
 
@@ -11,23 +13,6 @@ struct Params {
     int k;
     double x;
 };
-
-unsigned int WINAPI ThreadFunction(void *pvParams) {
-    Params *params = (Params *) pvParams;
-    cout << "(child): calculate function sin(" << params->x << ")" << endl;
-    int i = 0;
-    double sum;
-    while (!bTerminate) {
-        sum = sin(params->x);
-        i++;
-        if (i == params->k) {
-            break;
-        }
-    }
-    cout << "(child): terminating after " << i << " iterations" << endl;
-    cout << "(child): sin(" << params->x << ") = " << sum << endl;
-    return 0;
-}
 
 double sinx(double x) {
     double n = x;
@@ -43,6 +28,23 @@ double sinx(double x) {
     return sum;
 }
 
+unsigned int WINAPI ThreadFunction(void *pvParams) {
+    Params *params = (Params *) pvParams;
+    cout << "(child): calculate function sin(" << params->x << ")" << endl;
+    int i = 0;
+    double sum;
+    while (!bTerminate) {
+        sum = sinx(params->x);
+        i++;
+        if (i == params->k) {
+            break;
+        }
+    }
+    cout << "(child): terminating after " << i << " iterations" << endl;
+    cout << "(child): sin(" << params->x << ") = " << sum << endl;
+    return 0;
+}
+
 int main(int argc, char *argv[]) {
     Params params = Params();
     params.x = atof(argv[1]);
@@ -55,10 +57,7 @@ int main(int argc, char *argv[]) {
     // create child thread and passing params
     HANDLE hThread = (HANDLE) _beginthreadex(NULL, 0, ThreadFunction, (void *) &params, 0, NULL);
     // error handling
-    if (hThread == NULL) {
-        cout << "(main): Create Thread Error: " << GetLastError() << endl;
-        return -1;
-    }
+    CHECK(!hThread) << "(main): Create Thread Error: " << GetLastError() << endl;
 
     string promt;
     if (params.k == 0) {
@@ -69,7 +68,7 @@ int main(int argc, char *argv[]) {
 
     // wait for child thread terminating
     WaitForSingleObject(hThread, INFINITE);
-    cout << "(main): Child thread terminate successfully";
+    cout << "(main): Child thread terminate successfully" << endl;
 
     // close thread object
     CloseHandle(hThread);
