@@ -24,4 +24,4 @@
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489835183/ps2.png)
 
-`main.cpp` run `count_pi()` for `1`, `2`, `3`, `4` threads with `n` from `[100000, 1000000, 10000000, 100000000]` and generate report table into `report.tex`
+[`main.cpp`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab2/main.cpp) run [`count_pi()`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab2/main.cpp#L30) for `1`, `2`, `3`, `4` threads with `n` from `[100000, 1000000, 10000000, 100000000]` and generate report table into [`report.tex`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab2/report.tex)

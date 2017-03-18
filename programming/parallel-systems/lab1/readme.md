@@ -7,14 +7,14 @@
 
 1. Создание потока
 	* Читать: Функция [`CreateThread()`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682453(v=vs.85).aspx).
-	* Задача: Вызвать функцию `Calculate()` в отдельном потоке.
+	* Задача: Вызвать функцию [`Calculate()`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L31) в отдельном потоке.
 
 2. Завершение потока
 	* Читать: Корректное и некорректное завершение потока, функции [`WaitForSingleObject()`](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms687032(v=vs.85).aspx), [`CloseHandle()`](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms724211(v=vs.85).aspx).
 	* Задача: Обеспечить корректное завершение вычислительного потока.
 
 3. Корректное завершение потока по инициативе пользователя
-	* Читать: Глобальная переменная – флаг `Terminate`.
+	* Читать: Глобальная переменная – флаг [`Terminate`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L10).
 	* Задача: После запуска вычислений в отдельном потоке предоставить пользователю выбор: выполнить все вычисления или преждевременно завершить вычисления. Протестировать оба варианта.
 
 4. Передача данных потоку
