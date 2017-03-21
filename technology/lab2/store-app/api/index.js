@@ -2,11 +2,12 @@
  * Created by Drapegnik on 21.03.17.
  */
 
-var express = require('express');
-var router = express.Router();
+import express from 'express';
 
-router.get('/', function (req, res, next) {
+const router = express.Router();
+
+router.get('/', (req, res, next) => { // eslint-disable-line no-unused-vars
   res.send('Hello from api!');
 });
 
-module.exports = router;
+export default router;
