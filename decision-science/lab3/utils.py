@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class Edge:
     def __init__(self, start, finish, cost):
         self.start = start
@@ -5,38 +8,40 @@ class Edge:
         self.cost = cost
 
 
-def dijkstra(graph, s):
+def read_graph_list(file_name):
     """
-    find min distance for all nodes from s
-    :param graph: adjacency list of Edge objects
-    :param s: start node
+    Read graph list from file and return adjacency list and matrix
+    :param file_name: name of file with graph info
     :return:
-        prev - list of previous node in min way
-        dist - list of min distances
+        g_list - adjacency list: g_list[0]==[Edge, Edge, ...]
+        g_matrix - adjacency matrix: g_matrix[v1][v2]==v1_v2_cost
     """
-    n = len(graph)
-    prev = [-1]*n
-    dist = [float('inf')]*n
-    dist[s] = 0
-    visited = [False]*n
+    inp = file(file_name, 'r')
+    n, m = map(lambda x: int(x), inp.readline().split())
+    g_list = [[] for _ in range(n)]
+    g_mat = np.zeros((n, n))
+    g_mat.fill(float('inf'))
 
+    for i in range(m):
+        x, y, d = map(lambda a: int(a), inp.readline().split())
+        x -= 1
+        y -= 1
+
+        g_list[x].append(Edge(x, y, d))
+        g_mat[x][y] = d
+
+    return g_list, g_mat.tolist()
+
+
+def read_graph_matrix(file_name):
+    """
+    Read graph matrix from file
+    :param file_name: name of file with graph info
+    :return: matrix - adjacency matrix: g_matrix[v1][v2]==v1_v2_cost
+    """
+    inp = file(file_name, 'r')
+    n = int(inp.readline())
+    matrix = []
     for i in range(n):
-        u = -1
-        for j in range(n):
-            if not visited[j] and (u == -1 or dist[u] > dist[j]):
-                u = j
-
-        if dist[u] == float('inf'):
-            break
-
-        visited[u] = True
-
-        for e in graph[u]:
-            v = e.finish
-            d = dist[u] + e.cost
-
-            if dist[v] > d:
-                dist[v] = d
-                prev[v] = u
-
-    return dist, prev
+        matrix.append(map(lambda x: float(x), inp.readline().split()))
+    return matrix
