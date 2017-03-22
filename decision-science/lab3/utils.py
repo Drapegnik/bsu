@@ -8,6 +8,20 @@ class Edge:
         self.cost = cost
 
 
+def get(l, idx, default):
+    """
+    Safe list get
+    :param l: list
+    :param idx: index
+    :param default: default value
+    :return:
+    """
+    try:
+        return l[idx]
+    except IndexError:
+        return default
+
+
 def read_graph_list(file_name):
     """
     Read graph list from file and return adjacency list and matrix
@@ -45,3 +59,23 @@ def read_graph_matrix(file_name):
     for i in range(n):
         matrix.append(map(lambda x: float(x), inp.readline().split()))
     return matrix
+
+
+def write_debug_table(file_name, table):
+    out = file(file_name, 'w')
+    rows_len = 0
+    header = ''
+    separator = ''
+
+    for v in range(len(table)):
+        header += 'v{} | '.format(v + 1)
+        separator += '--- | '
+        rows_len = max(rows_len, len(table[v]))
+    out.write(header + '\n')
+    out.write(separator + '\n')
+
+    for i in range(rows_len):
+        row = ''
+        for v in range(len(table)):
+            row += '`{}` | '.format(get(table[v], i, '---'))
+        out.write(row + '\n')
