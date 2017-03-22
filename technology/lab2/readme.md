@@ -1,7 +1,7 @@
 # Лабораторная работа 2
 
 ## use case diagram
-I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](https://github.com/Drapegnik/bsu/tree/master/technology/lab2/lab2.eap)
+I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/lab2.eap)
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490050601/tp-2-1.png)
 
 ## task
