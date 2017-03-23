@@ -27,6 +27,13 @@
 * Использовать ссылки (`@link`), *HTML*. 
 * Должны работать ссылки на стандартную документацию.
 
+## task3 Использование технологий разбора *XML*
+* Для `task1` данные хранятся в *xml*-файле, а не в базе данных. 
+* Интерфейс *RMI* и интерфейс пользователя должен остаться таким же
+* Также должна быть возможность проверки *xml*-файла на корректность. 
+* С некорректными данными запретить возможность работы. 
+* Разбор осуществляется посредством технологии *StAX*.
+
 ***
 ## Setup
 * set `RMI_PORT` and `RMI_HOST` environment variables
@@ -37,9 +44,9 @@
 * `bash build_doc.sh` for generate documentation
 
 ## Run
-* start *RMI* `bash run_rmi.sh`
-* start *Server* `bash run_server.sh`
-* start *Client* `bash run_client.sh`
+* start *RMI* `bash run_rmi.sh {out_dir}`
+* start *Server* `bash run_server.sh {db_type} {port} {host} {out_dir}`
+* start *Client* `bash run_client.sh {port} {host} {out_dir}`
 
 ## Note
 * for running on remote machines you need to create `server.policy`, `client.policy` files and put it in `src/`

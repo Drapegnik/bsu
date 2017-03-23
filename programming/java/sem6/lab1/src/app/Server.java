@@ -6,15 +6,16 @@ package app;
 
 import app.backend.dbDriver;
 import app.backend.sqlDriver;
+import app.backend.xmlDriver;
 import app.config.Options;
 import app.models.Mark;
 import app.models.Student;
 
+import javax.xml.bind.ValidationException;
 import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,9 +29,7 @@ public class Server implements RemoteService {
 
     private dbDriver db;
 
-    public Server() {
-        db = new sqlDriver();
-    }
+    public Server(dbDriver db) {this.db = db;}
 
     @Override
     public String sayHello() throws RemoteException {
@@ -74,15 +73,28 @@ public class Server implements RemoteService {
     public static void main(String args[]) {
         int port = Integer.parseInt(System.getenv().get(Options.PORT_ENV_NAME));
         String host = System.getenv().get(Options.HOST_ENV_NAME);
+        String dbType = System.getenv().get(Options.DB_TYPE_ENV_NAME);
 
         try {
-            Server obj = new Server();
-            RemoteService stub = (RemoteService) UnicastRemoteObject.exportObject(obj, 0);
+            Server server;
+            switch (dbType) {
+                case Options.DB_SQL:
+                    server = new Server(new sqlDriver());
+                    break;
+                case Options.DB_XML:
+                    server = new Server(new xmlDriver());
+                    break;
+                default:
+                    throw new ValidationException("Incorrect db type! Please set " + Options.DB_TYPE_ENV_NAME +
+                            " env var to '" + Options.DB_SQL + "' or '" + Options.DB_XML + "'");
+            }
+
+            RemoteService stub = (RemoteService) UnicastRemoteObject.exportObject(server, 0);
 
             Registry registry = LocateRegistry.getRegistry(host, port);
             registry.bind(RemoteService.class.getSimpleName(), stub);
 
-            System.err.println("Server ready");
+            System.err.println(dbType + " server ready");
         } catch (Exception ex) {
             System.err.println("Server exception: " + ex.toString());
             ex.printStackTrace();

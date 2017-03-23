@@ -18,6 +18,9 @@ public class Options {
     public static final String DB_PASS = "";
     public static final String PORT_ENV_NAME = "RMI_PORT";
     public static final String HOST_ENV_NAME = "RMI_HOST";
+    public static final String DB_TYPE_ENV_NAME = "DB_TYPE";
+    public static final String DB_SQL = "sql";
+    public static final String DB_XML = "xml";
     public static final String STUDENTS_FILE_NAME = "students.binary";
     public static final Boolean DEBUG = false;
 }

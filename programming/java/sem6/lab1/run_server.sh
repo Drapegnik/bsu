@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-export RMI_PORT=${1:-2001}
-export RMI_HOST=${2:-localhost}
-cd ${3:-'out/production/lab1'}
+export DB_TYPE=${1:-sql}
+export RMI_PORT=${2:-2001}
+export RMI_HOST=${3}
+cd ${4:-'out/production/lab1'}
 java -Djava.security.policy=server.policy app/Server
