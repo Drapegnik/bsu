@@ -23,4 +23,5 @@ public class Options {
     public static final String DB_XML = "xml";
     public static final String STUDENTS_FILE_NAME = "students.binary";
     public static final Boolean DEBUG = false;
+    public static final String XML_DIR = "data/";
 }

@@ -4,6 +4,8 @@
 
 package app.models;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.UUID;
 
@@ -14,6 +16,7 @@ import java.util.UUID;
  * @author Ivan Pazhitnykh
  * @version 1.0
  */
+@XmlRootElement
 public class Mark implements Serializable {
     private String id;
     private Subject subject;
@@ -22,6 +25,8 @@ public class Mark implements Serializable {
      * Link with student {@link Student#id}
      */
     private String studentId;
+
+    public Mark() {}
 
     public Mark(Subject subject, int grade, String studentId) {
         this.subject = subject;
@@ -35,10 +40,12 @@ public class Mark implements Serializable {
         this(Subject.valueOf(subject), grade, studentId);
     }
 
+    @XmlElement
     public Subject getSubject() {return subject;}
 
     public String getStudentId() {return studentId;}
 
+    @XmlElement
     public int getGrade() {return grade;}
 
     public String getId() {return id;}

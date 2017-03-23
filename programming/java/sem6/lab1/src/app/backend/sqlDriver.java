@@ -285,7 +285,7 @@ public class sqlDriver extends dbDriver {
      * @see sqlDriver#createStudent(Student)
      * @see Options#STUDENTS_FILE_NAME
      */
-    public void initDB() {
+    private void initDB() {
         System.out.println("Init database...");
         ArrayList<Student> data = Student.readFromFile(Options.STUDENTS_FILE_NAME);
         Random random = new Random();

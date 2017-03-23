@@ -32,9 +32,12 @@
 * Интерфейс *RMI* и интерфейс пользователя должен остаться таким же
 * Также должна быть возможность проверки *xml*-файла на корректность. 
 * С некорректными данными запретить возможность работы. 
-* Разбор осуществляется посредством технологии *StAX*.
 
 ***
+## Dependencies
+* [`mysql-connector-java`](http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.41)
+* [`jaxb-ri`](https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-ri/2.2.11)
+
 ## Setup
 * set `RMI_PORT` and `RMI_HOST` environment variables
 * create out dir (default `out/production/lab1`)

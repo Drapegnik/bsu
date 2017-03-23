@@ -5,10 +5,12 @@
 package app.models;
 
 import app.config.Options;
+import app.models.wrappers.Marks;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.UUID;
+import javax.xml.bind.annotation.*;
 
 /**
  * <p>Class for storing info about students</p>
@@ -16,16 +18,17 @@ import java.util.UUID;
  * @author Ivan Pazhitnykh
  * @version 1.0
  */
+@XmlRootElement
 public class Student implements Serializable {
     private String name;
     private int group;
     private String id;
-    private ArrayList<Mark> marks;
+    private Marks marks;
 
     public Student() {
         this.name = "";
         this.id = UUID.randomUUID().toString();
-        this.marks = new ArrayList<>();
+        this.marks = new Marks();
     }
 
     public Student(String name, int group) {
@@ -46,26 +49,33 @@ public class Student implements Serializable {
         this.marks = o.marks;
     }
 
+    @XmlElement
     public String getName() {return name;}
 
     public void setName(String name) {this.name = name;}
 
+    @XmlElement
     public int getGroup() {return group;}
 
     public void setGroup(int group) {this.group = group;}
 
+    @XmlAttribute
     public String getId() {return id;}
 
-    public ArrayList<Mark> getMarks() {return marks;}
+    @XmlElement(name = "marks")
+    public Marks getMarksClass() {return marks;}
 
-    public void setMarks(ArrayList<Mark> marks) {this.marks = marks;}
+    @XmlTransient
+    public ArrayList<Mark> getMarks() {return marks.getData();}
 
-    public void addMark(Mark mark) {this.marks.add(mark);}
+    public void setMarks(ArrayList<Mark> marks) {this.marks.setData(marks);}
+
+    public void addMark(Mark mark) {this.marks.addElement(mark);}
 
     @Override
     public String toString() {
         StringBuilder marksString = new StringBuilder();
-        for (Mark mark : marks) {
+        for (Mark mark : marks.getData()) {
             marksString.append(mark.shortToString());
         }
 
@@ -79,7 +89,7 @@ public class Student implements Serializable {
 
     public String formattedToString() {
         StringBuilder str = new StringBuilder(name + " - " + group + "       |");
-        for (Mark mark : marks) {
+        for (Mark mark : marks.getData()) {
             str.append("       ").append(mark.getGrade());
         }
 
