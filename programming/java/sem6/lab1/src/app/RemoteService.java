@@ -8,7 +8,7 @@ import app.models.Student;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Interface for RMI</p>
@@ -21,20 +21,23 @@ public interface RemoteService extends Remote {
 
     /**
      * SELECT ALL
-     * @return <pre> {@code ArrayList<Student>}</pre> {@link Student}s list
+     *
+     * @return <pre> {@code List<Student>}</pre> {@link Student}s list
      * @throws RemoteException rmi exception
      */
-    ArrayList<Student> getStudents() throws RemoteException;
+    List<Student> getStudents() throws RemoteException;
 
     /**
      * SELECT WHERE
-     * @return <pre> {@code ArrayList<String>}</pre> {@link Student}s ids list
+     *
+     * @return <pre> {@code List<String>}</pre> {@link Student}s ids list
      * @throws RemoteException rmi exception
      */
-    ArrayList<String> getBadStudentsIds() throws RemoteException;
+    List<String> getBadStudentsIds() throws RemoteException;
 
     /**
      * DELETE
+     *
      * @param id {@link Student} id
      * @throws RemoteException rmi exception
      */
@@ -42,6 +45,7 @@ public interface RemoteService extends Remote {
 
     /**
      * CREATE
+     *
      * @param student {@link Student} object
      * @throws RemoteException rmi exception
      */

@@ -41,3 +41,5 @@
 * start *Server* `bash run_server.sh`
 * start *Client* `bash run_client.sh`
 
+## Note
+* for running on remote machines you need to create `server.policy`, `client.policy` files and put it in `src/`

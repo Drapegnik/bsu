@@ -5,6 +5,7 @@
 package app;
 
 import app.backend.dbDriver;
+import app.backend.sqlDriver;
 import app.config.Options;
 import app.models.Mark;
 import app.models.Student;
@@ -14,6 +15,7 @@ import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Class wrapper on backend functional</p>
@@ -27,7 +29,7 @@ public class Server implements RemoteService {
     private dbDriver db;
 
     public Server() {
-        db = new dbDriver();
+        db = new sqlDriver();
     }
 
     @Override
@@ -36,12 +38,12 @@ public class Server implements RemoteService {
     }
 
     @Override
-    public ArrayList<Student> getStudents() throws RemoteException {
+    public List<Student> getStudents() throws RemoteException {
         return db.getStudents();
     }
 
     @Override
-    public ArrayList<String> getBadStudentsIds() throws RemoteException {
+    public List<String> getBadStudentsIds() throws RemoteException {
         return db.getBadStudentsIds();
     }
 

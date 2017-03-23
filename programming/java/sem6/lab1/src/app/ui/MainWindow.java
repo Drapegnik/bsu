@@ -80,7 +80,7 @@ public class MainWindow extends JFrame implements ActionListener {
     private void checkConnection() {
         try {
             System.out.println(rmi.sayHello());
-            data = rmi.getStudents();
+            data = (ArrayList<Student>)rmi.getStudents();
         } catch (Exception ex) {
             System.err.println("RMI exception: " + ex.toString());
             ex.printStackTrace();
@@ -90,7 +90,7 @@ public class MainWindow extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             if (e.getSource() == getAll) {
-                data = rmi.getStudents();
+                data = (ArrayList<Student>)rmi.getStudents();
                 render(studentsList, data);
             } else if (e.getSource() == getBad) {
                 badData = getBadStudents();
@@ -102,7 +102,7 @@ public class MainWindow extends JFrame implements ActionListener {
                     return;
                 }
                 rmi.deleteStudent(badData.get(ind).getId());
-                data = rmi.getStudents();
+                data = (ArrayList<Student>)rmi.getStudents();
                 badData = getBadStudents();
                 renderAll();
             } else if (e.getSource() == addStudent) {
@@ -111,7 +111,7 @@ public class MainWindow extends JFrame implements ActionListener {
 
                 if (!tempStudent.equals(new Student())) {
                     rmi.addStudent(tempStudent);
-                    data = rmi.getStudents();
+                    data = (ArrayList<Student>)rmi.getStudents();
                     badData.clear();
                     renderAll();
                 }
@@ -123,7 +123,7 @@ public class MainWindow extends JFrame implements ActionListener {
     }
 
     private ArrayList<Student> getBadStudents() throws RemoteException {
-        ArrayList<String> badIds = rmi.getBadStudentsIds();
+        ArrayList<String> badIds = (ArrayList<String>)rmi.getBadStudentsIds();
         ArrayList<Student> badData = new ArrayList<>();
         for (Student st : data) {
             if (badIds.contains(st.getId())) {
