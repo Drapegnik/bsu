@@ -1,6 +1,8 @@
 # store-app
 [Angular2](https://angular.io)/[Node.js](https://nodejs.org/en/) webapp.
 
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490542775/mean2.jpg)
+
 ## development server
 Run `npm run client` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
@@ -15,3 +17,6 @@ Run `npm run build` to build the client. The build artifacts will be stored in t
 
 ## server
 Run `npm run server` for build client and start server. Open http://localhost:3000/.
+
+## init
+Run `npm run init-db` for inserting init data into database

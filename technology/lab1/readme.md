@@ -1,4 +1,6 @@
 # Лабораторная работа 1
+Создание приложение с деревом наслодования
+
 ## demo
 ![Demo gif](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489526127/tp-lab1.gif)
 

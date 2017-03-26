@@ -1,4 +1,13 @@
 # Лабораторная работа 2
+Создание приложения на основе *Use Case*
+
+## [store-app](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/store-app)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490542775/mean1.png)
+
+* [MongoDB](https://www.mongodb.com/)
+* [Express](http://expressjs.com/)
+* [Angular 2](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/)
+* [Node.js](https://nodejs.org/en/)
 
 ## use case diagram
 I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/lab2.eap)
