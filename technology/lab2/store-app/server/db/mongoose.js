@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 
 import config from '../config';
 
-function connect() {
+export default function () {
   mongoose.Promise = global.Promise;
 
   mongoose.connect(config.mongoose.url, config.mongoose.options);
@@ -26,5 +26,3 @@ function connect() {
 
   return mongoose;
 }
-
-export default connect;

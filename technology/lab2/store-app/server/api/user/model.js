@@ -11,6 +11,8 @@ const Schema = mongoose.Schema;
  * User mongoose Schema
  *  @config {Schema.String} _id
  *  @config {Schema.String} login
+ *  @config {Schema.String} firstName
+ *  @config {Schema.String} lastName
  *  @config {Schema.String} passwordHash
  *  @config {Schema.String} passwordSalt
  *  @config {Schema.String} role
@@ -18,7 +20,7 @@ const Schema = mongoose.Schema;
  * @type {mongoose.Schema}
  */
 const UserSchema = new Schema({
-  login: {
+  username: {
     type: String,
     unique: true,
     required: true,
@@ -35,12 +37,12 @@ const UserSchema = new Schema({
 });
 
 UserSchema.virtual('password')
-  .set(function (password) {
+  .set(function set(password) {
     this.privatePassword = password;
     this.passwordSalt = this.makeSalt();
     this.passwordHash = this.encryptPassword(password);
   })
-  .get(function () { return this.privatePassword; });
+  .get(function get() { return this.privatePassword; });
 
 UserSchema.methods = {
   /**

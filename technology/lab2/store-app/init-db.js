@@ -4,12 +4,11 @@
 /* eslint-disable no-console */
 
 import * as db from './server/db';
-import User from './server/api/user';
 
-Promise.resolve(db.connect())
-  .then(() => User.remove({}).exec())
-  .then((result) => {
-    console.log(`Mongoose: remove ${result.result.n} records from User`);
+Promise.resolve(db.connectDb())
+  .then(mongoose => db.dropCollections(mongoose))
+  .then((collections) => {
+    console.log(`Mongoose: drop ${collections.length} collections: ${collections}`);
   })
   .then(() => db.initUsers())
   .then((users) => {

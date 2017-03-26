@@ -1,34 +1,34 @@
 [
   {
-    "login": "admin",
+    "username": "admin",
     "firstName": "Fox",
     "lastName": "Mulder",
     "password": "1",
     "role": "admin"
   },
   {
-    "login": "order_manager",
+    "username": "order_manager",
     "firstName": "Dana",
     "lastName": "Scally",
     "password": "1",
     "role": "order-manager"
   },
   {
-    "login": "catalog_manager",
+    "username": "catalog_manager",
     "firstName": "John",
     "lastName": "Smith",
     "password": "1",
     "role": "catalog-manager"
   },
   {
-    "login": "transport_manager",
+    "username": "transport_manager",
     "firstName": "Alex",
     "lastName": "Mahone",
     "password": "1",
     "role": "transport-manager"
   },
   {
-    "login": "performer_manager",
+    "username": "performer_manager",
     "firstName": "Helen",
     "lastName": "Dots",
     "password": "1",

@@ -4,4 +4,6 @@
 
 import User from './model';
 
-export default User;
+const stub = 1;
+
+export { User, stub };
