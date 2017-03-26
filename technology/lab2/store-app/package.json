@@ -9,8 +9,8 @@
     "ng": "ng",
     "client": "ng serve && open http://localhost:4200",
     "build": "ng build",
-    "lint": "ng lint && eslint server.js api/**",
-    "server": "ng build && nodemon -w server.js -w ./api --exec babel-node server.js"
+    "lint": "ng lint && eslint server.js server/**",
+    "server": "ng build && nodemon -w server.js -w ./server --exec babel-node server.js"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "core-js": "^2.4.1",
     "cors": "^2.8.1",
     "express": "^4.15.2",
+    "mongoose": "^4.9.1",
     "morgan": "^1.8.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6"
