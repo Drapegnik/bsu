@@ -8,6 +8,8 @@ import mongoose from 'mongoose';
 import config from '../config';
 
 function connect() {
+  mongoose.Promise = global.Promise;
+
   mongoose.connect(config.mongoose.url, config.mongoose.options);
 
   mongoose.connection.on('connected', () => {
@@ -21,6 +23,8 @@ function connect() {
   mongoose.connection.on('disconnected', () => {
     console.log('Mongoose: connection disconnected');
   });
+
+  return mongoose;
 }
 
-export { mongoose, connect };
+export default connect;

@@ -2,6 +2,7 @@
  * Created by Drapegnik on 26.03.17.
  */
 
-import { connect, mongoose } from './mongoose';
+import connect from './mongoose';
+import initUsers from './users';
 
-export { connect, mongoose };
+export { connect, initUsers };

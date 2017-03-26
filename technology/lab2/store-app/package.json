@@ -10,7 +10,8 @@
     "client": "ng serve && open http://localhost:4200",
     "build": "ng build",
     "lint": "ng lint && eslint server.js server/**",
-    "server": "ng build && nodemon -w server.js -w ./server --exec babel-node server.js"
+    "server": "ng build && nodemon -w server.js -w ./server --exec babel-node server.js",
+    "init-db": "babel-node init-db"
   },
   "private": true,
   "dependencies": {
