@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def dijkstra(graph, start):
     """
     find min distance for all nodes from s
@@ -40,5 +43,25 @@ def dijkstra(graph, start):
     return dist, prev, debug_table
 
 
-def floyd():
-    pass
+def floyd(d):
+    """
+    find min distance for all nodes
+    :param d: matrix adjacency with distance
+    :return:
+        dist - matrix adjacency with shortest distance
+        path - path matrix for build shortest way
+    """
+    n = len(d)
+    p = [[j for j in range(n)] for _ in range(n)]
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                if d[i][k] < float('inf') and d[k][j] < float('inf'):
+                    if d[i][k] + d[k][j] < d[i][j]:
+                        d[i][j] = d[i][k] + d[k][j]
+                        p[i][j] = k
+        print 'k={}'.format(k)
+        print np.array(d)
+        print np.array(p)
+        print '-'*30
+    return d, p

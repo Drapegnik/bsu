@@ -35,6 +35,7 @@ def read_graph_list(file_name):
     g_list = [[] for _ in range(n)]
     g_mat = np.zeros((n, n))
     g_mat.fill(float('inf'))
+    np.fill_diagonal(g_mat, 0)
 
     for i in range(m):
         x, y, d = map(lambda a: int(a), inp.readline().split())
