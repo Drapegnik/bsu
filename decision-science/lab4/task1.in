@@ -1,0 +1,11 @@
+s v1 v2 v3 t
+9
+s v1 2
+s v2 3
+s v3 1
+v1 v3 1
+v1 t 3
+v1 v2 3
+v2 t 2
+v2 v3 4
+v3 t 2
