@@ -1,3 +1,32 @@
+# lab3
+Pazhitnykh Ivan
+
+# task1
+
+* Find shortest ways for all nodes from `v1` using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977440/ds-lab3-task1.png)
+
+## input 
+
+* [`task1.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task1.in)
+
+## result table
+v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | 
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+`(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | 
+`(0,1)*` | `(3, 4)*` | `(4, 1)*` | `(2, 1)*` | `(4, 2)` | `(3, 2)*` | `(6, 6)` | `(5, 9)*` | `(5, 4)` | `(5, 7)*` | 
+`---` | `---` | `---` | `---` | `(3, 6)*` | `---` | `(3, 9)*` | `---` | `(3, 5)*` | `---` | 
+
+# task2
+
+* Find shortest ways for all nodes using [Floyd–Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977439/ds-lab3-task2.png)
+
+## input 
+
+* [`task2.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task2.in)
+
+## result matrices
 * `k=0`:
 ```
 D=
@@ -105,4 +134,3 @@ T=
  [3 5 3 3 4 5]
  [4 1 1 4 4 5]]
 ```
-

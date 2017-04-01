@@ -1,4 +1,4 @@
-import numpy as np
+from utils import write_floyd
 
 
 def dijkstra(graph, start):
@@ -60,8 +60,6 @@ def floyd(d):
                     if d[i][k] + d[k][j] < d[i][j]:
                         d[i][j] = d[i][k] + d[k][j]
                         p[i][j] = k
-        print 'k={}'.format(k)
-        print np.array(d)
-        print np.array(p)
-        print '-'*30
+
+        write_floyd('task2.out.md', k, d, p)
     return d, p

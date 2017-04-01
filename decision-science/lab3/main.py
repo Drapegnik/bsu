@@ -1,3 +1,4 @@
+import os
 import sys
 
 from algorithms import dijkstra, floyd
@@ -47,8 +48,9 @@ print '-'*35 + '\ntask1 - shortest ways from ({})\n'.format(TASK1_START + 1) + '
 g_list, g_mat = read_graph_list('task1.in')
 dist, prev, table = dijkstra(g_list, TASK1_START)
 user_interaction(prev, dist, g_mat)
-write_debug_table('task2.out.md', table)
+write_debug_table('task1.out.md', table)
 
 print '\n' + '-'*35 + '\ntask2\n' + '-'*35
+os.remove('task2.out.md')
 g_mat = read_graph_matrix('task2.in')
 dist, path = floyd(g_mat)

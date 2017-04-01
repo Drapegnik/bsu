@@ -80,3 +80,15 @@ def write_debug_table(file_name, table):
         for v in range(len(table)):
             row += '`{}` | '.format(get(table[v], i, '---'))
         out.write(row + '\n')
+
+
+def write_floyd(file_name, k, d, t):
+    out = file(file_name, 'a')
+    out.write('* `k={}`:\n'.format(k))
+    print 'k={}:'.format(k)
+    out.write('```\n')
+    out.write('D=\n{}\n'.format(np.array(d)))
+    print np.array(d)
+    out.write('T=\n{}\n'.format(np.array(t)))
+    print np.array(t)
+    out.write('```\n\n')
