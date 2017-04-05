@@ -7,6 +7,8 @@
 * [lab4](https://github.com/Drapegnik/bsu/tree/master/networks/lab4) - [Работа с сетевыми адресами](https://drapegnik.github.io/bsu/networks/lab4/Lab4_PazhitnykhIP.pdf)
 * [lab5](https://github.com/Drapegnik/bsu/tree/master/networks/lab5) - [Статическая маршрутизация](https://drapegnik.github.io/bsu/networks/lab5/Lab5_PazhitnykhIP.pdf)
 * [lab6](https://github.com/Drapegnik/bsu/tree/master/networks/lab6) - [Внедрение адресации *VLSM*](https://drapegnik.github.io/bsu/networks/lab6/Lab6_PazhitnykhIP.pdf)
+* [lab7](https://github.com/Drapegnik/bsu/tree/master/networks/lab7) - [Конфигурация *RIP* `v2`](https://drapegnik.github.io/bsu/networks/lab7/Lab7_PazhitnykhIP.pdf)
+* [lab8](https://github.com/Drapegnik/bsu/tree/master/networks/lab8) - [Настройка параметров *OSPF*](https://drapegnik.github.io/bsu/networks/lab8/Lab8_PazhitnykhIP.pdf)
 
 ***
 
