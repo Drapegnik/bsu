@@ -6,6 +6,10 @@
     <groupId>bsu.famcs.drapegnik</groupId>
     <artifactId>java-sem6-lab1</artifactId>
     <version>1.0</version>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <name>rmi-javadoc-xml</name>
     <description>java sem6 lab1 bsu famcs</description>
     <url>https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6/lab1</url>

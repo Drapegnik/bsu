@@ -12,6 +12,7 @@ import app.models.wrappers.Students;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,20 +69,6 @@ public class xmlDriver extends dbDriver {
     public void createMark(Mark mark) {
     }
 
-    private void writeData(ArrayList<Student> data) {
-        try {
-            File file = new File(Options.XML_DIR + Student.class.getSimpleName() + "s.xml");
-            JAXBContext jaxbContext = JAXBContext.newInstance(Students.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            jaxbMarshaller.marshal(new Students(data), file);
-            jaxbMarshaller.marshal(new Students(data), System.out);
-
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
-    }
-
     /**
      * Fetch {@link Student}s data from {@link Options#STUDENTS_FILE_NAME}
      * Generate random {@link Mark}s with {@link Subject}s
@@ -104,6 +91,42 @@ public class xmlDriver extends dbDriver {
         }
 
         writeData(data);
+    }
+
+    private void writeData(ArrayList<Student> data) {
+        try {
+            File file = new File(getStudentsFilename());
+            JAXBContext jaxbContext = JAXBContext.newInstance(Students.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            jaxbMarshaller.marshal(new Students(data), file);
+            jaxbMarshaller.marshal(new Students(data), System.out);
+
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ArrayList<Student> readData(String filename) {
+        ArrayList<Student> data = new ArrayList<>();
+        try {
+            File file = new File(filename);
+            JAXBContext jaxbContext = JAXBContext.newInstance(Students.class);
+
+            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+            Students students = (Students) jaxbUnmarshaller.unmarshal(file);
+            for (Student st : students.getData()) {
+                System.out.println(st.shortToString());
+                data.add(st);
+            }
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
+    private static String getStudentsFilename() {
+        return Options.XML_DIR + Student.class.getSimpleName() + "s.xml";
     }
 
     public static void main(String[] args) {
