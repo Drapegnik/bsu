@@ -7,6 +7,7 @@ import app.config.Options;
 import app.models.Mark;
 import app.models.Student;
 import app.models.Subject;
+import app.models.wrappers.Marks;
 import app.models.wrappers.Students;
 
 import javax.xml.bind.JAXBContext;
@@ -26,7 +27,10 @@ public class xmlDriver extends dbDriver {
      */
     @Override
     public List<Student> getStudents() {
-        return null;
+        System.out.println("Select students...");
+        ArrayList<Student> data = readData(getStudentsFilename());
+        System.out.println("Successfully select " + data.size() + " students.");
+        return data;
     }
 
     /**
@@ -37,7 +41,24 @@ public class xmlDriver extends dbDriver {
      */
     @Override
     public List<String> getBadStudentsIds() {
-        return null;
+        System.out.println("Select bad students...");
+        ArrayList<String> badIds = new ArrayList<>();
+        ArrayList<Student> data = readData(getStudentsFilename());
+
+        for (Student st : data) {
+            int badMarksCount = 0;
+            for (Mark mr : st.getMarks()) {
+                if (mr.getGrade() < 4) {badMarksCount++;}
+            }
+
+            if (badMarksCount > 2) {
+                badIds.add(st.getId());
+                System.out.println(st.getId());
+            }
+        }
+
+        System.out.println("Successfully select " + badIds.size() + " bad students.");
+        return badIds;
     }
 
     /**
@@ -47,7 +68,22 @@ public class xmlDriver extends dbDriver {
      */
     @Override
     public void deleteStudent(String id) {
+        System.out.println("Delete student...");
+        ArrayList<Student> data = readData(getStudentsFilename());
+        int ind = -1;
 
+        for (int i = 0; i < data.size(); i++) {
+            if (data.get(i).getId().equals(id)) {
+                ind = i;
+                break;
+            }
+        }
+
+        if (ind == -1) {return;}
+
+        data.remove(ind);
+        writeData(data);
+        System.out.println("Successfully delete student with id=" + id);
     }
 
     /**
@@ -57,7 +93,9 @@ public class xmlDriver extends dbDriver {
      */
     @Override
     public void createStudent(Student student) {
-
+        ArrayList<Student> data = readData(getStudentsFilename());
+        data.add(student);
+        writeData(data);
     }
 
     /**
@@ -67,6 +105,20 @@ public class xmlDriver extends dbDriver {
      */
     @Override
     public void createMark(Mark mark) {
+        ArrayList<Student> data = readData(getStudentsFilename());
+        boolean found = false;
+
+        for (Student st : data) {
+            if (st.getId().equals(mark.getStudentId())) {
+                st.addMark(mark);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {return;}
+
+        writeData(data);
     }
 
     /**
@@ -100,8 +152,6 @@ public class xmlDriver extends dbDriver {
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             jaxbMarshaller.marshal(new Students(data), file);
-            jaxbMarshaller.marshal(new Students(data), System.out);
-
         } catch (JAXBException e) {
             e.printStackTrace();
         }
@@ -116,7 +166,6 @@ public class xmlDriver extends dbDriver {
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             Students students = (Students) jaxbUnmarshaller.unmarshal(file);
             for (Student st : students.getData()) {
-                System.out.println(st.shortToString());
                 data.add(st);
             }
         } catch (JAXBException e) {
@@ -131,7 +180,8 @@ public class xmlDriver extends dbDriver {
 
     public static void main(String[] args) {
         xmlDriver xml = new xmlDriver();
-        Student.writeInFile(app.config.Options.STUDENTS_FILE_NAME, Student.generateFakeData());
+        // Student.writeInFile(app.config.Options.STUDENTS_FILE_NAME, Student.generateFakeData());
         xml.initStorage();
+        xml.readData(getStudentsFilename());
     }
 }
