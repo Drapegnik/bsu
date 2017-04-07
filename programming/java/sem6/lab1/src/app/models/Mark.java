@@ -19,7 +19,9 @@ import java.util.UUID;
 @XmlRootElement
 public class Mark implements Serializable {
     private String id;
+    @XmlElement
     private Subject subject;
+    @XmlElement
     private int grade;
     /**
      * Link with student {@link Student#id}
@@ -40,12 +42,10 @@ public class Mark implements Serializable {
         this(Subject.valueOf(subject), grade, studentId);
     }
 
-    @XmlElement
     public Subject getSubject() {return subject;}
 
     public String getStudentId() {return studentId;}
 
-    @XmlElement
     public int getGrade() {return grade;}
 
     public String getId() {return id;}

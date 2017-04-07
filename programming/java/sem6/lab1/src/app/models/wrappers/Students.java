@@ -22,11 +22,11 @@ public class Students {
     }
 
     @XmlElement(name = "student")
-    public ArrayList<Student> getStudents() {
+    public ArrayList<Student> getData() {
         return data;
     }
 
-    public void setStudents(ArrayList<Student> data) {
+    public void setData(ArrayList<Student> data) {
         this.data = data;
     }
 }

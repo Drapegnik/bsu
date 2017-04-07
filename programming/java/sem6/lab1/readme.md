@@ -40,7 +40,7 @@
 
 ## Setup
 * set `RMI_PORT` and `RMI_HOST` environment variables
-* create out dir (default `out/production/lab1`)
+* create out dir (default `target/classes`)
 
 ## Build
 * `bash build.sh` for build all classes from `src/`

@@ -22,7 +22,11 @@ import javax.xml.bind.annotation.*;
 public class Student implements Serializable {
     private String name;
     private int group;
+
+    @XmlAttribute
     private String id;
+
+    @XmlElement(name = "marks")
     private Marks marks;
 
     public Student() {
@@ -49,7 +53,6 @@ public class Student implements Serializable {
         this.marks = o.marks;
     }
 
-    @XmlElement
     public String getName() {return name;}
 
     public void setName(String name) {this.name = name;}
@@ -59,7 +62,6 @@ public class Student implements Serializable {
 
     public void setGroup(int group) {this.group = group;}
 
-    @XmlAttribute
     public String getId() {return id;}
 
     @XmlElement(name = "marks")

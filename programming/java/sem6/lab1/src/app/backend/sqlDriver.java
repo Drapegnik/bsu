@@ -303,7 +303,7 @@ public class sqlDriver extends dbDriver {
         }
     }
 
-    private void dumpStudentsIntoFule() {
+    private void dumpStudentsIntoFile() {
         Student.writeInFile(Options.STUDENTS_FILE_NAME, getStudents());
     }
 

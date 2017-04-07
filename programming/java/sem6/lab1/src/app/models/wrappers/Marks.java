@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Marks implements Serializable {
     private ArrayList<Mark> data;
 
-    public Marks() {data = null;}
+    public Marks() {data = new ArrayList<>();}
 
     public Marks(ArrayList<Mark> data) {this.data = data;}
 
