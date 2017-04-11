@@ -1,5 +1,5 @@
 # Лабораторная работа 2
-Создание компьютерной сети с использованием [**Packet Tracer**](https://en.wikipedia.org/wiki/Packet_Tracer).
+Создание компьютерной сети с использованием [**Packet Tracer**](https://en.wikipedia.org/wiki/Packet_Tracer). 18 варинат. 18 варинат
 
 ## Задача
 1. Знакомство с пакетом [**Packet Tracer**](https://www.netacad.com/about-networking-academy/packet-tracer)
