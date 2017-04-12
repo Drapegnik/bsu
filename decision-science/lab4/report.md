@@ -76,6 +76,8 @@ Pazhitnykh Ivan
 	(v1)-1->(v3) - [0]
 ```
 
+![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task1.png)
+
 ## task2
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task2.png)
 
@@ -116,3 +118,5 @@ Pazhitnykh Ivan
 	(s)-0.9->(v1) - [0.3]
 	(v3)-0.14->(t) - [0.14]
 ```
+
+![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2.png)

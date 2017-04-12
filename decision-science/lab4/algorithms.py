@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from graphviz import Digraph
 
 
 class Edge:
@@ -16,6 +17,9 @@ class FlowNetwork:
         self.adj = {}
         self.flow = {}
         self.file_name = file_name
+
+    def get_vertex(self):
+        return self.adj.keys()
 
     def add_vertex(self, vertex):
         self.adj[vertex] = []
@@ -43,6 +47,15 @@ class FlowNetwork:
         for key in keys:
             out.write('\t{0} - [{1}]\n'.format(key, self.flow[key]))
         out.write('```\n\n')
+
+    def draw(self, file_name):
+        g = Digraph('G', filename='{}.gv'.format(file_name), directory='out', format='png')
+        for v in self.get_vertex():
+            for e in self.get_edges(v):
+                if e.cost != 0:
+                    flow = '[{}]'.format(self.flow[e]) if self.flow[e] != 0 else ''
+                    g.edge(e.start, e.finish, label=flow)
+        g.view()
 
     def format_path(self, path):
         i = 0
