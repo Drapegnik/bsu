@@ -3,23 +3,23 @@ from algorithms import FlowNetwork
 
 if __name__ == '__main__':
     # task1
-    inp = file('task1.in', 'r')
-    g = FlowNetwork('out/task1.md')
+    inp = file('in/task1.in', 'r')
+    g = FlowNetwork('out/task1')
     map(g.add_vertex, inp.readline().split())
     m = int(inp.readline())
     for _ in range(m):
         x, y, w = inp.readline().split()
         g.add_edge(x, y, int(w))
     print 'task1 max flow = {}'.format(g.ford_fulkerson('s', 't'))
-    g.draw('task1')
+    g.draw()
 
     # task2
-    inp = file('task2.in', 'r')
-    g = FlowNetwork('out/task2.md')
+    inp = file('in/task2.in', 'r')
+    g = FlowNetwork('out/task2')
     map(g.add_vertex, inp.readline().split())
     m = int(inp.readline())
     for _ in range(m):
         x, y, w = inp.readline().split()
         g.add_edge(x, y, float(w))
     print 'task2 max flow = {}'.format(g.edmonds_karp('s', 't'))
-    g.draw('task2')
+    g.draw()
