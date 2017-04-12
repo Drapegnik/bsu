@@ -53,7 +53,7 @@ class FlowNetwork:
         for v in self.get_vertex():
             for e in self.get_edges(v):
                 if e.cost != 0:
-                    flow = '[{}]'.format(self.flow[e]) if self.flow[e] != 0 else ''
+                    flow = '[{0}/{1}]'.format(self.flow[e], e.cost) if self.flow[e] != 0 else ''
                     g.edge(e.start, e.finish, label=flow)
         g.view()
 
