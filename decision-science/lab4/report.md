@@ -3,7 +3,7 @@ Pazhitnykh Ivan
 
 * Find maximum flows in graphs:
 ## task1
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task1.png)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task1.gv.png)
 
 * find path: `(s)-[2, 2]->(v1)-[1, 1]->(v3)-[2, 2]->(t)`, with min res = 1, change flow:
 ```
@@ -119,4 +119,4 @@ Pazhitnykh Ivan
 	(v3)-0.14->(t) - [0.14]
 ```
 
-![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2.png)
+![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2.gv.png)
