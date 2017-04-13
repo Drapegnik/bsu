@@ -27,10 +27,11 @@ class Edge:
 
 
 class Mark:
-    def __init__(self, parent=None, flow=float('inf'), edge=None):
+    def __init__(self, parent=None, flow=float('inf'), edge=None, sign=1):
         self.parent = parent
         self.flow = flow
         self.edge = edge
+        self.sign = sign
 
     def __repr__(self):
         return '({}, {})'.format(self.parent, self.flow)
@@ -96,14 +97,14 @@ class FlowNetwork:
 
             for edge in self.get_edges(v):
                 if not marks[edge.finish] and self.flow[edge] < edge.weight:
-                    flow = min(abs(marks[v].flow), edge.weight - self.flow[edge])
+                    flow = min(marks[v].flow, edge.weight - self.flow[edge])
                     marks[edge.finish] = Mark(v, flow, edge)
                     queue.append(edge.finish)
 
             for redge in self.get_redges(v):
                 if not marks[redge.start] and self.flow[redge] > redge.min_weight:
-                    flow = min(abs(marks[v].flow), self.flow[redge] - redge.min_weight)
-                    marks[redge.start] = Mark(v, -flow, redge)
+                    flow = min(marks[v].flow, self.flow[redge] - redge.min_weight)
+                    marks[redge.start] = Mark(v, flow, redge, sign=-1)
                     queue.append(redge.start)
 
         return marks
@@ -125,8 +126,9 @@ class FlowNetwork:
             if write:
                 self.print_table_row(out, marks)
             i = _to
+            min_flow = marks[_to].flow
             while marks[i].parent:
-                self.flow[marks[i].edge] += marks[i].flow
+                self.flow[marks[i].edge] += marks[i].sign*min_flow
                 i = marks[i].parent
             marks = self.get_marks(_from, _to)
 

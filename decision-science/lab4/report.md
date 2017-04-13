@@ -10,7 +10,8 @@ s | t  | v1  | v2  | v3
 --- | --- | --- | --- | --- | 
 `(None, inf)` | `(v1, 2)` | `(s, 2)` | `(s, 3)` | `(s, 1)` | 
 `(None, inf)` | `(v2, 2)` | `None` | `(s, 3)` | `(s, 1)` | 
-`(None, inf)` | `(v3, 1)` | `None` | `None` | `(s, 1)` | 
+`(None, inf)` | `(v3, 1)` | `None` | `(s, 1)` | `(s, 1)` | 
+`(None, inf)` | `(v3, 1)` | `None` | `(s, 1)` | `(v2, 1)` | 
 `(None, inf)` | `None` | `None` | `None` | `None` | 
 
 * maximal flow = 6:
@@ -22,8 +23,8 @@ s | t  | v1  | v2  | v3
 	(v1)-3->(t) - [2]
 	(v1)-3->(v2) - [0]
 	(v2)-2->(t) - [2]
-	(v2)-4->(v3) - [0]
-	(v3)-2->(t) - [1]
+	(v2)-4->(v3) - [1]
+	(v3)-2->(t) - [2]
 ```
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task1.gv.png)
@@ -32,16 +33,16 @@ s | t  | v1  | v2  | v3
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task2.png)
 * initial flow:
 ```
-	(s)-9->(v1) - [7]
 	(s)-8->(v2) - [4]
-	(v3)-14->(t) - [8]
-	(v1)-4,6->(v4) - [4]
-	(v2)-2->(v3) - [0]
+	(s)-9->(v1) - [7]
+	(v2)-7,8->(v5) - [7]
 	(v4)-5->(v3) - [5]
+	(v1)-3,5->(v2) - [3]
 	(v4)-3->(t) - [3]
 	(v1)-4->(v5) - [0]
-	(v1)-3,5->(v2) - [3]
-	(v2)-7,8->(v5) - [7]
+	(v2)-2->(v3) - [0]
+	(v3)-14->(t) - [8]
+	(v1)-4,6->(v4) - [4]
 	(v5)-4->(v3) - [3]
 	(v5)-7->(v4) - [4]
 ```
@@ -52,21 +53,21 @@ s | t  | v1  | v2  | v3
 s | t  | v1  | v2  | v3  | v4  | v5 
 --- | --- | --- | --- | --- | --- | --- | 
 `(None, inf)` | `(v3, 2)` | `(s, 2)` | `(s, 4)` | `(v2, 2)` | `(v1, 2)` | `(v1, 2)` | 
-`(None, inf)` | `(v3, 1)` | `(s, 2)` | `(v1, 2)` | `(v5, 1)` | `(v1, 2)` | `(v1, 2)` | 
-`(None, inf)` | `None` | `None` | `None` | `None` | `None` | `None` | 
+`(None, inf)` | `(v3, 1)` | `(s, 2)` | `(s, 2)` | `(v5, 1)` | `(v1, 2)` | `(v1, 2)` | 
+`(None, inf)` | `None` | `(s, 1)` | `(s, 2)` | `None` | `(v1, 1)` | `(v1, 1)` | 
 
-* maximal flow = 17:
+* maximal flow = 14:
 ```
-	(s)-9->(v1) - [9]
-	(s)-8->(v2) - [8]
+	(s)-8->(v2) - [6]
+	(s)-9->(v1) - [8]
+	(v2)-7,8->(v5) - [7]
+	(v4)-5->(v3) - [5]
+	(v1)-3,5->(v2) - [3]
+	(v4)-3->(t) - [3]
+	(v1)-4->(v5) - [1]
+	(v2)-2->(v3) - [2]
 	(v3)-14->(t) - [11]
 	(v1)-4,6->(v4) - [4]
-	(v2)-2->(v3) - [2]
-	(v4)-5->(v3) - [5]
-	(v4)-3->(t) - [3]
-	(v1)-4->(v5) - [2]
-	(v1)-3,5->(v2) - [3]
-	(v2)-7,8->(v5) - [7]
 	(v5)-4->(v3) - [4]
 	(v5)-7->(v4) - [4]
 ```
@@ -93,9 +94,9 @@ s | t  | v1  | v2  | v3  | v4  | v5
 ```
 s | s0  | s1  | s2  | s3  | s4  | s5  | t  | t0  | t1  | t2  | t3  | t4  | t5 
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-`(None, inf)` | `(t4, -1)` | `(s, 1)` | `None` | `(s, 1)` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `(s1, 1)` | `None` | 
-`(None, inf)` | `(t4, -1)` | `None` | `None` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `(s3, 1)` | `None` | 
-`(None, inf)` | `(t4, -1)` | `(t5, -1)` | `None` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `(s3, 1)` | `(s3, 1)` | 
+`(None, inf)` | `(t4, 1)` | `(s, 1)` | `None` | `(s, 1)` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `(s1, 1)` | `None` | 
+`(None, inf)` | `(t4, 1)` | `None` | `None` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `(s3, 1)` | `None` | 
+`(None, inf)` | `(t4, 1)` | `(t5, 1)` | `None` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `(s3, 1)` | `(s3, 1)` | 
 `(None, inf)` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | `None` | 
 
 * iteration 1, flow=3:
