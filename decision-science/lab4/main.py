@@ -45,7 +45,7 @@ if __name__ == '__main__':
         x, y, w = inp.readline().split()
         g.add_edge(x, y, int(w))
     inp.close()
-    print 'task1 max flow = {}'.format(g.ford_fulkerson('s', 't', out=out)[0])
+    print 'task1 max flow = {}'.format(g.max_flow('s', 't', out)[0])
     g.draw()
 
     out.write(
@@ -58,13 +58,16 @@ if __name__ == '__main__':
     map(g.add_vertex, inp.readline().split())
     m = int(inp.readline())
     for _ in range(m):
-        x, y, w = inp.readline().split()
-        g.add_edge(x, y, float(w))
+        x, y, min_w, w, f = inp.readline().split()
+        g.add_edge(x, y, int(w), int(min_w), int(f))
     inp.close()
-    print 'task2 max flow = {}'.format(g.edmonds_karp('s', 't', out=out)[0])
-    g.draw()
-
-    out.write('![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2.gv.png)\n')
+    g.draw(postfix='-1')
+    out.write('* initial flow:\n')
+    g.print_flow(out)
+    out.write('![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-1.gv.png)\n')
+    print 'task2 max flow = {}'.format(g.max_flow('s', 't', out)[0])
+    g.draw(postfix='-2')
+    out.write('![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-2.gv.png)\n')
     out.write('## task3\n* Solve Assignment problem with coast matrix:\n')
 
     # task3
@@ -95,9 +98,9 @@ if __name__ == '__main__':
     c_histtory = [np.copy(c)]
 
     while True:
-        flow, marks = g.ford_fulkerson('s', 't', write=False)
+        flow, marks = g.max_flow('s', 't', write=False)
         flows.append(flow)
-        print 'task3: iteration{0}: max flow after {1}'.format(k, flow)
+        print 'task3: iteration{0}: max flow = {1}'.format(k, flow)
         g.print_table_row(out, marks)
         g.draw()
 

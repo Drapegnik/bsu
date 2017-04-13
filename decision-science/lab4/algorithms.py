@@ -3,20 +3,27 @@ from graphviz import Digraph
 
 
 class Edge:
-    def __init__(self, start, finish, weight=0, redge=False):
+    def __init__(self, start, finish, weight=0, min_weight=0, redge=False):
         self.start = start
         self.finish = finish
+        self.min_weight = min_weight
         self.weight = weight
         self.redge = redge  # flag for saying, that its incoming edge
 
     def __repr__(self):
-        return '({0})-{1}->({2})'.format(self.start, self.weight, self.finish)
+        return '({0})-{1}{2}->({3})'.format(
+            self.start,
+            '{},'.format(self.min_weight) if self.min_weight != 0 else '',
+            self.weight, self.finish)
 
     def __hash__(self):
         return hash(self.__repr__())
 
     def __eq__(self, another):
-        return self.start == another.start and self.finish == another.finish and self.weight == another.weight
+        return self.start == another.start \
+               and self.finish == another.finish \
+               and self.weight == another.weight \
+               and self.min_weight == another.min_weight
 
 
 class Mark:
@@ -43,17 +50,17 @@ class FlowNetwork:
         vertex.sort()
         return vertex
 
-    def add_edge(self, u, v, w=0):
+    def add_edge(self, u, v, w=0, min_w=0, f=0):
         if u == v:
             raise ValueError('u == v')
 
-        edge = Edge(u, v, w)
-        redge = Edge(u, v, w, redge=True)
+        edge = Edge(u, v, w, min_w)
+        redge = Edge(u, v, w, min_w, redge=True)
 
         self.adj[u].append(edge)
         self.adj[v].append(redge)
 
-        self.flow[edge] = 0
+        self.flow[edge] = f
 
     def get_edges(self, v):
         """
@@ -63,10 +70,6 @@ class FlowNetwork:
         """
         return filter(lambda e: not e.redge, self.adj[v])
 
-    def clear(self):
-        self.adj = {}
-        self.flow = {}
-
     def get_redges(self, v):
         """
         Return incoming edges for v
@@ -74,24 +77,6 @@ class FlowNetwork:
         :return: list of Edge object's
         """
         return filter(lambda e: e.redge, self.adj[v])
-
-    def ford_fulkerson(self, _from, _to, write=True, out=None):
-        """
-        Wrapper on max_flow() method, with get_marks() as search function
-        :param _from: a source
-        :param _to: a sink
-        :param write: param for disabling file outputs
-        """
-        return self.max_flow(_from, _to, self.get_marks, write, out)
-
-    def edmonds_karp(self, _from, _to, write=True, out=None):
-        """
-        Wrapper on max_flow() method, with bfs() as search function
-        :param _from: a source
-        :param _to: a sink
-        :param write: param for disabling file outputs
-        """
-        return self.max_flow(_from, _to, self.bfs, write, out)
 
     def get_marks(self, _from, _to):
         """
@@ -116,85 +101,34 @@ class FlowNetwork:
                     queue.append(edge.finish)
 
             for redge in self.get_redges(v):
-                if not marks[redge.start] and self.flow[redge] > 0:
-                    flow = min(abs(marks[v].flow), self.flow[redge])
+                if not marks[redge.start] and self.flow[redge] > redge.min_weight:
+                    flow = min(abs(marks[v].flow), self.flow[redge] - redge.min_weight)
                     marks[redge.start] = Mark(v, -flow, redge)
                     queue.append(redge.start)
 
         return marks
 
-    def bfs(self, _from, _to):
-        """
-        Breadth-first search alghoritm implementation
-        :param _from: a source
-        :param _to: a sink
-        :return: list of Mark object's
-        """
-        visited = dict.fromkeys(self.get_vertex(), False)
-        marks = dict.fromkeys(self.get_vertex())
-        queue = [_from]
-        visited[_from] = True
-        marks[_from] = Mark()
-
-        while queue:
-            v = queue.pop(0)
-            for edge in self.get_edges(v):
-                flow = edge.weight - self.flow[edge]
-                if not visited[edge.finish] and flow > 0:
-                    queue.append(edge.finish)
-                    visited[edge.finish] = True
-                    marks[edge.finish] = Mark(v, flow, edge)
-
-        return self.find_min_flow(marks, _to)
-
-    @staticmethod
-    def find_min_flow(marks, _to):
-        """
-        Set min flow value during the min way from sink to source
-        :param marks: list of Mark object's
-        :param _to: a sink
-        :return: list of Mark object's with new flow value
-        """
-        i = _to
-        min_flow = float('inf')
-        while marks[i]:
-            if not marks[i].parent:
-                break
-            min_flow = min(min_flow, marks[i].flow)
-            i = marks[i].parent
-
-        i = _to
-        while marks[i]:
-            if not marks[i].parent:
-                break
-            marks[i].flow = min_flow
-            i = marks[i].parent
-        return marks
-
-    def max_flow(self, _from, _to, find_func, write, out):
+    def max_flow(self, _from, _to, out=None, write=True):
         """
         Find max flow in network
         :param _from: a source
         :param _to: a sink
-        :param find_func search function implementation
         :param write: param for disabling file outputs
         :return: max flow, marks from last iteration
         """
         if write:
             out.write('* table with marks by iteration:\n\n')
             self.print_table_head(out)
-        marks = find_func(_from, _to)
+        marks = self.get_marks(_from, _to)
 
         while marks[_to]:
             if write:
                 self.print_table_row(out, marks)
             i = _to
-            while marks[i]:
-                if not marks[i].parent:
-                    break
+            while marks[i].parent:
                 self.flow[marks[i].edge] += marks[i].flow
                 i = marks[i].parent
-            marks = find_func(_from, _to)
+            marks = self.get_marks(_from, _to)
 
         flow = sum(self.flow[edge] for edge in self.get_edges(_from))
         if write:

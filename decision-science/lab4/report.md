@@ -30,29 +30,48 @@ s | t  | v1  | v2  | v3
 ## task2
 * Find maximum flow in graph:
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task2.png)
+* initial flow:
+```
+	(s)-9->(v1) - [7]
+	(s)-8->(v2) - [4]
+	(v3)-14->(t) - [8]
+	(v1)-4,6->(v4) - [4]
+	(v2)-2->(v3) - [0]
+	(v4)-5->(v3) - [5]
+	(v4)-3->(t) - [3]
+	(v1)-4->(v5) - [0]
+	(v1)-3,5->(v2) - [3]
+	(v2)-7,8->(v5) - [7]
+	(v5)-4->(v3) - [3]
+	(v5)-7->(v4) - [4]
+```
+
+![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-1.gv.png)
 * table with marks by iteration:
 
 s | t  | v1  | v2  | v3  | v4  | v5 
 --- | --- | --- | --- | --- | --- | --- | 
-`(None, inf)` | `(v4, 0.3)` | `(s, 0.3)` | `(s, 0.8)` | `(v2, 0.2)` | `(v1, 0.3)` | `(v1, 0.4)` | 
-`(None, inf)` | `(v3, 0.14)` | `(s, 0.6)` | `(s, 0.14)` | `(v2, 0.14)` | `(v1, 4.3)` | `(v1, 0.4)` | 
-`(None, inf)` | `None` | `(s, 0.6)` | `(s, 0.66)` | `(v2, 0.06)` | `(v1, 4.3)` | `(v1, 0.4)` | 
+`(None, inf)` | `(v3, 2)` | `(s, 2)` | `(s, 4)` | `(v2, 2)` | `(v1, 2)` | `(v1, 2)` | 
+`(None, inf)` | `(v3, 1)` | `(s, 2)` | `(v1, 2)` | `(v5, 1)` | `(v1, 2)` | `(v1, 2)` | 
+`(None, inf)` | `None` | `None` | `None` | `None` | `None` | `None` | 
 
-* maximal flow = 0.44:
+* maximal flow = 17:
 ```
-	(s)-0.9->(v1) - [0.3]
-	(s)-0.8->(v2) - [0.14]
-	(v1)-3.5->(v2) - [0]
-	(v2)-7.8->(v5) - [0]
-	(v4)-0.5->(v3) - [0]
-	(v1)-4.6->(v4) - [0.3]
-	(v4)-0.3->(t) - [0.3]
-	(v2)-0.2->(v3) - [0.14]
-	(v3)-0.14->(t) - [0.14]
-	(v1)-0.4->(v5) - [0]
+	(s)-9->(v1) - [9]
+	(s)-8->(v2) - [8]
+	(v3)-14->(t) - [11]
+	(v1)-4,6->(v4) - [4]
+	(v2)-2->(v3) - [2]
+	(v4)-5->(v3) - [5]
+	(v4)-3->(t) - [3]
+	(v1)-4->(v5) - [2]
+	(v1)-3,5->(v2) - [3]
+	(v2)-7,8->(v5) - [7]
+	(v5)-4->(v3) - [4]
+	(v5)-7->(v4) - [4]
 ```
 
-![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2.gv.png)
+![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-2.gv.png)
 ## task3
 * Solve Assignment problem with coast matrix:
 ```
@@ -129,4 +148,4 @@ s | s0  | s1  | s2  | s3  | s4  | s5  | t  | t0  | t1  | t2  | t3  | t4  | t5
 (s5)-1->(t0)
 
 ```
-`C =  5 + 4 + 4 + 7 + 0 + 4 = 24`
+`C =  5 + 3 + 0 + 0 + 3 + 2 = 13`
