@@ -1,8 +1,9 @@
 # lab4
-Maximum flow
+Maximum flows and Assignment problems
 
 ## task
-[Ford–Fulkerson](https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm) and [Edmonds–Karp](https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm) algorithms realization
+* [Ford–Fulkerson](https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm) and [Edmonds–Karp](https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm) algorithms realization
+* Solving Assignment problem with Ford–Fulkerson algorithm
 
 ## dependencies
 * [python](https://www.python.org/) ~ `v2.7.10`

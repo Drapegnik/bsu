@@ -63,6 +63,10 @@ class FlowNetwork:
         """
         return filter(lambda e: not e.redge, self.adj[v])
 
+    def clear(self):
+        self.adj = {}
+        self.flow = {}
+
     def get_redges(self, v):
         """
         Return incoming edges for v
@@ -71,23 +75,23 @@ class FlowNetwork:
         """
         return filter(lambda e: e.redge, self.adj[v])
 
-    def ford_fulkerson(self, _from, _to, write=True):
+    def ford_fulkerson(self, _from, _to, write=True, out=None):
         """
         Wrapper on max_flow() method, with get_marks() as search function
         :param _from: a source
         :param _to: a sink
         :param write: param for disabling file outputs
         """
-        return self.max_flow(_from, _to, self.get_marks, write)
+        return self.max_flow(_from, _to, self.get_marks, write, out)
 
-    def edmonds_karp(self, _from, _to, write=True):
+    def edmonds_karp(self, _from, _to, write=True, out=None):
         """
         Wrapper on max_flow() method, with bfs() as search function
         :param _from: a source
         :param _to: a sink
         :param write: param for disabling file outputs
         """
-        return self.max_flow(_from, _to, self.bfs, write)
+        return self.max_flow(_from, _to, self.bfs, write, out)
 
     def get_marks(self, _from, _to):
         """
@@ -153,21 +157,21 @@ class FlowNetwork:
         """
         i = _to
         min_flow = float('inf')
-        while marks[i] is not None:
-            if marks[i].parent is None:
+        while marks[i]:
+            if not marks[i].parent:
                 break
             min_flow = min(min_flow, marks[i].flow)
             i = marks[i].parent
 
         i = _to
-        while marks[i] is not None:
-            if marks[i].parent is None:
+        while marks[i]:
+            if not marks[i].parent:
                 break
             marks[i].flow = min_flow
             i = marks[i].parent
         return marks
 
-    def max_flow(self, _from, _to, find_func, write=True):
+    def max_flow(self, _from, _to, find_func, write, out):
         """
         Find max flow in network
         :param _from: a source
@@ -177,17 +181,16 @@ class FlowNetwork:
         :return: max flow, marks from last iteration
         """
         if write:
-            out = file(self.file_name + '.md', 'w')
             out.write('* table with marks by iteration:\n\n')
             self.print_table_head(out)
         marks = find_func(_from, _to)
 
-        while marks[_to] is not None:
+        while marks[_to]:
             if write:
                 self.print_table_row(out, marks)
             i = _to
-            while marks[i] is not None:
-                if marks[i].parent is None:
+            while marks[i]:
+                if not marks[i].parent:
                     break
                 self.flow[marks[i].edge] += marks[i].flow
                 i = marks[i].parent
@@ -198,7 +201,6 @@ class FlowNetwork:
             self.print_table_row(out, marks)
             out.write('\n* maximal flow = {}:\n'.format(flow))
             self.print_flow(out)
-            out.close()
         return flow, marks
 
     def print_flow(self, out):
@@ -218,15 +220,21 @@ class FlowNetwork:
             out.write('`{}` | '.format(marks[v]))
         out.write('\n')
 
-    def draw(self, show=False):
+    def draw(self, show=False, postfix=''):
         """
         Render graph to png and save to filesystem
         :param show: flag to open image in new window
         :return: None
         """
-        g = Digraph('G', filename='{}.gv'.format(self.file_name), format='png')
+        g = Digraph('G', filename='{}.gv'.format(self.file_name + postfix), directory='out', format='png')
         for v in self.get_vertex():
             for e in self.get_edges(v):
-                flow = '[{0}/{1}]'.format(self.flow[e], e.weight) if self.flow[e] != 0 else ''
-                g.edge(e.start, e.finish, label=flow)
+                flow = ''
+                if self.flow[e] != 0:
+                    if self.flow[e] != e.weight:
+                        flow = '[{0}/{1}]'.format(self.flow[e], e.weight)
+                    else:
+                        flow = '[{}]'.format(self.flow[e])
+                color = 'red' if self.flow[e] != 0 else ''
+                g.edge(e.start, e.finish, label=flow, color=color)
         g.render(view=show)
