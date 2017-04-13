@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 from algorithms import FlowNetwork
 
 if __name__ == '__main__':
@@ -10,7 +11,8 @@ if __name__ == '__main__':
     for _ in range(m):
         x, y, w = inp.readline().split()
         g.add_edge(x, y, int(w))
-    print 'task1 max flow = {}'.format(g.ford_fulkerson('s', 't'))
+    inp.close()
+    print 'task1 max flow = {}'.format(g.ford_fulkerson('s', 't')[0])
     g.draw()
 
     # task2
@@ -21,5 +23,6 @@ if __name__ == '__main__':
     for _ in range(m):
         x, y, w = inp.readline().split()
         g.add_edge(x, y, float(w))
-    print 'task2 max flow = {}'.format(g.edmonds_karp('s', 't'))
+    inp.close()
+    print 'task2 max flow = {}'.format(g.edmonds_karp('s', 't')[0])
     g.draw()
