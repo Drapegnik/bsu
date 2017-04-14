@@ -10,6 +10,7 @@ Travelling Salesman Problem
 * [python](https://www.python.org/) ~ `v2.7.10`
 * [graphviz](https://github.com/xflr6/graphviz) ~ `v0.6`
 * [numpy](http://www.numpy.org/) ~ `v1.11.2`
+* [calculator](http://habr.x1site.ru/) - for `Branch and bound` tree generation
 
 ## result
 * [`report.md`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab5/report.md) - lab outputs
