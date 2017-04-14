@@ -30,7 +30,7 @@ def draw_graph_with_path(m, path):
                 if [i, j] in path:
                     kwargs = {
                         'color': 'red',
-                        'label': '[{}]'.format(j + 1),
+                        'label': '[{}]'.format(int(m[i][j])),
                         'penwidth': '3',
                         'fontsize': '20',
                         'fontcolor': 'red'

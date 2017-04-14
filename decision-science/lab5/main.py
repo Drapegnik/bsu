@@ -28,6 +28,6 @@ if __name__ == '__main__':
     sum = 0
     expression = ''
     for i, j in path:
-        expression = '{} + {}'.format(expression, int(m[i][j]))
+        expression = '{0} + {1}'.format(expression, int(m[i][j]))
         sum += m[i][j]
     out.write('`C = {0} = {1}`'.format(expression[2:], int(sum)))
