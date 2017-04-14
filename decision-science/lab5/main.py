@@ -2,7 +2,7 @@ import time
 
 import numpy as np
 
-from Little import atsp
+from Little import solve_tsp
 from utils import read_graph_matrix, draw_graph_with_path
 
 if __name__ == '__main__':
@@ -12,7 +12,7 @@ if __name__ == '__main__':
     out.write('```\n{}\n```\n'.format(np.array(m)))
 
     start_time = time.time()
-    cost, path = atsp(m)
+    cost, path = solve_tsp(m)
     print 'Cost = ', cost
     print 'Path = ', path
     print 'Time (s)', time.time() - start_time
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     out.write('![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492168988/ds-lab5.png)\n')
 
     draw_graph_with_path(m, path)
-    out.write('* Graph with Hamilton cycle fot TSP:\n')
+    out.write('* Graph with Hamilton cycle for TSP:\n')
     out.write('![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab5/out/lab5.gv.png)\n')
 
     out.write('\n* Minimal cost:\n')

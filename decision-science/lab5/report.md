@@ -13,7 +13,7 @@ Pazhitnykh Ivan
 ```
 * Branch and bound tree:
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492168988/ds-lab5.png)
-* Graph with Hamilton cycle fot TSP:
+* Graph with Hamilton cycle for TSP:
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab5/out/lab5.gv.png)
 
 * Minimal cost:
