@@ -94,6 +94,7 @@ if __name__ == '__main__':
 
     k = 1
     g = build_graph(c, s, t, file_name='task3-{}'.format(k))
+    out.write('* table with marks on last iterations of Ford-Fulkerson:\n\n')
     g.print_table_head(out)
     c_histtory = [np.copy(c)]
 

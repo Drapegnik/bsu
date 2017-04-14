@@ -33,18 +33,18 @@ s | t  | v1  | v2  | v3
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task2.png)
 * initial flow:
 ```
-	(s)-8->(v2) - [4]
 	(s)-9->(v1) - [7]
-	(v2)-7,8->(v5) - [7]
-	(v4)-5->(v3) - [5]
-	(v1)-3,5->(v2) - [3]
-	(v4)-3->(t) - [3]
-	(v1)-4->(v5) - [0]
-	(v2)-2->(v3) - [0]
-	(v3)-14->(t) - [8]
 	(v1)-4,6->(v4) - [4]
-	(v5)-4->(v3) - [3]
+	(v1)-3,5->(v2) - [3]
+	(s)-8->(v2) - [4]
+	(v4)-5->(v3) - [5]
+	(v4)-3->(t) - [3]
+	(v2)-2->(v3) - [0]
+	(v1)-4->(v5) - [0]
+	(v2)-7,8->(v5) - [7]
+	(v3)-14->(t) - [8]
 	(v5)-7->(v4) - [4]
+	(v5)-4->(v3) - [3]
 ```
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-1.gv.png)
@@ -58,18 +58,18 @@ s | t  | v1  | v2  | v3  | v4  | v5
 
 * maximal flow = 14:
 ```
-	(s)-8->(v2) - [6]
 	(s)-9->(v1) - [8]
-	(v2)-7,8->(v5) - [7]
-	(v4)-5->(v3) - [5]
-	(v1)-3,5->(v2) - [3]
-	(v4)-3->(t) - [3]
-	(v1)-4->(v5) - [1]
-	(v2)-2->(v3) - [2]
-	(v3)-14->(t) - [11]
 	(v1)-4,6->(v4) - [4]
-	(v5)-4->(v3) - [4]
+	(v1)-3,5->(v2) - [3]
+	(s)-8->(v2) - [6]
+	(v4)-5->(v3) - [5]
+	(v4)-3->(t) - [3]
+	(v2)-2->(v3) - [2]
+	(v1)-4->(v5) - [1]
+	(v2)-7,8->(v5) - [7]
+	(v3)-14->(t) - [11]
 	(v5)-7->(v4) - [4]
+	(v5)-4->(v3) - [4]
 ```
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-2.gv.png)
@@ -92,6 +92,8 @@ s | t  | v1  | v2  | v3  | v4  | v5
  [8 4 3 7 0 5]
  [0 2 4 6 1 5]]
 ```
+* table with marks on last iterations of Ford-Fulkerson:
+
 s | s0  | s1  | s2  | s3  | s4  | s5  | t  | t0  | t1  | t2  | t3  | t4  | t5 
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 `(None, inf)` | `(t4, 1)` | `(s, 1)` | `None` | `(s, 1)` | `(s, 1)` | `None` | `None` | `None` | `None` | `None` | `None` | `(s1, 1)` | `None` | 
