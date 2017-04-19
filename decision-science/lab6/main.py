@@ -7,7 +7,8 @@ def edges_list_to_matrix(filename):
     t = np.ndarray((n, n))
     t.fill(-1)
     for _ in range(m):
-        i, j, time = map(lambda x: int(x), inp.readline().split())
+        i, j, time, _ = inp.readline().split()
+        i, j, time = map(lambda x: int(x), [i, j, time])
         t[i][j] = time
     return t
 
