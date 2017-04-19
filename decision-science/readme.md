@@ -6,6 +6,7 @@
 * [lab3](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3) - [Кратчайшие пути (*Shortest ways*)](https://github.com/Drapegnik/bsu/blob/master/decision-science/lab3/report.md)
 * [lab4](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab4) - [Максимальный поток. Задача о назначении (*Maximun flow. Assignment problem*)](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab4/report.md)
 * [lab5](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab5) - [Метод ветвей и границ. Задача коммивояжёра (*Branch and bound method. Travelling Salesman Problem*)](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab5/report.md)
+* [lab6](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab6) - [Сетевые графики (*Net graphics*)](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab6/report.md)
 
 ***
 
