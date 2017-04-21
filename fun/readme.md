@@ -6,5 +6,7 @@
 * [hw3](https://github.com/Drapegnik/bsu/tree/master/fun/hw3) - [Проекции в ГП](https://drapegnik.github.io/bsu/fun/hw3/hw3.pdf)
 
 ***
+* [@**TDiva**/FAN](https://github.com/TDiva/FAN) - *more homeworks*
+***
 
 *by [@drapegnik](https://github.com/Drapegnik), february'16 - may'16*
