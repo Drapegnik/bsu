@@ -4,6 +4,8 @@
 ## [store-app](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/store-app)
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490542775/mean1.png)
 
+* see the [`docs/`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs)
+
 * [MongoDB](https://www.mongodb.com/)
 * [Express](http://expressjs.com/)
 * [Angular 2](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/)
