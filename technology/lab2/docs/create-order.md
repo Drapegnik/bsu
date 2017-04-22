@@ -42,4 +42,4 @@
 
 *** 
 
-[< Edit User](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-user.md) | Create Order | [Edit Catalog >](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-catalog.md)
+[< Edit User](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-user) | Create Order | [Edit Catalog >](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-catalog)

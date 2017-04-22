@@ -35,4 +35,4 @@
 
 *** 
 
-[< Login](http://drapegnik.github.io/bsu/technology/lab2/docs/login.md) | Edit User | [Create Order >](http://drapegnik.github.io/bsu/technology/lab2/docs/create-order.md)
+[< Login](http://drapegnik.github.io/bsu/technology/lab2/docs/login) | Edit User | [Create Order >](http://drapegnik.github.io/bsu/technology/lab2/docs/create-order)
