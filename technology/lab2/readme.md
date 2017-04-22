@@ -4,21 +4,15 @@
 ## [store-app](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/store-app)
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490542775/mean1.png)
 
-* see the [`docs/`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs)
-
 * [MongoDB](https://www.mongodb.com/)
 * [Express](http://expressjs.com/)
 * [Angular 2](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
 
-## use case diagram
-I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/lab2.eap)
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490050601/tp-2-1.png)
-
 ## task
 Смоделировать  и реализовать систему обработки заказов.
 
-### Спецификация системы.
+### conditions
 
 * Компания – торговый посредник, продающая товары различных производителей (заказчик системы).
 * Дважды в год компания публикует каталог продуктов, который рассылается клиентам и другим заинтересованным лицам.
@@ -27,6 +21,15 @@ I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model sav
 * Клиенты могут возвращать товары, оплачивая, возможно, некоторые издержки.
 * Компания пользуется услугами различных транспортных компаний.
 
-
-### Замечание
+### notes
 Интерфейс пользователя разработать и реализовать полностью для всей системы.
+
+## result
+
+### use case diagram
+> I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/lab2.eap)
+
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490050601/tp-2-1.png)
+
+### use case descriptions
+> see the [`docs`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs)

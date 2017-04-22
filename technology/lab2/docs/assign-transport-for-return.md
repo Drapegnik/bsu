@@ -41,3 +41,7 @@
 ## Post-conditions
 Постусловия
 > `Заказ` возвращен и удален из `Базы данных`.
+
+***
+
+[< Edit Catalog](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-catalog.md)

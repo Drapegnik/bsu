@@ -27,3 +27,7 @@
 > Если вариант использования выполнен успешно, `Пользователь` входит в `Систему`. 
 
 > В противном случае состояние `Системы` не изменится.
+
+*** 
+
+[< Glossary](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/readme.md) | [Edit User >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-user.md)

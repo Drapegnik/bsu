@@ -39,3 +39,7 @@
 ## Post-conditions
 Постусловия
 > Создан новый `Заказ`.
+
+*** 
+
+[< Edit User](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-user.md) | [Edit Catalog >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-catalog.md)
