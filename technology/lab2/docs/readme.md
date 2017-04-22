@@ -5,4 +5,4 @@ use case descriptions
 
 ***
 
-[Login >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/login.md)
+Glossary | [Login >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/login.md)
