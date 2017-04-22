@@ -20,3 +20,5 @@ Run `npm run server` for build client and start server. Open http://localhost:30
 
 ## init
 Run `npm run init-db` for inserting init data into database
+
+> see the [`docs`](http://drapegnik.github.io/bsu/technology/lab2/docs)

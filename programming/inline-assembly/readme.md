@@ -8,7 +8,7 @@
 * [lab5](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/lab5) - Работа со строками (*Strings*)
 * [lab6](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/lab6) - Массивы (*Arrays*)
 * [lab7](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/lab7) - Длинная арифметика (*Long arithmetic*)
-* [exam](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/exam) - Экзаменационная задача (*Exam task)
+* [exam](https://github.com/Drapegnik/bsu/tree/master/programming/assembly/exam) - Экзаменационная задача (*Exam task*)
 
 ***
 
