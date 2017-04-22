@@ -1,0 +1,54 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <a href="#" class="btn btn-lg btn-primary btn-block" (click)="loginVia('twitter')">Twitter</a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <a href="#" class="btn btn-lg btn-info btn-block" (click)="loginVia('google')">Google</a>
+    </div>
+  </div>
+  <div class="login-or">
+    <hr class="hr-or">
+    <span class="span-or">or</span>
+  </div>
+
+  <form [formGroup]="form" role="form" (ngSubmit)="login(form.value)" novalidate>
+    <div class="form-group" [class.has-error]="username.invalid && username.touched">
+      <label for="username">Username</label>
+      <input
+        formControlName="username"
+        [formControl]="username"
+        required type="text"
+        class="form-control"
+        id="username"
+        name="username"
+      >
+      <div class="help-block">
+        <ul class="list-unstyled">
+          <li *ngIf="username.valid || username.pristine">Enter your username</li>
+          <li *ngIf="username.dirty && username.hasError('required')">An username address is required</li>
+        </ul>
+      </div>
+    </div>
+    <div class="form-group" [class.has-error]="password.invalid && password.touched">
+      <label for="password">Password</label>
+      <input
+        formControlName="password"
+        [formControl]="password"
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+      >
+      <div class="help-block">
+        <ul class="list-unstyled">
+          <li *ngIf="password.valid || password.pristine">Enter your password</li>
+          <li *ngIf="password.dirty && password.hasError('required')">A password is required</li>
+        </ul>
+      </div>
+    </div>
+    <button type="submit" class="btn btn btn-primary">
+      Log In
+    </button>
+  </form>
+</div>
