@@ -49,4 +49,4 @@
 
 ***
 
-[< Create Order](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/create-order.md) | [Assign Transport >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/assign-transport-for-return.md)
+[< Create Order](http://drapegnik.github.io/bsu/technology/lab2/docs/create-order.md) | [Assign Transport >](http://drapegnik.github.io/bsu/technology/lab2/docs/assign-transport-for-return.md)

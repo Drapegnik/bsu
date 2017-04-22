@@ -32,4 +32,4 @@
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490050601/tp-2-1.png)
 
 ### use case descriptions
-> see the [`docs`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs)
+> see the [`docs`](http://drapegnik.github.io/bsu/technology/lab2/docs)

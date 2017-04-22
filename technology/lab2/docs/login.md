@@ -30,4 +30,4 @@
 
 *** 
 
-[< Glossary](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/readme.md) | Login | [Edit User >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-user.md)
+[< Glossary](http://drapegnik.github.io/bsu/technology/lab2/docs/readme.md) | Login | [Edit User >](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-user.md)
