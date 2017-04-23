@@ -2,21 +2,18 @@
  * Created by Drapegnik on 23.04.17.
  */
 
-import mongoose from 'mongoose';
-
-const Schema = mongoose.Schema;
+import mongoose, { Schema } from 'mongoose';
 
 /**
  * Product mongoose Schema
- *  @config {Schema.String} _id
- *  @config {Schema.Number} id
+ *  @config {Schema.Number} _id
  *  @config {Schema.String} title
  *  @config {Schema.String} type
  *  @config {Schema.Number} price
  * @type {Schema}
  */
 const ProductSchema = new Schema({
-  id: {
+  _id: {
     type: Number,
     unique: true,
     required: true,

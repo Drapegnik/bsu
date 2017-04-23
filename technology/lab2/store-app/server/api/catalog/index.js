@@ -3,5 +3,6 @@
  */
 
 import Product from './product.model';
+import Catalog from './catalog.model';
 
-export { Product }; // eslint-disable-line import/prefer-default-export
+export { Product, Catalog };
