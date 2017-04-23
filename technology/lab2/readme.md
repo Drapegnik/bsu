@@ -9,6 +9,8 @@
 * [Angular 2](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
 
+> see the [`code`](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/store-app)
+
 ## task
 Смоделировать  и реализовать систему обработки заказов.
 
