@@ -30,5 +30,6 @@ export class LoginUserComponent {
       err => console.error(err));
   }
 
-  loginVia(provider: string) {}
+  loginVia(provider: string) {
+  }
 }
