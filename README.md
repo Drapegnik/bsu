@@ -78,7 +78,7 @@
 
 * [@**bsu-docs**](https://github.com/bsu-docs) - *lectures and exam answers*
 * [@**bsutex**/bsustyle](https://github.com/bsutex/bsustyle) - *`TeX` styles for bsu publishing*
-* [@**reuptake**/famcs](http://reuptake.github.io/permalink/famcs/) - info about studying (literature, personal opinions and etc.)
+* [@**reuptake**/famcs](http://reuptake.github.io/permalink/famcs/) - *info about studying (books, notes and etc.)*
 * [@**UladBohdan**/uni-code](https://github.com/UladBohdan/uni-code) - *labs*
 * [@**jakwuh**/bsu](https://github.com/jakwuh/bsu) - *labs*
 * [@**Zmiecer**/BSU](https://github.com/Zmiecer/BSU) - *labs*
