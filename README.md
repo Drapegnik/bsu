@@ -1,6 +1,10 @@
 # bsu
 :mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
+> check the repository [website](https://drapegnik.github.io/bsu/)
+
+***
+
 * [Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - C++
 * [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
 * [Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - C++, Java, Assembly
@@ -60,10 +64,21 @@
 ***
 
 <details>
+<summary>cospects, books, lectures and exam answers</summary>
+
+* [@**drapegnik**/dropbox/course1](https://www.dropbox.com/s/86aqcvrszo4po4a/1%20%D0%BA%D1%83%D1%80%D1%81.zip?dl=0)
+* [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
+* [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
+</details>
+
+***
+
+<details>
 <summary>see also (useful links)</summary>
 
 * [@**bsu-docs**](https://github.com/bsu-docs) - *lectures and exam answers*
 * [@**bsutex**/bsustyle](https://github.com/bsutex/bsustyle) - *`TeX` styles for bsu publishing*
+* [@**reuptake**/famcs](http://reuptake.github.io/permalink/famcs/) - info about studying (literature, personal opinions and etc.)
 * [@**UladBohdan**/uni-code](https://github.com/UladBohdan/uni-code) - *labs*
 * [@**jakwuh**/bsu](https://github.com/jakwuh/bsu) - *labs*
 * [@**Zmiecer**/BSU](https://github.com/Zmiecer/BSU) - *labs*
