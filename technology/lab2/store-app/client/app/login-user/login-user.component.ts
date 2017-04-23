@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators, AbstractControl, FormGroup } from '@angular/forms';
+import {Component} from '@angular/core';
+import {FormBuilder, Validators, AbstractControl, FormGroup} from '@angular/forms';
+import {AuthenticationService} from '../_sevices/authentication.service';
 
 @Component({
   selector: 'app-login-user',
@@ -12,7 +13,10 @@ export class LoginUserComponent {
   username: AbstractControl;
   password: AbstractControl;
 
-  constructor(private fb: FormBuilder) {
+  checking = '-----------';
+
+  constructor(private fb: FormBuilder,
+              private authenticationService: AuthenticationService) {
     this.form = fb.group({
       'username': ['', Validators.required],
       'password': ['', Validators.required]
@@ -21,7 +25,11 @@ export class LoginUserComponent {
     this.password = this.form.controls['password'];
   }
 
-  login() {}
+  login() {
+      this.authenticationService.login(this.form.controls['username'].value, this.form.controls['password'].value);
+      this.checking = 'login pressed';
+  }
 
-  loginVia(provider: string) {}
+  loginVia(provider: string) {
+  }
 }
