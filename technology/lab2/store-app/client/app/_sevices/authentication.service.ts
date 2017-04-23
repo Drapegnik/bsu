@@ -1,6 +1,6 @@
-﻿import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Observable} from 'rxjs';
+﻿import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthenticationService {
@@ -12,7 +12,7 @@ export class AuthenticationService {
   };
 
   login(username: string, password: string) {
-    return this.http.post(this.authUrl + 'login', {username: username, password: password})
+    return this.http.post(this.authUrl + 'login', { username: username, password: password })
       .map((response: Response) => {
         if (response.status === 200) {
           AuthenticationService.isLogged = true;

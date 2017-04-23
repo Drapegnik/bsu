@@ -6,7 +6,7 @@ import {OrderService} from '../_sevices/order.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  //styleUrls: ['./order.component.css']
+  // styleUrls: ['./order.component.css']
 })
 export class OrderComponent {
   form: FormGroup;

@@ -2,8 +2,7 @@
  * Created by Drapegnik on 26.03.17.
  */
 
-import { Router } from 'express';
-
+import {Router} from 'express';
 import passport from './passport';
 
 const router = Router();
@@ -12,8 +11,10 @@ const router = Router();
  * Route for username post request
  */
 router.post('/login', (req, res, next) => {
-  passport.authenticate('local', { failureMessage: true }, (err, user, info) => {
-    if (err) {return next(err)}
+  passport.authenticate('local', {failureMessage: true}, (err, user, info) => {
+    if (err) {
+      return next(err);
+    }
 
     if (!user) {
       res.status(401);
@@ -21,12 +22,14 @@ router.post('/login', (req, res, next) => {
     }
 
     req.login(user, loginErr => {
-      if (loginErr) {return next(loginErr);}
+      if (loginErr) {
+        return next(loginErr);
+      }
 
-      const { username, firstName, lastName, role } = user
+      const {username, firstName, lastName, role} = user
 
       res.status(200);
-      return res.send({ username, firstName, lastName, role });
+      return res.send({username, firstName, lastName, role});
     });
   })(req, res, next);
 });
@@ -40,4 +43,4 @@ router.get('/logout', (req, res, next) => { // eslint-disable-line no-unused-var
 });
 
 export default router;
-export { passport };
+export {passport};
