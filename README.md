@@ -1,5 +1,5 @@
 # bsu
-Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
+:mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
 * [Теория Алгоритмов (Theory of algorithms)](http://drapegnik.github.io/bsu/algorithms) - C++
 * [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
@@ -60,4 +60,4 @@ useful links
 
 ***
 
-*by [**@drapegnik**](https://github.com/Drapegnik), september'14 - now*
+[feedback](https://github.com/Drapegnik/bsu/issues) is welcome!
