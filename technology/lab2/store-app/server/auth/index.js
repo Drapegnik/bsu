@@ -27,7 +27,7 @@ router.post('/login',
  */
 router.get('/logout', (req, res, next) => { // eslint-disable-line no-unused-vars
   req.logout();
-  res.redirect('/');
+  res.sendStatus(200);
 });
 
 export default router;

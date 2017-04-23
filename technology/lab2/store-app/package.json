@@ -7,7 +7,8 @@
   "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com>",
   "scripts": {
     "ng": "ng",
-    "client": "npm run ng serve",
+    "client": "ng serve",
+    "client-open": "(npm run wait 4200 &) && ng serve",
     "build": "ng build",
     "lint": "ng lint && eslint server.js server/**",
     "server": "ng build && (npm run wait 3000 &) && nodemon -w server.js -w ./server --exec babel-node server.js",

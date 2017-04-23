@@ -6,14 +6,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { LoginUserComponent } from './login-user/login-user.component';
+import { LoginUserComponent } from './auth/login-user.component';
 import { HomeComponent } from './home/home.component';
 import {AuthGuard} from './_guards/auth.guard';
 import {AuthenticationService} from './_sevices/authentication.service';
+import { LogoutUserComponent } from './auth/logout-user-component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginUserComponent},
+  {path: 'logout', component: LogoutUserComponent},
   {path: '**', redirectTo: ''},
 ];
 
@@ -21,6 +23,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginUserComponent,
+    LogoutUserComponent,
     HomeComponent,
   ],
   imports: [

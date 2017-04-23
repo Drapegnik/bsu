@@ -1,21 +1,17 @@
-import {Component} from '@angular/core';
-import {FormBuilder, Validators, AbstractControl, FormGroup} from '@angular/forms';
-import {AuthenticationService} from '../_sevices/authentication.service';
-import {Route, Router} from "@angular/router";
+import { Component } from '@angular/core';
+import { FormBuilder, Validators, AbstractControl, FormGroup } from '@angular/forms';
+import { AuthenticationService } from '../_sevices/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-user',
   templateUrl: './login-user.component.html',
   styleUrls: ['./login-user.component.css']
 })
-
 export class LoginUserComponent {
   form: FormGroup;
   username: AbstractControl;
   password: AbstractControl;
-
-  checking = '-----------';
-
 
   constructor(private router: Router,
               private fb: FormBuilder,
@@ -29,11 +25,10 @@ export class LoginUserComponent {
   }
 
   login() {
-    this.authenticationService.login(this.form.controls['username'].value, this.form.controls['password'].value);
-    this.router.navigate(['']);
-    this.checking = 'login pressed';
+    this.authenticationService.login(this.username.value, this.password.value).subscribe(
+      () => this.router.navigate(['']),
+      err => console.error(err));
   }
 
-  loginVia(provider: string) {
-  }
+  loginVia(provider: string) {}
 }

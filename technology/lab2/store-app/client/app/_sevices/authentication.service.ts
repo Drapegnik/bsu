@@ -1,28 +1,33 @@
-﻿import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
+﻿import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthenticationService {
 
   static isLogged = false;
+  private authUrl = 'http://localhost:3000/auth/';
 
-  constructor(private http: Http) {
-  };
-  /*вот тут получи свой респонс по нужному урлу твоего севрера и обработай  /--можещь закомментить все, кроме строчки  AuthenticationService.isLogged = true; и посмотреть как работает--/  */
+  constructor(private http: Http) {};
+
   login(username: string, password: string) {
-    return this.http.post('/', JSON.stringify({username: username, password: password}))
+    return this.http.post(this.authUrl + 'login', {username: username, password: password})
       .map((response: Response) => {
-        const code = response.json();
-        /*заглушка*/
-        if (true /*code === '200'*/) {
+        if (response.status === 200) {
           AuthenticationService.isLogged = true;
         }
-      });
+      })
+      .catch((error: any) => Observable.throw(error || 'Server error'));
   }
 
   logout() {
-    /*и тут*/
-    AuthenticationService.isLogged = false;
+    return this.http.get(this.authUrl + 'logout')
+      .map(() => {
+        console.log('kek');
+        AuthenticationService.isLogged = false;
+      })
+      .catch((error: any) => Observable.throw(error || 'Server error'));
   }
 }
