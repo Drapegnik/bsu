@@ -9,11 +9,11 @@ export default function (username, password, done) {
     if (err) { return done(err); }
 
     if (!user) {
-      return done(null, false, { message: 'Incorrect username.' });
+      return done(null, false, { username: 'Incorrect username' });
     }
 
     if (!user.authenticate(password)) {
-      return done(null, false, { message: 'Incorrect password.' });
+      return done(null, false, { password: 'Incorrect password' });
     }
 
     return done(null, user);

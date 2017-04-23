@@ -12,6 +12,7 @@ export class LoginUserComponent {
   form: FormGroup;
   username: AbstractControl;
   password: AbstractControl;
+  errors: Object;
 
   constructor(private router: Router,
               private fb: FormBuilder,
@@ -22,12 +23,19 @@ export class LoginUserComponent {
     });
     this.username = this.form.controls['username'];
     this.password = this.form.controls['password'];
+    this.errors = {};
   }
 
   login() {
     this.authenticationService.login(this.username.value, this.password.value).subscribe(
-      () => this.router.navigate(['']),
-      err => console.error(err));
+      () => {
+        this.errors = {};
+        this.router.navigate(['']);
+      },
+      (err) => {
+        this.errors = JSON.parse(err._body);
+        console.error(`Error: ${err._body}`);
+      });
   }
 
   loginVia(provider: string) {
