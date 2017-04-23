@@ -4,6 +4,7 @@
 
 import connectDb from './mongoose';
 import initUsers from './users';
+import {initProducts, initCatalogs} from './products';
 
 const dropCollections = (mongoose) => {
   const collections = Object.keys(mongoose.connection.collections);
@@ -14,7 +15,7 @@ const dropCollections = (mongoose) => {
       const collection = mongoose.connection.collections[name];
       collection.drop((err) => {
         if (err && err.message !== 'ns not found') { reject(err); }
-        resolve(collections);
+        resolve(name);
       });
     }));
   });
@@ -22,4 +23,4 @@ const dropCollections = (mongoose) => {
   return Promise.all(promises);
 };
 
-export { connectDb, initUsers, dropCollections };
+export { connectDb, initUsers, initProducts, initCatalogs, dropCollections };

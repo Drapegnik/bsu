@@ -11,23 +11,37 @@ const router = Router();
 /**
  * Route for username post request
  */
-router.post('/login',
-  passport.authenticate('local', { failureMessage: true }),
-
-  (req, res, next) => { // eslint-disable-line no-unused-vars
-    if (req.user) {
-      res.sendStatus(200);
+router.post('/login', (req, res, next) => {
+  // eslint-disable-next-line consistent-return
+  passport.authenticate('local', { failureMessage: true }, (err, user, info) => {
+    if (err) {
+      return next(err);
     }
 
-    res.status(200);
-  });
+    if (!user) {
+      res.status(401);
+      return res.send(info);
+    }
+
+    req.login(user, (loginErr) => {
+      if (loginErr) {
+        return next(loginErr);
+      }
+
+      const { username, firstName, lastName, role } = user;
+
+      res.status(200);
+      return res.send({ username, firstName, lastName, role });
+    });
+  })(req, res, next);
+});
 
 /**
  * Log out route
  */
 router.get('/logout', (req, res, next) => { // eslint-disable-line no-unused-vars
   req.logout();
-  res.redirect('/');
+  res.sendStatus(200);
 });
 
 export default router;

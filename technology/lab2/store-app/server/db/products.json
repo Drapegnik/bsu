@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Apple MacBook Air 13\"",
+    "type": "laptop",
+    "price": 1783
+  },
+  {
+    "id": 2,
+    "title": "Apple MacBook Pro 13\" Retina",
+    "type": "laptop",
+    "price": 2425
+  },
+  {
+    "id": 3,
+    "title": "Apple MacBook Pro 15\" Retina",
+    "type": "laptop",
+    "price": 3710
+  },
+  {
+    "id": 4,
+    "title": "Xiaomi Mi Book Air 13,3 Silver",
+    "type": "laptop",
+    "price": 1798
+  },
+  {
+    "id": 5,
+    "title": "Lenovo IdeaPad 510-15IKB",
+    "type": "laptop",
+    "price": 1080
+  },
+  {
+    "id": 6,
+    "title": "Samsung Galaxy S8 Dual SIM 64GB",
+    "type": "phone",
+    "price": 1840
+  },
+  {
+    "id": 7,
+    "title": "Xiaomi Redmi 4 16GB Gray",
+    "type": "phone",
+    "price": 319
+  },
+  {
+    "id": 8,
+    "title": "Apple iPhone 7 32GB Black",
+    "type": "phone",
+    "price": 1500
+  },
+  {
+    "id": 9,
+    "title": "LG G6 Dual SIM",
+    "type": "phone",
+    "price": 1463
+  },
+  {
+    "id": 10,
+    "title": "Xiaomi Redmi Note 4X 32GB Black",
+    "type": "phone",
+    "price": 418
+  }
+]

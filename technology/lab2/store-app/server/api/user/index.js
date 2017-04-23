@@ -4,6 +4,4 @@
 
 import User from './model';
 
-const stub = 1;
-
-export { User, stub };
+export { User }; // eslint-disable-line import/prefer-default-export
