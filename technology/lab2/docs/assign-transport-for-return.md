@@ -44,4 +44,4 @@
 
 ***
 
-[< Edit Catalog](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-catalog.md) | Assign Transport
+[< Edit Catalog](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/edit-catalog.md) | Assign Transport | [Main Page >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/readme.md)
