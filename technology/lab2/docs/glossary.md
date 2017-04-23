@@ -19,4 +19,4 @@
 
 ***
 
-[< Main Page](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/readme.md) | Glossary | [Login >](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/docs/login.md)
+[< Main Page](http://drapegnik.github.io/bsu/technology/lab2/docs/) | Glossary | [Login >](http://drapegnik.github.io/bsu/technology/lab2/docs/login)
