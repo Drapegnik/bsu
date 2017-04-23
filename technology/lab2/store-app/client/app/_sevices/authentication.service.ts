@@ -1,8 +1,6 @@
-﻿import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import { Observable } from 'rxjs/Observable';
+﻿import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class AuthenticationService {
@@ -10,7 +8,8 @@ export class AuthenticationService {
   static isLogged = false;
   private authUrl = 'http://localhost:3000/auth/';
 
-  constructor(private http: Http) {};
+  constructor(private http: Http) {
+  };
 
   login(username: string, password: string) {
     return this.http.post(this.authUrl + 'login', {username: username, password: password})
@@ -24,10 +23,7 @@ export class AuthenticationService {
 
   logout() {
     return this.http.get(this.authUrl + 'logout')
-      .map(() => {
-        console.log('kek');
-        AuthenticationService.isLogged = false;
-      })
+      .map(() => AuthenticationService.isLogged = false)
       .catch((error: any) => Observable.throw(error || 'Server error'));
   }
 }

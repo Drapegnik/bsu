@@ -28,10 +28,10 @@
     "role": "transport-manager"
   },
   {
-    "username": "performer_manager",
+    "username": "product_manager",
     "firstName": "Helen",
     "lastName": "Dots",
     "password": "1",
-    "role": "performer-manager"
+    "role": "product-manager"
   }
 ]

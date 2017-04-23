@@ -40,10 +40,8 @@ app.use(passport.session());
 app.use('/auth', auth);
 app.use('/api', api);
 
-app.use((req, res, next) => {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
@@ -52,9 +50,6 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.send(err.message);
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
-});
 
 createServer(app).listen(config.port, () => {
   console.log('Server running at http://localhost:3000'); // eslint-disable-line no-console

@@ -29,7 +29,7 @@ const UserSchema = new Schema({
   passwordSalt: String,
   role: {
     type: String,
-    enum: ['admin', 'order-manager', 'catalog-manager', 'transport-manager', 'performer-manager'],
+    enum: ['admin', 'order-manager', 'catalog-manager', 'transport-manager', 'product-manager'],
   },
   firstName: String,
   lastName: String,
