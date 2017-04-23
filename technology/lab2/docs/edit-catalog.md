@@ -49,4 +49,4 @@
 
 ***
 
-[< Create Order](http://drapegnik.github.io/bsu/technology/lab2/docs/create-order) | [Assign Transport >](http://drapegnik.github.io/bsu/technology/lab2/docs/assign-transport-for-return)
+[< Create Order](http://drapegnik.github.io/bsu/technology/lab2/docs/create-order) | Edit Catalog | [Assign Transport >](http://drapegnik.github.io/bsu/technology/lab2/docs/assign-transport-for-return)

@@ -44,4 +44,4 @@
 
 ***
 
-[< Edit Catalog](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-catalog) | Assign Transport
+[< Edit Catalog](http://drapegnik.github.io/bsu/technology/lab2/docs/edit-catalog) | Assign Transport | [Main Page >](http://drapegnik.github.io/bsu/technology/lab2/docs/)
