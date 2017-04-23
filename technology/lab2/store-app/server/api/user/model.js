@@ -17,7 +17,7 @@ const Schema = mongoose.Schema;
  *  @config {Schema.String} passwordSalt
  *  @config {Schema.String} role
  *  @config {Schema.Date} createdAt
- * @type {mongoose.Schema}
+ * @type {Schema}
  */
 const UserSchema = new Schema({
   username: {

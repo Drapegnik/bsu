@@ -12,8 +12,13 @@ Promise.resolve(db.connectDb())
   })
   .then(() => db.initUsers())
   .then((users) => {
-    console.log(`Mongoose: insert ${users.length} users:`);
-    console.log(users);
+    console.log(`Mongoose: insert ${users.length} users`);
+    // console.log(users);
+  })
+  .then(() => db.initProducts())
+  .then((products) => {
+    console.log(`Mongoose: insert ${products.length} products`);
+    // console.log(products);
   })
   .catch((err) => {
     console.log('Mongoose: error during init database');

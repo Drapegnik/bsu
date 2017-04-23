@@ -9,12 +9,14 @@
     "ng": "ng",
     "client": "ng serve",
     "client-open": "(npm run wait 4200 &) && ng serve",
+    "client-lint": "ng lint",
     "build": "ng build",
-    "lint": "ng lint && eslint server.js server/**",
-    "server-open": "ng build && (npm run wait 3000 &) && nodemon -w server.js -w ./server --exec babel-node server.js",
     "server": "ng build && nodemon -w server.js -w ./server --exec babel-node server.js",
+    "server-open": "ng build && (npm run wait 3000 &) && nodemon -w server.js -w ./server --exec babel-node server.js",
+    "server-lint": "eslint server.js server/**",
     "init-db": "babel-node init-db",
-    "wait": "bash wait.sh"
+    "wait": "bash wait.sh",
+    "lint": "npm run server-lint && npm run client-lint"
   },
   "private": true,
   "dependencies": {

@@ -12,18 +12,23 @@ const router = Router();
  * Route for username post request
  */
 router.post('/login', (req, res, next) => {
+  // eslint-disable-next-line consistent-return
   passport.authenticate('local', { failureMessage: true }, (err, user, info) => {
-    if (err) {return next(err)}
+    if (err) {
+      return next(err);
+    }
 
     if (!user) {
       res.status(401);
       return res.send(info);
     }
 
-    req.login(user, loginErr => {
-      if (loginErr) {return next(loginErr);}
+    req.login(user, (loginErr) => {
+      if (loginErr) {
+        return next(loginErr);
+      }
 
-      const { username, firstName, lastName, role } = user
+      const { username, firstName, lastName, role } = user;
 
       res.status(200);
       return res.send({ username, firstName, lastName, role });
