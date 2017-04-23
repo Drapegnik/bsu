@@ -11,9 +11,17 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OrderComponent } from 'app/order/order.component';
+
+
+const orderRoutes: Routes = [
+
+  { path: 'createorder', component: OrderComponent },
+
+];
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, children: orderRoutes, canActivate: [AuthGuard] },
   { path: 'login', component: LoginUserComponent },
   { path: '**', redirectTo: '' },
 ];
