@@ -1,0 +1,56 @@
+<form [formGroup]="form" role="form" (ngSubmit)="create(form.value)" novalidate>
+  <div class="form-group"> <!--[class.has-error]="username.invalid && username.touched">-->
+    <label for="product">Product</label>
+    <input
+      formControlName="product"
+      [formControl]="product"
+      required type="text"
+      class="form-control"
+      id="product"
+      name="product"
+    >
+    <!--<div class="help-block">
+      <ul class="list-unstyled">
+        <li *ngIf="username.valid || username.pristine">Enter your username</li>
+        <li *ngIf="username.dirty && username.hasError('required')">An username address is required</li>
+      </ul>
+    </div>-->
+  </div>
+  <div class="form-group"> <!--[class.has-error]="password.invalid && password.touched">-->
+    <label for="quantity">Quantity</label>
+    <input
+      formControlName="quantity"
+      [formControl]="quantity"
+      type="text"
+      class="form-control"
+      id="quantity"
+      name="quantity"
+    >
+    <!--<div class="help-block">
+      <ul class="list-unstyled">
+        <li *ngIf="password.valid || password.pristine">Enter your password</li>
+        <li *ngIf="password.dirty && password.hasError('required')">A password is required</li>
+      </ul>
+    </div>-->
+  </div>
+  <div class="form-group"> <!--[class.has-error]="password.invalid && password.touched">-->
+    <label for="password">Customer</label>
+    <input
+      formControlName="customer"
+      [formControl]="customer"
+      type="text"
+      class="form-control"
+      id="customer"
+      name="customer"
+    >
+    <!--<div class="help-block">
+      <ul class="list-unstyled">
+        <li *ngIf="password.valid || password.pristine">Enter your password</li>
+        <li *ngIf="password.dirty && password.hasError('required')">A password is required</li>
+      </ul>
+    </div>-->
+  </div>
+  <button type="submit" class="btn btn btn-primary">
+    Create
+  </button>
+</form>
