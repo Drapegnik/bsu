@@ -1,9 +1,9 @@
 # Numerical Analysis
 Вычислительные Методы Алгебры & Методы Численного Анализа
 
-* [semester 3](drapegnik.github.io/bsu/numerical-analysis/sem3) - *ВМА*
-* [semester 4](drapegnik.github.io/bsu/numerical-analysis/sem4) - *МЧА*
-* [semester 5](drapegnik.github.io/bsu/numerical-analysis/sem5) - *МЧА*
+* [semester 3](/sem3) - *ВМА*
+* [semester 4](/sem4) - *МЧА*
+* [semester 5](/sem5) - *МЧА*
 
 ***
 
