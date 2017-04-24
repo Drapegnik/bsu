@@ -22,19 +22,19 @@
 * [Inline Assembly (*Ассемблерные вставки*)](http://drapegnik.github.io/bsu/programming/inline-assembly)
 
 ## semester 3
+* [Java Core](http://drapegnik.github.io/bsu/programming/java/sem3)
 * [Data Mining (*Интеллектуальный анализ данных*)](http://drapegnik.github.io/bsu/data-mining)
-* [Numerical analysis (*Вычислительные Методы Алгебры*)](http://drapegnik.github.io/bsu/numerical-analysis#sem3)
+* [Numerical analysis (*Вычислительные Методы Алгебры*)](http://drapegnik.github.io/bsu/numerical-analysis/sem3)
 
 ## semester 4
 * [Algorithms (*Теория Алгоритмов*)](https://github.com/Drapegnik/algorithms)
 * [Educational Practice (*Учебная практика*)](https://github.com/Drapegnik/educational_practice)
-* [Numerical analysis (*Вычислительные Методы Алгебры*)](http://drapegnik.github.io/bsu/numerical-analysis#sem4)
+* [Numerical analysis (*Методы Численного Анализа*)](http://drapegnik.github.io/bsu/numerical-analysis/sem4)
 * [Functional analysis (*Функциональный Анализ*)](http://drapegnik.github.io/bsu/fun)
-* [Java Core](http://drapegnik.github.io/bsu/programming/java/sem3)
 
 ## semester 5
 * [Architecture (*Архитектура Компьютеров*)](http://drapegnik.github.io/bsu/architecture)
-* [Numerical analysis (*Методы Численного Анализа*)](http://drapegnik.github.io/bsu/numerical-analysis#sem5)
+* [Numerical analysis (*Методы Численного Анализа*)](http://drapegnik.github.io/bsu/numerical-analysis/sem5)
 * [Java Threads](http://drapegnik.github.io/bsu/programming/java/sem5)
 
 ## semester 6
