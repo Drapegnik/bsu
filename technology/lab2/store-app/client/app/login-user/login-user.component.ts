@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl, FormGroup } from '@angular/forms';
 import { AuthenticationService } from '../_sevices/authentication.service';
 import { Router } from '@angular/router';
+import { OrderService } from "../_sevices/order.service";
 
 @Component({
   selector: 'app-login-user',
   templateUrl: './login-user.component.html',
-  styleUrls: ['./login-user.component.css']
+  styleUrls: ['./login-user.component.css'],
+  providers: [OrderService]
 })
 export class LoginUserComponent {
   form: FormGroup;

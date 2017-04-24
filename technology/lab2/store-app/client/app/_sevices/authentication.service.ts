@@ -8,8 +8,7 @@ export class AuthenticationService {
   static isLogged = false;
   private authUrl = 'http://localhost:3000/auth/';
 
-  constructor(private http: Http) {
-  };
+  constructor(private http: Http) {};
 
   login(username: string, password: string) {
     return this.http.post(this.authUrl + 'login', { username: username, password: password })

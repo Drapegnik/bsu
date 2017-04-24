@@ -12,16 +12,18 @@ import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from 'app/order/order.component';
+import { OrderService } from "./_sevices/order.service";
 
 
 const orderRoutes: Routes = [
 
-  { path: 'createorder', component: OrderComponent },
+  //{ path: 'createorder', component: OrderComponent },
 
 ];
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, children: orderRoutes, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'order', component: OrderComponent },
   { path: 'login', component: LoginUserComponent },
   { path: '**', redirectTo: '' },
 ];
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     LoginUserComponent,
     HomeComponent,
+    OrderComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -44,6 +47,7 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
+    OrderService
   ],
 
   bootstrap: [AppComponent],
