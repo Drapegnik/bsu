@@ -32,23 +32,23 @@
 <details>
 <summary>semester 3</summary>
 
+* [Java Core](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)
 * [Data Mining (*Интеллектуальный анализ данных*)](https://github.com/Drapegnik/bsu/tree/master/data-mining)
-* [Numerical analysis (*Вычислительные Методы Алгебры*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis#sem3)
+* [Numerical analysis (*Вычислительные Методы Алгебры*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem3)
 </details>
 <details>
 <summary>semester 4</summary>
 
 * [Algorithms (*Теория Алгоритмов*)](https://github.com/Drapegnik/algorithms)
 * [Educational Practice (*Учебная практика*)](https://github.com/Drapegnik/educational_practice)
-* [Numerical analysis (*Вычислительные Методы Алгебры*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis#sem4)
+* [Numerical analysis (*Методы Численного Анализа*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem4)
 * [Functional analysis (*Функциональный Анализ*)](https://github.com/Drapegnik/bsu/tree/master/fun)
-* [Java Core](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)
 </details>
 <details>
 <summary>semester 5</summary>
 
 * [Architecture (*Архитектура Компьютеров*)](https://github.com/Drapegnik/bsu/tree/master/architecture)
-* [Numerical analysis (*Методы Численного Анализа*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis#sem5)
+* [Numerical analysis (*Методы Численного Анализа*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem5)
 * [Java Threads](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)
 </details>
 <details>
