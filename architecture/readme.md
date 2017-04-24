@@ -1,26 +1,12 @@
-# lab3
-solving partial differential Poisson's equation
+# Architecture
+Архитектура компьютеров
 
-## task
-Решение дифференциальных уравнений в частных производных
+> Multithreading solutions with [Message Passing Interface](https://www.open-mpi.org/) on **C++** & **Python**
 
-* Разработать приложение для решения задачи Пуассона 
-`d^2 U = f(x,y)`  c  прямоугольной границей `U(x,y)= g(x,y)` с помощью:
-  * параллельного алгоритма для  1D композиции;
-  * параллельного алгоритма для  2D композиции;
-* Конкретный вид функций `f`, `g`  определяется индивидуально.
-* Решение задачи представить визуально с помощью [WOLFRAM MATHEMATICA](https://www.wolfram.com/mathematica/)
+* [lab1](https://github.com/Drapegnik/merge_sort) - Merge sort (*Внешняя сортировка слиянием*)
+* [lab2](https://github.com/Drapegnik/Gauss-elimination) - Gauss-Jordan elimination by inverse matrix (*Решение систем линейных уравнений Методом Гаусса*)
+* [lab3](https://github.com/Drapegnik/bsu/tree/master/architecture/lab3-poisson) - [Poisson's equation (*Решение дифференциальных уравнений в частных производных*)](https://drapegnik.github.io/bsu/architecture/lab3-poisson/report.pdf)
 
-## requirements
-* [python](https://www.python.org/)
-* [numpy](http://www.numpy.org/)
-* [mpi4py](http://pythonhosted.org/mpi4py/)
+***
 
-## solver
-* **run**: `$ bash run.sh {num_of_procces} {num_of_rows} {num_of_cols}`
-* [code](https://github.com/Drapegnik/bsu/blob/master/architecture/lab3-poisson/solver.py)
-
-
-## results
-
-* [report](https://drapegnik.github.io/bsu/architecture/lab3-poisson/report.pdf)
+*by [@drapegnik](https://github.com/Drapegnik), september'16 - december'16*
