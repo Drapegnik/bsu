@@ -5,6 +5,7 @@
 import connectDb from './mongoose';
 import initUsers from './users';
 import { initProducts, initCatalogs } from './products';
+import { initOrder, initOrdersItems } from './orders';
 
 const dropCollections = (mongoose) => {
   const collections = Object.keys(mongoose.connection.collections);
@@ -25,4 +26,6 @@ const dropCollections = (mongoose) => {
   return Promise.all(promises);
 };
 
-export { connectDb, initUsers, initProducts, initCatalogs, dropCollections };
+export {
+  connectDb, dropCollections, initUsers, initProducts, initCatalogs, initOrder, initOrdersItems,
+};

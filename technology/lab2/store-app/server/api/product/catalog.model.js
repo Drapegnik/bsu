@@ -8,6 +8,8 @@ import mongoose, { Schema } from 'mongoose';
  * Catalog mongoose Schema
  *  @config {Schema.Number} _id
  *  @config {Schema.String} name
+ *  @config {Schema.Boolean} isActive
+ *  @config {Schema.Array} product
  * @type {Schema}
  */
 const CatalogSchema = new Schema({
