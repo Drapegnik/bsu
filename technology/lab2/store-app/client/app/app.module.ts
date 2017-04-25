@@ -13,9 +13,9 @@ import { AuthenticationService } from './_sevices/authentication.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginUserComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
@@ -37,7 +37,6 @@ const appRoutes: Routes = [
     AuthGuard,
     AuthenticationService,
   ],
-
   bootstrap: [AppComponent],
 })
 export class AppModule {

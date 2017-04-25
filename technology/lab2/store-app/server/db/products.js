@@ -17,8 +17,8 @@ export function initProducts() {
 
 export function initCatalogs(products) {
   const catalogsPromises = [];
-  const phones = products.filter(p => p.type === 'phone').map(p => p._id);
-  const laptops = products.filter(p => p.type === 'laptop').map(p => p._id);
+  const phones = products.filter(p => p.type === 'phone').map(p => p._id); // eslint-disable-line no-underscore-dangle
+  const laptops = products.filter(p => p.type === 'laptop').map(p => p._id); // eslint-disable-line no-underscore-dangle
   const catalogs = [
     { _id: 1, name: 'Phones', products: phones },
     { _id: 2, name: 'Laptops', products: laptops },
