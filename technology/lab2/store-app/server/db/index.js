@@ -3,29 +3,32 @@
  */
 
 import connectDb from './mongoose';
-import initUsers from './users';
+import { User } from '../api/user';
 import { initProducts, initCatalogs } from './products';
 import { initOrder, initOrdersItems } from './orders';
 
-const dropCollections = (mongoose) => {
-  const collections = Object.keys(mongoose.connection.collections);
-  const promises = [];
+import usersData from './users.json';
 
-  collections.forEach((name) => {
-    promises.push(new Promise((resolve, reject) => {
-      const collection = mongoose.connection.collections[name];
-      collection.drop((err) => {
-        if (err && err.message !== 'ns not found') {
-          reject(err);
-        }
-        resolve(name);
-      });
-    }));
-  });
+export const initUsers = () => Promise.all(usersData.map(user => (new User(user)).save()));
+
+export const dropCollections = (mongoose) => {
+  const collections = Object.keys(mongoose.connection.collections);
+
+  const promises = collections.map(
+    name =>
+      new Promise((resolve, reject) => {
+        const collection = mongoose.connection.collections[name];
+
+        collection.drop((err) => {
+          if (err && err.message !== 'ns not found') {
+            reject(err);
+          }
+
+          resolve(name);
+        });
+      }));
 
   return Promise.all(promises);
 };
 
-export {
-  connectDb, dropCollections, initUsers, initProducts, initCatalogs, initOrder, initOrdersItems,
-};
+export { connectDb, initProducts, initCatalogs, initOrder, initOrdersItems };

@@ -5,24 +5,16 @@
 import { Product, Catalog } from '../api/product';
 import data from './products.json';
 
-export function initProducts() {
-  const productsPromises = [];
-  data.forEach(productData => productsPromises.push((
-    new Product({
-      ...productData,
-      _id: productData.id,
-    })).save()));
-  return Promise.all(productsPromises);
-}
+export const initProducts = () => Promise.all(
+  data.map(productData => (new Product({ ...productData, _id: productData.id })).save())
+);
 
-export function initCatalogs(products) {
-  const catalogsPromises = [];
+export const initCatalogs = (products) => {
   const phones = products.filter(p => p.type === 'phone').map(p => p._id); // eslint-disable-line no-underscore-dangle
   const laptops = products.filter(p => p.type === 'laptop').map(p => p._id); // eslint-disable-line no-underscore-dangle
   const catalogs = [
     { _id: 1, name: 'Phones', products: phones, isActive: true },
     { _id: 2, name: 'Laptops', products: laptops },
   ];
-  catalogs.forEach(catalogData => catalogsPromises.push((new Catalog(catalogData)).save()));
-  return Promise.all(catalogsPromises);
-}
+  return Promise.all(catalogs.map(catalogData => (new Catalog(catalogData)).save()));
+};
