@@ -19,5 +19,6 @@ router.get('/catalogs/:id', catalogController.getById);
 router.get('/', productController.getAll);
 router.get('/:id', productController.getById);
 
-export { Product, Catalog };
+const serializeProduct = productController.serializeProduct;
+export { Product, Catalog, serializeProduct };
 export default router;

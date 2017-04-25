@@ -5,12 +5,7 @@
 import Product from './product.model';
 import { checkIsFound, checkIdCast } from '../utils';
 
-export const serializeProduct = product => ({
-  id: product._id, // eslint-disable-line no-underscore-dangle
-  title: product.title,
-  type: product.type,
-  price: product.price,
-});
+export const serializeProduct = ({ _id, title, type, price }) => ({ id: _id, title, type, price });
 
 export const getAll = (req, res, next) => Product.find({})
   .then(products => products.map(serializeProduct))

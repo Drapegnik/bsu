@@ -6,13 +6,8 @@ import mongoose from 'mongoose';
 import User from './model';
 import { checkIsFound, checkIdCast } from '../utils';
 
-const serializeUser = user => ({
-  id: user._id, // eslint-disable-line no-underscore-dangle
-  username: user.username,
-  firstName: user.firstName,
-  lastName: user.lastName,
-  role: user.role,
-});
+const serializeUser = ({ _id, username, firstName, lastName, role }) =>
+  ({ id: _id, username, firstName, lastName, role });
 
 export const getAll = (req, res, next) => User.find({})
   .then(users => users.map(serializeUser))

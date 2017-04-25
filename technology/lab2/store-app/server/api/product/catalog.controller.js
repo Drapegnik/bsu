@@ -6,15 +6,9 @@ import Catalog from './catalog.model';
 import { serializeProduct } from './product.controller';
 import { checkIsFound, checkIdCast } from '../utils';
 
-const serializeCatalog = (catalog) => {
-  const products = catalog.products.map(serializeProduct);
-  return {
-    id: catalog._id, // eslint-disable-line no-underscore-dangle
-    name: catalog.name,
-    isActive: catalog.isActive,
-    products,
-  };
-};
+const serializeCatalog = ({ _id, name, isActive, products }) =>
+  ({ id: _id, name, isActive, products: products.map(serializeProduct) });
+
 
 export const getAll = (req, res, next) => Catalog.find({})
   .populate('products')
