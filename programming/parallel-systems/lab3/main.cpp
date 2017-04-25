@@ -3,8 +3,6 @@
 #include <windows.h>
 #include <process.h>
 #include <cmath>
-#include <cstdlib>
-#include <chrono>
 
 #define CHECK(condition) if (!condition) std::cerr
 
@@ -113,13 +111,6 @@ int main(int argc, char *argv[]) {
     int dims[4] = {2500, 5000, 7500, 10000};
     int dims_num = 4;
     int threads = 4;
-
-//    for (int i = 0; i < 8; i++) {
-//        for (int j = 0; j < 8; j++) {
-//            cout << matrix[i][j] << " ";
-//        }
-//        cout << endl;
-//    }
 
     fprintf(file, "\\documentclass{article}\n\\usepackage[a4paper, left=0.5cm]{geometry}"
             "\n\\begin{document}\n\\begin{table}[]");
