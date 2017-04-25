@@ -21,6 +21,10 @@ const CatalogSchema = new Schema({
     unique: true,
     required: true,
   },
+  isActive: {
+    type: Boolean,
+    default: false,
+  },
   products: [{ type: Number, ref: 'Product' }],
 });
 

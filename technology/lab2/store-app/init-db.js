@@ -4,7 +4,7 @@
 /* eslint-disable no-console */
 
 import * as db from './server/db';
-import { Catalog, Product } from './server/api/catalog';
+import { Catalog, Product } from './server/api/product';
 import { User } from './server/api/user';
 
 Promise.resolve(db.connectDb())

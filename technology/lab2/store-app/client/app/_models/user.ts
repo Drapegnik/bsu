@@ -8,12 +8,14 @@ export default class User {
   lastName: string;
   role: string;
   isAnonymous: boolean;
+  id: string;
 
-  constructor({ username = 'anon', firstName = '', lastName = '', role = '', isAnonymous = false }) {
+  constructor({ id = '', username = 'anon', firstName = '', lastName = '', role = '', isAnonymous = false }) {
     this.isAnonymous = isAnonymous;
     this.username = username;
     this.firstName = firstName;
     this.lastName = lastName;
     this.role = role;
+    this.id = id;
   }
 }

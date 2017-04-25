@@ -28,10 +28,10 @@ router.post('/login', (req, res, next) => {
         return next(loginErr);
       }
 
-      const { username, firstName, lastName, role } = user;
+      const { username, firstName, lastName, role, _id } = user;
 
       res.status(200);
-      return res.send({ username, firstName, lastName, role });
+      return res.send({ username, firstName, lastName, role, id: _id });
     });
   })(req, res, next);
 });
