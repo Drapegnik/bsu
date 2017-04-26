@@ -5,9 +5,10 @@
 import { Product, Catalog } from '../api/product';
 import data from './products.json';
 
-export const initProducts = () => Promise.all(
-  data.map(productData => (new Product({ ...productData, _id: productData.id })).save())
-);
+export const initProducts = () => Promise.all(data.map(productData => (new Product({
+  ...productData,
+  _id: productData.id,
+})).save()));
 
 export const initCatalogs = (products) => {
   const phones = products.filter(p => p.type === 'phone').map(p => p._id); // eslint-disable-line no-underscore-dangle

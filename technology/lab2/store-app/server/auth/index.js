@@ -5,6 +5,7 @@
 import { Router } from 'express';
 
 import passport from './passport';
+import requireAuth from './requireAuth';
 
 const router = Router();
 
@@ -45,4 +46,4 @@ router.get('/logout', (req, res, next) => { // eslint-disable-line no-unused-var
 });
 
 export default router;
-export { passport };
+export { passport, requireAuth };

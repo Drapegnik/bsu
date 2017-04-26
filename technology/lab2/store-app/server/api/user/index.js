@@ -9,6 +9,7 @@ import * as controller from './controller';
 
 const router = Router();
 router.get('/', controller.getAll);
+router.get('/me', controller.getMe);
 router.get('/:id', controller.getById);
 
 export { User }; // eslint-disable-line import/prefer-default-export

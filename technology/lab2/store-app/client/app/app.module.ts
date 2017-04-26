@@ -13,9 +13,19 @@ import { AuthenticationService } from './_sevices/authentication.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginUserComponent },
-  { path: '**', redirectTo: 'home' },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginUserComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
+  },
 ];
 
 @NgModule({

@@ -14,6 +14,7 @@ export class LoginUserComponent implements OnInit {
   password: AbstractControl;
   errors: Object;
   returnUrl: string;
+  isRender: boolean;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -27,13 +28,14 @@ export class LoginUserComponent implements OnInit {
     this.username = this.form.controls['username'];
     this.password = this.form.controls['password'];
     this.errors = {};
+    this.isRender = false;
   }
 
   ngOnInit() {
-    if (AuthenticationService.isLogged) {
-      this.router.navigate(['home']);
-    }
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'home';
+    this.authenticationService.loadCurrentUser().subscribe(
+      () => this.router.navigate([this.returnUrl]),
+      () => this.isRender = true);
   }
 
   login() {

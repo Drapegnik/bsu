@@ -14,7 +14,7 @@ import crypto from 'crypto';
 import { createServer } from 'http';
 
 import api from './server/api';
-import auth, { passport } from './server/auth';
+import auth, { passport, requireAuth } from './server/auth';
 import config from './server/config';
 import { connectDb } from './server/db';
 
@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/auth', auth);
-app.use('/api', api);
+app.use('/api', requireAuth, api);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));

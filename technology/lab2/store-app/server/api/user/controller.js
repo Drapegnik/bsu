@@ -14,6 +14,9 @@ export const getAll = (req, res, next) => User.find({})
   .then(users => res.status(200).json(users))
   .catch(err => next(err));
 
+// eslint-disable-next-line no-unused-vars
+export const getMe = (req, res, next) => res.status(200).json(serializeUser(req.user));
+
 export const getById = (req, res, next) => {
   Promise.resolve(checkIdCast(req.params.id, mongoose.Types.ObjectId))
     .then(id => User.findById(id))
