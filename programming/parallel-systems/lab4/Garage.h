@@ -23,10 +23,10 @@ public:
 
     void takePlace();
 
-    void getInfo();
+    void getStatus();
 
 private:
-    int size, free;
+    int size, taked;
 };
 
 #endif //LAB4_GARAGE_H

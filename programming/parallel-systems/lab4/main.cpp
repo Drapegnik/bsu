@@ -18,35 +18,34 @@ unsigned int WINAPI ThreadFunction(void *param) {
     Car car = Car(index);
     while (!bTerminate) {
         if (car.isInGarage()) {
-            Sleep(rand() % 20000);
-            ReleaseSemaphore(hSemaphore, 1, NULL);
-            car.leaveGarage();
-
+            Sleep(rand() % 10000);
             EnterCriticalSection(&cs);
+            car.leaveGarage();
             garage.freePlace();
             LeaveCriticalSection(&cs);
+            ReleaseSemaphore(hSemaphore, 1, NULL);
         } else {
-            Sleep(rand() % 20000);
+            Sleep(rand() % 10000);
             WaitForSingleObject(hSemaphore, INFINITE);
-            car.enterGarage();
-
             EnterCriticalSection(&cs);
+            car.enterGarage();
             garage.takePlace();
             LeaveCriticalSection(&cs);
         }
+        cout << "--------------------------------------" << endl;
     }
 
     if (car.isInGarage()) {
-        ReleaseSemaphore(hSemaphore, 1, NULL);
-        car.leaveGarage();
-
         EnterCriticalSection(&cs);
+        car.leaveGarage();
         garage.freePlace();
         LeaveCriticalSection(&cs);
+        ReleaseSemaphore(hSemaphore, 1, NULL);
     }
 
     EnterCriticalSection(&cs);
     car.getInfo();
+    cout << "--------------------------------------" << endl;
     LeaveCriticalSection(&cs);
     return 0;
 }
@@ -56,10 +55,12 @@ int main(int argc, char *argv[]) {
     int cars_num = atoi(argv[2]);     // number of threads
 
     cout << "(main): There are " << garage.getSize() << " places and " << cars_num << " cars." << endl;
-    cout << "(main): Start race! Type any key terminating" << endl;
+    cout << "(main): Start race! Type any key terminating:" << endl;
+    cout << "--------------------------------------" << endl;
 
     HANDLE hThreads[cars_num];
-    hSemaphore = CreateSemaphore(NULL, garage.getSize(), garage.getSize(), NULL);
+    InitializeCriticalSection(&cs);
+    hSemaphore = CreateSemaphore(NULL,  garage.getSize(), garage.getSize(), NULL);
     CHECK(hSemaphore) << "(main): Create Semaphore Error: " << GetLastError() << std::endl;
 
     for (int i = 0; i < cars_num; i++) {
@@ -75,6 +76,6 @@ int main(int argc, char *argv[]) {
 
     WaitForMultipleObjects(cars_num, hThreads, TRUE, INFINITE);
     cout << "(main): All child threads terminate successfully!" << endl;
-    garage.getInfo();
+    garage.getStatus();
     return 0;
 }

@@ -4,24 +4,26 @@
 
 #include "Garage.h"
 
-Garage::Garage() : size(0), free(0) {}
+Garage::Garage() : size(0), taked(0) {}
 
-Garage::Garage(int size) : size(size), free(free) {}
+Garage::Garage(int size) : size(size), taked(0) {
+    getStatus();
+}
 
 int Garage::getSize() const {
     return size;
 }
 
 void Garage::freePlace() {
-    free++;
-    getInfo();
+    taked--;
+    getStatus();
 }
 
 void Garage::takePlace() {
-    free--;
-    getInfo();
+    taked++;
+    getStatus();
 }
 
-void Garage::getInfo() {
-    std::cout << "(garage): number of free places: " << free << "/" << size << std::endl;
+void Garage::getStatus() {
+    std::cout << "(garage): status: [" << taked << "/" << size << "] taked!" << std::endl;
 }
