@@ -8,6 +8,7 @@
 * [lab1](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab1) - Потоки. Введение.
 * [lab2](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab2) - Вичысление числа `pi`
 * [lab3](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab3) - Умгожение матрицы на вектор
+* [lab4](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab4) - Синхронизация потоков
 
 ***
 
