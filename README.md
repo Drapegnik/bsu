@@ -1,4 +1,6 @@
 # bsu
+[![Code Climate](https://codeclimate.com/github/Drapegnik/bsu/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/bsu)
+
 :mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
 > check the repository [website](https://drapegnik.github.io/bsu/)
