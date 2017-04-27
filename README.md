@@ -70,4 +70,4 @@ useful links
 
 ***
 
-[feedback](https://github.com/Drapegnik/bsu/issues) is welcome!
+[feedback](https://github.com/Drapegnik/bsu/issues/new) is welcome!
