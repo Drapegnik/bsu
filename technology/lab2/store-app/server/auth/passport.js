@@ -6,12 +6,27 @@ import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 
 import { User } from '../api/user';
-import checkAuth from './checkAuth';
 
 passport.use(new LocalStrategy({
   usernameField: 'username',
   passwordField: 'password',
-}, checkAuth));
+}, (username, password, done) => {
+  User.findOne({ username }, (err, user) => {
+    if (err) {
+      return done(err);
+    }
+
+    if (!user) {
+      return done(null, false, { username: 'Incorrect username' });
+    }
+
+    if (!user.authenticate(password)) {
+      return done(null, false, { password: 'Incorrect password' });
+    }
+
+    return done(null, user);
+  });
+}));
 
 passport.serializeUser((user, done) => done(null, user.id));
 

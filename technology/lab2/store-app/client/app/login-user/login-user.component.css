@@ -15,8 +15,10 @@
   top: -2px;
   margin-left: -25px;
   background-color: #fff;
+  color: #333;
   width: 50px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .hr-or {
@@ -29,4 +31,14 @@
 h3 {
   text-align: center;
   line-height: 300%;
+}
+
+.fb {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.fb:hover {
+  color: #fff;
+  background-color: #394986;
 }

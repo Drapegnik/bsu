@@ -4,11 +4,14 @@
 
 import { Router } from 'express';
 
+import userRoutes from './user';
+import productsRoutes from './product';
+import ordersRoutes from './order';
+
 const router = Router();
 
-router.get('/', (req, res, next) => { // eslint-disable-line no-unused-vars
-  res.send('Hello from api!');
-});
+router.use('/products', productsRoutes);
+router.use('/users', userRoutes);
+router.use('/orders', ordersRoutes);
 
 export default router;
-
