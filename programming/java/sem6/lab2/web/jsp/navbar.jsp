@@ -5,7 +5,7 @@
   Time: 13:50
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,24 +23,33 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Next Page</a></li>
+                <li class="${param.currentPage == "main" ? "active" : ""}">
+                    <a href="/">App name</a>
+                </li>
+                <li class="${param.currentPage == "front" ? "active" : ""}">
+                    <a href="/?page=front">Front-end</a>
+                </li>
+                <li class="${param.currentPage == "style" ? "active" : ""}">
+                    <a href="/?page=style">Styles</a>
+                </li>
+                <li class="${param.currentPage == "back" ? "active" : ""}">
+                    <a href="/?page=back">Back-end</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                       aria-expanded="false">Step <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="/">App name</a></li>
+                        <li><a href="/?page=front">Front-end</a></li>
+                        <li><a href="/?page=style">Styles</a></li>
+                        <li><a href="/?page=back">Back-end</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="#">Results</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Link</a></li>
+                <li><a href="/">Reset</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
