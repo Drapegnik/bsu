@@ -1,4 +1,7 @@
 # bsu
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e389bfae1c764befaa148dc378b7ed2a)](https://www.codacy.com/app/Drapegnik/bsu?utm_source=github.com&utm_medium=referral&utm_content=Drapegnik/bsu&utm_campaign=badger)
+[![Code Climate](https://codeclimate.com/github/Drapegnik/bsu/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/bsu)
+
 :mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
 * [Теория Алгоритмов (Theory of algorithms)](http://drapegnik.github.io/bsu/algorithms) - C++
