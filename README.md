@@ -4,6 +4,10 @@
 
 :mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
+<iframe src="https://ghbtns.com/github-btn.html?user=Drapegnik&repo=bsu&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=Drapegnik&repo=bsu&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+
 * [Теория Алгоритмов (Theory of algorithms)](http://drapegnik.github.io/bsu/algorithms) - C++
 * [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
 * [Программирование (Programming)](http://drapegnik.github.io/bsu/programming) - C++, Java, Assembly
@@ -74,3 +78,5 @@ useful links
 ***
 
 [feedback](https://github.com/Drapegnik/bsu/issues/new) is welcome!
+
+<iframe src="https://ghbtns.com/github-btn.html?user=Drapegnik&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
