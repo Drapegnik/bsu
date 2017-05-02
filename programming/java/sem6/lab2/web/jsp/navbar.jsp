@@ -35,6 +35,9 @@
                 <li class="${param.currentPage == "back" ? "active" : ""}">
                     <a href="/?page=back">Back-end</a>
                 </li>
+                <li class="${param.currentPage == "results" ? "active" : ""}">
+                    <a href="/?page=results">Results</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -46,7 +49,7 @@
                         <li><a href="/?page=style">Styles</a></li>
                         <li><a href="/?page=back">Back-end</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Results</a></li>
+                        <li><a href="/?page=results">Results</a></li>
                     </ul>
                 </li>
                 <li><a href="/">Reset</a></li>

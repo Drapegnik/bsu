@@ -1,0 +1,41 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>sitem</short-name>
+    <tag>
+        <name>SelectItem</name>
+        <tag-class>generator.SelectItem</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>imagePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>img src attribute</description>
+        </attribute>
+        <attribute>
+            <name>imageSize</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>img width attribute</description>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>input name attribute</description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>input value attribute</description>
+        </attribute>
+        <attribute>
+            <name>isChecked</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+            <description>input checked attribute</description>
+        </attribute>
+    </tag>
+</taglib>
