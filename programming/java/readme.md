@@ -1,9 +1,9 @@
 # Java labs
 Лабораторные по Java
 
-* [semester 3](drapegnik.github.io/bsu/programming/java/sem3) - *Java Core*
-* [semester 5](drapegnik.github.io/bsu/programming/java/sem5) - *Java Threads*
-* [semester 6](drapegnik.github.io/bsu/programming/java/sem6) - *Java Web*
+* [semester 3](/sem3) - *Java Core*
+* [semester 5](/sem5) - *Java Threads*
+* [semester 6](/sem6) - *Java Web*
 
 ***
 
