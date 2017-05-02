@@ -17,6 +17,8 @@
     items.add(new SelectItemModel("React", "react", "/images/react.png", 65));
     items.add(new SelectItemModel("Vue.js", "vue", "/images/vue.png"));
     items.add(new SelectItemModel("Polymer", "polymer", "/images/polymer.png"));
+    items.add(new SelectItemModel("", "", "/images/not_image.txt"));
+
 %>
 <div class="container">
     <h2 class="col-md-8 col-md-offset-2">
