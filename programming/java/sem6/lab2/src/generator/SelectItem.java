@@ -45,11 +45,14 @@ public class SelectItem extends SimpleTagSupport {
         Matcher m = p.matcher(imagePath);
 
         if (!m.matches()) {
-            out.println("<div class=\"alert alert-danger alert-dismissible error-block\" role=\"alert\">\n" +
+            out.println("" +
+                    "<div class=\"form-group\">\n" +
+                    "   <div class=\"alert alert-danger alert-dismissible error-block\" role=\"alert\">\n" +
                     "       <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>" +
                     "       <strong>Error!</strong><br>\n" +
-                    "       ImagePath don't match regexp\n" +
-                    "   </div>");
+                    "       <code>ImagePath doesn't match regexp</code>\n" +
+                    "   </div>" +
+                    "</div>\n");
             return;
         }
 
@@ -63,7 +66,8 @@ public class SelectItem extends SimpleTagSupport {
                 ">\n";
         getJspBody().invoke(sw);
 
-        out.println("<div class=\"form-group\">\n" +
+        out.println("" +
+                "<div class=\"form-group\">\n" +
                 "   <div class=\"pull-left\">" + image +
                 "       <h3 class=\"pull-right\">" + sw.toString() + "</h3>\n" +
                 "   </div>\n" +
