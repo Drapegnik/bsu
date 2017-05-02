@@ -5,68 +5,35 @@
   Time: 15:36
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="generator.SelectItemModel" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="gen" uri="/WEB-INF/custom.tld" %>
+<%
+    ArrayList<SelectItemModel> items = new ArrayList<>();
+    items.add(new SelectItemModel("Native JS", "js", "/images/js.png", 50));
+    items.add(new SelectItemModel("Angular", "ng", "/images/ng.png", 65));
+    items.add(new SelectItemModel("React", "react", "/images/react.png", 65));
+    items.add(new SelectItemModel("Vue.js", "vue", "/images/vue.png"));
+    items.add(new SelectItemModel("Polymer", "polymer", "/images/polymer.png"));
+%>
 <div class="container">
     <h2 class="col-md-8 col-md-offset-2">
         Choose front-end framework for your app:
     </h2>
     <form class="form-horizontal col-md-3 col-md-offset-4" method="POST" action="/controller">
-        <div class="form-group">
-            <div class="pull-left"><img src="/images/js.png" width="50px">
-                <h3 class="pull-right">Native JS</h3></div>
-            <div class="pull-right">
-                <label class="btn btn-default btn-circle btn-lg">
-                    <input type="radio" name="framework" value="js"
-                    ${sessionScope.framework == "js" ? 'checked' : ''}
-                    >
-                    <i class="glyphicon glyphicon-ok"></i>
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="pull-left"><img src="/images/ng.png" width="60px">
-                <h3 class="pull-right">Angular</h3></div>
-            <div class="pull-right">
-                <label class="btn btn-default btn-circle btn-lg">
-                    <input type="radio" name="framework" value="ng"
-                    ${sessionScope.framework == "ng" ? 'checked' : ''}
-                    ><i class="glyphicon glyphicon-ok"></i>
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="pull-left"><img src="/images/react.png" width="60px">
-                <h3 class="pull-right">React</h3></div>
-            <div class="pull-right">
-                <label class="btn btn-default btn-circle btn-lg">
-                    <input type="radio" name="framework" value="react"
-                    ${sessionScope.framework == "react" ? 'checked' : ''}
-                    ><i class="glyphicon glyphicon-ok"></i>
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="pull-left"><img src="/images/vue.png" width="60px">
-                <h3 class="pull-right">Vue.js</h3></div>
-            <div class="pull-right">
-                <label class="btn btn-default btn-circle btn-lg">
-                    <input type="radio" name="framework" value="vue"
-                    ${sessionScope.framework == "vue" ? 'checked' : ''}
-                    ><i class="glyphicon glyphicon-ok"></i>
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="pull-left"><img src="/images/polymer.png" width="60px">
-                <h3 class="pull-right">Polymer</h3></div>
-            <div class="pull-right">
-                <label class="btn btn-default btn-circle btn-lg">
-                    <input type="radio" name="framework" value="polymer"
-                    ${sessionScope.framework == "polymer" ? 'checked' : ''}
-                    ><i class="glyphicon glyphicon-ok"></i>
-                </label>
-            </div>
-        </div>
+        <c:forEach items="<%=items%>" var="item">
+            <gen:SelectItem
+                    name="framework"
+                    value="${item.value}"
+                    imagePath="${item.imagePath}"
+                    imageSize="${item.imageSize}"
+                    isChecked="${sessionScope.framework == item.value}"
+            >
+                ${item.title}
+            </gen:SelectItem>
+        </c:forEach>
         <div class="row">
             <a href="/" class="btn btn-default col-md-4 pull-left">Back</a>
             <button class="btn btn-default col-md-4 pull-right" type="submit">Next</button>

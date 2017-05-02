@@ -8,16 +8,6 @@
         <location>/jsp/error.jsp</location>
     </error-page>
 
-    <error-page>
-        <error-code>500</error-code>
-        <location>/jsp/error.jsp</location>
-    </error-page>
-
-    <error-page>
-        <exception-type>java.lang.RuntimeException</exception-type>
-        <location>/jsp/error.jsp</location>
-    </error-page>
-
     <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>

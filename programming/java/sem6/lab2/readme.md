@@ -27,3 +27,7 @@
 
 ## Dependencies
 * [`tomcat server`](http://tomcat.apache.org/download-80.cgi)
+* [`jstl`](https://tomcat.apache.org/taglibs/standard/)
+
+## Notes
+> you should add `javax.servlet.jsp.jstl.jsp` and `javax.servlet.jsp.jstl-api.jar`in [`WEB-INF/lib`](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6/lab2/web/WEB-INF/lib) directory
