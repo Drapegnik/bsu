@@ -11,6 +11,7 @@
     <title>Web app Generator</title>
     <link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
+    <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
 </head>
 <body>
 <%

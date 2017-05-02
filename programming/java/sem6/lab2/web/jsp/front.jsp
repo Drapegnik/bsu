@@ -5,9 +5,9 @@
   Time: 15:36
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="generator.SelectItemModel" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page import="generator.SelectItemModel" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="gen" uri="/WEB-INF/custom.tld" %>
 <%
@@ -25,11 +25,11 @@
     <form class="form-horizontal col-md-3 col-md-offset-4" method="POST" action="/controller">
         <c:forEach items="<%=items%>" var="item">
             <gen:SelectItem
-                    name="framework"
+                    name="front"
                     value="${item.value}"
                     imagePath="${item.imagePath}"
                     imageSize="${item.imageSize}"
-                    isChecked="${sessionScope.framework == item.value}"
+                    isChecked="${sessionScope.front == item.value}"
             >
                 ${item.title}
             </gen:SelectItem>

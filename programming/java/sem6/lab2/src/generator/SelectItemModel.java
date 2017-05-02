@@ -13,7 +13,7 @@ public class SelectItemModel {
         this.title = title;
         this.value = value;
         this.imagePath = imagePath;
-        this.imageSize = "50px";
+        this.imageSize = "65px";
     }
 
     public SelectItemModel(String title, String value, String imagePath, int imageSize) {
