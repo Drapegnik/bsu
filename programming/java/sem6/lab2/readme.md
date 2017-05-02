@@ -1,6 +1,26 @@
 # Лабораторная работа 2
 «Сервлеты»
 
+## demo
+
+### step 1 - App name
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step1.png" width="700px">
+
+### step 2 - Front-end
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step2.png" width="700px">
+
+### step 3 - Styles
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step3.png" width="700px">
+
+### step 4 - Back-end
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step4.png" width="700px">
+
+### step 5 - Results
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step5.png" width="700px">
+
+### step 5 - Empty results
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1493688911/java-gen-step6.png" width="700px">
+
 ## task1 Изучение сервлетов, использование механизма сессий
 
 * Создать мастер создания чего-либо, в котором пользователи двигаются через цепочку шагов.
