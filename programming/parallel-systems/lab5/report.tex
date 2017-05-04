@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[a4paper, left=0.5cm]{geometry}
+\begin{document}
+\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} & \multicolumn{3}{c|}{\textbf{1 Thread}} & \multicolumn{3}{c|}{\textbf{2 Threads}} & \multicolumn{3}{c|}{\textbf{3 Threads}} & \multicolumn{3}{c|}{\textbf{4 Threads}} \\ \hline
+ & & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 24.134 ms & 0.001 & 0.000 & 1.#IO & 45.330 & 1.000 & 45.330 & 0.212 & 213.316 & 0.106 & 0.247 & 183.298 & 0.082\\ \hline
+1000
+ & 48.348 ms & 0.001 & 34869.000 & 1.#IO & 31.141 & 1.000 & 31.141 & 3.961 & 7.862 & 1.980 & 3.264 & 9.542 & 1.088\\ \hline
+2500
+ & 195.276 ms & 0.002 & 19463.188 & 1.#IO & 240.039 & 1.000 & 240.039 & 73.956 & 3.246 & 36.978 & 37.440 & 6.411 & 12.480\\ \hline
+5000
+ & 364.962 ms & 0.002 & 141199.471 & 1.#IO & 82.719 & 1.000 & 82.719 & 112.324 & 0.736 & 56.162 & 109.613 & 0.755 & 36.538\\ \hline
+\end{tabular}
+\end{table}
+\end{document}
