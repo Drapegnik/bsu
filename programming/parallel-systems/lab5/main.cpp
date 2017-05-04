@@ -116,21 +116,17 @@ void multiply2() {
 
 void print_table_header(int threads) {
     fprintf(file, "\\begin{tabular}{|");
-    for (int i = 0; i < threads * 3 + 2; i++) {
+    for (int i = 0; i < 6; i++) {
         fprintf(file, "l|");
     }
     fprintf(file, "}\\hline\n");
     fprintf(file, "\\multicolumn{1}{|c|}{\\textbf{dimensions}} &");
-    fprintf(file, "\\multicolumn{1}{|c|}{\\textbf{model 1}} ");
-
-    for (int i = 0; i < threads; i++) {
-        fprintf(file, "& \\multicolumn{3}{c|}{\\textbf{%d Thread%s}} ", i + 1, i == 0 ? "" : "s");
-    }
-    fprintf(file, "\\\\ \\hline\n &");
-
-    for (int i = 0; i < threads; i++) {
-        fprintf(file, " & \\textbf{time} & \\textbf{acc} & \\textbf{eff}");
-    }
+    fprintf(file, "\\multicolumn{1}{|c|}{\\textbf{model 1}} &");
+    fprintf(file, "\\multicolumn{3}{|c|}{\\textbf{model 2}}");
+    fprintf(file, "\\\\ \\hline\n");
+    fprintf(file, "& & \\multicolumn{3}{c|}{\\textbf{%d Thread%s}} ", threads, threads == 1 ? "" : "s");
+    fprintf(file, "\\\\ \\hline\n");
+    fprintf(file, "& \\textbf{time} & \\textbf{time} & \\textbf{acc} & \\textbf{eff}");
     fprintf(file, "\\\\ \\hline\n");
     return;
 }
@@ -156,29 +152,31 @@ int main(int argc, char *argv[]) {
     int dims[4] = {100, 1000, 2500, 5000};
     int dims_num = 4;
     int threads = 4;
-
     fprintf(file, "\\documentclass{article}\n\\usepackage[a4paper, left=0.5cm]{geometry}"
-            "\n\\begin{document}\n\\begin{table}\n");
-    print_table_header(threads);
+            "\n\\begin{document}\n");
 
-    for (int j = 0; j < dims_num; j++) {
-        n = dims[j];
-        matrix = initMatrix(n);
-        vector = initVector(n);
-        result = new int[n];
-        fprintf(file, "%d\n", n);
-        multiply1();
-        cout << "multiply2:" << endl;
+    for (int i = 1; i <= threads; i++) {
+        fprintf(file, "\\begin{table}\n");
+        print_table_header(i);
+        for (int j = 0; j < dims_num; j++) {
+            n = dims[j];
+            matrix = initMatrix(n);
+            vector = initVector(n);
+            result = new int[n];
+            fprintf(file, "%d\n", n);
+            multiply1();
+            cout << "multiply2:" << endl;
 
-        for (int i = 0; i < threads; i++) {
             threads_num = i;
             current_row = 0;
             multiply2();
+
+            fprintf(file, "\\\\ \\hline\n");
+            delete[] result;
         }
-        fprintf(file, "\\\\ \\hline\n");
-        delete[] result;
+        fprintf(file, "\\end{tabular}\n\\end{table}");
     }
-    fprintf(file, "\\end{tabular}\n\\end{table}\n\\end{document}");
+    fprintf(file, "\n\\end{document}");
 
     delete[] vector;
     for (int i = 0; i < n; i++) {

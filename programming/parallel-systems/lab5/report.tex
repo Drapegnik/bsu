@@ -2,17 +2,60 @@
 \usepackage[a4paper, left=0.5cm]{geometry}
 \begin{document}
 \begin{table}
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}\hline
-\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} & \multicolumn{3}{c|}{\textbf{1 Thread}} & \multicolumn{3}{c|}{\textbf{2 Threads}} & \multicolumn{3}{c|}{\textbf{3 Threads}} & \multicolumn{3}{c|}{\textbf{4 Threads}} \\ \hline
- & & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{1 Thread}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
 100
- & 24.134 ms & 0.001 & 0.000 & 1.#IO & 45.330 & 1.000 & 45.330 & 0.212 & 213.316 & 0.106 & 0.247 & 183.298 & 0.082\\ \hline
+ & 4.148 ms & 24.407 & 1.000 & 24.407\\ \hline
 1000
- & 48.348 ms & 0.001 & 34869.000 & 1.#IO & 31.141 & 1.000 & 31.141 & 3.961 & 7.862 & 1.980 & 3.264 & 9.542 & 1.088\\ \hline
+ & 52.826 ms & 32.377 & 1.000 & 32.377\\ \hline
 2500
- & 195.276 ms & 0.002 & 19463.188 & 1.#IO & 240.039 & 1.000 & 240.039 & 73.956 & 3.246 & 36.978 & 37.440 & 6.411 & 12.480\\ \hline
+ & 140.555 ms & 48.931 & 1.000 & 48.931\\ \hline
 5000
- & 364.962 ms & 0.002 & 141199.471 & 1.#IO & 82.719 & 1.000 & 82.719 & 112.324 & 0.736 & 56.162 & 109.613 & 0.755 & 36.538\\ \hline
+ & 385.881 ms & 85.804 & 1.000 & 85.804\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{2 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 4.864 ms & 0.298 & 288.320 & 0.149\\ \hline
+1000
+ & 75.459 ms & 8.122 & 10.565 & 4.061\\ \hline
+2500
+ & 203.000 ms & 28.816 & 2.978 & 14.408\\ \hline
+5000
+ & 481.918 ms & 105.217 & 0.815 & 52.608\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{3 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 4.282 ms & 2.018 & 42.521 & 0.673\\ \hline
+1000
+ & 62.685 ms & 8.520 & 10.071 & 2.840\\ \hline
+2500
+ & 183.628 ms & 31.018 & 2.766 & 10.339\\ \hline
+5000
+ & 376.102 ms & 94.621 & 0.907 & 31.540\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{4 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 4.698 ms & 1.349 & 63.596 & 0.337\\ \hline
+1000
+ & 65.587 ms & 10.692 & 8.025 & 2.673\\ \hline
+2500
+ & 160.432 ms & 37.400 & 2.294 & 9.350\\ \hline
+5000
+ & 460.330 ms & 97.108 & 0.884 & 24.277\\ \hline
 \end{tabular}
 \end{table}
 \end{document}
