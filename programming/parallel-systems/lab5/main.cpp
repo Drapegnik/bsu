@@ -109,7 +109,8 @@ void multiply2() {
 
     if (threads_num == 1) { one_time = elapsed; }
 
-    fprintf(file, " & %.3f & %.3f & %.3f", elapsed, one_time / elapsed, elapsed / threads_num);
+    double acc = one_time / elapsed;
+    fprintf(file, " & %.3f & %.3f & %.3f", elapsed, acc, acc / threads_num);
     delete[] hThreads;
     return;
 }
