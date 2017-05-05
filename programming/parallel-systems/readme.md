@@ -9,7 +9,9 @@
 * [lab2](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab2) - Вичисление числа `pi`
 * [lab3](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab3) - Умножение матрицы на вектор
 * [lab4](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab4) - Синхронизация потоков
-* [lab5](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab5) - Модели создания и функционирования потоков
+* Модели создания и функционирования потоков:
+  * [lab5](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab5) - Модель делегирования
+  * [lab8](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems/lab8) - «Производитель-Потребитель»
 
 ***
 
