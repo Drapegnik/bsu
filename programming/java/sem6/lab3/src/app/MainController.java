@@ -41,6 +41,11 @@ public class MainController extends HttpServlet {
 
     private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        if (action == null) {
+            request.setAttribute("status", "404");
+            request.getRequestDispatcher("/").forward(request, response);
+            return;
+        }
         System.out.println("[main controller] " + action);
         switch (action) {
             case "getStudents":
