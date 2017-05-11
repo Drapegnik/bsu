@@ -1,8 +1,6 @@
 package app;
 
-
 import app.backend.dbDriver;
-import app.models.Mark;
 import app.models.Student;
 
 import javax.servlet.ServletConfig;
@@ -12,10 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Map;
 
 /**
  * Created by Drapegnik on 5/11/17.
@@ -44,33 +39,44 @@ public class MainController extends HttpServlet {
 
     private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        System.out.println("[main controller] " + action);
         switch (action) {
             case "getStudents":
-                request.setAttribute("response", db.getStudents());
+                request.setAttribute("students", db.getStudents());
                 break;
             case "getBadStudents":
-                request.setAttribute("response", db.getBadStudentsIds());
+                request.setAttribute("students", db.getStudents());
+                request.setAttribute("badIds", db.getBadStudentsIds());
                 break;
             case "addStudent":
                 String name = request.getParameter("name");
                 String groupStr = request.getParameter("group");
                 if (name == null || groupStr == null) {
-                    request.setAttribute("response", "500");
+                    request.setAttribute("status", "500");
                 }
                 int group = Integer.parseInt(groupStr);
                 Student s = new Student(name, group);
                 db.createStudent(s);
-                request.setAttribute("response", "200");
                 break;
             case "deleteStudent":
+                System.out.println("[main controller] im'here");
                 String id = request.getParameter("id");
+                System.out.println(id);
                 if (id == null) {
-                    request.setAttribute("response", "500");
+                    request.setAttribute("status", "500");
                 }
                 db.deleteStudent(id);
-                request.setAttribute("response", "200");
+                request.setAttribute("students", db.getStudents());
+                request.setAttribute("badIds", db.getBadStudentsIds());
+                break;
+            default:
+                request.setAttribute("status", "404");
                 break;
         }
+        if (request.getAttribute("status") == null) {
+            request.setAttribute("status", "200");
+        }
+        System.out.println("[main controller] " + request.getAttribute("status"));
         request.getRequestDispatcher("/").forward(request, response);
     }
 }

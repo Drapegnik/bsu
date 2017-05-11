@@ -60,4 +60,8 @@ public class Mark implements Serializable {
                 ",\tgrade=" + grade +
                 "} ";
     }
+
+    public String formatted() {
+        return subject + " : " + grade + " / ";
+    }
 }

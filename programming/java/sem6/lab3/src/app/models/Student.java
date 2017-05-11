@@ -75,15 +75,6 @@ public class Student implements Serializable {
                 "} }";
     }
 
-    public String formattedToString() {
-        StringBuilder str = new StringBuilder(name + " - " + group + "       |");
-        for (Mark mark : marks) {
-            str.append("       ").append(mark.getGrade());
-        }
-
-        return str.toString();
-    }
-
     public String shortToString() {
         return "Student{" +
                 "id='" + id + '\'' +
