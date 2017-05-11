@@ -1,17 +1,17 @@
 \documentclass{article}
-\usepackage[a4paper]{geometry}
+\usepackage[a4paper, left=0.5cm]{geometry}
 \begin{document}
 \begin{table}[]\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}\hline
 \multicolumn{1}{|c|}{\textbf{dimensions}} & \multicolumn{3}{c|}{\textbf{1 Thread}} & \multicolumn{3}{c|}{\textbf{2 Threads}} & \multicolumn{3}{c|}{\textbf{3 Threads}} & \multicolumn{3}{c|}{\textbf{4 Threads}} \\ \hline
  & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
 100000
- & 6.054 & 1.000 & 6.054 & 91.038 & 0.067 & 45.519 & 1.423 & 4.254 & 0.474 & 0.932 & 6.497 & 0.233\\ \hline
+ & 57.924 & 1.000 & 1.000 & 49.980 & 1.159 & 0.579 & 1.789 & 32.378 & 10.793 & 1.246 & 46.503 & 11.626\\ \hline
 1000000
- & 4.928 & 1.000 & 4.928 & 7.530 & 0.655 & 3.765 & 5.434 & 0.907 & 1.811 & 4.705 & 1.047 & 1.176\\ \hline
+ & 5.134 & 1.000 & 1.000 & 6.216 & 0.826 & 0.413 & 5.075 & 1.012 & 0.337 & 5.709 & 0.899 & 0.225\\ \hline
 10000000
- & 53.410 & 1.000 & 53.410 & 47.246 & 1.130 & 23.623 & 64.432 & 0.829 & 21.477 & 60.323 & 0.885 & 15.081\\ \hline
+ & 44.608 & 1.000 & 1.000 & 62.280 & 0.716 & 0.358 & 32.914 & 1.355 & 0.452 & 38.654 & 1.154 & 0.289\\ \hline
 100000000
- & 489.726 & 1.000 & 489.726 & 265.933 & 1.842 & 132.966 & 261.152 & 1.875 & 87.051 & 252.014 & 1.943 & 63.004\\ \hline
+ & 467.423 & 1.000 & 1.000 & 233.665 & 2.000 & 1.000 & 270.248 & 1.730 & 0.577 & 253.160 & 1.846 & 0.462\\ \hline
 \end{tabular}
 \end{table}
 \end{document}

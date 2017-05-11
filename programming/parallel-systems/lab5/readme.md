@@ -16,4 +16,4 @@
 * Представить таблицу с результатами вычислительных экспериментов.
 
 ## Отчёт
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1493907341/ps-5-3.png)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1493992391/ps-5-3.png)

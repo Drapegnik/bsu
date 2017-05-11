@@ -26,7 +26,7 @@
 4. Задачи будет делить так: каждый поток получает `n / p` строк исходной матрицы (где `n` - размерность матрицы, `p` - количество потоков). Далее остаток `n % p` также распредляется между потоками.
 
 ### table
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1493146866/ps3.png)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1493993352/ps3.png)
 
 ### code
 > [`main.cpp`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab3/main.cpp) run [`multiply()`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab3/main.cpp#L33) for `1`, `2`, `3`, `4` threads with `n` from `[2500, 5000, 7500, 10000]` and generate report table into [`report.tex`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab3/report.tex)

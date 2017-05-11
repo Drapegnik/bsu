@@ -76,7 +76,8 @@ double count_pi() {
     cout << "cpp1 time=" << cpp11_elapsed << " ms" << endl;
     cout << "QueryPerformance time=" << hq_elapsed << " ms" << endl;
 
-    fprintf(file, " & %.3f & %.3f & %.3f", hq_elapsed, one_time / hq_elapsed, hq_elapsed / threads_num);
+    double acc = one_time / hq_elapsed;
+    fprintf(file, " & %.3f & %.3f & %.3f", hq_elapsed, acc, acc / threads_num);
     return sum;
 }
 
@@ -105,7 +106,8 @@ int main(int argc, char *argv[]) {
     int dims_num = 4;
     int threads = 4;
 
-    fprintf(file, "\\documentclass{article}\n\\usepackage[a4paper, left=0.5cm]{geometry}\n\\begin{document}\n\\begin{table}[]");
+    fprintf(file,
+            "\\documentclass{article}\n\\usepackage[a4paper, left=0.5cm]{geometry}\n\\begin{document}\n\\begin{table}[]");
     print_table_header(threads);
     for (int i = 0; i < dims_num; i++) {
         n = dims[i];
