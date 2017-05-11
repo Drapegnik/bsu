@@ -1,6 +1,7 @@
 package app;
 
 import app.backend.dbDriver;
+import app.models.Mark;
 import app.models.Student;
 
 import javax.servlet.ServletConfig;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by Drapegnik on 5/11/17.
@@ -57,6 +59,18 @@ public class MainController extends HttpServlet {
                 int group = Integer.parseInt(groupStr);
                 Student s = new Student(name, group);
                 db.createStudent(s);
+                Map<String, String[]> params = request.getParameterMap();
+                for (Map.Entry<String, String[]> entry : params.entrySet()) {
+                    if (entry.getKey().equals("name") || entry.getKey().equals("group") || entry.getKey().equals("action")) {
+                        continue;
+                    }
+                    System.out.println(entry.getKey() + " / " + entry.getValue());
+                    int grade = Integer.parseInt(entry.getValue()[0]);
+                    db.createMark(new Mark(entry.getKey(), grade, s.getId()));
+
+                }
+                request.setAttribute("students", db.getStudents());
+                request.setAttribute("badIds", db.getBadStudentsIds());
                 break;
             case "deleteStudent":
                 System.out.println("[main controller] im'here");
