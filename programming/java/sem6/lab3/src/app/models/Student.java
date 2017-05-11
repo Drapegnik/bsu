@@ -24,6 +24,7 @@ public class Student implements Serializable {
     public Student() {
         this.name = "";
         this.id = UUID.randomUUID().toString();
+        this.marks = new ArrayList<>();
     }
 
     public Student(String name, int group) {
