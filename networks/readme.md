@@ -10,6 +10,8 @@
 * [lab7](https://github.com/Drapegnik/bsu/tree/master/networks/lab7) - [Конфигурация *RIP* `v2`](https://drapegnik.github.io/bsu/networks/lab7/Lab7_PazhitnykhIP.pdf)
 * [lab8](https://github.com/Drapegnik/bsu/tree/master/networks/lab8) - [Настройка параметров *OSPF*](https://drapegnik.github.io/bsu/networks/lab8/Lab8_PazhitnykhIP.pdf)
 * [lab9](https://github.com/Drapegnik/bsu/tree/master/networks/lab9) - [Конфигурирование *DHCP*-сервера](https://drapegnik.github.io/bsu/networks/lab9/Lab9_PazhitnykhIP.pdf)
+* [lab10](https://github.com/Drapegnik/bsu/tree/master/networks/lab10) - [Создание *VLAN* и назначение портов](https://drapegnik.github.io/bsu/networks/lab10/Lab10_PazhitnykhIP.pdf)
+* [lab11](https://github.com/Drapegnik/bsu/tree/master/networks/lab11) - [Настройка и проверка *NAPT*](https://drapegnik.github.io/bsu/networks/lab11/Lab11_PazhitnykhIP.pdf)
 
 ***
 
