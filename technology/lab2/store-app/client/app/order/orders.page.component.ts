@@ -11,7 +11,7 @@ import { OrderService } from '../_sevices/order.service';
     </div>
   `
 })
-export class OrdersController {
+export class OrdersPageComponent {
   orders: Array<Order>;
 
   constructor(private orderService: OrderService) {

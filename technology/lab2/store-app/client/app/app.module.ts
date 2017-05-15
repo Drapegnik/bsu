@@ -7,18 +7,26 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginUserComponent } from './login-user/login-user.component';
-import { OrdersController } from './order/orders.controller';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
+
+import { OrdersPageComponent } from './order/orders.page.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
 import { OrderService } from './_sevices/order.service';
+import { ProductService } from './_sevices/product.service';
 
 const appRoutes: Routes = [
   {
     path: 'orders',
-    component: OrdersController,
+    component: OrdersPageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'catalog',
+    component: CatalogComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -34,9 +42,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    CatalogComponent,
     NavbarComponent,
     LoginUserComponent,
-    OrdersController,
+    OrdersPageComponent,
     OrderComponent,
   ],
   imports: [
@@ -51,6 +60,7 @@ const appRoutes: Routes = [
     AuthGuard,
     AuthenticationService,
     OrderService,
+    ProductService,
   ],
   bootstrap: [AppComponent],
 })

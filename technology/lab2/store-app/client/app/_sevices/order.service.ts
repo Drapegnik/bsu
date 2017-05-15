@@ -21,7 +21,6 @@ export class OrderService {
   getAll() {
     return this.http.get(`${SettingsService.apiUrl}/orders`)
       .map((response: Response) => {
-        console.log(response);
         if (response.status === 200) {
           const body = JSON.parse(response['_body']);
           return body.map((order) => {
