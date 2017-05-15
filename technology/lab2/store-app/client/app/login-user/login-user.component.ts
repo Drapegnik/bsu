@@ -32,7 +32,7 @@ export class LoginUserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'home';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'orders';
     this.authenticationService.loadCurrentUser().subscribe(
       () => this.router.navigate([this.returnUrl]),
       () => this.isRender = true);
