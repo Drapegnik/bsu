@@ -3,6 +3,8 @@ package generator;
 import javax.servlet.jsp.tagext.*;
 import javax.servlet.jsp.*;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -14,6 +16,7 @@ public class SelectItem extends SimpleTagSupport {
     private String name;
     private String value;
     private boolean isChecked;
+    private String imageRegex = "(.*/)*.+\\.(png|jpg|gif|bmp|jpeg|PNG|JPG|GIF|BMP)$";
     private StringWriter sw = new StringWriter();
 
     public String getImagePath() {return imagePath;}
@@ -37,6 +40,22 @@ public class SelectItem extends SimpleTagSupport {
     public void setIsChecked(boolean checked) {isChecked = checked;}
 
     public void doTag() throws JspException, IOException {
+        JspWriter out = getJspContext().getOut();
+        Pattern p = Pattern.compile(imageRegex);
+        Matcher m = p.matcher(imagePath);
+
+        if (!m.matches()) {
+            out.println("" +
+                    "<div class=\"form-group\">\n" +
+                    "   <div class=\"alert alert-danger alert-dismissible error-block\" role=\"alert\">\n" +
+                    "       <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>" +
+                    "       <strong>Error!</strong><br>\n" +
+                    "       <code>ImagePath doesn't match regexp</code>\n" +
+                    "   </div>" +
+                    "</div>\n");
+            return;
+        }
+
         String image = "<img src=\"" + imagePath + "\" width=\"" + imageSize + "\">\n";
         String checked = isChecked ? "checked" : "";
         String input = "<input " +
@@ -45,10 +64,10 @@ public class SelectItem extends SimpleTagSupport {
                 "value=\"" + value + "\" " +
                 checked +
                 ">\n";
-        JspWriter out = getJspContext().getOut();
         getJspBody().invoke(sw);
 
-        out.println("<div class=\"form-group\">\n" +
+        out.println("" +
+                "<div class=\"form-group\">\n" +
                 "   <div class=\"pull-left\">" + image +
                 "       <h3 class=\"pull-right\">" + sw.toString() + "</h3>\n" +
                 "   </div>\n" +

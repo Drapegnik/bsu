@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[a4paper, left=0.5cm]{geometry}
+\begin{document}
+\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{1 Thread}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 2.639 ms & 7.746 & 1.000 & 1.000\\ \hline
+1000
+ & 50.918 ms & 59.905 & 1.000 & 1.000\\ \hline
+2500
+ & 155.356 ms & 234.774 & 1.000 & 1.000\\ \hline
+5000
+ & 612.133 ms & 279.907 & 1.000 & 1.000\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{2 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 3.941 ms & 1.155 & 242.427 & 121.214\\ \hline
+1000
+ & 59.088 ms & 20.007 & 13.990 & 6.995\\ \hline
+2500
+ & 160.959 ms & 59.488 & 4.705 & 2.353\\ \hline
+5000
+ & 326.767 ms & 106.800 & 2.621 & 1.310\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{3 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 3.920 ms & 0.312 & 896.849 & 298.950\\ \hline
+1000
+ & 48.827 ms & 7.775 & 36.001 & 12.000\\ \hline
+2500
+ & 137.800 ms & 38.776 & 7.218 & 2.406\\ \hline
+5000
+ & 346.625 ms & 96.730 & 2.894 & 0.965\\ \hline
+\end{tabular}
+\end{table}\begin{table}
+\begin{tabular}{|l|l|l|l|l|l|}\hline
+\multicolumn{1}{|c|}{\textbf{dimensions}} &\multicolumn{1}{|c|}{\textbf{model 1}} &\multicolumn{3}{|c|}{\textbf{model 2}}\\ \hline
+& & \multicolumn{3}{c|}{\textbf{4 Threads}} \\ \hline
+& \textbf{time} & \textbf{time} & \textbf{acc} & \textbf{eff}\\ \hline
+100
+ & 3.190 ms & 2.600 & 107.673 & 26.918\\ \hline
+1000
+ & 60.400 ms & 4.814 & 58.150 & 14.538\\ \hline
+2500
+ & 156.497 ms & 38.450 & 7.280 & 1.820\\ \hline
+5000
+ & 307.043 ms & 103.039 & 2.717 & 0.679\\ \hline
+\end{tabular}
+\end{table}
+\end{document}
