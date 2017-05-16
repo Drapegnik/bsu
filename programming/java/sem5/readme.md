@@ -5,4 +5,4 @@ semester 5
 
 ***
 
-*by [@drapegnik](https://github.com/Drapegnik)
+*by [@drapegnik](https://github.com/Drapegnik)*

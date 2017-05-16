@@ -11,10 +11,10 @@
 	path = architecture/lab2-gauss-elimination
 	url = https://github.com/Drapegnik/Gauss-elimination
 [submodule "course-work/report"]
-	path = course-work/report
+	path = science-works/report
 	url = https://github.com/Drapegnik/bsu-cw
 [submodule "course-work/code"]
-	path = course-work/code
+	path = science-works/course-project
 	url = https://github.com/lybros/drone-vision
 [submodule "programming/java/sem3/lab4"]
 	path = programming/java/sem3/lab4

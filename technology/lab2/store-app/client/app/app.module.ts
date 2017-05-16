@@ -6,17 +6,39 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
+import { CatalogComponent } from './catalog/catalog.component';
 import { LoginUserComponent } from './login-user/login-user.component';
-import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { OrderComponent } from './order/order.component';
+import { OrderFormComponent } from './order/order-form.component';
+import { OrdersPageComponent } from './order/orders.page.component';
+
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
-import { NavbarComponent } from './navbar/navbar.component';
+import { OrderService } from './_sevices/order.service';
+import { ProductService } from './_sevices/product.service';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'orders',
+    component: OrdersPageComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'catalog',
+    component: CatalogComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orders/create',
+    component: CatalogComponent,
+    canActivate: [AuthGuard], // todo: add roles checking,
+    data: { isCreateMode: true },
+  },
+  {
+    path: 'orders/create/form',
+    component: OrderFormComponent,
+    canActivate: [AuthGuard], // todo: add roles checking,
   },
   {
     path: 'login',
@@ -24,16 +46,19 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'orders'
   },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    CatalogComponent,
     NavbarComponent,
     LoginUserComponent,
-    HomeComponent,
+    OrdersPageComponent,
+    OrderComponent,
+    OrderFormComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -46,6 +71,8 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
+    OrderService,
+    ProductService,
   ],
   bootstrap: [AppComponent],
 })

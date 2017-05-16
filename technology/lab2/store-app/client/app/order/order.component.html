@@ -1,0 +1,34 @@
+<div class="order col-md-11 col-xs-11">
+  <ul class="breadcrumb">
+    <li><span class="badge">{{index + 1}}</span></li>
+    <li>{{order.client.name}}</li>
+    <li>{{order.client.email}}</li>
+  </ul>
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>title</th>
+        <th>type</th>
+        <th>count</th>
+        <th>price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of order.products; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.type}}</td>
+        <td>{{product.count}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+      <tr class="success">
+        <td>total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{order.summaryPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

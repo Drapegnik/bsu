@@ -1,0 +1,10 @@
+# Executables
+*.exe
+*.out
+*.o
+*.app
+
+# CodeBlocks
+*.cbp
+*.depend
+*.layout

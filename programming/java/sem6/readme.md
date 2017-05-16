@@ -7,4 +7,4 @@ semester 6
 
 ***
 
-*by [@drapegnik](https://github.com/Drapegnik), march'15 - now*
+*by [@drapegnik](https://github.com/Drapegnik), march'17 - may'17*
