@@ -115,9 +115,8 @@ public class Student implements Serializable {
         }
 
         Student student = (Student) o;
-        if (group != student.group) {return false;}
 
-        return name.equals(student.name);
+        return group == student.group && name.equals(student.name);
     }
 
     /**

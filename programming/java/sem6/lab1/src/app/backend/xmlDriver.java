@@ -7,14 +7,22 @@ import app.config.Options;
 import app.models.Mark;
 import app.models.Student;
 import app.models.Subject;
-import app.models.wrappers.Marks;
 import app.models.wrappers.Students;
+import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.transform.stax.StAXSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import java.io.File;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -160,15 +168,26 @@ public class xmlDriver extends dbDriver {
     private ArrayList<Student> readData(String filename) {
         ArrayList<Student> data = new ArrayList<>();
         try {
-            File file = new File(filename);
+            XMLStreamReader reader = XMLInputFactory.newInstance().createXMLStreamReader(new FileInputStream(filename));
+            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+            String xcdFileName = filename.substring(0, filename.length() - 3) + "xsd";
+            System.out.println(xcdFileName);
+            Schema schema = sf.newSchema(new File(xcdFileName));
+            Validator validator = schema.newValidator();
+            validator.validate(new StAXSource(reader));
+
+            System.out.println("Document is valid");
             JAXBContext jaxbContext = JAXBContext.newInstance(Students.class);
 
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            Students students = (Students) jaxbUnmarshaller.unmarshal(file);
+            Students students = (Students) jaxbUnmarshaller.unmarshal(new File(filename));
             for (Student st : students.getData()) {
                 data.add(st);
             }
-        } catch (JAXBException e) {
+        } catch (SAXException e) {
+            System.err.println("Document is invalid!!");
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return data;
