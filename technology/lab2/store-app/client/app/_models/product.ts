@@ -8,6 +8,7 @@ export default class Product {
   count: number;
   type: string;
   price: number;
+  selected: boolean;
 
   constructor({ id, title, count, type, price }) {
     this.id = id;
@@ -15,5 +16,6 @@ export default class Product {
     this.count = count;
     this.type = type;
     this.price = price;
+    this.selected = false;
   }
 }

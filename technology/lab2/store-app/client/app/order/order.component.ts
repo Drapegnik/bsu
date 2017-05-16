@@ -7,7 +7,7 @@ import Order from '../_models/order';
  */
 
 @Component({
-  selector: 'app-order-item',
+  selector: 'app-order',
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })

@@ -1,6 +1,8 @@
 <div *ngIf="activeCatalog">
   <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a>Catalog «{{activeCatalog.name}}»</a></li>
+    <li class="active">
+      <a>Catalog «{{activeCatalog.name}}» {{isCreateMode && '/ choose products for order'}}</a>
+    </li>
   </ul>
   <table class="table table-striped table-hover ">
     <thead>
@@ -9,6 +11,7 @@
         <th>title</th>
         <th>type</th>
         <th>price</th>
+        <th *ngIf="isCreateMode">select</th>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +20,25 @@
         <td>{{product.title}}</td>
         <td>{{product.type}}</td>
         <td>{{product.price}}</td>
+        <td *ngIf="isCreateMode">
+          <input type="checkbox" [(ngModel)]="product.selected">
+        </td>
+      </tr>
+      <tr *ngIf="isCreateMode">
+        <td>select all</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input #all type="checkbox" (click)="setAll(all.checked)"/></td>
       </tr>
     </tbody>
   </table>
+  <a
+    *ngIf="isCreateMode"
+    [class.disabled]="canNext()"
+    [routerLink]="['form']"
+    class="hvr-bounce-to-right btn btn btn-default col-md-2 pull-right"
+    (click)="handleNext()"
+  >Next
+  </a>
 </div>

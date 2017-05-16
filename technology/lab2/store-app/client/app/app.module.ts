@@ -6,12 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
+import { CatalogComponent } from './catalog/catalog.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
-
+import { OrderFormComponent } from './order/order-form.component';
 import { OrdersPageComponent } from './order/orders.page.component';
-import { CatalogComponent } from './catalog/catalog.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
@@ -28,6 +28,17 @@ const appRoutes: Routes = [
     path: 'catalog',
     component: CatalogComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'orders/create',
+    component: CatalogComponent,
+    canActivate: [AuthGuard], // todo: add roles checking,
+    data: { isCreateMode: true },
+  },
+  {
+    path: 'orders/create/form',
+    component: OrderFormComponent,
+    canActivate: [AuthGuard], // todo: add roles checking,
   },
   {
     path: 'login',
@@ -47,6 +58,7 @@ const appRoutes: Routes = [
     LoginUserComponent,
     OrdersPageComponent,
     OrderComponent,
+    OrderFormComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

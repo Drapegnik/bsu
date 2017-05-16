@@ -3,8 +3,10 @@
  */
 
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import Catalog from '../_models/catalog';
+import Product from '../_models/product';
 import { ProductService } from '../_sevices/product.service';
 
 @Component({
@@ -13,8 +15,20 @@ import { ProductService } from '../_sevices/product.service';
 })
 export class CatalogComponent {
   activeCatalog: Catalog;
+  isCreateMode: boolean;
+  selectedProducts: Array<Product>;
 
-  constructor(productService: ProductService) {
+  constructor(productService: ProductService, route: ActivatedRoute) {
     productService.getActiveCatalog().subscribe(catalog => this.activeCatalog = catalog);
+    this.isCreateMode = route.snapshot.data['isCreateMode'];
+  }
+
+  public canNext = () => !this.activeCatalog.products.filter(p => p.selected).length;
+
+  public setAll = (value) => this.activeCatalog.products.forEach(p => p.selected = value);
+
+  public handleNext = () => {
+    this.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
+    this.setAll(false);
   }
 }
