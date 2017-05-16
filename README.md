@@ -13,7 +13,7 @@
 * [Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - C++, Java, Assembly
 * [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - Python, TeX
 * [Функциональный Анализ (Functional analysis)](https://github.com/Drapegnik/bsu/tree/master/fun) - TeX
-* [Курсовая работа (Course work)](https://github.com/Drapegnik/bsu/tree/master/course-work) - C++, TeX
+* [Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - C++, TeX
 * [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - C++, Python
 * [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - R
 * [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - `bash`, [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer)
@@ -53,6 +53,7 @@
 * [Architecture (*Архитектура Компьютеров*)](https://github.com/Drapegnik/bsu/tree/master/architecture)
 * [Numerical analysis (*Методы Численного Анализа*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem5)
 * [Java Threads](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)
+* [Course project (*Курсовой проект*)](https://github.com/Drapegnik/bsu-science/releases/tag/v1.0.0)
 </details>
 <details>
 <summary>semester 6</summary>
@@ -62,6 +63,7 @@
 * [Networks (*Компьютерные сети*)](https://github.com/Drapegnik/bsu/tree/master/networks)
 * [Programming Technology (*Технология программирования*)](https://github.com/Drapegnik/bsu/tree/master/technology)
 * [Decision Science (*Исследование операций*)](https://github.com/Drapegnik/bsu/tree/master/decision-science)
+* [Course work (*Курсовая работа*)](https://github.com/lybros/Appa)
 </details>
 
 ***
