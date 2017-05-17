@@ -8,3 +8,6 @@
 *.cbp
 *.depend
 *.layout
+
+.idea/
+**build**/
