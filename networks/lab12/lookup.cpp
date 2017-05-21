@@ -1,10 +1,12 @@
+//
+// Created by Drapegnik on 21.05.17.
+//
 #include <iostream>
 #include <winsock2.h>
 
 using namespace std;
 
 int main() {
-
     WSADATA data;
 
     if (WSAStartup(MAKEWORD(2, 2), &data) != 0) {
@@ -55,8 +57,6 @@ int main() {
         i++;
     }
 
-    cout << endl << "_________________________________________________________" << endl << endl;
     WSACleanup();
     return 0;
 }
-
