@@ -12,6 +12,8 @@
 * [lab9](http://drapegnik.github.io/bsu/networks/lab9) - [Конфигурирование *DHCP*-сервера](https://drapegnik.github.io/bsu/networks/lab9/Lab9_PazhitnykhIP.pdf)
 * [lab10](http://drapegnik.github.io/bsu/networks/lab10) - [Создание *VLAN* и назначение портов](https://drapegnik.github.io/bsu/networks/lab10/Lab10_PazhitnykhIP.pdf)
 * [lab11](http://drapegnik.github.io/bsu/networks/lab11) - [Настройка и проверка *NAPT*](https://drapegnik.github.io/bsu/networks/lab11/Lab11_PazhitnykhIP.pdf)
+* [lab12](https://github.com/Drapegnik/bsu/tree/master/networks/lab12) - Разработка клиент-серверных приложений. Интерфейс *Windows Sockets*
+* [test](https://github.com/Drapegnik/bsu/tree/master/networks/test) - [Контрольная работа. Настройка протокола *RIP*](https://drapegnik.github.io/bsu/networks/test)
 
 ***
 

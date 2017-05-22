@@ -6,11 +6,12 @@ april
 blade
 carrot
 atom
-xyu
-6
+table
+7
 apple
 shit
 blac
 cap
 atom
-xyu
+tab
+table

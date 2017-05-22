@@ -48,7 +48,7 @@
 * [Sieve of Eratosthenes (*Решето Эратосфена*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Eratosthenes)
 * [Brute force (*Генератор для полного перебора*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/brute_force)
 * [`C(n,k)` (*Вычисление сочетания из `n` по `k`*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/C(n,k))
-* [Combination generating (*Генерация биномиальных коэффицентов*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/combination_generating)
+* [Combination generating (*Генерация всех сочетаний из `n` по `k`*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/combination_generating)
 * [Speed power (*Быстрое возведение в степень*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/power)
 
 ***
