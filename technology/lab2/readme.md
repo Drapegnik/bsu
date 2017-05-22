@@ -30,4 +30,7 @@
 ## use case diagram
 > I use [Enterprise Architect](http://www.sparxsystems.com/products/ea). Model saved in [`lab2.eap`](http://drapegnik.github.io/bsu/technology/lab2/lab2.eap)
 
+## use case descriptions
+> check [this google doc](https://docs.google.com/document/d/1mrmffR5iioQHIku-LjeII9fzL6B34L7IpCmIUHblz_M/edit?usp=sharing)
+
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490050601/tp-2-1.png)
