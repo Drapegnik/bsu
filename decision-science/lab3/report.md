@@ -20,7 +20,7 @@ v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 |
 # task2
 
 * Find shortest ways for all nodes using [Floyd–Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977439/ds-lab3-task2.png)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1495483184/ds-lab3-task2.png)
 
 ## input 
 
