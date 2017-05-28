@@ -42,6 +42,6 @@ export class OrdersPageComponent {
   orders: Array<Order>;
 
   constructor(private orderService: OrderService) {
-    orderService.getAll().subscribe(orders => this.orders = orders);
+    orderService.getAll().subscribe(orders => this.orders = orders.reverse());
   }
 }

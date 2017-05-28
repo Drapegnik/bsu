@@ -10,7 +10,7 @@ export default class Product {
   price: number;
   selected: boolean;
 
-  constructor({ id, title, count, type, price }) {
+  constructor({ id, title, count = 1, type, price }) {
     this.id = id;
     this.title = title;
     this.count = count;

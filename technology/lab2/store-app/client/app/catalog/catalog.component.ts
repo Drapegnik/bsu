@@ -14,9 +14,9 @@ import { ProductService } from '../_sevices/product.service';
   templateUrl: './catalog.component.html'
 })
 export class CatalogComponent {
+  public static selectedProducts: Array<Product>;
   activeCatalog: Catalog;
   isCreateMode: boolean;
-  selectedProducts: Array<Product>;
 
   constructor(productService: ProductService, route: ActivatedRoute) {
     productService.getActiveCatalog().subscribe(catalog => this.activeCatalog = catalog);
@@ -28,7 +28,7 @@ export class CatalogComponent {
   public setAll = (value) => this.activeCatalog.products.forEach(p => p.selected = value);
 
   public handleNext = () => {
-    this.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
+    CatalogComponent.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
     this.setAll(false);
   }
 }

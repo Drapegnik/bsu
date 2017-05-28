@@ -1,0 +1,87 @@
+<form
+  [formGroup]="form"
+  class="form-horizontal col-md-8 col-md-offset-2"
+  role="form"
+  (ngSubmit)="create(form.value)" novalidate
+>
+  <fieldset class="col-md-12">
+    <legend>Client</legend>
+    <div class="col-md-offset-2 col-md-8">
+      <div class="form-group" [class.has-error]="name.invalid && name.touched">
+        <label for="inputName" class="col-lg-2">Name</label>
+        <div class="col-lg-10">
+          <input [formControl]="name" type="text" class="form-control" id="inputName">
+          <div class="help-block">
+            <ul class="list-unstyled">
+              <li *ngIf="name.valid || name.pristine">Enter client name</li>
+              <li *ngIf="name.dirty && name.hasError('required')">A name is required</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" [class.has-error]="email.invalid && email.touched">
+        <label for="inputEmail" class="col-lg-2">Email</label>
+        <div class="col-lg-10">
+          <input [formControl]="email" type="email" class="form-control" id="inputEmail">
+          <div class="help-block">
+            <ul class="list-unstyled">
+              <li *ngIf="email.valid || email.pristine">Enter client email</li>
+              <li *ngIf="email.dirty && email.hasError('required')">An email is required</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="col-md-12">
+    <legend>Products</legend>
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>title</th>
+          <th>type</th>
+          <th>price</th>
+          <th>count</th>
+          <th>sum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i=index">
+          <td>{{i+1}}</td>
+          <td>{{product.title}}</td>
+          <td>{{product.type}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <input
+              type="number"
+              [(ngModel)]="product.count"
+              [ngModelOptions]="{standalone: true}"
+              min="1"
+              max="100"
+              class="form-control"
+            >
+          </td>
+          <td>{{product.price*product.count}}</td>
+        </tr>
+        <tr class="warning">
+          <td>Total</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{total()}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+  <button
+    [class.disabled]="name.invalid || email.invalid"
+    type="submit"
+    class="pull-right btn btn-success hvr-grow col-md-3"
+  >
+    Create
+  </button>
+</form>
