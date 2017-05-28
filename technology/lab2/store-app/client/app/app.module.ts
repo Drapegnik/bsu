@@ -9,9 +9,9 @@ import { AppComponent } from './app.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { OrderComponent } from './order/order.component';
-import { OrderFormComponent } from './order/order-form.component';
-import { OrdersPageComponent } from './order/orders.page.component';
+import { OrderComponent } from './orders/order.component';
+import { OrderFormComponent } from './orders/order-form.component';
+import { OrdersPageComponent } from './orders/orders.page.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';

@@ -43,6 +43,7 @@ export class OrderFormComponent {
     let sum = 0;
     this.products.forEach(p => sum += p.price * p.count);
     this.summaryPrice = sum;
+    return sum;
   }
 
   public create() {
