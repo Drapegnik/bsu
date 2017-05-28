@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import Order from '../_models/order';
-import { OrderService } from '../_sevices/order.service';
+import { OrdersService } from '../_sevices/orders.service';
 
 @Component({
   selector: 'app-orders-page',
@@ -41,7 +41,7 @@ import { OrderService } from '../_sevices/order.service';
 export class OrdersPageComponent {
   orders: Array<Order>;
 
-  constructor(private orderService: OrderService) {
-    orderService.getAll().subscribe(orders => this.orders = orders.reverse());
+  constructor(private ordersService: OrdersService) {
+    ordersService.getAll().subscribe(orders => this.orders = orders.reverse());
   }
 }

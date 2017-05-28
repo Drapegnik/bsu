@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import Catalog from '../_models/catalog';
 import Product from '../_models/product';
-import { ProductService } from '../_sevices/product.service';
+import { ProductsService } from '../_sevices/products.service';
 
 @Component({
   selector: 'app-catalog',
@@ -18,8 +18,8 @@ export class CatalogComponent {
   activeCatalog: Catalog;
   isCreateMode: boolean;
 
-  constructor(productService: ProductService, route: ActivatedRoute) {
-    productService.getActiveCatalog().subscribe(catalog => this.activeCatalog = catalog);
+  constructor(productsService: ProductsService, route: ActivatedRoute) {
+    productsService.getActiveCatalog().subscribe(catalog => this.activeCatalog = catalog);
     this.isCreateMode = route.snapshot.data['isCreateMode'];
   }
 

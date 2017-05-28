@@ -11,12 +11,12 @@ import { LoginUserComponent } from './login-user/login-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './orders/order.component';
 import { OrderFormComponent } from './orders/order-form.component';
-import { OrdersPageComponent } from './orders/orders.page.component';
+import { OrdersPageComponent } from './orders/orders-page.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_sevices/authentication.service';
-import { OrderService } from './_sevices/order.service';
-import { ProductService } from './_sevices/product.service';
+import { OrdersService } from './_sevices/orders.service';
+import { ProductsService } from './_sevices/products.service';
 
 const appRoutes: Routes = [
   {
@@ -71,8 +71,8 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
-    OrderService,
-    ProductService,
+    OrdersService,
+    ProductsService,
   ],
   bootstrap: [AppComponent],
 })

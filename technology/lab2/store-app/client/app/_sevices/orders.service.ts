@@ -13,7 +13,7 @@ import Order from '../_models/order';
 import Product from '../_models/product';
 
 @Injectable()
-export class OrderService {
+export class OrdersService {
 
   constructor(private http: Http) {
   };
