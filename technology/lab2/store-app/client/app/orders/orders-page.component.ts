@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 import Order from '../_models/order';
+import User from '../_models/user';
 import { OrdersService } from '../_sevices/orders.service';
+import { AuthenticationService } from '../_sevices/authentication.service';
 
 @Component({
   selector: 'app-orders-page',
@@ -9,7 +11,7 @@ import { OrdersService } from '../_sevices/orders.service';
     <div *ngFor="let order of orders; let i=index">
       <app-order [index]="i" [order]="order"></app-order>
     </div>
-    <div class="col-md-1 col-xs-1">
+    <div *ngIf="canCreate()" class="col-md-1 col-xs-1">
       <a [routerLink]="['create']"><span class="hvr-pulse-grow create glyphicon glyphicon-plus-sign"></span></a>
     </div>
   `,
@@ -40,8 +42,14 @@ import { OrdersService } from '../_sevices/orders.service';
 })
 export class OrdersPageComponent {
   orders: Array<Order>;
+  user: User;
 
-  constructor(private ordersService: OrdersService) {
+  constructor(private ordersService: OrdersService, private authenticationService: AuthenticationService) {
     ordersService.getAll().subscribe(orders => this.orders = orders.reverse());
+    authenticationService.currentUser().subscribe(user => this.user = user);
+  }
+
+  public canCreate() {
+    return this.user.role === 'admin' || this.user.role === 'order-manager';
   }
 }

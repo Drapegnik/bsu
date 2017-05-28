@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { CatalogComponent } from '../catalog/catalog.component';
-import { OrderService } from '../_sevices/order.service';
+import { OrdersService } from '../_sevices/orders.service';
 import Order from '../_models/order';
 import Product from '../_models/product';
 
@@ -25,7 +25,7 @@ export class OrderFormComponent {
 
   constructor(private fb: FormBuilder,
               private router: Router,
-              private orderService: OrderService) {
+              private ordersService: OrdersService) {
     this.products = CatalogComponent.selectedProducts;
     if (!this.products) {
       this.products = [];
@@ -51,7 +51,7 @@ export class OrderFormComponent {
     const email = this.email.value;
     const { summaryPrice, products } = this;
 
-    this.orderService.create(new Order({ client: { name, email }, summaryPrice, products })).subscribe(
+    this.ordersService.create(new Order({ client: { name, email }, summaryPrice, products })).subscribe(
       () => {
         this.router.navigate(['orders']);
       },

@@ -14,6 +14,8 @@ import { OrderFormComponent } from './orders/order-form.component';
 import { OrdersPageComponent } from './orders/orders-page.component';
 
 import { AuthGuard } from './_guards/auth.guard';
+import { OrdersGuard } from './_guards/orders.guard';
+
 import { AuthenticationService } from './_sevices/authentication.service';
 import { OrdersService } from './_sevices/orders.service';
 import { ProductsService } from './_sevices/products.service';
@@ -32,13 +34,13 @@ const appRoutes: Routes = [
   {
     path: 'orders/create',
     component: CatalogComponent,
-    canActivate: [AuthGuard], // todo: add roles checking,
+    canActivate: [AuthGuard, OrdersGuard],
     data: { isCreateMode: true },
   },
   {
     path: 'orders/create/form',
     component: OrderFormComponent,
-    canActivate: [AuthGuard], // todo: add roles checking,
+    canActivate: [AuthGuard, OrdersGuard],
   },
   {
     path: 'login',
@@ -71,6 +73,7 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
+    OrdersGuard,
     OrdersService,
     ProductsService,
   ],
