@@ -39,14 +39,14 @@ export class OrderFormComponent {
     this.email = this.form.controls['email'];
   }
 
-  public total() {
+  total() {
     let sum = 0;
     this.products.forEach(p => sum += p.price * p.count);
     this.summaryPrice = sum;
     return sum;
   }
 
-  public create() {
+  create() {
     const name = this.name.value;
     const email = this.email.value;
     const { summaryPrice, products } = this;

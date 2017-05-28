@@ -12,9 +12,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './orders/order.component';
 import { OrderFormComponent } from './orders/order-form.component';
 import { OrdersPageComponent } from './orders/orders-page.component';
+import { ProductsTableComponent } from './products/products-table.component';
+import { ProductsPageComponent } from './products/proucts-page.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { OrdersGuard } from './_guards/orders.guard';
+import { ProductsGuard } from './_guards/products.guard';
 
 import { AuthenticationService } from './_sevices/authentication.service';
 import { OrdersService } from './_sevices/orders.service';
@@ -43,6 +46,11 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard, OrdersGuard],
   },
   {
+    path: 'products',
+    component: ProductsPageComponent,
+    canActivate: [AuthGuard, ProductsGuard],
+  },
+  {
     path: 'login',
     component: LoginUserComponent
   },
@@ -61,6 +69,8 @@ const appRoutes: Routes = [
     OrdersPageComponent,
     OrderComponent,
     OrderFormComponent,
+    ProductsTableComponent,
+    ProductsPageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -75,6 +85,7 @@ const appRoutes: Routes = [
     AuthenticationService,
     OrdersGuard,
     OrdersService,
+    ProductsGuard,
     ProductsService,
   ],
   bootstrap: [AppComponent],

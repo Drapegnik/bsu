@@ -9,11 +9,11 @@ import { AuthenticationService } from '../_sevices/authentication.service';
 import User from '../_models/user';
 
 @Injectable()
-export class OrdersGuard implements CanActivate {
+export class ProductsGuard implements CanActivate {
   user: User;
 
   public static check(user: User) {
-    return user.role === 'admin' || user.role === 'order-manager';
+    return user.role === 'admin' || user.role === 'catalog-manager' || user.role === 'product-manager';
   }
 
   constructor(private router: Router, private authenticationService: AuthenticationService) {
@@ -23,7 +23,7 @@ export class OrdersGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot,
               state: RouterStateSnapshot) {
 
-    if (OrdersGuard.check(this.user)) {
+    if (ProductsGuard.check(this.user)) {
       return true;
     }
 

@@ -4,6 +4,7 @@ import Order from '../_models/order';
 import User from '../_models/user';
 import { OrdersService } from '../_sevices/orders.service';
 import { AuthenticationService } from '../_sevices/authentication.service';
+import { OrdersGuard } from '../_guards/orders.guard';
 
 @Component({
   selector: 'app-orders-page',
@@ -49,7 +50,7 @@ export class OrdersPageComponent {
     authenticationService.currentUser().subscribe(user => this.user = user);
   }
 
-  public canCreate() {
-    return this.user.role === 'admin' || this.user.role === 'order-manager';
+  canCreate() {
+    return OrdersGuard.check(this.user);
   }
 }
