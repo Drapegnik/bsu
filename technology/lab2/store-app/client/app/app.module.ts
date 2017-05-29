@@ -21,6 +21,7 @@ import { ProductsPageComponent } from './products/proucts-page.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { OrdersGuard } from './_guards/orders.guard';
 import { ProductsGuard } from './_guards/products.guard';
+import { CatalogGuard } from './_guards/catalog.guard';
 
 import { AuthenticationService } from './_sevices/authentication.service';
 import { OrdersService } from './_sevices/orders.service';
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
   {
     path: 'catalog/edit',
     component: CatalogEditComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard, CatalogGuard]
   },
   {
     path: 'orders/create',
@@ -94,6 +95,7 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
+    CatalogGuard,
     OrdersGuard,
     OrdersService,
     ProductsGuard,
