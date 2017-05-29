@@ -15,6 +15,7 @@ const router = Router();
 router.get('/catalogs', catalogController.getAll); // catalogs routes first
 router.get('/catalogs/active', catalogController.getActive);
 router.get('/catalogs/:id', catalogController.getById);
+router.put('/catalogs/:id', catalogController.editCatalog);
 
 router.get('/', productController.getAll);
 router.get('/:id', productController.getById);
