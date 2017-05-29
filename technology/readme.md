@@ -6,4 +6,4 @@
 
 ***
 
-*by [@drapegnik](https://github.com/Drapegnik), february'17 - now*
+*by [@drapegnik](https://github.com/Drapegnik), february'17 - may'17*
