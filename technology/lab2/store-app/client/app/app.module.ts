@@ -7,6 +7,9 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { CatalogEditComponent } from './catalog/catalog-edit.component';
+import { CircleBtnComponent } from './_common/circle-btn.component';
+import { DualListComponent } from './_common/dual-list.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './orders/order.component';
@@ -32,6 +35,11 @@ const appRoutes: Routes = [
   {
     path: 'catalog',
     component: CatalogComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'catalog/edit',
+    component: CatalogEditComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -64,6 +72,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CatalogComponent,
+    CatalogEditComponent,
+    CircleBtnComponent,
+    DualListComponent,
     NavbarComponent,
     LoginUserComponent,
     OrdersPageComponent,

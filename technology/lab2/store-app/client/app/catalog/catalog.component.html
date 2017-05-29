@@ -11,4 +11,9 @@
     (click)="handleNext()"
   >Next
   </a>
+  <app-circle-btn
+    *ngIf="canEdit() && !isCreateMode"
+    [link]="'edit'"
+    [iconClass]="'glyphicon glyphicon-edit'"
+  ></app-circle-btn>
 </div>

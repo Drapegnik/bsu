@@ -15,7 +15,22 @@ import Catalog from '../_models/catalog';
 @Injectable()
 export class ProductsService {
 
-  constructor(private http: Http) {};
+  constructor(private http: Http) {
+  };
+
+  private errorHandler = (error: any) => Observable.throw(error || 'Server error');
+
+  getAll() {
+    return this.http.get(`${SettingsService.apiUrl}/products/`)
+      .map((response: Response) => {
+        if (response.status === 200) {
+          const rawProducts = JSON.parse(response['_body']);
+          return rawProducts.map(o => new Product(o));
+        }
+        return response;
+      })
+      .catch(this.errorHandler);
+  }
 
   getActiveCatalog() {
     return this.http.get(`${SettingsService.apiUrl}/products/catalogs/active`)
@@ -28,18 +43,17 @@ export class ProductsService {
 
         return response;
       })
-      .catch((error: any) => Observable.throw(error || 'Server error'));
+      .catch(this.errorHandler);
   }
 
-  getAll() {
-    return this.http.get(`${SettingsService.apiUrl}/products/`)
+  saveCatalog(catalog: Catalog) {
+    const { name, products } = catalog;
+    const productsIds = products.map(p => p.id);
+
+    return this.http.put(`${SettingsService.apiUrl}/products/catalogs/${catalog.id}`, { name, productsIds })
       .map((response: Response) => {
-        if (response.status === 200) {
-          const rawProducts = JSON.parse(response['_body']);
-          return rawProducts.map(o => new Product(o));
-        }
-        return response;
+        console.log(response);
       })
-      .catch((error: any) => Observable.throw(error || 'Server error'));
+      .catch(this.errorHandler);
   }
 }

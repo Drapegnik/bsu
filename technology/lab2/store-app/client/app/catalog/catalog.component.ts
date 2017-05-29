@@ -19,7 +19,7 @@ export class CatalogComponent {
   isCreateMode: boolean;
   title: string;
 
-  constructor(productsService: ProductsService, route: ActivatedRoute) {
+  constructor(private productsService: ProductsService, private route: ActivatedRoute) {
     this.isCreateMode = route.snapshot.data['isCreateMode'];
     productsService.getActiveCatalog().subscribe((catalog) => {
       this.activeCatalog = catalog;
@@ -30,9 +30,11 @@ export class CatalogComponent {
     });
   }
 
-  public canNext = () => !this.activeCatalog.products.filter(p => p.selected).length;
+  canNext = () => !this.activeCatalog.products.filter(p => p.selected).length;
 
-  public handleNext = () => {
+  canEdit = () => true;
+
+  handleNext = () => {
     console.log(this.activeCatalog.products);
     CatalogComponent.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
   }
