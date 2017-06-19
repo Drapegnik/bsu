@@ -21,8 +21,8 @@ Job Name | time | depends of
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab6/task1.in.gv.png)
 
 ```
-Events early terms:		Tp[0]=0.0	Tp[1]=3.0	Tp[2]=6.0	Tp[3]=7.0	Tp[4]=12.0	Tp[5]=17.0
-Events late terms:		Tn[0]=0.0	Tn[1]=4.0	Tn[2]=7.0	Tn[3]=7.0	Tn[4]=12.0	Tn[5]=17.0
+Events early terms:	Tp[0]=0.0	Tp[1]=3.0	Tp[2]=6.0	Tp[3]=7.0	Tp[4]=12.0	Tp[5]=17.0
+Events late terms:	Tn[0]=0.0	Tn[1]=4.0	Tn[2]=7.0	Tn[3]=7.0	Tn[4]=12.0	Tn[5]=17.0
 Events time reserves:	R[0]=0.0	R[1]=1.0	R[2]=1.0	R[3]=0.0	R[4]=0.0	R[5]=0.0
 
 Jobs early terms start:
@@ -127,8 +127,8 @@ Jobs guaranteed reserves:
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492564649/ds-lab6-task2.png)
 
 ```
-Events early terms:		Tp[0]=0.0	Tp[1]=1.0	Tp[2]=6.0	Tp[3]=8.0	Tp[4]=11.0	Tp[5]=14.0
-Events late terms:		Tn[0]=0.0	Tn[1]=1.0	Tn[2]=6.0	Tn[3]=8.0	Tn[4]=12.0	Tn[5]=14.0
+Events early terms:	Tp[0]=0.0	Tp[1]=1.0	Tp[2]=6.0	Tp[3]=8.0	Tp[4]=11.0	Tp[5]=14.0
+Events late terms:	Tn[0]=0.0	Tn[1]=1.0	Tn[2]=6.0	Tn[3]=8.0	Tn[4]=12.0	Tn[5]=14.0
 Events time reserves:	R[0]=0.0	R[1]=0.0	R[2]=0.0	R[3]=0.0	R[4]=1.0	R[5]=0.0
 
 Jobs early terms start:
