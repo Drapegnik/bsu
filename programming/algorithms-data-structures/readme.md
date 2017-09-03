@@ -36,13 +36,13 @@
 * [`LIFO` Stack (*Стэк*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/stack)
 * [Segment tree (*Дерево отрезков*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/segment-tree)
 * [Recurrent segment tree (*Рекурсивное дерево отрезков*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/recurrent-segment-tree)
-* [Digital tree (*Бор*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Aho–Corasick)
+* [Digital tree (*Бор*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Aho-Corasick)
 
 ## substrings search algorithms
 > алгоритмы поиска подстроки в строке
 
-* [Aho–Corasick algoritms (*Алгоритм Ахо-Корасика*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Aho–Corasick)
-* [Knuth–Morris–Pratt algorithm (*Алгоритм Кнута-Морриса-Пратта*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Knuth–Morris–Pratt)
+* [Aho–Corasick algoritms (*Алгоритм Ахо-Корасика*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Aho-Corasick)
+* [Knuth–Morris–Pratt algorithm (*Алгоритм Кнута-Морриса-Пратта*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Knuth-Morris-Pratt)
 
 ## other
 * [Sieve of Eratosthenes (*Решето Эратосфена*)](https://github.com/Drapegnik/bsu/tree/master/programming/algorithms-data-structures/Eratosthenes)
