@@ -10,7 +10,7 @@ semester 3
 * [lab7](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab7) - Графическое приложение. обработка событий (*Graphic application. Event handling*)
 * [lab8](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab8) - *Java Swing. Layouts*
 * [lab9](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/lab9) - Оконные приложения: контейнеры, итераторы, компараторы (*Window applications: containers, iterators, comparators*)
-* [test](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/test) - Контрольная работа(*Test work*)
+* [test](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/test) - Контрольная работа (*Test work*)
 * [exam](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3/exam) - Экзаменационная задача (*Exam task*)
 
 ***
