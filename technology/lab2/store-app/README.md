@@ -22,3 +22,25 @@ Run `npm run server` for build client and start server. Open http://localhost:30
 Run `npm run init-db` for inserting init data into database
 
 > see the [`docs`](http://drapegnik.github.io/bsu/technology/lab2/docs)
+
+## demo
+### login 
+<p align="center">
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078049/store-app-login.png" width="700px"/>
+</p>
+
+### orders list
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078050/store-app-orders.png)
+
+### create order
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078051/store-app-create-order1.png)
+
+<p align="center">
+<img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078050/store-app-create-order2.png" width="700px"/>
+</p>
+
+### edit catalog
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078050/store-app-edit-catalog.png)
+
+### products table
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078050/store-app-products.png)

@@ -36,7 +36,7 @@ def count_params(filename):
         for j in range(n):
             if time_matrix[j][i] != -1:
                 events_early_terms[i] = max(events_early_terms[i], events_early_terms[j] + time_matrix[j][i])
-    print 'Events early terms:\t\t{}'.format(format_array(events_early_terms, prefix='Tp'))
+    print 'Events early terms:\t{}'.format(format_array(events_early_terms, prefix='Tp'))
 
     events_late_terms = np.array([float('inf') for _ in range(n)])
     events_late_terms[n - 1] = events_early_terms[n - 1]
@@ -44,7 +44,7 @@ def count_params(filename):
         for j in range(n):
             if time_matrix[i][j] != -1:
                 events_late_terms[i] = min(events_late_terms[i], events_late_terms[j] - time_matrix[i][j])
-    print 'Events late terms:\t\t{}'.format(format_array(events_late_terms, prefix='Tn'))
+    print 'Events late terms:\t{}'.format(format_array(events_late_terms, prefix='Tn'))
 
     events_time_reserves = map(lambda (early, late): late - early, zip(events_early_terms, events_late_terms))
     print 'Events time reserves:\t{}\n'.format(format_array(events_time_reserves, prefix='R'))
@@ -93,6 +93,7 @@ if __name__ == '__main__':
     print 'task1:\n'
     count_params('task1.in')
     print '-'*100
+    # task 2
     print 'task2:\n'
     count_params('task2.in')
     print '-'*100

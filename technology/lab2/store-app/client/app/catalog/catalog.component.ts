@@ -5,30 +5,46 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import User from '../_models/user';
 import Catalog from '../_models/catalog';
 import Product from '../_models/product';
-import { ProductService } from '../_sevices/product.service';
+import { ProductsService } from '../_sevices/products.service';
+import { CatalogGuard } from '../_guards/catalog.guard';
+import { AuthenticationService } from "../_sevices/authentication.service";
+
 
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html'
 })
 export class CatalogComponent {
+  public static selectedProducts: Array<Product>;
   activeCatalog: Catalog;
   isCreateMode: boolean;
-  selectedProducts: Array<Product>;
+  title: string;
+  user: User;
 
-  constructor(productService: ProductService, route: ActivatedRoute) {
-    productService.getActiveCatalog().subscribe(catalog => this.activeCatalog = catalog);
+  constructor(private productsService: ProductsService,
+              private route: ActivatedRoute,
+              private authService: AuthenticationService) {
     this.isCreateMode = route.snapshot.data['isCreateMode'];
+
+    authService.currentUser().subscribe(user => this.user = user);
+    productsService.getActiveCatalog().subscribe((catalog) => {
+      this.activeCatalog = catalog;
+      this.title = `Catalog «${this.activeCatalog.name}»`;
+      if (this.isCreateMode) {
+        this.title += '/ choose products for order';
+      }
+    });
   }
 
-  public canNext = () => !this.activeCatalog.products.filter(p => p.selected).length;
+  canNext = () => !this.activeCatalog.products.filter(p => p.selected).length;
 
-  public setAll = (value) => this.activeCatalog.products.forEach(p => p.selected = value);
+  canEdit = () => CatalogGuard.check(this.user);
 
-  public handleNext = () => {
-    this.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
-    this.setAll(false);
+  handleNext = () => {
+    console.log(this.activeCatalog.products);
+    CatalogComponent.selectedProducts = this.activeCatalog.products.filter(p => p.selected);
   }
 }

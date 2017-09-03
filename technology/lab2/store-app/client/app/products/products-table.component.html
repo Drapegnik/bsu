@@ -1,0 +1,34 @@
+<ul *ngIf="title" class="nav nav-pills nav-stacked">
+  <li class="active">
+    <a>{{title}}</a>
+  </li>
+</ul>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>title</th>
+      <th>type</th>
+      <th>price</th>
+      <th *ngIf="selectable">select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{product.title}}</td>
+      <td>{{product.type}}</td>
+      <td>{{product.price}}</td>
+      <td *ngIf="selectable">
+        <input type="checkbox" [(ngModel)]="product.selected">
+      </td>
+    </tr>
+    <tr *ngIf="selectable">
+      <td>select all</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input #all type="checkbox" (click)="setAll(all.checked)"/></td>
+    </tr>
+  </tbody>
+</table>

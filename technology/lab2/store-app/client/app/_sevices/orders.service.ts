@@ -13,7 +13,7 @@ import Order from '../_models/order';
 import Product from '../_models/product';
 
 @Injectable()
-export class OrderService {
+export class OrdersService {
 
   constructor(private http: Http) {
   };
@@ -35,7 +35,10 @@ export class OrderService {
   }
 
   create(order: Order) {
-    return this.http.post(`${SettingsService.apiUrl}/orders`, order)
+    const { client, products, summaryPrice } = order;
+    const items = products.map(({ id, count }) => ({ product: id, count }));
+
+    return this.http.post(`${SettingsService.apiUrl}/orders`, { client, items, summaryPrice })
       .map((response: Response) => {
         console.log(response);
       })

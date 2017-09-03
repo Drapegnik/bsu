@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group">
+      <li class="list-group-item active">{{left.title}}</li>
+      <li *ngFor="let item of left.data" class="list-group-item">
+        {{item.title}}
+        <input class="pull-right" type="checkbox" [(ngModel)]="item.selected" (click)="leftSelected.push(item)">
+      </li>
+    </ul>
+    <ul class="pager">
+      <li class="next">
+        <a (click)="moveToRight()">
+          <small *ngIf="leftSelected.length" class="label label-success"> {{leftSelected.length}}</small>
+          Add &rarr;
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <ul class="list-group">
+      <li class="list-group-item active">{{right.title}}</li>
+      <li *ngFor="let item of right.data" class="list-group-item">
+        {{item.title}}
+        <input class="pull-right" type="checkbox" [(ngModel)]="item.selected" (click)="rightSelected.push(item)">
+      </li>
+    </ul>
+    <ul class="pager">
+      <li class="previous">
+        <a (click)="moveToLeft()">&larr; Remove
+          <small *ngIf="rightSelected.length" class="label label-danger">{{rightSelected.length}}</small>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row col-md-offset-10">
+  <button [routerLink]="[returnLink]" class="btn btn-warning hvr-grow col-md-5">
+    <span class="glyphicon glyphicon-remove"></span> Cancel
+  </button>
+  <button (click)="saveCallback(right.data)" class="btn btn-primary hvr-grow col-md-5 pull-right">
+    <span class="glyphicon glyphicon-floppy-disk"></span> Save
+  </button>
+</div>
