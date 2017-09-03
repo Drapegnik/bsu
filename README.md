@@ -26,15 +26,18 @@
 <summary>semester 1</summary>
 
 * [C++ Core](https://github.com/Drapegnik/bsu/tree/master/programming/c++)
+* [WinApi (*Программирование оконных приложений для **Windows***)](https://github.com/Drapegnik/bsu/tree/master/programming/winapi)
 </details>
 <details>
 <summary>semester 2</summary>
 
 * [Inline Assembly (*Ассемблерные вставки*)](https://github.com/Drapegnik/bsu/tree/master/programming/inline-assembly)
+* [Floating-point unit programming (*Программирование на сопроцессоре*)](https://github.com/Drapegnik/bsu/tree/master/programming/fpu)
 </details>
 <details>
 <summary>semester 3</summary>
 
+* [Assembly window applications](https://github.com/Drapegnik/bsu/tree/master/programming/radasm) - Оконные приложения на ассемблере
 * [Java Core](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)
 * [Data Mining (*Интеллектуальный анализ данных*)](https://github.com/Drapegnik/bsu/tree/master/data-mining)
 * [Numerical analysis (*Вычислительные Методы Алгебры*)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem3)
