@@ -20,14 +20,14 @@
 
 ## semester 1
 * [C++ Core](http://drapegnik.github.io/bsu/programming/c++)
-* [WinApi (*Программирование оконных приложений для **Windows***)](http://drapegnik.github.io/bsu/programming/winapi)
+* [WinApi (*Программирование оконных приложений для Windows*)](http://drapegnik.github.io/bsu/programming/winapi)
 
 ## semester 2
 * [Inline Assembly (*Ассемблерные вставки*)](http://drapegnik.github.io/bsu/programming/inline-assembly)
 * [Floating-point unit programming (*Программирование на сопроцессоре*)](http://drapegnik.github.io/bsu/programming/fpu)
 
 ## semester 3
-* [Assembly window applications](http://drapegnik.github.io/bsu/programming/radasm) - Оконные приложения на ассемблере
+* [Assembly window applications (*Оконные приложения на ассемблере*)](http://drapegnik.github.io/bsu/programming/radasm)
 * [Java Core](http://drapegnik.github.io/bsu/programming/java/sem3)
 * [Data Mining (*Интеллектуальный анализ данных*)](http://drapegnik.github.io/bsu/data-mining)
 * [Numerical analysis (*Вычислительные Методы Алгебры*)](http://drapegnik.github.io/bsu/numerical-analysis/sem3)
