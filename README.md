@@ -16,9 +16,10 @@
 * [Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - C++, TeX
 * [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - C++, Python
 * [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - R
-* [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - `bash`, [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer)
+* [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), bash
 * [Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - UML, Python, [MEAN](http://mean.io/) stack
 * [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - TeX, Python
+* [Спецкурс по `Linux`, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - C, bash
 
 ***
 
@@ -67,6 +68,11 @@
 * [Programming Technology (*Технология программирования*)](https://github.com/Drapegnik/bsu/tree/master/technology)
 * [Decision Science (*Исследование операций*)](https://github.com/Drapegnik/bsu/tree/master/decision-science)
 * [Course work (*Курсовая работа*)](https://github.com/lybros/Appa)
+</details>
+<details>
+<summary>semester 7</summary>
+
+* [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
 </details>
 
 ***
