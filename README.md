@@ -20,6 +20,7 @@
 * [Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - UML, Python, [MEAN](http://mean.io/) stack
 * [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - TeX, Python
 * [Спецкурс по `Linux`, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - C, bash
+* [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - Oracle, SQL, UML
 
 ***
 
@@ -73,6 +74,7 @@
 <summary>semester 7</summary>
 
 * [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
+* [DMS (*СУБД*)](https://github.com/Drapegnik/bsu/tree/master/dms)
 </details>
 
 ***
