@@ -21,6 +21,7 @@
 * [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - TeX, Python
 * [Спецкурс по `Linux`, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - C, bash
 * [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - Oracle, SQL, UML
+* [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - Python
 
 ***
 
@@ -75,6 +76,7 @@
 
 * [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
 * [DMS (*СУБД*)](https://github.com/Drapegnik/bsu/tree/master/dms)
+* [Statistical Modeling (*Имитационное и статистическое моделирование*)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
 </details>
 
 ***
