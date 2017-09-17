@@ -1,4 +1,5 @@
-from ciphers import Caesar, Vigenere, Kasiski
+from ciphers import Caesar, Vigenere
+from hackers import Kasiski
 
 LANG = 'en'
 CAESAR_SHIFT = 7
@@ -10,6 +11,7 @@ with open('text_{}.txt'.format(LANG)) as data_file:
 caesar = Caesar(CAESAR_SHIFT, LANG)
 encrypted = caesar.encrypt(data)
 decrypted = caesar.decrypt(encrypted)
+print('\nCaesar:')
 print(' data:\t\t{}'.format(data))
 print(' encrypted:\t{}'.format(encrypted))
 print(' decrypted:\t{}'.format(decrypted))
@@ -24,3 +26,7 @@ print(' encrypted:\t{}'.format(encrypted))
 print(' decrypted:\t{}'.format(decrypted))
 print('-' * 100)
 
+kasiski = Kasiski(3, LANG)
+length = kasiski.get_len(encrypted)
+print('\nKasiski:')
+print(' keyword len:\t{}'.format(length))

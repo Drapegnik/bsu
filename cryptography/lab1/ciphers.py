@@ -1,16 +1,9 @@
 import json
 
-from utils import add_to_char
+from utils import add_to_char, WithLanguage
 
 with open('frequencies.json') as data_file:
     freq = json.load(data_file)
-
-
-class WithLanguage:
-    def __init__(self, lang):
-        if not freq.get(lang):
-            raise ValueError('Unsupported language {}'.format(lang))
-        self.lang = lang
 
 
 class Caesar(WithLanguage):
@@ -59,5 +52,3 @@ class Vigenere(WithLanguage):
 
     def decrypt(self, string):
         return self.process_string(string, -1)
-
-
