@@ -1,3 +1,13 @@
+import re
+from functools import reduce
+from math import gcd
+
+LETTERS_REGEXPS = {
+    'en': re.compile('^[a-zA-Z]+$'),
+    'ru': re.compile('^[а-яА-Я]+$')
+}
+
+
 def add_to_char(char, shift, alphabet_dict):
     if not alphabet_dict.get(char.lower()):
         return char
