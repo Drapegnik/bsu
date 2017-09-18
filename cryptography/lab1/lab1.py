@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import tests
 from ciphers import Caesar, Vigenere
 from hackers import Kasiski, Analyzer

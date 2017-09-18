@@ -1,5 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 from PyQt5.QtGui import QPolygon
 
 from src.Shape import Shape
