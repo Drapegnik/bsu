@@ -13,6 +13,8 @@ text len|keyword|: len|found keyword|: len|success probability
 11679|ABSTRACT|8|ABSTRACT|8|100%
 13139|ABSTRACT|8|ABSTRACT|8|100%
 14599|ABSTRACT|8|ABSTRACT|8|100%
+
+![test1](./images/test1.png)
 ## test 2: with fixed text length
 text len|keyword|: len|found keyword|: len|success probability
 ---|---|---|---|---|---
@@ -26,3 +28,5 @@ text len|keyword|: len|found keyword|: len|success probability
 6000|YESTERDAY|9|YESTERDAY|9|100%
 6000|FLYCATCHER|10|FLYCATCHEF|10|90%
 6000|OPPOSITIONS|11|OPPCSICFOUS|11|63%
+
+![test2](./images/test2.png)
