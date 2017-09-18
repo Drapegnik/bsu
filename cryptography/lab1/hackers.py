@@ -1,7 +1,9 @@
 import re
-from pprint import pprint
+from math import ceil
 
 from utils import WithLanguage, is_all_letters, list_gcd, freq_to_sorted_list, add_to_char
+
+DIFF_THRESHOLD = 0.1
 
 
 class Kasiski(WithLanguage):
@@ -31,7 +33,9 @@ class Kasiski(WithLanguage):
             for i in range(len(el) - 1):
                 key = el[i + 1] - el[i]
                 diffs[key] = diffs.get(key, 0) + 1
-        return [key for key in diffs if diffs[key] > 1]
+        common_diff = diffs[max(diffs, key=lambda k: diffs[k])]
+        min_accepted_diff = ceil(common_diff * DIFF_THRESHOLD)
+        return [key for key in diffs if diffs[key] > min_accepted_diff]
 
     def get_len(self, encrypted):
         gramms = self.get_gramms(encrypted.lower())
@@ -77,6 +81,7 @@ class Analyzer(WithLanguage):
             shift = self.count_shift(el, closest)
             shifts[shift] = shifts.get(shift, 0) + 1
         common_shift = max(shifts, key=lambda k: shifts[k])
+        # common_shift = self.count_shift(freq[0], known_freq[0])  # diff between most popular
         return add_to_char(self.alphabet[0], common_shift, self.alphabet)
 
     def find_keyword(self, string):

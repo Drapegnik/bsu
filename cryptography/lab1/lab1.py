@@ -1,3 +1,4 @@
+import tests
 from ciphers import Caesar, Vigenere
 from hackers import Kasiski, Analyzer
 
@@ -33,5 +34,7 @@ print(' keyword length:\t{}'.format(length))
 
 analyzer = Analyzer(length, LANG)
 keyword = analyzer.find_keyword(encrypted)
-print(' finded keyword:\t{}'.format(keyword.upper()))
+print(' found keyword:\t{}'.format(keyword.upper()))
 print('-' * 300)
+
+tests.run()
