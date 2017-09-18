@@ -9,21 +9,23 @@ LETTERS_REGEXPS = {
 }
 
 with open('frequencies.json') as data_file:
-    freq = json.load(data_file)
+    frequencies = json.load(data_file)
 
 
 class WithLanguage:
     def __init__(self, lang):
-        if not freq.get(lang):
+        freq = frequencies.get(lang)
+        if not freq:
             raise ValueError('Unsupported language {}'.format(lang))
         self.lang = lang
+        self.known_freq = freq_to_sorted_list(freq)
+        self.alphabet = sorted(list(freq.keys()))
 
 
-def add_to_char(char, shift, alphabet_dict):
-    if not alphabet_dict.get(char.lower()):
+def add_to_char(char, shift, alphabet):
+    if char.lower() not in alphabet:
         return char
 
-    alphabet = sorted(list(alphabet_dict.keys()))
     index = ord(char.lower()) - ord(alphabet[0]) + shift
     next_char = alphabet[index % len(alphabet)]
     return next_char.upper() if char.istitle() else next_char
@@ -38,3 +40,7 @@ def is_all_letters(string, lang):
 
 def list_gcd(list):
     return reduce(gcd, list)
+
+
+def freq_to_sorted_list(dict):
+    return sorted([{'letter': k, 'freq': v} for k, v in dict.items()], key=lambda x: x['freq'], reverse=True)

@@ -1,5 +1,5 @@
 from ciphers import Caesar, Vigenere
-from hackers import Kasiski
+from hackers import Kasiski, Analyzer
 
 LANG = 'en'
 CAESAR_SHIFT = 7
@@ -15,7 +15,7 @@ print('\nCaesar:')
 print(' data:\t\t{}'.format(data))
 print(' encrypted:\t{}'.format(encrypted))
 print(' decrypted:\t{}'.format(decrypted))
-print('-' * 100)
+print('-' * 300)
 
 vigenere = Vigenere(VIGENERE_KEY_WORD, LANG)
 encrypted = vigenere.encrypt(data)
@@ -24,9 +24,14 @@ print('\nVigenere:')
 print(' data:\t\t{}'.format(data))
 print(' encrypted:\t{}'.format(encrypted))
 print(' decrypted:\t{}'.format(decrypted))
-print('-' * 100)
+print('-' * 300)
 
 kasiski = Kasiski(3, LANG)
 length = kasiski.get_len(encrypted)
 print('\nKasiski:')
-print(' keyword len:\t{}'.format(length))
+print(' keyword length:\t{}'.format(length))
+
+analyzer = Analyzer(length, LANG)
+keyword = analyzer.find_keyword(encrypted)
+print(' finded keyword:\t{}'.format(keyword.upper()))
+print('-' * 300)
