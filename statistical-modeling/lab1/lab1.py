@@ -24,10 +24,12 @@ print('mmg:\t{}'.format(a))
 
 chi, test_result = pearson(bn, TEST_K, N, PEARSON_DELTA)
 chi2, test_result2 = pearson(a, TEST_K, N, PEARSON_DELTA)
+chi3, test_result3 = pearson(c, TEST_K, N, PEARSON_DELTA)
 
 print('\npearson:')
 print(' chi for mcg: {0} - test {1}'.format(chi, test_result))
 print(' chi for mmg: {0} - test {1}'.format(chi2, test_result2))
+print(' chi for random: {0} - test {1}'.format(chi3, test_result3))
 
 dn1, test_result = kolmogorov(bn, KOLMOGOROV_DELTA)
 dn2, test_result2 = kolmogorov(a, KOLMOGOROV_DELTA)

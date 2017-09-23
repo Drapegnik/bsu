@@ -28,7 +28,7 @@ def pearson(seq, k, n, delta):
     """
     v = get_frequency(seq, k)
     p = 1.0 / k
-    value = sum([(v[i] - n * p) ** 2 / n * p for i in range(k)])
+    value = sum([(v[i] - n * p) ** 2 / (n * p) for i in range(k)])
     return value, get_test_result(value, delta)
 
 
