@@ -8,7 +8,7 @@ subject project
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1505213348/dms-project-use-case.png)
 
 ### database schema
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1505213348/dms-project-data-model.png)
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1506265718/dms-project-data-model.png)
 
 ## tasks
 * Для выполнения данной работы требуется спроектировать и создать базы данных, относящиеся к различным предметным областям. 
