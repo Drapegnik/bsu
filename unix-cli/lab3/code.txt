@@ -1,0 +1,12 @@
+// my first program in C++ (not sure);
+#include <iostream>
+
+int main()
+{
+	bool m = false;
+  std::cout << "Hello World!";
+  std::cout << ("meow!");
+  if (m == true) {
+  	std::cout << "m is true! ())))))";
+  }
+}
