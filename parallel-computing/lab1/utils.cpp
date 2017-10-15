@@ -23,7 +23,7 @@ void Timer::print() {
  * generate random number in [-100, 100]
  */
 int get_random_number() {
-  return (rand() % 100) - 50;
+  return (rand() % 200) - 100;
 }
 
 matrix_t get_matrix(ulong rows, ulong cols) {
