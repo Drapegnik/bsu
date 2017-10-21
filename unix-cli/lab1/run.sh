@@ -1,13 +1,15 @@
-gcc -Wall -ggdb hello.c -o hello.o
+#!/usr/bin/env bash
+
+gcc -Wall -ggdb hello.c -o hello
 echo --------------------------
 echo '# without args:'
-./hello.o
+./hello
 echo --------------------------
 
 echo '# with bash args:'
-./hello.o 'im form bash script'
+./hello 'im form bash script'
 echo --------------------------
 
 echo '# with cli args:'
-./hello.o "$*"
+./hello "$*"
 echo --------------------------
