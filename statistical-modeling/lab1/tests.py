@@ -1,20 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from math import sqrt
 
 import numpy as np
 
+TEST_K = 30
+PEARSON_DELTA = 42.577
+KOLMOGOROV_DELTA = 1.36
+
+
+def extrapolate(seq, k):
+    return [int(el * k) for el in seq]
+
 
 def get_frequency(seq, k):
     v = [0] * k
-    step = 1.0 / k
-    bound = step
-    seq.sort()
-    i, j = 0, 0
-    while j < k:
-        while i < len(seq) and seq[i] < bound:
-            v[j] += 1
-            i += 1
-        bound += step
-        j += 1
+    for el in seq:
+        v[el] += 1
     return v
 
 
@@ -22,13 +24,12 @@ def get_test_result(val, delta):
     return 'passed 👌' if val < delta else 'failed 😭'
 
 
-def pearson(seq, k, n, delta):
+def pearson(seq, k, p, n, delta):
     """
     Pearson's chi-squared test
     """
     v = get_frequency(seq, k)
-    p = 1.0 / k
-    value = sum([(v[i] - n * p) ** 2 / (n * p) for i in range(k)])
+    value = sum([(v[i] - n * p[i]) ** 2 / (n * p[i]) for i in range(k)])
     return value, get_test_result(value, delta)
 
 
