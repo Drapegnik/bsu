@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # cryptographically secure pseudorandom number generators
-
 
 def mcg(alpha, beta, m, n):
     """
