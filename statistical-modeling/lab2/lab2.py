@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+
 import numpy as np
 from generators import poisson, pascal, poisson_distribution, pascal_distribution
 from utils import print_table
+
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(0, parent_dir)
 
 from lab1.tests import pearson, TEST_K, PEARSON_DELTA
 
