@@ -1,39 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import os
 from math import sqrt
 
 import numpy as np
 
-TEST_K = 30
-PEARSON_DELTA = 42.577
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(0, parent_dir)
+
+from lab1.chi_square import DELTA, MAX_K
+from lab1.utils import get_test_result, TEST_TEMPLATE
+
+PEARSON_THRESHOLD = 0.01
 KOLMOGOROV_DELTA = 1.36
 
 
-def extrapolate(seq, k):
-    return [int(el * k) for el in seq]
-
-
-def get_frequency(seq, k):
-    v = [0] * k
+def get_frequency(seq, p):
+    k = 0
+    while k < MAX_K and p[k] > PEARSON_THRESHOLD:
+        k += 1
+    v = [0] * (k + 1)
     for el in seq:
-        v[el] += 1
-    return v
+        i = el if el < k else k
+        v[i] += 1
+    return k, v
 
 
-def get_test_result(val, delta):
-    return 'passed 👌' if val < delta else 'failed 😭'
-
-
-def pearson(seq, k, p, n, delta):
+def pearson(seq, p, n):
     """
     Pearson's chi-squared test
     """
-    v = get_frequency(seq, k)
+    k, v = get_frequency(seq, p)
+    delta = DELTA[k]
     value = sum([(v[i] - n * p[i]) ** 2 / (n * p[i]) for i in range(k)])
-    return value, get_test_result(value, delta)
+    return value, delta, k
 
 
-def kolmogorov(seq, delta):
+def kolmogorov(seq):
     """
     Kolmogorov–Smirnov test
     """
@@ -42,4 +45,5 @@ def kolmogorov(seq, delta):
     test_seq = np.array([float(i + 1) / n for i in range(n)])
     max_diff = max(list(map(abs, test_seq - sort_seq)))
     value = sqrt(n) * max_diff
-    return value, get_test_result(value, delta)
+    sign, result = get_test_result(value, KOLMOGOROV_DELTA)
+    return TEST_TEMPLATE.format(value=value, sign=sign, delta=KOLMOGOROV_DELTA, result=result)
