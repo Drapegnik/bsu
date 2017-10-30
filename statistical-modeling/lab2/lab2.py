@@ -4,13 +4,15 @@
 import os
 
 import numpy as np
-from generators import poisson, pascal, poisson_distribution, pascal_distribution
+from generators import poisson, poisson_distribution, pascal, pascal_distribution
 from utils import print_table
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(0, parent_dir)
 
-from lab1.tests import pearson, TEST_K, PEARSON_DELTA
+from lab1.tests import pearson
+from lab1.utils import get_pearson_result
+from lab1.chi_square import MAX_K
 
 N = 1000
 R = 4
@@ -18,20 +20,24 @@ P = 0.8
 LAMBDA = 0.3
 EPSILON = 0.05
 
-actual = np.array(list(poisson(LAMBDA, N)))
-print('> Poisson:')
-print_table(actual, LAMBDA, LAMBDA)
 
-p = [poisson_distribution(LAMBDA, i) for i in range(TEST_K)]
-chi, test_result = pearson(actual, TEST_K, p, N, PEARSON_DELTA)
-print('Pearson chi: {0} - test {1}\n'.format(chi, test_result))
+def run(title, generator, distr, mean, var, args):
+    successes = 0
+    for i in range(N):
+        actual = np.array(list(generator(*args, N)))
+        if i == 0:
+            print('\n> {}:'.format(title))
+            print_table(actual, mean, var)
+        p = [distr(*args, i) for i in range(MAX_K)]
+        value, delta, k = pearson(actual, p, N)
+        successes += int(value < delta)
+        if i == 0:
+            print('Pearson:\t{}'.format(get_pearson_result(value, delta, k)))
+    print('Success:\t{}%'.format(successes * 100 / N))
 
-actual = np.array(list(pascal(R, P, N)))
-print('> Pascal:')
+
+run('Poisson', poisson, poisson_distribution, LAMBDA, LAMBDA, args=[LAMBDA])
+
 pascal_mean = R * (1 - P) / P
 pascal_var = pascal_mean / P
-print_table(actual, pascal_mean, pascal_var)
-
-p = [pascal_distribution(R, P, i) for i in range(TEST_K)]
-chi, test_result = pearson(actual, TEST_K, p, N, PEARSON_DELTA)
-print('Pearson chi: {0} - test {1}\n'.format(chi, test_result))
+run('Pascal', pascal, pascal_distribution, pascal_mean, pascal_var, args=[R, P])
