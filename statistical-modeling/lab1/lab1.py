@@ -6,7 +6,7 @@ from random import random
 from chi_square import MAX_K
 from generators import mcg, mmg
 from tests import pearson, kolmogorov
-from utils import extrapolate, get_pearson_result
+from utils import extrapolate, format_test_result
 
 N = 1000
 K = 64
@@ -24,15 +24,18 @@ a = list(mmg(b, c, K, N))
 print('mmg:\t{}'.format(a))
 
 p = [1.0 / MAX_K] * MAX_K
-bn_result = pearson(extrapolate(bn, MAX_K), p, N)
-c_result = pearson(extrapolate(c, MAX_K), p, N)
-a_result = pearson(extrapolate(a, MAX_K), p, N)
+bn_result = pearson(extrapolate(bn, MAX_K), p)
+c_result = pearson(extrapolate(c, MAX_K), p)
+a_result = pearson(extrapolate(a, MAX_K), p)
 
-print('\npearsonm, chi:')
-print('\tmcg:\t{}'.format(get_pearson_result(*bn_result)))
-print('\trandom:\t{}'.format(get_pearson_result(*c_result)))
-print('\tmmg:\t{}'.format(get_pearson_result(*a_result)))
+print('\npearson, chi:')
+print('\tmcg:\t' + format_test_result(*bn_result))
+print('\trandom:\t' + format_test_result(*c_result))
+print('\tmmg:\t' + format_test_result(*a_result))
+
+bn_result = kolmogorov(sorted(bn))
+a_result = kolmogorov(sorted(a))
 
 print('\nkolmogorov, sqrt(n)*dn')
-print('\tmcg:\t{}'.format(kolmogorov(bn)))
-print('\tmmg:\t{}'.format(kolmogorov(a)))
+print('\tmcg:\t' + format_test_result(*bn_result))
+print('\tmmg:\t' + format_test_result(*a_result))
