@@ -14,18 +14,20 @@
 ## result
 ```
 > Poisson:
-      Actual  Theory  | Residual
-Mean    0.2970  0.3000  | 3.00E-03
-Variance  0.2868  0.3000  | 1.32E-02
-------------------------------
-Pearson:  k = 3 | 0.487 < 5.991 | test passed 👌
-Success:  94.9%
+			Actual	Theory	| Residual
+Mean		0.2890	0.3000	| 1.10E-02
+Variance	0.2975	0.3000	| 2.52E-03
+---------------------------------------------------
+Pearson:	k = 3 | 2.642 < 5.991 | test passed 👌
+Success:	93.7%
+---------------------------------------------------
 
 > Pascal:
-      Actual  Theory  | Residual
-Mean    1.0050  1.0000  | 5.00E-03
-Variance  1.2650  1.2500  | 1.50E-02
---------------------------------
-Pearson:  k = 5 | 0.075 < 9.488 | test passed 👌
-Success:  95.8%
+			Actual	Theory	| Residual
+Mean		0.9920	1.0000	| 8.00E-03
+Variance	1.1999	1.2500	| 5.01E-02
+---------------------------------------------------
+Pearson:	k = 5 | 1.731 < 9.488 | test passed 👌
+Success:	93.0%
+---------------------------------------------------
 ```
