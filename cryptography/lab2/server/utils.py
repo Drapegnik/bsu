@@ -1,5 +1,13 @@
+import random
+
 from flask import jsonify
 
+s = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-def json(data):
-    return jsonify({'data': data})
+
+def get_session_key(length):
+    return ''.join(random.sample(s, length))
+
+
+def json(data, error=None):
+    return jsonify({'data': data, 'error': error})
