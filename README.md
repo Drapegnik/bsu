@@ -8,21 +8,22 @@
 
 ***
 
-* [Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - C++
-* [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
-* [Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - C++, Java, Assembly
-* [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - Python, TeX
-* [Функциональный Анализ (Functional analysis)](https://github.com/Drapegnik/bsu/tree/master/fun) - TeX
-* [Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - C++, TeX
-* [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - C++, Python
-* [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - R
-* [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), bash
-* [Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - UML, Python, [MEAN](http://mean.io/) stack
-* [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - TeX, Python
-* [Спецкурс по `Linux`, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - C, bash
-* [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - Oracle, SQL, UML
-* [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - Python
-* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - Python
+* [Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B)
+* [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript)
+* [Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`Assembly`](https://github.com/Drapegnik/bsu/search?l=Assembly)
+* [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Функциональный Анализ (Functional analysis)](https://github.com/Drapegnik/bsu/tree/master/fun) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `mpi`
+* [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - [`R`](https://github.com/Drapegnik/bsu/search?l=R)
+* [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+* [Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - `UML`, [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`MEAN`](http://mean.io/) stack with [`TypeScript`](https://github.com/Drapegnik/bsu/search?l=TypeScript)
+* [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python)
+* [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+* [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
+* [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
+* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with `React Native`
+* [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `openmp`, `mpi`
 
 ***
 
@@ -78,7 +79,8 @@
 * [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
 * [DMS (*СУБД*)](https://github.com/Drapegnik/bsu/tree/master/dms)
 * [Statistical Modeling (*Имитационное и статистическое моделирование*)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
-* [Cryptography (*Компьютерная безопасность распределенных систем*)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - Python
+* [Cryptography (*Компьютерная безопасность распределенных систем*)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
+* [Parallel Computing (*Параллельные и распределенные вычисления*)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
 </details>
 
 ***
