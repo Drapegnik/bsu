@@ -1,10 +1,11 @@
 all: client
 
-CFLAGS=
-LDFLAGS=
 BUILD_PATH=build
 
-swapper: swapper.c
+clean:
+	rm -rf ${BUILD_PATH}
+	mkdir ${BUILD_PATH}
+swapper: clean swapper.c
 	gcc -fPIC swapper.c -c -o ${BUILD_PATH}/swapper.o
 	gcc -shared ${BUILD_PATH}/swapper.o -o ${BUILD_PATH}/libswapper.dylib
 client: swapper client.c

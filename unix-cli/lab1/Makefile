@@ -12,6 +12,6 @@ CFLAGS=${CFLAGS-${PROFILE}}
 LDFLAGS=
 
 hello: hello.c
-	gcc $(CFLAGS) hello.c -o hello
+	gcc ${CFLAGS} hello.c -o hello
 run: hello
 	./hello
