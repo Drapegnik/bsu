@@ -21,3 +21,8 @@ Protected Notebook
 2. Использовать вместо `RSA ECDSA` или `GM` алгоритмы
 3. Добавить срок годности к сеансовому ключу
 4. Реализовать клиента на платформе `Android`
+
+***
+<p align="center">
+  <img width="500px" alt="foot shooting prevention agreement" src="https://github.com/Drapegnik/bsu/raw/master/cryptography/lab2/foot-shooting-prevention-agreement.png"/>
+</p>
