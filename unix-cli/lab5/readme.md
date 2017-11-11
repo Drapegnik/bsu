@@ -10,7 +10,7 @@ own `shell`
 3. Implement starting shell scripts (reading input commands from file) and executing commands from command line (`-c` command line argument).
 
 ## example
-```
+```sh
 ./myshell # usual (interactive mode)
 ./myshell file # script
 ./myshell -c "something" # command line
@@ -20,7 +20,7 @@ own `shell`
 > `wheel` + `shell` = `sheel` :no_bicycles: :bug: :laughing:
 
 * **simple**:
-	```
+	```sh
 	Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run
 	rm -rf build
 	mkdir build
@@ -44,7 +44,7 @@ own `shell`
 	```
 
 * **pipe**:
-	```
+	```sh
 	Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run
 	rm -rf build
 	mkdir build
@@ -59,7 +59,7 @@ own `shell`
 	```
 
 * **redirect**:
-	```
+	```sh
 	Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run
 	rm -rf build
 	mkdir build
