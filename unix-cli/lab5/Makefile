@@ -1,6 +1,6 @@
 all: sheel
 
-CFLAGS=-Wall
+CFLAGS=-Wall -std=c++11
 LDFLAGS=
 BUILD_PATH=build
 
