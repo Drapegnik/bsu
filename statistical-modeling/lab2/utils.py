@@ -5,7 +5,6 @@ import numpy as np
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(0, parent_dir)
 
-from lab1.chi_square import MAX_K
 from lab1.tests import pearson, kolmogorov
 from lab1.utils import format_test_result
 
@@ -41,12 +40,13 @@ def run(title, generator, distr, args, mean, var, size, enable_pearson=True, ena
         if i == 0:
             print('\n> {}:'.format(title))
             print_table(actual, mean, var)
+        sorted_actual = sorted(actual)
         if enable_pearson:
-            p = [distr(*args, i) for i in range(MAX_K)]
-            p_value, p_delta, k = pearson(actual, p)
+            distr_f = lambda x: distr(*args, x)
+            p_value, p_delta, k = pearson(sorted_actual, distr_f)
             pearson_successes += int(p_value < p_delta)
         if enable_kolmogorov:
-            model_distr = [distr(*args, x) for x in sorted(actual)]
+            model_distr = [distr(*args, x) for x in sorted_actual]
             k_value, k_delta = kolmogorov(model_distr)
             kolmogorov_successes += int(k_value < k_delta)
         if i == size - 1:
@@ -58,3 +58,5 @@ def run(title, generator, distr, args, mean, var, size, enable_pearson=True, ena
                 print('Kolmogorov:\t' + format_test_result(k_value, k_delta))
                 print('Success:\t{}%'.format(kolmogorov_successes * 100 / size))
                 print_separator()
+        if not enable_kolmogorov and not enable_pearson:
+            break
