@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import WelcomePage from 'components/WelcomePage';
+import GamePage from 'components/GamePage';
 import KnowledgeBase from 'components/KnowledgeBase';
 import Footer from 'components/Footer';
 
@@ -9,7 +10,7 @@ import 'App.css';
 
 const pages = {
   'welcome': <WelcomePage />,
-  'game': <p>Game</p>,
+  'game': <GamePage />,
   'knowledge': <KnowledgeBase />,
 };
 
