@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import WelcomePage from 'components/WelcomePage';
+import KnowledgeBase from 'components/KnowledgeBase';
 import Footer from 'components/Footer';
 
 import 'bulma/css/bulma.css';
@@ -9,7 +10,7 @@ import 'App.css';
 const pages = {
   'welcome': <WelcomePage />,
   'game': <p>Game</p>,
-  'knowledge': <p>Knowledge base</p>,
+  'knowledge': <KnowledgeBase />,
 };
 
 class App extends Component {

@@ -6,6 +6,7 @@
   "dependencies": {
     "bulma": "^0.6.1",
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"

@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Manchester United"
+    }
+  },
+  {
+    "id": 2,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Arsenal"
+    }
+  },
+  {
+    "id": 3,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Chelsea"
+    }
+  },
+  {
+    "id": 4,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Leicester City"
+    }
+  },
+  {
+    "id": 5,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue-white"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Blackburn Rovers"
+    }
+  },
+  {
+    "id": 6,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue-white"
+      },
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Manchester City"
+    }
+  },
+  {
+    "id": 7,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Tottenham Hotspur"
+    }
+  },
+  {
+    "id": 8,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "West Ham United"
+    }
+  },
+  {
+    "id": 9,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "Liverpool"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Liverpool"
+    }
+  },
+  {
+    "id": 10,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "Liverpool"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Everton"
+    }
+  },
+  {
+    "id": 11,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Swansea City"
+    }
+  },
+  {
+    "id": 12,
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Stoke City"
+    }
+  }
+]

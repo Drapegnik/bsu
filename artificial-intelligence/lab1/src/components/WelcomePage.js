@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WelcomePage = () => {
+export default () => {
   return (
     <div className="container has-text-centered">
       <h1 className="title is-1">
@@ -15,5 +15,3 @@ const WelcomePage = () => {
     </div>
   );
 };
-
-export default WelcomePage;

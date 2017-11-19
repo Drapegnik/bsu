@@ -1,0 +1,45 @@
+[
+  {
+    "name": "city",
+    "values": [
+      "London",
+      "Liverpool",
+      "Manchester",
+      "other"
+    ]
+  },
+  {
+    "name": "color",
+    "values": [
+      "white",
+      "red",
+      "blue",
+      "blue-white"
+    ]
+  },
+  {
+    "name": "number of championship cups",
+    "values": [
+      "0",
+      "1+"
+    ]
+  },
+  {
+    "name": "club",
+    "values": [
+      "unknown",
+      "Manchester United",
+      "Blackburn Rovers",
+      "Arsenal",
+      "Chelsea",
+      "Manchester City",
+      "Leicester City",
+      "Tottenham Hotspur",
+      "Everton",
+      "Liverpool",
+      "West Ham United",
+      "Stoke City",
+      "Swansea City"
+    ]
+  }
+]
