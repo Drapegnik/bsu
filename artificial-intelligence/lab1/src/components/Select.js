@@ -7,16 +7,11 @@ class Select extends Component {
     options: PropTypes.arrayOf(
       PropTypes.string.isRequired
     ).isRequired,
-    onSubmit: PropTypes.func.isRequired
-  };
-
-  state = {
-    value: null
+    onChange: PropTypes.func.isRequired
   };
 
   render() {
-    const { attribute, onSubmit } = this.props;
-    const { value } = this.state;
+    const { attribute, options, onChange } = this.props;
 
     return (
       <div className="field has-addons has-addons-centered">
@@ -28,26 +23,15 @@ class Select extends Component {
         <div className="control">
           <div className="select is-black is-large">
             <select
-              value={value}
-              onChange={({ target }) => this.setState({ value: target.value })}
+              value={''}
+              onChange={({ target }) => onChange(target.value)}
             >
-              {!value && (<option>...</option>)}
-              <option>London</option>
-              <option>Liverpool</option>
-              <option>Manchester</option>
-              <option>Other</option>
+              <option>...</option>
+              {options.map(value => (
+                <option key={value} value={value}>{value}</option>
+              ))}
             </select>
           </div>
-        </div>
-        <div className="control">
-          <button
-            className="button is-black is-large"
-            type="submit"
-            disabled={!value}
-            onClick={onSubmit.bind(null, value)}
-          >
-            Next
-          </button>
         </div>
       </div>
     );
