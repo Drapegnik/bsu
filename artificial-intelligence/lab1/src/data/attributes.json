@@ -18,6 +18,13 @@
     ]
   },
   {
+    "name": "years of foundation",
+    "values": [
+      "<1890",
+      "1890+"
+    ]
+  },
+  {
     "name": "number of championship cups",
     "values": [
       "0",
@@ -27,7 +34,6 @@
   {
     "name": "club",
     "values": [
-      "unknown",
       "Manchester United",
       "Blackburn Rovers",
       "Arsenal",

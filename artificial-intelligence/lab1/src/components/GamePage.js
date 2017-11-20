@@ -1,5 +1,7 @@
-import Select from "components/Select";
 import React, { Component } from 'react';
+
+import KnowledgeBase from 'components/KnowledgeBase';
+import Select from 'components/Select';
 
 import InferenceEngine, { mainTarget } from 'core/InferenceEngine';
 
@@ -12,6 +14,7 @@ class GamePage extends Component {
     attribute: null,
     options: null,
     context: {},
+    logs: [],
     finish: false,
   }, this.play);
 
@@ -27,9 +30,10 @@ class GamePage extends Component {
       })
     };
     const handleFinish = () => this.setState({ finish: true });
+    const log = rule => this.setState({ logs: this.state.logs.concat(rule) });
 
     const ie = new InferenceEngine(
-      getContext, updateContext, askQuestion, handleFinish
+      getContext, updateContext, askQuestion, handleFinish, log
     );
     ie.start();
   };
@@ -37,7 +41,7 @@ class GamePage extends Component {
   handleSelect = value => this.resolve(value);
 
   render() {
-    const { attribute, options, finish, context } = this.state;
+    const { attribute, options, finish, context, logs } = this.state;
     const result = context[mainTarget];
 
     if (finish) {
@@ -46,6 +50,8 @@ class GamePage extends Component {
           <h1 className="title">
             {result ? `✨You are fun of ${result}!🔥` : 'Sorry, can\'t identify your club 😱('}
           </h1>
+          <KnowledgeBase rules={logs} />
+          <br />
           <button onClick={this.initState} className="button is-black is-large">Try Again!</button>
         </div>
       )
@@ -62,6 +68,9 @@ class GamePage extends Component {
             options={options}
             onChange={this.handleSelect}
           />)}
+        {logs && (
+          <KnowledgeBase rules={logs} />
+        )}
       </div>
     );
   }

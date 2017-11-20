@@ -1,6 +1,65 @@
 [
   {
-    "id": 1,
+    "if": [
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "years of foundation",
+        "value": "1890+"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "0"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "years of foundation",
+        "value": "1890+"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "1+"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "1+"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "years of foundation",
+        "value": "<1890"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "0"
+    }
+  },
+  {
     "if": [
       {
         "attr": "number of championship cups",
@@ -21,7 +80,6 @@
     }
   },
   {
-    "id": 2,
     "if": [
       {
         "attr": "number of championship cups",
@@ -42,7 +100,6 @@
     }
   },
   {
-    "id": 3,
     "if": [
       {
         "attr": "number of championship cups",
@@ -63,7 +120,6 @@
     }
   },
   {
-    "id": 4,
     "if": [
       {
         "attr": "number of championship cups",
@@ -84,7 +140,6 @@
     }
   },
   {
-    "id": 5,
     "if": [
       {
         "attr": "number of championship cups",
@@ -105,7 +160,6 @@
     }
   },
   {
-    "id": 6,
     "if": [
       {
         "attr": "number of championship cups",
@@ -126,7 +180,6 @@
     }
   },
   {
-    "id": 7,
     "if": [
       {
         "attr": "number of championship cups",
@@ -147,7 +200,6 @@
     }
   },
   {
-    "id": 8,
     "if": [
       {
         "attr": "number of championship cups",
@@ -155,7 +207,7 @@
       },
       {
         "attr": "color",
-        "value": "blue"
+        "value": "other"
       },
       {
         "attr": "city",
@@ -168,7 +220,6 @@
     }
   },
   {
-    "id": 9,
     "if": [
       {
         "attr": "number of championship cups",
@@ -189,7 +240,6 @@
     }
   },
   {
-    "id": 10,
     "if": [
       {
         "attr": "number of championship cups",
@@ -210,7 +260,6 @@
     }
   },
   {
-    "id": 11,
     "if": [
       {
         "attr": "number of championship cups",
@@ -231,7 +280,6 @@
     }
   },
   {
-    "id": 12,
     "if": [
       {
         "attr": "number of championship cups",

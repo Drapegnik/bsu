@@ -6,7 +6,6 @@ import KnowledgeBase from 'components/KnowledgeBase';
 import Footer from 'components/Footer';
 
 import 'bulma/css/bulma.css';
-import 'App.css';
 
 const pages = {
   'welcome': <WelcomePage />,

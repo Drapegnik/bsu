@@ -1,14 +1,15 @@
-import initialRules from 'data/rules';
-import attributes from 'data/attributes';
+import { rules as initialRules } from 'data';
+import { attributes } from 'data';
 
 export const mainTarget = 'club';
 
 export default class {
-  constructor(getContext, updateContext, askQuestion, finish) {
+  constructor(getContext, updateContext, askQuestion, finish, log) {
     this.getContext = getContext;
     this.updateContext = updateContext;
     this.askQuestion = askQuestion;
     this.finish = finish;
+    this.log = log;
   }
 
   async start() {
@@ -40,6 +41,7 @@ export default class {
         const { value } = currentRule.then;
 
         console.log(`> find ${target}=${value}`);
+        this.log(currentRule);
 
         this.updateContext(target, value);
         if (!targets.length) {
@@ -47,9 +49,8 @@ export default class {
         }
         rules = rules.filter(({ id }) => id !== currentRule.id);
       } else if (result !== false) {
-        const { attr } = result;
-
-        targets.push(attr);
+        targets.push(result);
+        console.log('> targets: ', targets);
         continue;
       }
       rules = rules.filter(({ id }) => id !== currentRule.id);
@@ -63,7 +64,7 @@ export default class {
       const { attr, value } = condition;
 
       if (!context.hasOwnProperty(attr)) {
-        return condition;
+        return attr;
       }
 
       if (context[attr] !== value) {

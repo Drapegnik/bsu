@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import rules from 'data/rules.json';
+import { rules as initialRules } from 'data';
 
 const Keyword = ({ label }) => (
   <div className="control">
@@ -38,7 +38,7 @@ KeyValue.defaultProps = {
   alt: false,
 };
 
-export default () => (
+const KnowledgeBase = ({ rules }) => (
   <div className="container">
     <ul>
       {rules.map(rule => (
@@ -62,3 +62,9 @@ export default () => (
     </ul>
   </div>
 );
+
+KnowledgeBase.propTypes = { rules: PropTypes.array, };
+
+KnowledgeBase.defaultProps = { rules: initialRules, };
+
+export default KnowledgeBase;
