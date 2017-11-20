@@ -22,9 +22,9 @@
 * [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
 * [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
 * [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
-* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with `React Native`
-* [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `openmp`, `mpi`
-
+* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
+* [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
+* [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
 ***
 
 <details>
@@ -81,6 +81,7 @@
 * [Statistical Modeling (*Имитационное и статистическое моделирование*)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
 * [Cryptography (*Компьютерная безопасность распределенных систем*)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
 * [Parallel Computing (*Параллельные и распределенные вычисления*)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
+* [Artificial Intelligence (*Интелектуальныеинформационные системы*)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence)
 </details>
 
 ***
@@ -91,6 +92,7 @@
 * [@**drapegnik**/dropbox/course1](https://www.dropbox.com/s/86aqcvrszo4po4a/1%20%D0%BA%D1%83%D1%80%D1%81.zip?dl=0)
 * [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
 * [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
+* [@**drapegnik**/dropbox/course4](https://www.dropbox.com/sh/8qwf8bdp0xdkiam/AABcWjfItB6tMAu1aZ7r9-qTa?dl=0)
 * [@**cloud**/mailru/course1-course4](https://cloud.mail.ru/public/2e5ab4ae2c5d/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80)
 * [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
 </details>
