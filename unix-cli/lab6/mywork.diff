@@ -1,0 +1,83 @@
+From a4e395c1bff1368cca33c884ca6f67f8b5466cd6 Mon Sep 17 00:00:00 2001
+From: Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com>
+Date: Fri, 27 Oct 2017 21:00:35 +0300
+Subject: [PATCH 1/3] [unix-cli: lab6]: fix some misprints in L1, L2
+
+---
+ unix-cli/lab6/sample.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/unix-cli/lab6/sample.txt b/unix-cli/lab6/sample.txt
+index c02b32f..d37453f 100644
+--- a/unix-cli/lab6/sample.txt
++++ b/unix-cli/lab6/sample.txt
+@@ -1,6 +1,6 @@
+-One marning, wen Gregor Samsa woke from troubled dreams, he found himslf transformed in his bed into a horrible vermin.
+-He lay on his armour-like back, and if he lifted his head a little he could see his brwn belly, slightly domed and devided by arches into stiff sektions.
+-The bedding wos hardly able to cover it and seemed ready to slide off any momnt.
++One marning, wen Gregor Samsa woke from troubled dreams, he found himslef transformed in his bed into a horrible vermin.
++He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and devided by arches into stiff sektions.
++The bedding was hardly able to cover it and seemed ready to slide off any moment.
+ His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+ "What's happened to me? " he thought. 
+ It wasn't a dream.
+-- 
+2.13.5 (Apple Git-94)
+
+
+From bc3b9f6a953ea21ec5478fb3b2c32ee7dede8c1b Mon Sep 17 00:00:00 2001
+From: Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com>
+Date: Fri, 27 Oct 2017 21:03:03 +0300
+Subject: [PATCH 2/3] [unix-cli: lab6]: fix some misprints in L12, L13
+
+---
+ unix-cli/lab6/sample.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/unix-cli/lab6/sample.txt b/unix-cli/lab6/sample.txt
+index d37453f..a380c27 100644
+--- a/unix-cli/lab6/sample.txt
++++ b/unix-cli/lab6/sample.txt
+@@ -9,8 +9,8 @@ A collection of textile samples lay spread out on the table - Samsa was a travel
+ It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+ Gregor ten turned to lok out the window at the dull weazer.
+ Drops of rain could be heard hiting the pane, which made him feel qute sad.
+-"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was samething he was unable to do because he was used to sleeping on his right, and in his presnt state couldn't get into that position.
+-However hard he threw himself onto his rihgt, he olways rolled back to where he was.
++"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
++However hard he threw himself onto his right, he always rolled back to where he was.
+ He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stoped when he began to feel a mild, dull pain there that he had never felt before.
+ "Oh, God", he thought, "what a strenuous career it is that I've chosen!
+ Travelling day in and day out.
+-- 
+2.13.5 (Apple Git-94)
+
+
+From da6e81b4a16ed54c5ac6ab778895277558660ca3 Mon Sep 17 00:00:00 2001
+From: Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com>
+Date: Fri, 27 Oct 2017 21:04:43 +0300
+Subject: [PATCH 3/3] [unix-cli: lab6]: fix some misprints in L17
+
+---
+ unix-cli/lab6/sample.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/unix-cli/lab6/sample.txt b/unix-cli/lab6/sample.txt
+index a380c27..962abfb 100644
+--- a/unix-cli/lab6/sample.txt
++++ b/unix-cli/lab6/sample.txt
+@@ -14,7 +14,7 @@ However hard he threw himself onto his right, he always rolled back to where he
+ He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stoped when he began to feel a mild, dull pain there that he had never felt before.
+ "Oh, God", he thought, "what a strenuous career it is that I've chosen!
+ Travelling day in and day out.
+-Doing business like this takes much more efort than doing your own business at home, and on top of that there's the curse of traveling, worries about making train conections, bad and irregular food, contact with diferent people all the time so that you can nevr get to know anyane or bicome friendly with them.
++Doing business like this takes much more efort than doing your own business at home, and on top of that there's the curse of traveling, worries about making train connections, bad and irregular food, contact with different people all the time so that you can nevr get to know anyane or bicome friendly with them.
+ It can oll go to Hell!
+ He felt a slight itch
+-Ze End
+\ No newline at end of file
++The End
+\ No newline at end of file
+-- 
+2.13.5 (Apple Git-94)
+

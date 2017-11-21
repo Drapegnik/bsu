@@ -1,0 +1,1 @@
+tail -r code.txt | grep "(" | sed 's/;/ /g' | sed 's/m/"/g'

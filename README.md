@@ -4,18 +4,23 @@
 
 :mortar_board: Repository for university labs on [FAMCS](http://www.fpmi.bsu.by/en/main.aspx), [BSU](http://www.bsu.by/en/main.aspx)
 
-* [Теория Алгоритмов (Theory of algorithms)](http://drapegnik.github.io/bsu/algorithms) - C++
-* [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - Java, JavaScript
-* [Программирование (Programming)](http://drapegnik.github.io/bsu/programming) - C++, Java, Assembly
-* [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](http://drapegnik.github.io/bsu/numerical-analysis) - Python, TeX
-* [Функциональный Анализ (Functional analysis)](http://drapegnik.github.io/bsu/fun) - TeX
-* [Научные работы (Science works)](http://drapegnik.github.io/bsu/science-works) - C++, TeX
-* [Архитектура Компьютеров (Architecture)](http://drapegnik.github.io/bsu/architecture) - C++, Python
-* [Интеллектуальный анализ данных (Data Mining)](http://drapegnik.github.io/bsu/data-mining) - R
-* [Компьютерные сети (Networks)](http://drapegnik.github.io/bsu/networks) - `bash`, [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer)
-* [Технология программирования (Programming Technology)](http://drapegnik.github.io/bsu/technology) - UML, Python, [MEAN](http://mean.io/) stack
-* [Исследование операций (Decision Science)](http://drapegnik.github.io/bsu/decision-science) - TeX, Python
-
+* [Теория Алгоритмов (Theory of algorithms)](http://drapegnik.github.io/bsu/algorithms) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B)
+* [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript)
+* [Программирование (Programming)](http://drapegnik.github.io/bsu/programming) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`Assembly`](https://github.com/Drapegnik/bsu/search?l=Assembly)
+* [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](http://drapegnik.github.io/bsu/numerical-analysis) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Функциональный Анализ (Functional analysis)](http://drapegnik.github.io/bsu/fun) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Научные работы (Science works)](http://drapegnik.github.io/bsu/science-works) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+* [Архитектура Компьютеров (Architecture)](http://drapegnik.github.io/bsu/architecture) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `mpi`
+* [Интеллектуальный анализ данных (Data Mining)](http://drapegnik.github.io/bsu/data-mining) - [`R`](https://github.com/Drapegnik/bsu/search?l=R)
+* [Компьютерные сети (Networks)](http://drapegnik.github.io/bsu/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+* [Технология программирования (Programming Technology)](http://drapegnik.github.io/bsu/technology) - `UML`, [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`MEAN`](http://mean.io/) stack with [`TypeScript`](https://github.com/Drapegnik/bsu/search?l=TypeScript)
+* [Исследование операций (Decision Science)](http://drapegnik.github.io/bsu/decision-science) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python)
+* [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+* [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
+* [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
+* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
+* [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
+* [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
 ***
 
 ## semester 1
@@ -52,6 +57,14 @@
 * [Decision Science (*Исследование операций*)](http://drapegnik.github.io/bsu/decision-science)
 * [Course work (*Курсовая работа*)](https://github.com/lybros/Appa)
 
+## semester 7
+* [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
+* [DMS (*СУБД*)](https://github.com/Drapegnik/bsu/tree/master/dms)
+* [Statistical Modeling (*Имитационное и статистическое моделирование*)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
+* [Cryptography (*Компьютерная безопасность распределенных систем*)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
+* [Parallel Computing (*Параллельные и распределенные вычисления*)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
+* [Artificial Intelligence (*Интелектуальныеинформационные системы*)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence)
+
 ***
 
 ## dropbox cloud
@@ -60,6 +73,7 @@ cospects, books, lectures and exam answers
 * [@**drapegnik**/dropbox/course1](https://www.dropbox.com/s/86aqcvrszo4po4a/1%20%D0%BA%D1%83%D1%80%D1%81.zip?dl=0)
 * [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
 * [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
+* [@**drapegnik**/dropbox/course4](https://www.dropbox.com/sh/8qwf8bdp0xdkiam/AABcWjfItB6tMAu1aZ7r9-qTa?dl=0)
 * [@**cloud**/mailru/course1-course4](https://cloud.mail.ru/public/2e5ab4ae2c5d/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80)
 * [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
 

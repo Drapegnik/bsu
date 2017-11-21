@@ -1,0 +1,302 @@
+[
+  {
+    "if": [
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "1+"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "years of foundation",
+        "value": "1890+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "0"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "years of foundation",
+        "value": "1890+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "1+"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "years of foundation",
+        "value": "<1890"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "0"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Manchester United"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Arsenal"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Chelsea"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Leicester City"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue-white"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Blackburn Rovers"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "1+"
+      },
+      {
+        "attr": "color",
+        "value": "blue-white"
+      },
+      {
+        "attr": "city",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Manchester City"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Tottenham Hotspur"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "other"
+      },
+      {
+        "attr": "city",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "West Ham United"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "Liverpool"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Liverpool"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
+      },
+      {
+        "attr": "city",
+        "value": "Liverpool"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Everton"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "white"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Swansea City"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "number of championship cups",
+        "value": "0"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      },
+      {
+        "attr": "city",
+        "value": "other"
+      }
+    ],
+    "then": {
+      "attr": "club",
+      "value": "Stoke City"
+    }
+  }
+]
