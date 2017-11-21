@@ -15,12 +15,12 @@
 * [Компьютерные сети (Networks)](http://drapegnik.github.io/bsu/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
 * [Технология программирования (Programming Technology)](http://drapegnik.github.io/bsu/technology) - `UML`, [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`MEAN`](http://mean.io/) stack with [`TypeScript`](https://github.com/Drapegnik/bsu/search?l=TypeScript)
 * [Исследование операций (Decision Science)](http://drapegnik.github.io/bsu/decision-science) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python)
-* [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
-* [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
-* [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
-* [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
-* [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
-* [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
+* [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](http://drapegnik.github.io/bsu/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+* [Системы управления базами данных (Database managment systems)](http://drapegnik.github.io/bsu/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
+* [Имитационное и статистическое моделирование (Statistical Modeling)](http://drapegnik.github.io/bsu/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
+* [Компьютерная безопасность распределенных систем (Cryptography)](http://drapegnik.github.io/bsu/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
+* [Параллельные и распределенные вычисления (Parallel Computing)](http://drapegnik.github.io/bsu/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
+* [Интелектуальныеинформационные системы (Artificial Intelligence)](http://drapegnik.github.io/bsu/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
 ***
 
 ## semester 1
@@ -58,12 +58,13 @@
 * [Course work (*Курсовая работа*)](https://github.com/lybros/Appa)
 
 ## semester 7
-* [Unix-cli (*Спецкурс МСС*)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
-* [DMS (*СУБД*)](https://github.com/Drapegnik/bsu/tree/master/dms)
-* [Statistical Modeling (*Имитационное и статистическое моделирование*)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
-* [Cryptography (*Компьютерная безопасность распределенных систем*)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
-* [Parallel Computing (*Параллельные и распределенные вычисления*)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
-* [Artificial Intelligence (*Интелектуальныеинформационные системы*)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence)
+* [Unix-cli (*Спецкурс МСС*)](http://drapegnik.github.io/bsu/unix-cli)
+* [DMS (*СУБД*)](http://drapegnik.github.io/bsu/dms)
+* [Statistical Modeling (*Имитационное и статистическое моделирование*)](http://drapegnik.github.io/bsu/statistical-modeling)
+* [Cryptography (*Компьютерная безопасность распределенных систем*)](http://drapegnik.github.io/bsu/cryptography)
+* [Parallel Computing (*Параллельные и распределенные вычисления*)](http://drapegnik.github.io/bsu/parallel-computing)
+* [Artificial Intelligence (*Интелектуальныеинформационные системы*)](http://drapegnik.github.io/bsu/artificial-intelligence)
+
 
 ***
 
