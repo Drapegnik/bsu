@@ -22,6 +22,7 @@
     "url": "https://github.com/Drapegnik/bsu.git"
   },
   "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com> (http://github.com/drapegnik)",
+  "homepage": "https://drapegnik.github.io/bsu/artificial-intelligence/lab1/build/index.html",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.0.2",
