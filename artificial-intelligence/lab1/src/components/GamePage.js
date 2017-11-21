@@ -3,22 +3,26 @@ import React, { Component } from 'react';
 import KnowledgeBase from 'components/KnowledgeBase';
 import Select from 'components/Select';
 
-import InferenceEngine, { mainTarget } from 'core/InferenceEngine';
+import InferenceEngine from 'core/InferenceEngine';
+
+import { targets } from 'data';
 
 class GamePage extends Component {
-  componentWillMount() {
-    this.initState();
-  }
+  state = {
+    attribute: null,
+    mainTarget: null,
+    context: {},
+  };
 
-  initState = () => this.setState({
+  play = () => this.setState({
     attribute: null,
     options: null,
     context: {},
     logs: [],
     finish: false,
-  }, this.play);
+  }, this.startAlgo);
 
-  play = () => {
+  startAlgo = () => {
     const getContext = () => ({ ...this.state.context });
     const updateContext = (key, value) => this.setState({
       context: { ...this.state.context, [key]: value },
@@ -32,42 +36,53 @@ class GamePage extends Component {
     const handleFinish = () => this.setState({ finish: true });
     const log = rule => this.setState({ logs: this.state.logs.concat(rule) });
 
-    const ie = new InferenceEngine(getContext, updateContext, askQuestion, handleFinish, log);
+    const ie = new InferenceEngine(
+      this.state.mainTarget,
+      getContext,
+      updateContext,
+      askQuestion,
+      handleFinish,
+      log
+    );
     ie.start();
   };
 
   handleSelect = value => this.resolve(value);
 
+  handleTargetChange = target => this.setState({ mainTarget: target }, this.play);
+
   render() {
     const {
-      attribute, options, finish, context, logs,
+      attribute, options, finish, context, logs, mainTarget
     } = this.state;
     const result = context[mainTarget];
 
-    if (finish) {
-      return (
-        <div className="container has-text-centered">
-          <h1 className="title">
-            {result ? `✨You are fun of ${result}!🔥` : 'Sorry, can\'t identify your club 😱('}
-          </h1>
-          <KnowledgeBase rules={logs} />
-          <br />
-          <button onClick={this.initState} className="button is-black is-large">Try Again!</button>
-        </div>
-      );
-    }
-
     return (
       <div className="container has-text-centered">
-        {!attribute && (
-          <h1 className="title">Loading...</h1>
+        <Select
+          label="Select target"
+          value={mainTarget || ""}
+          options={targets}
+          onChange={this.handleTargetChange}
+        />
+        <br />
+        {finish && (
+          <div>
+            <h1 className="title">
+              {result ? `✨Your target is ${result}!🔥` : 'Sorry, can\'t identify your target 😱('}
+            </h1>
+            <button onClick={this.play} className="button is-black is-large">Try again!</button>
+          </div>
         )}
-        {attribute && (
+        {mainTarget && attribute && !finish && (
           <Select
+            value=""
+            label={`Choose ${attribute} of your target:`}
             attribute={attribute}
             options={options}
             onChange={this.handleSelect}
           />)}
+        <br />
         {logs && (
           <KnowledgeBase rules={logs} />
         )}

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Select = ({ attribute, options, onChange }) => (
+const Select = ({ label, options, onChange, value }) => (
   <div className="field has-addons has-addons-centered">
     <div className="control">
       <button className="button is-black is-large">
-        Choose {attribute} of your club:
+        {label}
       </button>
     </div>
     <div className="control">
       <div className="select is-black is-large">
         <select
-          value=""
+          value={value}
           onChange={({ target }) => onChange(target.value)}
         >
           <option>...</option>
@@ -23,7 +23,6 @@ const Select = ({ attribute, options, onChange }) => (
 );
 
 Select.propTypes = {
-  attribute: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onChange: PropTypes.func.isRequired,
 };

@@ -1,12 +1,11 @@
 /* eslint-disable no-console */
 import { rules as initialRules, attributes } from 'data';
 
-export const mainTarget = 'club';
-
 const hasOwnProperty = (target, prop) => Object.prototype.hasOwnProperty.call(target, prop);
 
 export default class {
-  constructor(getContext, updateContext, askQuestion, finish, log) {
+  constructor(mainTarget, getContext, updateContext, askQuestion, finish, log) {
+    this.mainTarget = mainTarget;
     this.getContext = getContext;
     this.updateContext = updateContext;
     this.askQuestion = askQuestion;
@@ -15,7 +14,7 @@ export default class {
   }
 
   async start() {
-    const targets = [mainTarget];
+    const targets = [this.mainTarget];
     let rules = [...initialRules];
 
     // eslint-disable-next-line no-constant-condition
@@ -25,7 +24,7 @@ export default class {
 
       if (!currentRule) {
         const target = targets.pop();
-        if (target === mainTarget) {
+        if (target === this.mainTarget) {
           break;
         }
 
