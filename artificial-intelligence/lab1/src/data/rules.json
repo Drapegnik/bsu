@@ -2,28 +2,8 @@
   {
     "if": [
       {
-        "attr": "color",
-        "value": "red"
-      },
-      {
-        "attr": "years of foundation",
-        "value": "1890+"
-      }
-    ],
-    "then": {
-      "attr": "number of championship cups",
-      "value": "0"
-    }
-  },
-  {
-    "if": [
-      {
-        "attr": "color",
-        "value": "blue"
-      },
-      {
-        "attr": "years of foundation",
-        "value": "1890+"
+        "attr": "city",
+        "value": "Manchester"
       }
     ],
     "then": {
@@ -34,8 +14,28 @@
   {
     "if": [
       {
-        "attr": "city",
-        "value": "Manchester"
+        "attr": "years of foundation",
+        "value": "1890+"
+      },
+      {
+        "attr": "color",
+        "value": "red"
+      }
+    ],
+    "then": {
+      "attr": "number of championship cups",
+      "value": "0"
+    }
+  },
+  {
+    "if": [
+      {
+        "attr": "years of foundation",
+        "value": "1890+"
+      },
+      {
+        "attr": "color",
+        "value": "blue"
       }
     ],
     "then": {

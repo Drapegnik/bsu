@@ -20,7 +20,11 @@ const Footer = ({ activeRoute, onRouteChange }) => (
         <ul>
           {routes.map(({ key, label }) => (
             <li key={key} className={classNames({ 'is-active': key === activeRoute })}>
-              <a onClick={onRouteChange.bind(null, key)}>{label}</a>
+              <a
+                href={`#${key}`}
+                onClick={onRouteChange.bind(null, key)}
+              >{label}
+              </a>
             </li>
           ))}
         </ul>
@@ -31,7 +35,7 @@ const Footer = ({ activeRoute, onRouteChange }) => (
 
 Footer.propTypes = {
   activeRoute: PropTypes.string.isRequired,
-  onRouteChange: PropTypes.func.isRequired
+  onRouteChange: PropTypes.func.isRequired,
 };
 
 export default Footer;

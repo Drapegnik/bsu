@@ -8,9 +8,9 @@ import Footer from 'components/Footer';
 import 'bulma/css/bulma.css';
 
 const pages = {
-  'welcome': <WelcomePage />,
-  'game': <GamePage />,
-  'knowledge': <KnowledgeBase />,
+  welcome: <WelcomePage />,
+  game: <GamePage />,
+  knowledge: <KnowledgeBase />,
 };
 
 class App extends Component {

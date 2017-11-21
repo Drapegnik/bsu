@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "no-continue": 0,
+    "import/extensions": [2, {
+        "css": "always",
+        "json": "always",
+        "svg": "always"
+      }],
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-no-bind": 0,
+    "react/jsx-filename-extension": [1, {
+        "extensions": [
+          ".js"
+        ]}]
+  }
+}

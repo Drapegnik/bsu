@@ -1,5 +1,5 @@
-import rawRules from './rules';
-import attributes from './attributes';
+import rawRules from './rules.json';
+import attributes from './attributes.json';
 
 const rules = rawRules.map((rule, i) => ({ ...rule, id: i + 1 }));
 

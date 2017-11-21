@@ -21,27 +21,27 @@ class GamePage extends Component {
   play = () => {
     const getContext = () => ({ ...this.state.context });
     const updateContext = (key, value) => this.setState({
-      context: { ...this.state.context, [key]: value, }
+      context: { ...this.state.context, [key]: value },
     });
     const askQuestion = (attribute, options) => {
       this.setState({ attribute, options });
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         this.resolve = resolve;
-      })
+      });
     };
     const handleFinish = () => this.setState({ finish: true });
     const log = rule => this.setState({ logs: this.state.logs.concat(rule) });
 
-    const ie = new InferenceEngine(
-      getContext, updateContext, askQuestion, handleFinish, log
-    );
+    const ie = new InferenceEngine(getContext, updateContext, askQuestion, handleFinish, log);
     ie.start();
   };
 
   handleSelect = value => this.resolve(value);
 
   render() {
-    const { attribute, options, finish, context, logs } = this.state;
+    const {
+      attribute, options, finish, context, logs,
+    } = this.state;
     const result = context[mainTarget];
 
     if (finish) {
@@ -54,7 +54,7 @@ class GamePage extends Component {
           <br />
           <button onClick={this.initState} className="button is-black is-large">Try Again!</button>
         </div>
-      )
+      );
     }
 
     return (

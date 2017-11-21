@@ -12,7 +12,9 @@ const Keyword = ({ label }) => (
 );
 Keyword.propTypes = { label: PropTypes.string.isRequired };
 
-const KeyValue = ({ attr, value, showAnd, alt }) => (
+const KeyValue = ({
+  attr, value, showAnd, alt,
+}) => (
   <div className="control">
     <div className="field is-grouped is-grouped-multiline">
       <div className="control">
@@ -63,8 +65,19 @@ const KnowledgeBase = ({ rules }) => (
   </div>
 );
 
-KnowledgeBase.propTypes = { rules: PropTypes.array, };
+const ruleType = PropTypes.shape({
+  attr: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+});
 
-KnowledgeBase.defaultProps = { rules: initialRules, };
+KnowledgeBase.propTypes = {
+  rules: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    if: PropTypes.arrayOf(ruleType.isRequired).isRequired,
+    then: PropTypes.shape(ruleType.isRequired).isRequired,
+  }).isRequired),
+};
+
+KnowledgeBase.defaultProps = { rules: initialRules };
 
 export default KnowledgeBase;
