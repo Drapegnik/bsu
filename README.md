@@ -75,7 +75,7 @@ cospects, books, lectures and exam answers
 * [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
 * [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
 * [@**drapegnik**/dropbox/course4](https://www.dropbox.com/sh/8qwf8bdp0xdkiam/AABcWjfItB6tMAu1aZ7r9-qTa?dl=0)
-* [@**cloud**/mailru/course1-course3]https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
+* [@**cloud**/mailru/course1-course3](https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
 * [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
 * [@**yadisk**](https://yadi.sk/d/FsMqju0sfn7Dp)
 
