@@ -6,7 +6,7 @@ from random import random
 from chi_square import MAX_K
 from generators import mcg, mmg
 from tests import pearson, kolmogorov
-from utils import extrapolate, format_test_result
+from utils import format_test_result
 
 N = 1000
 K = 64
@@ -24,9 +24,9 @@ a = list(mmg(b, c, K, N))
 print('mmg:\t{}'.format(a))
 
 p = [1.0 / MAX_K] * MAX_K
-bn_result = pearson(extrapolate(bn, MAX_K), p)
-c_result = pearson(extrapolate(c, MAX_K), p)
-a_result = pearson(extrapolate(a, MAX_K), p)
+bn_result = pearson(sorted(bn), p_list=p)
+c_result = pearson(sorted(c), p_list=p)
+a_result = pearson(sorted(a), p_list=p)
 
 print('\npearson, chi:')
 print('\tmcg:\t' + format_test_result(*bn_result))

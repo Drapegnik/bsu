@@ -40,7 +40,7 @@ def C(n, k):
 
 
 def pascal_distribution(r, p, x):
-    return C(r + x - 1, x) * p ** r * (1 - p) ** x
+    return C(int(r + x - 1), int(x)) * p ** r * (1 - p) ** x
 
 
 def get_next_pascal(r, p):

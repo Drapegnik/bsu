@@ -24,7 +24,6 @@ run(
     mean=M,
     var=S ** 2,
     size=N,
-    enable_pearson=False
 )
 
 mu = log(M)
@@ -38,7 +37,6 @@ run(
     mean=lognormal_mean,
     var=lognormal_var,
     size=N,
-    enable_pearson=False
 )
 
 run(
@@ -49,5 +47,4 @@ run(
     mean=LAMBDA ** (-1),
     var=LAMBDA ** (-2),
     size=N,
-    enable_pearson=False
 )

@@ -1,10 +1,6 @@
 TEST_TEMPLATE = '{value:.3f} {sign} {delta:.3f} | test {result}'
 
 
-def extrapolate(seq, k):
-    return [int(el * k) for el in seq]
-
-
 def get_test_result(value, delta):
     return ['<', 'passed 👌'] if value < delta else ['>=', 'failed 😭']
 
