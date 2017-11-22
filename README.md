@@ -25,6 +25,7 @@
 * [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
 * [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
 * [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
+
 ***
 
 <details>
@@ -93,7 +94,7 @@
 * [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
 * [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
 * [@**drapegnik**/dropbox/course4](https://www.dropbox.com/sh/8qwf8bdp0xdkiam/AABcWjfItB6tMAu1aZ7r9-qTa?dl=0)
-* [@**cloud**/mailru/course1-course3]https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
+* [@**cloud**/mailru/course1-course3](https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
 * [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
 * [@**yadisk**](https://yadi.sk/d/FsMqju0sfn7Dp)
 </details>
