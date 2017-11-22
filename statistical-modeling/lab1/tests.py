@@ -29,6 +29,17 @@ def get_frequency(sorted_seq, k):
     return v, segments
 
 
+def get_discrete_frequency(sorted_seq, p):
+    k = 0
+    while k < MAX_K and p[k] > PEARSON_THRESHOLD:
+        k += 1
+    v = [0] * (k + 1)
+    for el in sorted_seq:
+        i = el if el < k else k
+        v[i] += 1
+    return v, k
+
+
 def get_probabilities(segments, f):
     k = len(segments)
     p = [0] * k
@@ -37,18 +48,23 @@ def get_probabilities(segments, f):
     return p
 
 
-def pearson(sorted_seq, distr_f=None, p_list=None):
+def pearson(sorted_seq, distr_f=None, p_list=None, discrete=False):
     """
     Pearson's chi-squared test
     :param sorted_seq: sorted random sequence to test
     :param distr_f: optional distribution function
     :param p_list: optional distribution list
+    :param discrete: flag for discrete distributions
     :return: test value, pearson delta for k, k
     """
-    k = MAX_K
     n = len(sorted_seq)
-    v, segments = get_frequency(sorted_seq, k)
-    p = p_list if p_list else get_probabilities(segments, distr_f)
+    if discrete:
+        v, k = get_discrete_frequency(sorted_seq, p_list)
+        p = p_list
+    else:
+        k = MAX_K
+        v, segments = get_frequency(sorted_seq, k)
+        p = p_list if p_list else get_probabilities(segments, distr_f)
     delta = DELTA[k]
     value = sum([(v[i] - n * p[i]) ** 2 / (n * p[i]) for i in range(k)])
     return value, delta, k

@@ -5,6 +5,7 @@ import numpy as np
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(0, parent_dir)
 
+from lab1.chi_square import MAX_K
 from lab1.tests import pearson, kolmogorov
 from lab1.utils import format_test_result
 
@@ -22,7 +23,18 @@ def print_table(actual, theory_mean, theory_var):
     print_separator()
 
 
-def run(title, generator, distr, args, mean, var, size, enable_pearson=True, enable_kolmogorov=True):
+def run(
+        title,
+        generator,
+        distr,
+        args,
+        mean,
+        var,
+        size,
+        enable_pearson=True,
+        enable_kolmogorov=True,
+        discrete=False,
+):
     """
     Tests runner
         :param title: distribution name
@@ -32,7 +44,11 @@ def run(title, generator, distr, args, mean, var, size, enable_pearson=True, ena
         :param var: theory distribution variance
         :param size: size of generated sequence
         :param args: generator and dist positional arguments
+        :param enable_pearson: flag to perform pearson test (default=True)
+        :param enable_kolmogorov: flag to perform kolmogorov test (default=True)
+        :param discrete: flag for use discrete pearson test (default=False)
     """
+    print(discrete)
     pearson_successes = 0
     kolmogorov_successes = 0
     for i in range(size):
@@ -42,8 +58,11 @@ def run(title, generator, distr, args, mean, var, size, enable_pearson=True, ena
             print_table(actual, mean, var)
         sorted_actual = sorted(actual)
         if enable_pearson:
+            p = None
             distr_f = lambda x: distr(*args, x)
-            p_value, p_delta, k = pearson(sorted_actual, distr_f)
+            if discrete:
+                p = [distr_f(i) for i in range(MAX_K)]
+            p_value, p_delta, k = pearson(sorted_actual, distr_f, p, discrete)
             pearson_successes += int(p_value < p_delta)
         if enable_kolmogorov:
             model_distr = [distr(*args, x) for x in sorted_actual]

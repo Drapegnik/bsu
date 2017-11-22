@@ -2,17 +2,14 @@
 # -*- coding: utf-8 -*-
 # discrete random number generators
 
-from math import exp, factorial, ceil
+from math import exp, factorial
 from random import random
-
-from scipy.special import betainc, gammainc
 
 MAX = 10 * 6
 
 
 def poisson_distribution(lmbda, x):
-    # return (lmbda ** x) * exp(-lmbda) / factorial(x)
-    return gammainc(x + 1, lmbda) / factorial(ceil(x))
+    return (lmbda ** x) * exp(-lmbda) / factorial(x)
 
 
 def poisson_theory(lmbda, n):
@@ -43,8 +40,7 @@ def C(n, k):
 
 
 def pascal_distribution(r, p, x):
-    # return C(int(r + x - 1), int(x)) * p ** r * (1 - p) ** x
-    return betainc(r, x + 1, p)
+    return C(int(r + x - 1), int(x)) * p ** r * (1 - p) ** x
 
 
 def get_next_pascal(r, p):

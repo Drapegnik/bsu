@@ -17,7 +17,7 @@ run(
     mean=LAMBDA,
     var=LAMBDA,
     size=N,
-    enable_pearson=False,
+    discrete=True,
     enable_kolmogorov=False
 )
 
@@ -31,6 +31,6 @@ run(
     mean=pascal_mean,
     var=pascal_var,
     size=N,
-    enable_pearson=False,
+    discrete=True,
     enable_kolmogorov=False
 )
