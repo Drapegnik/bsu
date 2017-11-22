@@ -15,7 +15,7 @@ GROUP BY bonuscopy.empno,
          bonuscopy.year;
 
 i bonusCursor % ROWTYPE;
-taxPercent real := 0;
+taxPercent REAL := 0;
 BEGIN OPEN bonusCursor;
   LOOP FETCH bonusCursor INTO i;
     EXIT WHEN bonusCursor % NOTFOUND;
@@ -51,7 +51,7 @@ GROUP BY bonuscopy.empno,
          bonuscopy.month,
          bonuscopy.year;
 
-taxPercent real := 0;
+taxPercent REAL := 0;
 
 BEGIN
   FOR i IN bonusCursor LOOP
@@ -71,8 +71,8 @@ END;
 SELECT * FROM bonus;
 
 --1с. С помощью курсора с параметром, передавая номер сотрудника, для которого необходимо посчитать налог.
-CREATE OR REPLACE PROCEDURE task1c(employee IN integer) IS
-  CURSOR bonusCursor (employee integer) IS
+CREATE OR REPLACE PROCEDURE task1c(employee IN INTEGER) IS
+  CURSOR bonusCursor (employee INTEGER) IS
   SELECT bonuscopy.empno,
          bonuscopy.month,
          bonuscopy.year,
@@ -87,7 +87,7 @@ CREATE OR REPLACE PROCEDURE task1c(employee IN integer) IS
            bonuscopy.year;
 
   i bonusCursor % ROWTYPE;
-  taxPercent real := 0;
+  taxPercent REAL := 0;
   BEGIN OPEN bonusCursor(employee);
     LOOP FETCH bonusCursor INTO i;
       EXIT WHEN bonusCursor % NOTFOUND;
@@ -126,7 +126,7 @@ CREATE OR REPLACE PROCEDURE task2a IS
            bonuscopy.year;
 
   i bonusCursor % ROWTYPE;
-  taxPercent real := 0;
+  taxPercent REAL := 0;
 
   BEGIN OPEN bonusCursor;
     LOOP FETCH bonusCursor INTO i;
@@ -164,7 +164,7 @@ CREATE OR REPLACE PROCEDURE task2b IS
            bonuscopy.month,
            bonuscopy.year;
 
-  taxPercent real := 0;
+  taxPercent REAL := 0;
 
   BEGIN
   FOR i IN bonusCursor LOOP
@@ -186,8 +186,8 @@ SELECT * FROM bonus;
 
 --3. Создайте процедуру, вычисления налога и вставки его в таблицу `bonus` за всё время начислений для конкретного сотрудника.
 --В качестве параметров передать проценты налога (до `500`, от `501` до `1000`, выше `1000`), номер сотрудника.
-CREATE OR REPLACE PROCEDURE task3(taxPercent1 IN real, taxPercent2 IN real, taxPercent3 IN real, employee IN integer) IS
-  CURSOR bonusCursor (employee integer) IS
+CREATE OR REPLACE PROCEDURE task3(taxPercent1 IN REAL, taxPercent2 IN REAL, taxPercent3 IN REAL, employee IN INTEGER) IS
+  CURSOR bonusCursor (employee INTEGER) IS
   SELECT bonuscopy.empno,
          bonuscopy.month,
          bonuscopy.year,
@@ -202,7 +202,7 @@ CREATE OR REPLACE PROCEDURE task3(taxPercent1 IN real, taxPercent2 IN real, taxP
            bonuscopy.year;
 
   i bonusCursor % ROWTYPE;
-  taxPercent real := 0;
+  taxPercent REAL := 0;
 
   BEGIN OPEN bonusCursor(employee);
     LOOP FETCH bonusCursor INTO i;
@@ -228,8 +228,8 @@ SELECT * FROM bonus WHERE empno = 102;
 --4. Создайте функцию, вычисляющую суммарный налог на премию сотрудника за всё время начислений. 
 --В качестве параметров передать процент налога (до `500`, от `501` до `1000`, выше `1000`), номер сотрудника.
 --Возвращаемое значение – суммарный налог.
-CREATE OR REPLACE FUNCTION task4(taxPercent1 IN real, taxPercent2 IN real, taxPercent3 IN real, employee IN integer) RETURN real IS
-  CURSOR bonusCursor (employee integer) IS
+CREATE OR REPLACE FUNCTION task4(taxPercent1 IN REAL, taxPercent2 IN REAL, taxPercent3 IN REAL, employee IN INTEGER) RETURN REAL IS
+  CURSOR bonusCursor (employee INTEGER) IS
   SELECT bonuscopy.empno,
          bonuscopy.month,
          bonuscopy.year,
@@ -245,8 +245,8 @@ CREATE OR REPLACE FUNCTION task4(taxPercent1 IN real, taxPercent2 IN real, taxPe
            bonuscopy.year;
 
   i bonusCursor % ROWTYPE;
-  taxPercent real := 0;
-  total real := 0;
+  taxPercent REAL := 0;
+  total REAL := 0;
 
   BEGIN OPEN bonusCursor (employee);
     LOOP FETCH bonusCursor INTO i;

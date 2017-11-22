@@ -1,7 +1,7 @@
 # lab2
 Update
 
-## problem
+## init
 * Выбирите СУБД `Oracle` для выполнения лабораторной. 
 * Оознакомтесь со скриптом создания и заполнения таблиц для выполнения лабораторной ([`create.sql`](https://github.com/Drapegnik/bsu/blob/master/dms/lab2/create.sql)).
 * Произведите запуск `SQLPlus` или `PLSQLDeveloper` и соеденитесь с БД под логином `System` и паролем `Admin`.
