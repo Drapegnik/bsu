@@ -68,7 +68,7 @@
 
 ***
 
-## dropbox cloud
+## clouds
 cospects, books, lectures and exam answers
 
 * [@**drapegnik**/dropbox/course1](https://www.dropbox.com/s/86aqcvrszo4po4a/1%20%D0%BA%D1%83%D1%80%D1%81.zip?dl=0)
@@ -81,8 +81,7 @@ cospects, books, lectures and exam answers
 
 ***
 
-## see also
-useful links
+## useful links
 
 * [@**bsu-docs**](https://github.com/bsu-docs) - *lectures and exam answers*
 * [@**bsutex**/bsustyle](https://github.com/bsutex/bsustyle) - *`TeX` styles for bsu publishing*
