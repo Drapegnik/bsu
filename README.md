@@ -21,6 +21,7 @@
 * [Компьютерная безопасность распределенных систем (Cryptography)](http://drapegnik.github.io/bsu/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`]()
 * [Параллельные и распределенные вычисления (Parallel Computing)](http://drapegnik.github.io/bsu/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`Jupyter Notebook`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
 * [Интелектуальныеинформационные системы (Artificial Intelligence)](http://drapegnik.github.io/bsu/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/)
+
 ***
 
 ## semester 1
@@ -65,6 +66,8 @@
 * [Parallel Computing (*Параллельные и распределенные вычисления*)](http://drapegnik.github.io/bsu/parallel-computing)
 * [Artificial Intelligence (*Интелектуальныеинформационные системы*)](http://drapegnik.github.io/bsu/artificial-intelligence)
 
+***
+
 ## dropbox cloud
 cospects, books, lectures and exam answers
 
@@ -75,6 +78,8 @@ cospects, books, lectures and exam answers
 * [@**cloud**/mailru/course1-course3]https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
 * [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
 * [@**yadisk**](https://yadi.sk/d/FsMqju0sfn7Dp)
+
+***
 
 ## see also
 useful links
