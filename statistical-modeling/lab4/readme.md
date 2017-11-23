@@ -1,4 +1,3 @@
-
 # lab4
 Метод Монте-Карло
 
@@ -7,8 +6,7 @@
 2. Сравнить полученное значение либо с точным значением (если его получится вычислить), либо с приближенным, полученным в каком-либо математическом пакете (например, в `Mathematica`). Для этого построить график зависимости точности вычисленного методом Монте-Карло интеграла от числа итераций `n`.
 
 ## integrals
-# 1. $\int\limits_{-\infty}^{\infty} e^{-x^4} \sqrt{1+x^4} dx$
-# 2. $\iint\limits_{1 \leq x^2 + y^2 \leq 4} \dfrac{dx dy}{x^2 + y^4}$
+![integrals1](images/integrals1.png)
 
 ## solution
 
@@ -44,10 +42,7 @@ i1
 
 
 ### Для подсчёта второго интеграла разобём его на несколько:
-
-## $
-\iint\limits_{1 \leq x^2 + y^2 \leq 4} = \int\limits_{-2}^2\int\limits_{(-\sqrt{4-x^2})}^{\sqrt{4-x^2}} - \int\limits_{-1}^1\int\limits_{(-\sqrt{1-x^2})}^{\sqrt{1-x^2}} = \left(\int\limits_{-2}^{-0}\int\limits_{(-\sqrt{4-x^2})}^{\sqrt{4-x^2}} + \int\limits_{+0}^2\int\limits_{(-\sqrt{4-x^2})}^{\sqrt{4-x^2}}\right) - \left(\int\limits_{-1}^{-0}\int\limits_{(-\sqrt{1-x^2})}^{\sqrt{1-x^2}} + \int\limits_{+0}^1\int\limits_{(-\sqrt{1-x^2})}^{\sqrt{1-x^2}}\right)
-$
+![integrals1](images/integrals2.png)
 
 
 ```python
@@ -120,7 +115,7 @@ plt.show()
 ```
 
 
-![png](images/output_11_0.png)
+![output_11_0](images/output_11_0.png)
 
 
 ### Определим функцию-индикатор попадания в область интегрирования:
@@ -196,9 +191,6 @@ draw(i2_real, i2)
 ```
 
 
-![png](images/output_17_0.png)
+![output_17_0](images/output_17_0.png)
 
-
-
-![png](images/output_17_1.png)
-
+![output_17_1](images/output_17_1.png)
