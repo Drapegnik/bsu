@@ -1,12 +1,18 @@
 # Architecture
+
 Архитектура компьютеров
 
-> Multithreading solutions with [Message Passing Interface](https://www.open-mpi.org/) on **C++** & **Python**
+> Multithreading solutions with
+> [Message Passing Interface](https://www.open-mpi.org/) on **C++** & **Python**
 
-* [lab1](https://github.com/Drapegnik/merge_sort) - Merge sort (*Внешняя сортировка слиянием*)
-* [lab2](https://github.com/Drapegnik/Gauss-elimination) - Gauss-Jordan elimination by inverse matrix (*Решение систем линейных уравнений Методом Гаусса*)
-* [lab3](https://github.com/Drapegnik/bsu/tree/master/architecture/lab3-poisson) - [Poisson's equation (*Решение дифференциальных уравнений в частных производных*)](https://drapegnik.github.io/bsu/architecture/lab3-poisson/report.pdf)
+* [lab1](https://github.com/Drapegnik/merge_sort) - Merge sort (_Внешняя
+  сортировка слиянием_)
+* [lab2](https://github.com/Drapegnik/Gauss-elimination) - Gauss-Jordan
+  elimination by inverse matrix (_Решение систем линейных уравнений Методом
+  Гаусса_)
+* [lab3](https://github.com/Drapegnik/bsu/tree/master/architecture/lab3-poisson) -
+  [Poisson's equation (_Решение дифференциальных уравнений в частных производных_)](https://drapegnik.github.io/bsu/architecture/lab3-poisson/report.pdf)
 
-***
+---
 
-*by [@drapegnik](https://github.com/Drapegnik), september'16 - december'16*
+_by [@drapegnik](https://github.com/Drapegnik), september'16 - december'16_

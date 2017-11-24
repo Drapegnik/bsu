@@ -1,16 +1,19 @@
 # lab3
-* *Пажитных Иван Павлович*
-* *3 курс, 1 группа, МСС*
+
+* _Пажитных Иван Павлович_
+* _3 курс, 1 группа, МСС_
 * [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab3)
 
 ## task 1
-1. Для всех маршрутизаторов сети добавить описание интерфейсов (*description*)
+
+1. Для всех маршрутизаторов сети добавить описание интерфейсов (_description_)
 2. Установить пароли на привилегированный режим доступа
-3. Добавить заголовки (*MOTD banner*)
+3. Добавить заголовки (_MOTD banner_)
 4. Присвоить имена коммутаторам сети
 5. Проверить правильность
 
 ### 1. description
+
 ```
 Router>enable
 Router#configure terminal
@@ -19,11 +22,15 @@ Router(config)#interface FastEthernet 0/0
 Router(config-if)#description descFE
 Router(config-if)#exit
 ```
+
 ### 2. password
+
 ```
 Router(config)#enable secret abcd1234
 ```
+
 * check login:
+
 ```
 Router#disable
 Router>enable
@@ -32,18 +39,22 @@ Router#
 ```
 
 ### 3. banner
+
 ```
 Router(config)#banner motd # THIS IS BANNER! #
 ```
 
 ### 4. hostname
+
 ```
 Router(config)#hostname MainRouter
 MainRouter#
 ```
 
 ### 5. config
+
 * `MainRouter#show running-config`:
+
 ```
 Building configuration...
 
@@ -98,11 +109,15 @@ end
 ```
 
 ## task 2
+
 ### 1. schema
+
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1487602662/networks-2-1.png"/>
 
 * check network connection from `PC0`:
+
   * `PC>ipconfig /all`
+
   ```
     Physical Address................: 0000.0CD3.A902
     IP Address......................: 172.17.10.21
@@ -110,7 +125,9 @@ end
     Default Gateway.................: 172.17.10.1
     DNS Servers.....................: 0.0.0.0
   ```
+
   * `PC>ping 172.17.30.26`
+
   ```
     Pinging 172.17.30.26 with 32 bytes of data:
     Reply from 172.17.30.26: bytes=32 time=234ms TTL=128
@@ -123,8 +140,11 @@ end
     Approximate round trip times in milli-seconds:
       Minimum = 93ms, Maximum = 234ms, Average = 140ms
   ```
+
 * check network connection from `PC5`:
+
   * `PC>ipconfig /all`:
+
   ```
     Physical Address................: 0090.2104.3EE1
     IP Address......................: 172.17.30.26
@@ -132,7 +152,9 @@ end
     Default Gateway.................: 172.17.30.1
     DNS Servers.....................: 0.0.0.0
   ```
+
   * `PC>ping 172.17.10.21`:
+
   ```
     Pinging 172.17.10.21 with 32 bytes of data:
     Reply from 172.17.10.21: bytes=32 time=124ms TTL=128
@@ -146,7 +168,8 @@ end
       Minimum = 109ms, Maximum = 125ms, Average = 120ms
   ```
 
-### 2. Создать VLANs на  коммутаторе `S0`
+### 2. Создать VLANs на коммутаторе `S0`
+
 ```
 Switch>
 Switch>enable
@@ -168,7 +191,9 @@ S0(config)#exit
 * on `S1` and `S2` the same way
 
 ### 3. Проверить конфигурацию `VLANs` на всех коммутаторах
+
 * `S0#show vlan brief`: (for `S1` and `S2` the same)
+
 ```
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
@@ -178,33 +203,37 @@ VLAN Name                             Status    Ports
                                                 Fa0/13, Fa0/14, Fa0/15, Fa0/16
                                                 Fa0/17, Fa0/18, Fa0/19, Fa0/20
                                                 Fa0/21, Fa0/22, Fa0/23, Fa0/24
-10   Faculty/Staff                    active    
-20   Students                         active    
-30   Guest(Default)                   active    
-99   Management&Native                active    
-1002 fddi-default                     active    
-1003 token-ring-default               active    
-1004 fddinet-default                  active    
+10   Faculty/Staff                    active
+20   Students                         active
+30   Guest(Default)                   active
+99   Management&Native                active
+1002 fddi-default                     active
+1003 token-ring-default               active
+1004 fddinet-default                  active
 1005 trnet-default                    active
 ```
 
 ### 4. Назначить `VLANs` на порты
+
 ```
 S1(config)#interface fastEthernet 0/3
-S1(config-if)#switchport mode access 
-S1(config-if)#switchport access vlan 10 
+S1(config-if)#switchport mode access
+S1(config-if)#switchport access vlan 10
 S1(config-if)#interface fastEthernet 0/2
-S1(config-if)#switchport mode access 
+S1(config-if)#switchport mode access
 S1(config-if)#switchport access vlan 20
 S1(config-if)#interface fastEthernet 0/1
-S1(config-if)#switchport mode access 
+S1(config-if)#switchport mode access
 S1(config-if)#switchport access vlan 30
 ```
+
 * Аналогичная настройка для `S2`
 * Пакеты не доходят, т.к. `VLANs` не настроены на портах `S0`
 
 ### 5. Конфигурирование `trunk` портов
+
 * for `S0`:
+
 ```
   S0(config)#interface fastEthernet 0/1
   S0(config-if)#switchport mode trunk
@@ -220,7 +249,9 @@ S1(config-if)#switchport access vlan 30
   S0(config-if)#exit
   S0(config)#exit
 ```
+
 * for `S1` and `S2`:
+
 ```
   S2(config)#interface fastEthernet 0/4
   S2(config-if)#switchport mode trunk
@@ -236,9 +267,11 @@ S1(config-if)#switchport access vlan 30
 ```
 
 ### 6. Протестировать сеть
+
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1487602662/networks-2-2.png"/>
 
 * `S1>show vlan brief`:
+
 ```
   10   Faculty/Staff                    active    Fa0/3
   20   Students                         active    Fa0/2

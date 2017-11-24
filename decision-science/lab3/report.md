@@ -1,33 +1,39 @@
 # lab3
+
 Pazhitnykh Ivan
 
 # task1
 
-* Find shortest ways for all nodes from `v1` using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977440/ds-lab3-task1.png)
+* Find shortest ways for all nodes from `v1` using
+  [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+  ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977440/ds-lab3-task1.png)
 
-## input 
+## input
 
 * [`task1.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task1.in)
 
 ## result table
-v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | 
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-`(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | 
-`(0,1)*` | `(3, 4)*` | `(4, 1)*` | `(2, 1)*` | `(4, 2)` | `(3, 2)*` | `(6, 6)` | `(5, 9)*` | `(5, 4)` | `(5, 7)*` | 
-`---` | `---` | `---` | `---` | `(3, 6)*` | `---` | `(3, 9)*` | `---` | `(3, 5)*` | `---` | 
+
+| v1        | v2        | v3        | v4        | v5        | v6        | v7        | v8        | v9        | v10       |
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` | `(inf,1)` |
+| `(0,1)*`  | `(3, 4)*` | `(4, 1)*` | `(2, 1)*` | `(4, 2)`  | `(3, 2)*` | `(6, 6)`  | `(5, 9)*` | `(5, 4)`  | `(5, 7)*` |
+| `---`     | `---`     | `---`     | `---`     | `(3, 6)*` | `---`     | `(3, 9)*` | `---`     | `(3, 5)*` | `---`     |
 
 # task2
 
-* Find shortest ways for all nodes using [Floyd–Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1495483184/ds-lab3-task2.png)
+* Find shortest ways for all nodes using
+  [Floyd–Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+  ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1495483184/ds-lab3-task2.png)
 
-## input 
+## input
 
 * [`task2.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task2.in)
 
 ## result matrices
+
 * `k=0`:
+
 ```
 D=
 [[  0.  11.   2.   8.  11.  11.]
@@ -46,6 +52,7 @@ T=
 ```
 
 * `k=1`:
+
 ```
 D=
 [[  0.  11.   2.   8.  11.  11.]
@@ -64,6 +71,7 @@ T=
 ```
 
 * `k=2`:
+
 ```
 D=
 [[  0.   7.   2.   8.   4.   3.]
@@ -82,6 +90,7 @@ T=
 ```
 
 * `k=3`:
+
 ```
 D=
 [[  0.   7.   2.   8.   4.   3.]
@@ -100,6 +109,7 @@ T=
 ```
 
 * `k=4`:
+
 ```
 D=
 [[  0.   7.   2.   6.   4.   3.]
@@ -118,6 +128,7 @@ T=
 ```
 
 * `k=5`:
+
 ```
 D=
 [[  0.   4.   2.   6.   4.   3.]

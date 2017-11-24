@@ -1,51 +1,55 @@
 # lab9
-* *Пажитных Иван Павлович*
-* *3 курс, 1 группа, МСС*
+
+* _Пажитных Иван Павлович_
+* _3 курс, 1 группа, МСС_
 * [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab9)
 
 # part1
+
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491837213/networks9-1.png)
 
 ## task1 - subnets:
 
 * `net1` ~ `50`
 
-name | value
---- | ---
-ip/mask | `176.141.64.128/26`
-ip | `176.141.64.128`
-mask | `255.255.255.192`
-net size | `62`
-min addr | `176.141.64.129`
-max addr | `176.141.64.190`
-broadcast | `176.141.64.191`
+| name      | value               |
+| --------- | ------------------- |
+| ip/mask   | `176.141.64.128/26` |
+| ip        | `176.141.64.128`    |
+| mask      | `255.255.255.192`   |
+| net size  | `62`                |
+| min addr  | `176.141.64.129`    |
+| max addr  | `176.141.64.190`    |
+| broadcast | `176.141.64.191`    |
 
 * `net2` ~ `2`
 
-name | value
---- | ---
-ip/mask | `176.141.64.192/30`
-ip | `176.141.64.192`
-mask | `255.255.255.252`
-net size | `2`
-min addr | `176.141.64.193`
-max addr | `176.141.64.194`
-broadcast | `176.141.64.195`
+| name      | value               |
+| --------- | ------------------- |
+| ip/mask   | `176.141.64.192/30` |
+| ip        | `176.141.64.192`    |
+| mask      | `255.255.255.252`   |
+| net size  | `2`                 |
+| min addr  | `176.141.64.193`    |
+| max addr  | `176.141.64.194`    |
+| broadcast | `176.141.64.195`    |
 
 * `net3` ~ `100`
 
-name | value
---- | ---
-ip/mask | `176.141.64.0/25`
-ip | `176.141.64.0`
-mask | `255.255.255.128`
-net size | `126`
-min addr | `176.141.64.1`
-max addr | `176.141.64.126`
-broadcast | `176.141.64.127`
+| name      | value             |
+| --------- | ----------------- |
+| ip/mask   | `176.141.64.0/25` |
+| ip        | `176.141.64.0`    |
+| mask      | `255.255.255.128` |
+| net size  | `126`             |
+| min addr  | `176.141.64.1`    |
+| max addr  | `176.141.64.126`  |
+| broadcast | `176.141.64.127`  |
 
 ## task2 - ip configs
+
 * `PC0` in `net1`
+
 ```
    Link-local IPv6 Address.........: FE80::201:97FF:FE28:C205
    IP Address......................: 176.141.64.130
@@ -54,6 +58,7 @@ broadcast | `176.141.64.127`
 ```
 
 * `PC1` in `net1`
+
 ```
    Link-local IPv6 Address.........: FE80::203:E4FF:FE42:1323
    IP Address......................: 176.141.64.131
@@ -62,36 +67,43 @@ broadcast | `176.141.64.127`
 ```
 
 * `R0` in `net1`
+
 ```
 R0(config)#interface FastEthernet0/0
 R0(config-if)#ip address 176.141.64.129 255.255.255.192
 ```
 
 * `R0` in `net2`
+
 ```
 R0(config)#interface Serial0/2
 R0(config-if)#ip address 176.141.64.193 255.255.255.252
 ```
 
 * `R1` in `net2`
+
 ```
 R1(config)#interface Serial0/1
 R1(config-if)#ip address 176.141.64.194 255.255.255.252
 ```
 
 * `R1` in `net3`
+
 ```
 R1(config)#interface FastEthernet0/0
 R1(config-if)#ip address 176.141.64.1 255.255.255.128
 ```
 
 ## task3 - routes
+
 * `R0` -> `net3`
+
 ```
 R0(config)#ip route 0.0.0.0 0.0.0.0 176.141.64.194
 ```
 
 * `R1` -> `net1`
+
 ```
 R1(config)#ip route 0.0.0.0 0.0.0.0 176.141.64.193
 ```
@@ -110,6 +122,7 @@ R1(config)#exit
 ```
 
 * `show running-config`:
+
 ```
     Current configuration : 931 bytes
     !
@@ -144,6 +157,7 @@ R1(config)#exit
 ### `R0`
 
 * `show ip route`:
+
 ```
          176.141.0.0/16 is variably subnetted, 2 subnets, 2 masks
     C       176.141.64.128/26 is directly connected, FastEthernet0/0
@@ -153,6 +167,7 @@ R1(config)#exit
 ### `R1`
 
 * `show ip route`:
+
 ```
          176.141.0.0/16 is variably subnetted, 3 subnets, 3 masks
     C       176.141.64.0/25 is directly connected, FastEthernet0/0
@@ -163,6 +178,7 @@ R1(config)#exit
 ## task 6 `dhcp` `pc` addressing
 
 * `PC2`
+
 ```
 PC>ipconfig
 
@@ -189,8 +205,11 @@ PC>ipconfig
 ```
 
 ## task7 - check connection
+
 ### `net1` -> `net3` (`PC0` -> `PC2`)
+
 * `ping 176.141.64.3`
+
 ```
     Reply from 176.141.64.3: bytes=32 time=1ms TTL=126
     Reply from 176.141.64.3: bytes=32 time=1ms TTL=126
@@ -204,7 +223,9 @@ PC>ipconfig
 ```
 
 ### `net3` -> `net1` (`PC2` -> `PC0`)
+
 * `ping 176.141.64.130`
+
 ```
     Pinging 176.141.64.130 with 32 bytes of data:
 
@@ -220,14 +241,15 @@ PC>ipconfig
 ```
 
 # part2
+
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491838332/networks9-2.png)
 
 ## task1 `dhcp` router config
+
 ```
 R0(config)#interface FastEthernet0/0
 R0(config-if)#ip address 176.141.64.1 255.255.0.0
 ```
-
 
 ```
 R0(config)#ip dhcp pool pool18
@@ -242,6 +264,7 @@ R0(config)#end
 ## task2 check config
 
 * `sh run`
+
 ```
     !
     hostname R0

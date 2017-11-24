@@ -1,13 +1,17 @@
 # lab11
-* *Пажитных Иван Павлович*
-* *3 курс, 1 группа, МСС*
+
+* _Пажитных Иван Павлович_
+* _3 курс, 1 группа, МСС_
 * [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab11)
 
 ## task0 - schema
+
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1494851136/networks-11-2.png)
 
 ## task1 - ip configs
+
 * `PC1`:
+
 ```
    Link-local IPv6 Address.........: FE80::260:2FFF:FE42:BC29
    IP Address......................: 10.162.140.3
@@ -16,6 +20,7 @@
 ```
 
 * `PC2`:
+
 ```
    Link-local IPv6 Address.........: FE80::204:9AFF:FEAB:C88
    IP Address......................: 10.162.140.2
@@ -24,6 +29,7 @@
 ```
 
 * `Gateway`:
+
 ```
 Gateway#config tGateway(config)#interface fast
 Gateway(config)#interface fastEthernet0/0
@@ -38,6 +44,7 @@ Gateway(config-if)#exit
 ```
 
 * `ISP`:
+
 ```
 ISP(config)#interface serial0/1
 ISP(config-if)#ip address 176.141.0.2 255.255.255.252
@@ -49,8 +56,11 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 ```
 
 ## task2 - connection check & QA
+
 ### `PC1` -> `Gateway`:
+
 * `ping 10.162.140.1`
+
 ```
 	Reply from 10.162.140.1: bytes=32 time=2ms TTL=255
 	Reply from 10.162.140.1: bytes=32 time=0ms TTL=255
@@ -63,7 +73,9 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 ```
 
 ### `PC2` -> `Gateway`:
+
 * `ping 10.162.140.1`
+
 ```
 	Reply from 10.162.140.1: bytes=32 time=1ms TTL=255
 	Reply from 10.162.140.1: bytes=32 time=0ms TTL=255
@@ -75,19 +87,24 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 	    Minimum = 0ms, Maximum = 1ms, Average = 0ms
 ```
 
-> Если бы вы попытались отправить эхо-запросы на *IP*-адрес маршрутизатора `ISP`, был бы этот эхо-запрос успешным? Поясните свой ответ.
+> Если бы вы попытались отправить эхо-запросы на _IP_-адрес маршрутизатора
+> `ISP`, был бы этот эхо-запрос успешным? Поясните свой ответ.
 
-> Ответ: результат был бы не успешным, т.к. не настроена маршрутизация на `Gateway`
+> Ответ: результат был бы не успешным, т.к. не настроена маршрутизация на
+> `Gateway`
 
 ## task3 - routes config
 
 ### `Gateway`:
+
 * default gateway:
+
 ```
 Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 ```
 
 * `show ip route`:
+
 ```
 	Gateway of last resort is 176.141.0.2 to network 0.0.0.0
 	     10.0.0.0/24 is subnetted, 1 subnets
@@ -98,7 +115,9 @@ Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 ```
 
 #### `PC1` -> `ISP`
+
 * `ping 176.141.0.2`:
+
 ```
 	Request timed out.
 	Request timed out.
@@ -111,12 +130,15 @@ Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 ### `ISP`
 
 * static route:
+
 ```
 ISP(config)#ip route 10.162.140.0 255.255.255.0 176.141.0.1
 ```
 
 #### `PC1` -> `ISP`
+
 * `ping 176.141.0.2`:
+
 ```
 	Reply from 176.141.0.2: bytes=32 time=5ms TTL=255
 	Reply from 176.141.0.2: bytes=32 time=7ms TTL=255
@@ -128,22 +150,27 @@ ISP(config)#ip route 10.162.140.0 255.255.255.0 176.141.0.1
 	    Minimum = 5ms, Maximum = 7ms, Average = 6ms
 ```
 
-## task4 - *NAT* config
+## task4 - _NAT_ config
+
 * `Gateway`:
+
 ```
 Gateway(config)#ip nat pool public_access 176.141.0.1 176.141.0.1 netmask 255.255.255.252
 Gateway(config)#access-list 1 permit 10.162.140.0 0.0.0.255
 Gateway(config)#ip nat inside source list 1 pool public_access overload
-Gateway(config)#interface fastethernet 0/0 
+Gateway(config)#interface fastethernet 0/0
 Gateway(config-if)#ip nat inside
 Gateway(config-if)#interface serial 0/0
-Gateway(config-if)#ip nat outside 
+Gateway(config-if)#ip nat outside
 Gateway(config-if)#exit
 ```
 
 ## task5 - generate traffic
+
 ### `PC1` -> `loopback`:
+
 * `ping 172.16.1.18`:
+
 ```
 Reply from 172.16.1.18: bytes=32 time=94ms TTL=254
 Reply from 172.16.1.18: bytes=32 time=94ms TTL=254
@@ -157,7 +184,9 @@ Approximate round trip times in milli-seconds:
 ```
 
 ### `PC2` -> `loopback`:
+
 * `ping 172.16.1.18`:
+
 ```
 Reply from 172.16.1.18: bytes=32 time=93ms TTL=254
 Reply from 172.16.1.18: bytes=32 time=93ms TTL=254
@@ -171,8 +200,11 @@ Approximate round trip times in milli-seconds:
 ```
 
 ## task6 - check `NAT`
+
 ### Gateway
+
 * `show ip nat statistics`
+
 ```
 	Total translations: 0 (0 static, 0 dynamic, 0 extended)
 	Outside Interfaces: Serial0/0

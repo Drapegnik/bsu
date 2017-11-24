@@ -1,22 +1,37 @@
 # Лабораторная работа 1
+
 «Разработка многопоточных приложений с **Windows API**»
 
-* **Подготовить исходные данные**: Программа, которая вызывает функцию `Calculate()`, выполняющую трудоемкие вычисления
+* **Подготовить исходные данные**: Программа, которая вызывает функцию
+  `Calculate()`, выполняющую трудоемкие вычисления
 * **Цель**: Улучшить отзывчивость программы
-* **Средство**: Разделить по потокам пользовательский интерфейс и трудоемкие вычисления
+* **Средство**: Разделить по потокам пользовательский интерфейс и трудоемкие
+  вычисления
 
 1. Создание потока
-	* Читать: Функция [`CreateThread()`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682453(v=vs.85).aspx).
-	* Задача: Вызвать функцию [`Calculate()`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L31) в отдельном потоке.
+
+   * Читать: Функция
+     [`CreateThread()`](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms682453(v=vs.85).aspx>).
+   * Задача: Вызвать функцию
+     [`Calculate()`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L31)
+     в отдельном потоке.
 
 2. Завершение потока
-	* Читать: Корректное и некорректное завершение потока, функции [`WaitForSingleObject()`](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms687032(v=vs.85).aspx), [`CloseHandle()`](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms724211(v=vs.85).aspx).
-	* Задача: Обеспечить корректное завершение вычислительного потока.
+
+   * Читать: Корректное и некорректное завершение потока, функции
+     [`WaitForSingleObject()`](<https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms687032(v=vs.85).aspx>),
+     [`CloseHandle()`](<https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms724211(v=vs.85).aspx>).
+   * Задача: Обеспечить корректное завершение вычислительного потока.
 
 3. Корректное завершение потока по инициативе пользователя
-	* Читать: Глобальная переменная – флаг [`Terminate`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L10).
-	* Задача: После запуска вычислений в отдельном потоке предоставить пользователю выбор: выполнить все вычисления или преждевременно завершить вычисления. Протестировать оба варианта.
+
+   * Читать: Глобальная переменная – флаг
+     [`Terminate`](https://github.com/Drapegnik/bsu/blob/master/programming/parallel-systems/lab1/main.cpp#L10).
+   * Задача: После запуска вычислений в отдельном потоке предоставить
+     пользователю выбор: выполнить все вычисления или преждевременно завершить
+     вычисления. Протестировать оба варианта.
 
 4. Передача данных потоку
-  * Читать: Параметры функции потока.
-  * Задача: При запуске потока передать параметры.
+
+* Читать: Параметры функции потока.
+* Задача: При запуске потока передать параметры.

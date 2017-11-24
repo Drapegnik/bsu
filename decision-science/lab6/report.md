@@ -1,20 +1,22 @@
 # lab6
+
 Pazhitnykh Ivan
 
 ## task1
+
 * Build net graphics and find all time params for:
 
-Job Name | time | depends of
---- | --- | --
-`A` | `3` | –
-`B` | `5` | –
-`C` | `7` | –
-`D` | `6` | `A`
-`E` | `3` | `A`
-`F` | `3` | `B`, `E`
-`G` | `2` | `D`, `F`, `G`
-`H` | `5` | `B`, `C`, `E`
-`I` | `7` | `B`, `C`, `E`
+| Job Name | time | depends of    |
+| -------- | ---- | ------------- |
+| `A`      | `3`  | –             |
+| `B`      | `5`  | –             |
+| `C`      | `7`  | –             |
+| `D`      | `6`  | `A`           |
+| `E`      | `3`  | `A`           |
+| `F`      | `3`  | `B`, `E`      |
+| `G`      | `2`  | `D`, `F`, `G` |
+| `H`      | `5`  | `B`, `C`, `E` |
+| `I`      | `7`  | `B`, `C`, `E` |
 
 * result:
 
@@ -123,8 +125,9 @@ Jobs guaranteed reserves:
 ```
 
 ## task2
+
 * Find all time params for net graphics:
-![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492564649/ds-lab6-task2.png)
+  ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492564649/ds-lab6-task2.png)
 
 ```
 Events early terms:	Tp[0]=0.0	Tp[1]=1.0	Tp[2]=6.0	Tp[3]=8.0	Tp[4]=11.0	Tp[5]=14.0

@@ -1,8 +1,11 @@
 # lab2
+
 low-level file write/open on `C++`, `dtrace` command
 
 ## result
+
 * `bash run.sh`:
+
 ```
 #compiled.
 #file contains: Lol
@@ -34,5 +37,4 @@ ulock_wake(0x1, 0x7FFF59F5ED80, 0x0)		 = -1 Err#2
 csops(0xFA7A, 0x7, 0x7FFF59F5E0E0)		 = -1 Err#22
 open("lala.txt\0", 0x201, 0x7FFF59F60920)		 = 3 0
 dtrace: error on enabled probe ID 2132 (ID 165: syscall::write:return): invalid kernel access in action #12 at DIF offset 92
-
 ```

@@ -1,13 +1,26 @@
 # lab1
+
 Vigenere Cipher
 
 ## tasks
-1. Реализовать программное средство, осуществляющее шифрование и дешифрование текстового файла, содержащего текст на заданном языке.
-2. Реализовать программное средство, осуществляющее криптоанализ зашифрованного по [методу Виженера](https://ru.wikipedia.org/wiki/Шифр_Виженера) текста. Для криптоанализа использовать [тест Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски).
-3. Провести экспериментальное исследование зависимости вероятности успешного проведения атаки по [методу Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски) от длины шифротекста.
-4. Провести экспериментальное исследование зависимости вероятности успешного проведения атаки по [методу Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски) от длины использованного при шифровании ключевого слова.
+
+1. Реализовать программное средство, осуществляющее шифрование и дешифрование
+   текстового файла, содержащего текст на заданном языке.
+2. Реализовать программное средство, осуществляющее криптоанализ зашифрованного
+   по [методу Виженера](https://ru.wikipedia.org/wiki/Шифр_Виженера) текста. Для
+   криптоанализа использовать
+   [тест Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски).
+3. Провести экспериментальное исследование зависимости вероятности успешного
+   проведения атаки по
+   [методу Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски) от длины
+   шифротекста.
+4. Провести экспериментальное исследование зависимости вероятности успешного
+   проведения атаки по
+   [методу Касиски](https://ru.wikipedia.org/wiki/Метод_Касиски) от длины
+   использованного при шифровании ключевого слова.
 
 ## demo
+
 ```
 Caesar:
  data:		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -27,4 +40,5 @@ Kasiski:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-check generated [report](https://github.com/Drapegnik/bsu/blob/master/cryptography/lab1/report.md)
+check generated
+[report](https://github.com/Drapegnik/bsu/blob/master/cryptography/lab1/report.md)

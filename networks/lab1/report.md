@@ -1,30 +1,35 @@
 # lab1
-* *Пажитных Иван Павлович*
-* *3 курс, 1 группа, МСС*
-* *вариант #19*
+
+* _Пажитных Иван Павлович_
+* _3 курс, 1 группа, МСС_
+* _вариант #19_
 * [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab1)
 
 ## 1. `hostname`
+
 `MacBook-Pro-Ivan.local`
+
 ## 2. `ipconfig`
- * ip-addres:		`10.160.56.63`
- * subnet mask:		`255.255.128.0`
- * gateway:		`open.wifi.bsu`
- * dhcp address:	`10.0.0.20`
- * mac-address:		`72:00:06:67:22:40`
- * dns-address:		`10.0.0.20`
+
+* ip-addres: `10.160.56.63`
+* subnet mask: `255.255.128.0`
+* gateway: `open.wifi.bsu`
+* dhcp address: `10.0.0.20`
+* mac-address: `72:00:06:67:22:40`
+* dns-address: `10.0.0.20`
 
 ## 3. `ping`
 
-| address      | ttl | time |
-|-------------|-----|------|
+| address     | ttl | time |
+| ----------- | --- | ---- |
 | 10.150.1.5  | 254 | 13ms |
 | 10.150.1.1  | 126 | 28ms |
 | 10.0.0.20   | 127 | 9ms  |
 | 10.150.6.29 | 126 | 2ms  |
 | 10.150.3.30 | 126 | 2ms  |
 
- * `ping  10.150.1.5`:
+* `ping 10.150.1.5`:
+
 ```
 PING 10.150.1.5 (10.150.1.5): 56 data bytes
 64 bytes from 10.150.1.5: icmp_seq=0 ttl=254 time=12.983 ms
@@ -37,7 +42,9 @@ PING 10.150.1.5 (10.150.1.5): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 7.325/29.300/101.383/36.103 ms
 ```
- * `ping  10.150.1.1`:
+
+* `ping 10.150.1.1`:
+
 ```
 PING 10.150.1.1 (10.150.1.1): 56 data bytes
 64 bytes from 10.150.1.1: icmp_seq=0 ttl=126 time=40.251 ms
@@ -50,7 +57,9 @@ PING 10.150.1.1 (10.150.1.1): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 3.135/17.311/40.251/14.491 ms
 ```
- * `ping  10.0.0.20`:
+
+* `ping 10.0.0.20`:
+
 ```
 PING 10.0.0.20 (10.0.0.20): 56 data bytes
 64 bytes from 10.0.0.20: icmp_seq=0 ttl=127 time=3.809 ms
@@ -63,7 +72,9 @@ PING 10.0.0.20 (10.0.0.20): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 3.546/9.467/17.810/5.448 ms
 ```
- * `ping  10.150.6.29`:
+
+* `ping 10.150.6.29`:
+
 ```
 PING 10.150.6.29 (10.150.6.29): 56 data bytes
 64 bytes from 10.150.6.29: icmp_seq=0 ttl=126 time=5.058 ms
@@ -76,7 +87,9 @@ PING 10.150.6.29 (10.150.6.29): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 1.847/2.987/5.058/1.356 ms
 ```
- * `ping  10.150.3.30`:
+
+* `ping 10.150.3.30`:
+
 ```
 PING 10.150.3.30 (10.150.3.30): 56 data bytes
 64 bytes from 10.150.3.30: icmp_seq=0 ttl=126 time=1.469 ms
@@ -90,14 +103,15 @@ PING 10.150.3.30 (10.150.3.30): 56 data bytes
 round-trip min/avg/max/stddev = 1.469/7.310/28.628/10.662 ms
 ```
 
-| address      | ip | time |
-|-------------|-----|------|
-| ya.ru  | 93.158.134.3 | 78ms |
-| yandex.ru  | 5.255.255.55 | 64ms |
-| tut.by   | 178.172.160.2 | 7ms  |
+| address    | ip             | time |
+| ---------- | -------------- | ---- |
+| ya.ru      | 93.158.134.3   | 78ms |
+| yandex.ru  | 5.255.255.55   | 64ms |
+| tut.by     | 178.172.160.2  | 7ms  |
 | onliner.by | 178.124.129.14 | 9ms  |
 
- * `ping  ya.ru`:
+* `ping ya.ru`:
+
 ```
 PING ya.ru (93.158.134.3): 56 data bytes
 64 bytes from 93.158.134.3: icmp_seq=0 ttl=51 time=78.590 ms
@@ -110,7 +124,9 @@ PING ya.ru (93.158.134.3): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 78.066/78.790/79.358/0.450 ms
 ```
- * `ping  yandex.ru`:
+
+* `ping yandex.ru`:
+
 ```
 PING yandex.ru (5.255.255.55): 56 data bytes
 64 bytes from 5.255.255.55: icmp_seq=0 ttl=52 time=62.885 ms
@@ -123,7 +139,9 @@ PING yandex.ru (5.255.255.55): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 62.885/65.180/67.250/1.456 ms
 ```
- * `ping  tut.by`:
+
+* `ping tut.by`:
+
 ```
 PING tut.by (178.172.160.2): 56 data bytes
 64 bytes from 178.172.160.2: icmp_seq=0 ttl=57 time=3.890 ms
@@ -136,7 +154,9 @@ PING tut.by (178.172.160.2): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 3.704/7.786/18.421/5.460 ms
 ```
- * `ping -c 19 -s 1000 onliner.by`:
+
+* `ping -c 19 -s 1000 onliner.by`:
+
 ```
 PING onliner.by (178.124.129.14): 1000 data bytes
 1008 bytes from 178.124.129.14: icmp_seq=0 ttl=57 time=3.881 ms
@@ -163,7 +183,9 @@ PING onliner.by (178.124.129.14): 1000 data bytes
 19 packets transmitted, 19 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 3.085/7.241/27.734/5.891 ms
 ```
- * `ping  localhost`:
+
+* `ping localhost`:
+
 ```
 PING localhost (127.0.0.1): 56 data bytes
 64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.042 ms
@@ -176,8 +198,11 @@ PING localhost (127.0.0.1): 56 data bytes
 5 packets transmitted, 5 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
 ```
+
 ## 4. `traceroute`
- * `traceroute -d tut.by:`
+
+* `traceroute -d tut.by:`
+
 ```
  1  open.wifi.bsu (10.160.0.1)  2.691 ms  1.205 ms  1.151 ms
  2  border-gw.net.bsu (10.149.8.252)  1.170 ms  3.122 ms  1.241 ms
@@ -189,7 +214,9 @@ round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
  8  * * *
  9  178-172-160-2.hosterby.com (178.172.160.2)  2.664 ms  2.034 ms  1.870 ms
 ```
- * `traceroute -m 8 onliner.by`
+
+* `traceroute -m 8 onliner.by`
+
 ```
  1  open.wifi.bsu (10.160.0.1)  3.157 ms  3.358 ms  3.689 ms
  2  border-gw.net.bsu (10.149.8.252)  2.687 ms  3.225 ms  3.351 ms
@@ -200,19 +227,25 @@ round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
  7  178.124.134.214 (178.124.134.214)  2.132 ms  3.416 ms  2.957 ms
  8  * onliner.by (178.124.129.14)  5.241 ms  3.162 ms
 ```
+
 ## 5. `arp`
- * `arp -a`
+
+* `arp -a`
+
 ```
 open.wifi.bsu (10.160.0.1) at 0:21:a0:c1:19:40 on en0 ifscope [ethernet]
 ? (10.160.127.255) at (incomplete) on en0 ifscope [ethernet]
 ? (224.0.0.251) at 1:0:5e:0:0:fb on en0 ifscope permanent [ethernet]
 ? (239.255.255.250) at 1:0:5e:7f:ff:fa on en0 ifscope permanent [ethernet]
 ```
+
 ## 6. `netstat`
- * `netstat -p TCP`
+
+* `netstat -p TCP`
+
 ```
 Active Internet connections
-Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
 tcp4       0      0  10.160.56.63.54536     23.99.116.116.https    ESTABLISHED
 tcp4       0      0  10.160.56.63.54535     23.99.116.116.https    ESTABLISHED
 tcp4       0      0  10.160.56.63.54534     23.99.116.116.https    ESTABLISHED
@@ -243,20 +276,22 @@ tcp4       0      0  10.160.56.63.54460     91.190.217.44.12350    ESTABLISHED
 tcp4       0      0  10.160.56.63.54459     40.77.226.192.https    ESTABLISHED
 tcp4       0      0  cmm-server.54422       192.30.253.124.https   ESTABLISHED
 tcp4       0      0  cmm-server.54044       192.30.253.125.https   ESTABLISHED
-tcp4       0      0  10.160.56.63.54521     23.97.178.173.https    TIME_WAIT  
-tcp4       0      0  10.160.56.63.54524     23.97.178.173.https    TIME_WAIT  
-tcp4       0      0  10.160.56.63.54527     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54528     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54529     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54531     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54532     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54533     janus2.intuit.ru.http  TIME_WAIT  
-tcp4       0      0  10.160.56.63.54526     104.40.208.40.https    TIME_WAIT  
+tcp4       0      0  10.160.56.63.54521     23.97.178.173.https    TIME_WAIT
+tcp4       0      0  10.160.56.63.54524     23.97.178.173.https    TIME_WAIT
+tcp4       0      0  10.160.56.63.54527     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54528     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54529     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54531     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54532     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54533     janus2.intuit.ru.http  TIME_WAIT
+tcp4       0      0  10.160.56.63.54526     104.40.208.40.https    TIME_WAIT
 ```
- * `netstat -np TCP`
+
+* `netstat -np TCP`
+
 ```
 Active Internet connections
-Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
 tcp4       0      0  10.160.56.63.55750     52.72.183.95.443       ESTABLISHED
 tcp4       0      0  10.160.56.63.55748     216.58.209.46.443      ESTABLISHED
 tcp4       0      0  10.160.56.63.55746     216.58.209.46.443      ESTABLISHED
@@ -279,13 +314,15 @@ tcp4       0      0  10.160.56.63.55530     40.77.226.192.443      ESTABLISHED
 tcp4       0      0  10.160.56.63.55529     91.190.216.53.12350    ESTABLISHED
 tcp4       0      0  10.160.56.63.54662     192.30.253.125.443     ESTABLISHED
 ```
- * `netstat –a –s –r`
 
+* `netstat –a –s –r`
 
-`netstat -r` - Show the routing tables.  Use with `-a` to show protocol-cloned routes.  When `-s` is also present, show routing statistics instead
+`netstat -r` - Show the routing tables. Use with `-a` to show protocol-cloned
+routes. When `-s` is also present, show routing statistics instead
+
 ```
 Active Internet connections
-Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
 tcp4       0      0  10.160.56.63.55750     ec2-52-72-183-95.https ESTABLISHED
 tcp4       0      0  10.160.56.63.55748     waw02s05-in-f14..https ESTABLISHED
 tcp4       0      0  10.160.56.63.55746     waw02s05-in-f14..https ESTABLISHED
@@ -307,78 +344,78 @@ tcp4       0      0  10.160.56.63.55531     207.46.151.217.https   ESTABLISHED
 tcp4       0      0  10.160.56.63.55530     40.77.226.192.https    ESTABLISHED
 tcp4       0      0  10.160.56.63.55529     91.190.216.53.12350    ESTABLISHED
 tcp4       0      0  10.160.56.63.54662     192.30.253.125.https   ESTABLISHED
-udp4       0      0  10.160.56.63.59972     waw02s05-in-f14..https            
-udp4       0      0  10.160.56.63.58351     lt-in-f189.1e100.https            
-udp6       0      0  *.65482                *.*                               
-udp4       0      0  *.65482                *.*                               
-udp6       0      0  *.55840                *.*                               
-udp4       0      0  *.55840                *.*                               
-udp6       0      0  *.49809                *.*                               
-udp4       0      0  *.49809                *.*                               
-udp6       0      0  *.50470                *.*                               
-udp4       0      0  *.50470                *.*                               
-udp4       0      0  10.160.56.63.21767     *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  10.160.56.63.ntp       *.*                               
-udp6       0      0  fe80::47f:d7bc:8.ntp   *.*                               
-udp6       0      0  fe80::4479:65ff:.ntp   *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp46      0      0  *.53117                *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  localhost.53116        *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.58403                *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp6       0      0  fe80::e41a:ed2d:.ntp   *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp6       0      0  fe80::1%lo0.ntp        *.*                               
-udp6       0      0  localhost.ntp          *.*                               
-udp4       0      0  localhost.ntp          *.*                               
-udp4       0      0  *.ntp                  *.*                               
-udp6       0      0  *.ntp                  *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp46      0      0  *.*                    *.*                               
-udp6       0      0  *.mdns                 *.*                               
-udp4       0      0  *.mdns                 *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.*                    *.*                               
-udp4       0      0  *.netbios-ns           *.*                               
-udp4       0      0  *.netbios-dgm          *.*                               
+udp4       0      0  10.160.56.63.59972     waw02s05-in-f14..https
+udp4       0      0  10.160.56.63.58351     lt-in-f189.1e100.https
+udp6       0      0  *.65482                *.*
+udp4       0      0  *.65482                *.*
+udp6       0      0  *.55840                *.*
+udp4       0      0  *.55840                *.*
+udp6       0      0  *.49809                *.*
+udp4       0      0  *.49809                *.*
+udp6       0      0  *.50470                *.*
+udp4       0      0  *.50470                *.*
+udp4       0      0  10.160.56.63.21767     *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  10.160.56.63.ntp       *.*
+udp6       0      0  fe80::47f:d7bc:8.ntp   *.*
+udp6       0      0  fe80::4479:65ff:.ntp   *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp46      0      0  *.53117                *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  localhost.53116        *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.58403                *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp6       0      0  fe80::e41a:ed2d:.ntp   *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp6       0      0  fe80::1%lo0.ntp        *.*
+udp6       0      0  localhost.ntp          *.*
+udp4       0      0  localhost.ntp          *.*
+udp4       0      0  *.ntp                  *.*
+udp6       0      0  *.ntp                  *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp46      0      0  *.*                    *.*
+udp6       0      0  *.mdns                 *.*
+udp4       0      0  *.mdns                 *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.netbios-ns           *.*
+udp4       0      0  *.netbios-dgm          *.*
 Active Multipath Internet connections
-Proto/ID  Flags      Local Address          Foreign Address        (state)    
-icm6       0      0  *.*                    *.*                               
+Proto/ID  Flags      Local Address          Foreign Address        (state)
+icm6       0      0  *.*                    *.*
 Active LOCAL (UNIX) domain sockets
 Address          Type   Recv-Q Send-Q            Inode             Conn             Refs          Nextref Addr
 f744bf24a76c949f stream      0      0                0 f744bf24a76cbe07                0                0
@@ -425,22 +462,22 @@ f744bf249c135567 stream      0      0                0 f744bf249c1361e7         
 f744bf249ec926ff stream      0      0                0 f744bf249ec90a17                0                0
 f744bf249ec90a17 stream      0      0                0 f744bf249ec926ff                0                0
 Registered kernel control modules
-id       flags    pcbcount rcvbuf   sndbuf   name 
-       1        9        0   131072   131072 com.apple.flow-divert 
-       2        1        0    16384     2048 com.apple.nke.sockwall 
-       3        9        0   524288   524288 com.apple.content-filter 
-       4        9        0     8192     2048 com.apple.packet-mangler 
-       5        1        3    65536    65536 com.apple.net.necp_control 
-       6        1       10    65536    65536 com.apple.net.netagent 
-       7        9        1   524288   524288 com.apple.net.utun_control 
-       8        1        0    65536    65536 com.apple.net.ipsec_control 
-       9        0       21     8192     2048 com.apple.netsrc 
-       a       18        5     8192     2048 com.apple.network.statistics 
-       b        5        0     8192     2048 com.apple.network.tcp_ccdebug 
-       c        1        1     8192     2048 com.apple.network.advisory 
-       d        1        1     8192     2048 com.checkpoint.cpfw.ctl 
-       e        1        0     8192     2048 com.checkpoint.cpfw.fwnotify 
-       f        1        0  1048576     2048 com.checkpoint.cpfw.debug 
+id       flags    pcbcount rcvbuf   sndbuf   name
+       1        9        0   131072   131072 com.apple.flow-divert
+       2        1        0    16384     2048 com.apple.nke.sockwall
+       3        9        0   524288   524288 com.apple.content-filter
+       4        9        0     8192     2048 com.apple.packet-mangler
+       5        1        3    65536    65536 com.apple.net.necp_control
+       6        1       10    65536    65536 com.apple.net.netagent
+       7        9        1   524288   524288 com.apple.net.utun_control
+       8        1        0    65536    65536 com.apple.net.ipsec_control
+       9        0       21     8192     2048 com.apple.netsrc
+       a       18        5     8192     2048 com.apple.network.statistics
+       b        5        0     8192     2048 com.apple.network.tcp_ccdebug
+       c        1        1     8192     2048 com.apple.network.advisory
+       d        1        1     8192     2048 com.checkpoint.cpfw.ctl
+       e        1        0     8192     2048 com.checkpoint.cpfw.fwnotify
+       f        1        0  1048576     2048 com.checkpoint.cpfw.debug
 Active kernel event sockets
 Proto Recv-Q Send-Q vendor  class subcla
 kevt       0      0      1      1     11
@@ -510,17 +547,20 @@ kctl       0      0      1     13 com.checkpoint.cpfw.ctl
 ```
 
 ## 7. `nslookup`
- * `nslookup 10.150.5.44`
+
+* `nslookup 10.150.5.44`
+
 ```
 Server:		10.0.0.20
 Address:	10.0.0.20#53
 
 44.5.150.10.in-addr.arpa	name = fpmi506st14.bsu.
-
 ```
 
 ## 8. `route`
- * `netstat -rn`
+
+* `netstat -rn`
+
 ```
 Routing tables
 
