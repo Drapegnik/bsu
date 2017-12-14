@@ -9,11 +9,6 @@ from utils import json, get_session_key
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-
 @app.route('/data', methods=['POST'])
 def get_data():
     try:
@@ -36,6 +31,25 @@ def get_data():
             'key': encrypted_key,
             'text': encrypted_data
         })
+
+
+"""
+Private api for sharing crypto methods with client, to avoid code duplicating
+(I don't want to implement algorithms also on javascript)
+"""
+
+
+@app.route('/private/rsa/generate', methods=['POST'])
+def get_rsa_keys():
+    body = request.get_json()
+    try:
+        public, private = rsa.generate_keypair(int(body['p']), int(body['q']))
+    except ValueError as error:
+        print(error)
+        return json(None, 'Something went wrong!')
+    e, n = public
+    d, n = private
+    return json({'e': e, 'd': d, 'n': n})
 
 
 if __name__ == '__main__':

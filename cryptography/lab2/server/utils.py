@@ -10,4 +10,4 @@ def get_session_key(length):
 
 
 def json(data, error=None):
-    return jsonify({'data': data, 'error': error})
+    return jsonify(data=data, error=error)
