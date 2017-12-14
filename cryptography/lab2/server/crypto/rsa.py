@@ -31,9 +31,9 @@ def multiplicative_inverse(e, phi):
 
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
-        raise ValueError('Both numbers must be prime.')
+        raise ValueError('Both numbers must be prime!')
     elif p == q:
-        raise ValueError('p and q cannot be equal')
+        raise ValueError('P and Q cannot be equal!')
     n = p * q
     e = 0
     phi = (p - 1) * (q - 1)
