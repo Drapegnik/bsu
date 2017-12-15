@@ -49,7 +49,7 @@ def get_data():
             decrypted_data = aes.decrypt(encrypted_data, session_key)
             print('ENCRYPTION CORRECT:', bytes(decrypted_data).startswith(bytes(data)))
 
-        return json({'text': encrypted_data})
+        return json({'encrypted': encrypted_data})
 
 
 """
@@ -84,8 +84,8 @@ def rsa_decrypt():
 @app.route('/private/aes/decrypt', methods=['POST'])
 def aes_decrypt():
     body = request.get_json()
-    data, session_key = body['data'], body['key']
-    decrypted_data = str(bytes(aes.decrypt(data, session_key)))
+    encrypted, session_key = body['encrypted'], body['key']
+    decrypted_data = bytes(aes.decrypt(encrypted, session_key)).decode('utf-8', 'ignore')
     return json({'text': decrypted_data})
 
 
