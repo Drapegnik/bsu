@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-nat
 
 import DataView from './components/DataView';
 import NumberInput from './components/NumberInput';
+import LoginForm from './components/LoginForm';
 import { post, api } from './utils';
 
 global.XMLHttpRequest = global.originalXMLHttpRequest || global.XMLHttpRequest;
@@ -12,6 +13,7 @@ export default class App extends Component {
     p: '61',
     q: '53',
     user: 'admin',
+    password: '',
     publicKey: null,
     privateKey: null,
     sessionKey: null,
@@ -19,15 +21,12 @@ export default class App extends Component {
     text: null,
   };
 
-  handleError = error => {
-    if (error.code && error.code === 401) {
-      this.setState({
-        sessionKey: null,
-        error: error.message,
-      });
-      return;
+  handleError = ({ status, error }) => {
+    const state = { error, text: null };
+    if (status === 401) {
+      state.sessionKey = null;
     }
-    this.setState({ error });
+    this.setState(state);
   };
 
   handleRsaSectionTogle = () => {
@@ -41,6 +40,7 @@ export default class App extends Component {
     try {
       const { p, q } = this.state;
       const { e, n, d } = await post(api.private.rsaGenerate, { p, q });
+      console.log(e, n, d);
       this.setState({
         text: null,
         sessionKey: null,
@@ -56,8 +56,12 @@ export default class App extends Component {
 
   login = async () => {
     try {
-      const { user, publicKey, privateKey } = this.state;
-      const { sessionKey } = await post(api.login, { user, key: publicKey });
+      const { user, password, publicKey, privateKey } = this.state;
+      const { sessionKey } = await post(api.login, {
+        user,
+        password,
+        key: publicKey,
+      });
       console.log('encrypted sessionKey: ', sessionKey);
 
       const { decrypted } = await post(api.private.rsaDecrypt, {
@@ -65,7 +69,7 @@ export default class App extends Component {
         data: sessionKey,
       });
       console.log('decrypted sessionKey: ', decrypted);
-      this.setState({ sessionKey: decrypted });
+      this.setState({ sessionKey: decrypted, error: null, password: '' });
     } catch (err) {
       this.handleError(err);
     }
@@ -85,22 +89,39 @@ export default class App extends Component {
   };
 
   render() {
-    const { error, rsaOpened, publicKey, privateKey, sessionKey, text } = this.state;
-    const hasRsa = publicKey && privateKey;
+    const {
+      user,
+      password,
+      error,
+      rsaOpened,
+      publicKey,
+      privateKey,
+      sessionKey,
+      text,
+    } = this.state;
+    const hasRsaKeys = publicKey && privateKey;
     const showText = !!text && !rsaOpened;
+    const showLogin = hasRsaKeys && !rsaOpened && !sessionKey;
 
     return (
       <View style={styles.container}>
         {error && <Text style={{ color: 'red' }}>{error}</Text>}
-        {hasRsa && <DataView {...{ publicKey, privateKey, sessionKey }} />}
+        {hasRsaKeys && <DataView {...{ publicKey, privateKey, sessionKey }} />}
         {showText && (
           <ScrollView style={styles.textWrapper}>
             <Text>{text}</Text>
           </ScrollView>
         )}
+        {showLogin && (
+          <LoginForm
+            {...{ user, password }}
+            onChange={state => this.setState(state)}
+            onSubmit={this.login}
+          />
+        )}
         <Button
           onPress={this.handleRsaSectionTogle}
-          title={`${hasRsa ? 'Reg' : 'G'}enerate rsa keys`}
+          title={`${hasRsaKeys ? 'Reg' : 'G'}enerate rsa keys`}
         />
         {rsaOpened && (
           <View>
@@ -117,7 +138,6 @@ export default class App extends Component {
             <Button onPress={this.generateKeys} title="Submit" />
           </View>
         )}
-        {hasRsa && !rsaOpened && !sessionKey && <Button onPress={this.login} title="Login" />}
         {sessionKey && <Button onPress={this.getData} title="Get data" />}
       </View>
     );

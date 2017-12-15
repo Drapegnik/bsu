@@ -8,19 +8,20 @@ export const api = {
   },
 };
 
-export const post = (url, data) =>
-  fetch(`http://localhost:5000/${url}`, {
+export const post = async (url, data) => {
+  const response = await fetch(`http://localhost:5000/${url}`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
-  })
-    .then(response => response.json())
-    .then(({ data, error }) => {
-      if (error) {
-        throw error;
-      }
-      return data;
-    });
+  });
+  const { status } = response;
+  const json = await response.json();
+  if (status !== 200) {
+    const { error } = json;
+    throw { status, error };
+  }
+  return json.data;
+};

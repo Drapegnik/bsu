@@ -1,44 +1,59 @@
 import os
+from time import time
 
 from flask import Flask, request
 
 from crypto import rsa, aes
 from settings import APP_STATIC
-from utils import json, get_session_key
+from utils import json, get_session_key, SESSION_KEY_EXPIRATION_TIME
 
 app = Flask(__name__)
 
-db = dict()
+db = {
+    'admin': {
+        'password': 'secret'
+    },
+    'bob': {
+        'password': 'foo'
+    },
+    'alice': {
+        'password': 'bar'
+    }
+}
+
+
+def key_expired(created_at):
+    return (time() - created_at) > SESSION_KEY_EXPIRATION_TIME
 
 
 @app.route('/login', methods=['POST'])
 def login():
     body = request.get_json()
-    user = body['user']
+    user, password = body.get('user'), body.get('password')
+    if not db.get(user, {}).get('password') == password:
+        return json(None, 'Incorrect login or password!'), 401
     try:
         pub_key = int(body['key']['e']), int(body['key']['n'])
     except ValueError:
-        return json(None, 'PublicKey(e, n) should consist of two integers!')
+        return json(None, 'PublicKey(e, n) should consist of two integers!'), 400
 
     session_key = get_session_key(aes.KEY_LENGTH)
     encrypted_key = rsa.encrypt(pub_key, session_key)
     if __debug__:
         print('SESSION_KEY:', session_key)
 
-    db[user] = {
-        'public_key': pub_key,
-        'session_key': session_key
-    }
+    db[user]['session_key'] = session_key
+    db[user]['created_at'] = time()
     return json({'sessionKey': encrypted_key})
 
 
 @app.route('/data', methods=['POST'])
 def get_data():
     body = request.get_json()
-    user = db.get(body['user'], None)
+    user = db.get(body['user'], {})
 
-    if not user or not user['session_key']:
-        return json(None, {'code': 401, 'message': 'Please authenticate!'})
+    if not user.get('session_key') or key_expired(user.get('created_at')):
+        return json(None, 'Session key has expired!'), 401
 
     session_key = user['session_key']
 
@@ -64,7 +79,7 @@ def get_rsa_keys():
     try:
         public, private = rsa.generate_keypair(int(body['p']), int(body['q']))
     except ValueError as error:
-        return json(None, str(error))
+        return json(None, str(error)), 400
     e, n = public
     d, n = private
     return json({'e': e, 'd': d, 'n': n})

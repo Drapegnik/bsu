@@ -2,6 +2,8 @@ import random
 
 from flask import jsonify
 
+
+SESSION_KEY_EXPIRATION_TIME = 30  # seconds
 s = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 
 

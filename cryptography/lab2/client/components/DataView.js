@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 100,
+    top: 50,
   },
   key: {
     fontSize: 17,
