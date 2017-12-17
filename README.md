@@ -62,7 +62,8 @@
   `openmp`, `mpi`
 * [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) -
   [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with
-  [`React`](https://reactjs.org/)
+  [`React`](https://reactjs.org/),
+  [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
 
 ---
 
