@@ -156,6 +156,7 @@
   about studying (books, notes and etc.)_
 * [@**UladBohdan**/uni-code](https://github.com/UladBohdan/uni-code) - _labs_
 * [@**jakwuh**/bsu](https://github.com/jakwuh/bsu) - _labs_
+* [@**kventinel**/BSU](https://github.com/kventinel/BSU) - _labs_
 * [@**Zmiecer**/BSU](https://github.com/Zmiecer/BSU) - _labs_
 * [@**mantergo**/BSU](https://github.com/mantergo/BSU) - _labs_
 * [@**daksenik**/FAMCS](https://github.com/daksenik/FAMCS) - _labs_
