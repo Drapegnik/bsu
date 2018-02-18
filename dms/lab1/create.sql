@@ -5,19 +5,19 @@ DROP TABLE DEPT;
 DROP TABLE JOB;
 
 /******************************************************/
-/*          Departments (Подразделения)               */ 
+/*          Departments (Подразделения)               */
 /******************************************************/
 CREATE TABLE dept (
-	deptid VARCHAR (3) PRIMARY KEY NOT NULL, 
-	deptname VARCHAR (20) NOT NULL, 
+	deptid VARCHAR(3) PRIMARY KEY NOT NULL,
+	deptname VARCHAR(20) NOT NULL,
 	deptaddress VARCHAR(25) NOT NULL
 );
 COMMIT;
 
 INSERT INTO dept VALUES ('B02', 'Support', 'Belarus, Minsk') ;
-INSERT INTO dept VALUES ('U03', 'Development', 'USA, San-Diego'); 
+INSERT INTO dept VALUES ('U03', 'Development', 'USA, San-Diego');
 INSERT INTO dept VALUES ('B01', 'Administration', 'Belarus, Minsk') ;
-INSERT INTO dept VALUES ('U01', 'Administration', 'USA, San-Diego'); 
+INSERT INTO dept VALUES ('U01', 'Administration', 'USA, San-Diego');
 INSERT INTO dept VALUES ('C02', 'Web-technology', 'Czechia,  Praga');
 INSERT INTO dept VALUES ('B03', 'Personnel management', 'Belarus,  Minsk');
 INSERT INTO dept VALUES ('U02', 'Research', 'USA, Dallas');
@@ -28,19 +28,19 @@ INSERT INTO dept VALUES ('B05', 'Production', 'Belarus, Minsk');
 COMMIT;
 
 /******************************************************/
-/*          Employers (Работники)                     */ 
+/*          Employers (Работники)                     */
 /******************************************************/
 CREATE TABLE emp (
-	empno INTEGER PRIMARY KEY NOT NULL, 
-	empname VARCHAR (15) NOT NULL, 
+	empno INTEGER PRIMARY KEY NOT NULL,
+	empname VARCHAR(15) NOT NULL,
 	birthdate DATE NOT NULL CHECK (birthdate > to_date('01-01-1954','dd-mm-yyyy'))
 );
 COMMIT;
 
-INSERT INTO emp VALUES (101, 'Steve Bobrowski', to_date('02-04-1983','dd-mm-yyyy')); 
-INSERT INTO emp VALUES (102, 'Don Burleson', to_date('10-06-1973','dd-mm-yyyy')); 
+INSERT INTO emp VALUES (101, 'Steve Bobrowski', to_date('02-04-1983','dd-mm-yyyy'));
+INSERT INTO emp VALUES (102, 'Don Burleson', to_date('10-06-1973','dd-mm-yyyy'));
 INSERT INTO emp VALUES (103, 'Vera Rovdo', to_date('03.09.1980','dd-mm-yyyy'));
-INSERT INTO emp VALUES (104, 'Olga Buben', to_date('23.11.1982','dd-mm-yyyy')) ; 
+INSERT INTO emp VALUES (104, 'Olga Buben', to_date('23.11.1982','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (105, 'Mark Gokman', to_date('21.11.1978','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (201, 'Jon Ingmar', to_date('14.01.1980','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (203, 'Irina Klimovich', to_date('25.07.1982','dd-mm-yyyy'));
@@ -50,31 +50,31 @@ INSERT INTO emp VALUES (209, 'Kevin Loney', to_date('06.08.1977','dd-mm-yyyy'));
 INSERT INTO emp VALUES (211, 'Grady Booch', to_date('23.05.1977','dd-mm-yyyy'));
 INSERT INTO emp VALUES (215, 'Frank Boumphrey', to_date('12.10.1979','dd-mm-yyyy'));
 INSERT INTO emp VALUES (303, 'Nina Tihanovich',to_date('05.08.1976','dd-mm-yyyy'));
-INSERT INTO emp VALUES (304, 'Pavel Zuck', to_date('25.11.1981','dd-mm-yyyy')); 
-INSERT INTO emp VALUES (311, 'Olivia Direnzo', to_date('13.03.1970','dd-mm-yyyy')); 
+INSERT INTO emp VALUES (304, 'Pavel Zuck', to_date('25.11.1981','dd-mm-yyyy'));
+INSERT INTO emp VALUES (311, 'Olivia Direnzo', to_date('13.03.1970','dd-mm-yyyy'));
 INSERT INTO emp VALUES (321, 'Jon Duckett', to_date('19.09.1971','dd-mm-yyyy')) ;
-INSERT INTO emp VALUES (322, 'Dave Hollander', to_date('13.05.1972','dd-mm-yyyy')) ; 
-INSERT INTO emp VALUES (327, 'Trevor Jenkins', to_date('21.02.1972','dd-mm-yyyy')); 
+INSERT INTO emp VALUES (322, 'Dave Hollander', to_date('13.05.1972','dd-mm-yyyy')) ;
+INSERT INTO emp VALUES (327, 'Trevor Jenkins', to_date('21.02.1972','dd-mm-yyyy'));
 INSERT INTO emp VALUES (329, 'Peter Jones', to_date('19.01.1982','dd-mm-yyyy'));
-INSERT INTO emp VALUES (401, 'Craig McQueen', to_date('29.12.1960','dd-mm-yyyy')); 
-INSERT INTO emp VALUES (402, 'Stephen Mohr', to_date('25.05.1965','dd-mm-yyyy'));  
-INSERT INTO emp VALUES (403, 'Jon Martin', to_date('15.07.1955','dd-mm-yyyy')) ;  
+INSERT INTO emp VALUES (401, 'Craig McQueen', to_date('29.12.1960','dd-mm-yyyy'));
+INSERT INTO emp VALUES (402, 'Stephen Mohr', to_date('25.05.1965','dd-mm-yyyy'));
+INSERT INTO emp VALUES (403, 'Jon Martin', to_date('15.07.1955','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (404, 'Richard Martin', to_date('23.02.1960','dd-mm-yyyy'));
-INSERT INTO emp VALUES (410, 'Robert Grishuk', to_date('15.07.1965','dd-mm-yyyy')); 
+INSERT INTO emp VALUES (410, 'Robert Grishuk', to_date('15.07.1965','dd-mm-yyyy'));
 INSERT INTO emp VALUES (412, 'Vladimir Liss', to_date('18.10.1965','dd-mm-yyyy'));
 INSERT INTO emp VALUES (414, 'Piter Mohov', to_date('25.12.1976','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (503, 'Alex Kuznetsov', to_date('14.09.1980','dd-mm-yyyy'));
 INSERT INTO emp VALUES (504, 'Ivan Dudin', to_date('25.03.1981','dd-mm-yyyy')) ;
 INSERT INTO emp VALUES (505, 'Fedor Dikunov', to_date('12.07.1965','dd-mm-yyyy'));
-INSERT INTO emp VALUES (601, 'Anna Zlotnik', to_date('18.05.1979','dd-mm-yyyy'));  
+INSERT INTO emp VALUES (601, 'Anna Zlotnik', to_date('18.05.1979','dd-mm-yyyy'));
 COMMIT;
 
 /******************************************************/
-/*          Jobs (Должности)                          */ 
+/*          Jobs (Должности)                          */
 /******************************************************/
 CREATE TABLE job (
-	jobno INTEGER PRIMARY KEY NOT NULL, 
-	jobname VARCHAR(20) NOT NULL, 
+	jobno INTEGER PRIMARY KEY NOT NULL,
+	jobname VARCHAR(20) NOT NULL,
 	minsalary REAL NOT NULL
 );
 COMMIT;
@@ -92,14 +92,14 @@ INSERT INTO job VALUES (1009, 'Accountant',5500);
 COMMIT;
 
 /******************************************************/
-/*          Career (Служебная карьера)                */ 
+/*          Career (Служебная карьера)                */
 /******************************************************/
 CREATE TABLE career (
-	jobno INTEGER REFERENCES job(jobno) NOT NULL, 
+	jobno INTEGER REFERENCES job(jobno) NOT NULL,
 	empno INTEGER REFERENCES emp(empno) NOT NULL,
 	deptid VARCHAR(3) REFERENCES dept(deptid) NOT NULL,
-	startdate DATE NOT NULL, 
-	enddate DATE, 
+	startdate DATE NOT NULL,
+	enddate DATE,
 	CHECK (startdate < enddate)
 );
 COMMIT;
@@ -152,7 +152,7 @@ INSERT INTO career VALUES  (1007, 601, 'B05', to_date('01.07.2013','dd-mm-yyyy')
 COMMIT;
 
 /******************************************************/
-/*         Bonus (Премия)                             */ 
+/*         Bonus (Премия)                             */
 /******************************************************/
 CREATE TABLE bonus (
 	empno INTEGER REFERENCES emp(empno) NOT NULL,

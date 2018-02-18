@@ -1,0 +1,8 @@
+DROP TABLE T_ERROR;
+CREATE TABLE T_ERROR (
+  err_num INTEGER,
+  err_msg VARCHAR(100),
+  err_time DATE
+);
+COMMIT;
+/
