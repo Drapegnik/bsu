@@ -7,7 +7,7 @@
 [FAMCS](http://www.fpmi.bsu.by/en/main.aspx),
 [BSU](http://www.bsu.by/en/main.aspx)
 
-> check the repository [website](https://drapegnik.github.io/bsu/)
+> check the repository [website](https://drapegnik.github.io/bsu/), also available via a short link [`git.io/bsu`](https://git.io/bsu)
 
 ---
 
