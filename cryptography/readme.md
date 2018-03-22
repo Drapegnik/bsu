@@ -9,4 +9,4 @@
 
 ---
 
-_by [**@drapegnik**](https://github.com/Drapegnik), september'17 - now_
+_by [**@drapegnik**](https://github.com/Drapegnik), september'17 - December'17_
