@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com>",
   "scripts": {
+    "start": "npm run server",
     "ng": "ng",
     "client": "ng serve",
     "client-open": "(npm run wait 4200 &) && ng serve",
@@ -18,7 +19,6 @@
     "wait": "bash wait.sh",
     "lint": "npm run server-lint && npm run client-lint"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",

@@ -4,10 +4,21 @@
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490542775/mean2.jpg)
 
+**TL;DR:**
+
+```bash
+npm i
+npm start
+```
+
 ## development server
 
 Run `npm run client` for a dev server. Navigate to http://localhost:4200/. The
 app will automatically reload if you change any of the source files.
+
+:warning: **Warning**: Cookies doesn't works in this mode, because browser doesn't attach cookie for different domains (e.g. `localhost:3000` & `localhost:4200`). With builded client in case `npm run server` everything should works.
+
+> You can try to solve issue with cookies by enabling proxying on client in dev mode
 
 ## code scaffolding
 
