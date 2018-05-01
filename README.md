@@ -167,4 +167,11 @@
 
 ---
 
+## feedback
+
+* If you have any troubles - [**create issue**](https://github.com/Drapegnik/bsu/issues/new)
+* Found typo or error? - [**fork**](https://github.com/Drapegnik/bsu/compare#fork-destination-box), fix & [**create pull request**](https://github.com/Drapegnik/bsu/pulls?q=is%3Apr+sort%3Aupdated-desc+is%3Aopen)
+
+---
+
 _by [**@drapegnik**](https://github.com/Drapegnik), september'14 - now_
