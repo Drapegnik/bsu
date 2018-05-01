@@ -61,3 +61,5 @@ Run `npm run init-db` for inserting init data into database
 ### products table
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1496078050/store-app-products.png)
+
+> P.S: you can easy change app theme by replacing theme name from [`bootswatch`](https://bootswatch.com/) [here](https://github.com/Drapegnik/bsu/blob/master/technology/lab2/store-app/client/styles.css#L2)
