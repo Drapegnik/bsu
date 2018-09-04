@@ -3,9 +3,9 @@
 --    DECLARE
 --         empnum INTEGER;
 --    BEGIN
---        INSERT INTO BONUS VALUES (505, 15, 2012, 500, NULL);
---        INSERT INTO JOB VALUES (1010, 'Accountant xxxxxxxxxx', 5500);
---        SELECT empno INTO empnum FROM EMP WHERE empno=505 OR empno=403;
+--        INSERT INTO bonus VALUES (505, 15, 2012, 500, NULL);
+--        INSERT INTO job VALUES (1010, 'Accountant xxxxxxxxxx', 5500);
+--        SELECT empno INTO empnum FROM emp WHERE empno=505 OR empno=403;
 --    END;
 --    ```
 --    * Каждый из операторов исполняемого раздела вызывает предопределённое исключение со своими предопределёнными кодом и сообщением.
@@ -16,9 +16,9 @@ DECLARE
   error_code INTEGER;
   error_message VARCHAR(100);
 BEGIN
-  INSERT INTO BONUS VALUES (505, 15, 2012, 500, NULL);
-  INSERT INTO JOB VALUES (1010, 'Accountant xxxxxxxxxx', 5500);
-  SELECT empno INTO emp_num FROM EMP
+  INSERT INTO bonus VALUES (505, 15, 2012, 500, NULL);
+  INSERT INTO job VALUES (1010, 'Accountant xxxxxxxxxx', 5500);
+  SELECT empno INTO emp_num FROM emp
   WHERE empno = 505 OR empno = 403;
 
   EXCEPTION WHEN OTHERS THEN error_code := SQLCODE;

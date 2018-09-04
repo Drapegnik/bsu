@@ -5,9 +5,7 @@ Packages
 ## init
 
 - Выбирите СУБД `Oracle` для выполнения лабораторной.
-- Оознакомтесь со скриптом создания и заполнения таблиц для выполнения
-  лабораторной
-  ([`create.sql`](https://github.com/Drapegnik/bsu/blob/master/dms/lab1/create.sql)).
+- Оознакомтесь со скриптом создания и заполнения таблиц для выполнения лабораторной ([`create.sql`](https://github.com/Drapegnik/bsu/blob/master/dms/lab1/create.sql)).
 - Запустите скрипт `create.sql` на выполнение.
 
 ## task

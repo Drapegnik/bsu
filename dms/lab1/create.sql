@@ -1,8 +1,8 @@
-DROP TABLE BONUS;
-DROP TABLE CAREER;
-DROP TABLE EMP;
-DROP TABLE DEPT;
-DROP TABLE JOB;
+DROP TABLE bonus;
+DROP TABLE career;
+DROP TABLE emp;
+DROP TABLE dept;
+DROP TABLE job;
 
 /******************************************************/
 /*          Departments (Подразделения)               */
