@@ -139,6 +139,11 @@ WHERE
      WHERE career.empno = emp.empno ) >= 2;
 
 --17.	Найти коды и фамилии работников, суммарный стаж работы которых в компании не менее 4 лет.
+SELECT emp.empno, empname
+FROM emp
+JOIN career ON emp.empno = career.empno
+GROUP BY emp.empno, empname
+HAVING sum(MONTHS_BETWEEN(NVL(enddate, current_date), startdate)) >= 4 * 12;
 
 --18. Найти всех работников (коды и фамилии), увольнявшихся хотя бы один раз.
 SELECT DISTINCT emp.empno,
@@ -152,5 +157,18 @@ WHERE
        AND enddate IS NOT NULL ) > 0;
 
 --19.	Найти среднии премии, начисленные за два `2013`, `2014` года, и за два `2015`, `2016` года, в разрезе работников (т.е. для работников, имевших начисления хотя бы в одном месяце двугодичного периода).
+SELECT avg(bonvalue), '2013, 2014' as years
+FROM bonus
+WHERE year IN (2013, 2014) UNION
+    ( SELECT avg(bonvalue), '2015, 2016' AS years
+    FROM bonus
+    WHERE year IN (2015, 2016) );
 
 --20.	Найти отделы (`id`, название, адрес), в которых есть начисления премий в феврале `2016` года.
+SELECT dept.deptid, deptname, deptaddress
+FROM dept
+JOIN (career JOIN bonus ON career.empno = bonus.empno) ON dept.deptid = career.deptid
+WHERE bonus.month = 2
+  AND bonus.year = 2016
+  AND startdate <= to_date('01-02-2016','dd-mm-yyyy')
+  AND (enddate >= to_date('29-02-2016','dd-mm-yyyy') OR enddate IS NULL);
