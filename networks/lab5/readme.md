@@ -19,8 +19,7 @@
    также таблицу).
 2. Используя _CLI_ настроить сетевые интерфейсы всех устройств.
 3. Для маршрутизаторов `R1`-`R4` настроить статические маршруты.
-4. Просмотреть таблицы маршрутизации всех маршрутизаторов (команда `show ip
-   route`);
+4. Просмотреть таблицы маршрутизации всех маршрутизаторов (команда `show ip route`);
 5. Используя команды `ping`, `traceroute` проверить взаимодостижимость всех
    оконечных узлов пользователей (`PC1`, `PC3`, `PC4`) и оценить эти маршруты.
 
@@ -29,7 +28,7 @@
 
 ### Выполнение
 
-* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab5/report.md) -
+- [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab5/report.md) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab5/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab5/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

@@ -20,16 +20,16 @@
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490803121/tp-lab7.png)
 
-* `net1` ~ `175.123.1.0/24`
-* `net2` ~ `175.123.2.0/24`
-* `net3` ~ `175.123.3.0/24`
-* `net4` ~ `175.123.4.0/24`
-* `net5` ~ `175.123.5.0/24`
-* `net6` ~ `175.123.6.0/24`
+- `net1` ~ `175.123.1.0/24`
+- `net2` ~ `175.123.2.0/24`
+- `net3` ~ `175.123.3.0/24`
+- `net4` ~ `175.123.4.0/24`
+- `net5` ~ `175.123.5.0/24`
+- `net6` ~ `175.123.6.0/24`
 
 ### Выполнение
 
-* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab7/report.md) -
+- [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab7/report.md) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab7/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab7/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

@@ -4,7 +4,7 @@ compiling `C` programm from console, pass command line arguments
 
 ## result
 
-* `bash run.sh 'im from cli!'`:
+- `bash run.sh 'im from cli!'`:
 
 ```
 --------------------------

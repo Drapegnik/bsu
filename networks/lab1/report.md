@@ -1,9 +1,9 @@
 # lab1
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* _вариант #19_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab1)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- _вариант #19_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab1)
 
 ## 1. `hostname`
 
@@ -11,12 +11,12 @@
 
 ## 2. `ipconfig`
 
-* ip-addres: `10.160.56.63`
-* subnet mask: `255.255.128.0`
-* gateway: `open.wifi.bsu`
-* dhcp address: `10.0.0.20`
-* mac-address: `72:00:06:67:22:40`
-* dns-address: `10.0.0.20`
+- ip-addres: `10.160.56.63`
+- subnet mask: `255.255.128.0`
+- gateway: `open.wifi.bsu`
+- dhcp address: `10.0.0.20`
+- mac-address: `72:00:06:67:22:40`
+- dns-address: `10.0.0.20`
 
 ## 3. `ping`
 
@@ -28,7 +28,7 @@
 | 10.150.6.29 | 126 | 2ms  |
 | 10.150.3.30 | 126 | 2ms  |
 
-* `ping 10.150.1.5`:
+- `ping 10.150.1.5`:
 
 ```
 PING 10.150.1.5 (10.150.1.5): 56 data bytes
@@ -43,7 +43,7 @@ PING 10.150.1.5 (10.150.1.5): 56 data bytes
 round-trip min/avg/max/stddev = 7.325/29.300/101.383/36.103 ms
 ```
 
-* `ping 10.150.1.1`:
+- `ping 10.150.1.1`:
 
 ```
 PING 10.150.1.1 (10.150.1.1): 56 data bytes
@@ -58,7 +58,7 @@ PING 10.150.1.1 (10.150.1.1): 56 data bytes
 round-trip min/avg/max/stddev = 3.135/17.311/40.251/14.491 ms
 ```
 
-* `ping 10.0.0.20`:
+- `ping 10.0.0.20`:
 
 ```
 PING 10.0.0.20 (10.0.0.20): 56 data bytes
@@ -73,7 +73,7 @@ PING 10.0.0.20 (10.0.0.20): 56 data bytes
 round-trip min/avg/max/stddev = 3.546/9.467/17.810/5.448 ms
 ```
 
-* `ping 10.150.6.29`:
+- `ping 10.150.6.29`:
 
 ```
 PING 10.150.6.29 (10.150.6.29): 56 data bytes
@@ -88,7 +88,7 @@ PING 10.150.6.29 (10.150.6.29): 56 data bytes
 round-trip min/avg/max/stddev = 1.847/2.987/5.058/1.356 ms
 ```
 
-* `ping 10.150.3.30`:
+- `ping 10.150.3.30`:
 
 ```
 PING 10.150.3.30 (10.150.3.30): 56 data bytes
@@ -110,7 +110,7 @@ round-trip min/avg/max/stddev = 1.469/7.310/28.628/10.662 ms
 | tut.by     | 178.172.160.2  | 7ms  |
 | onliner.by | 178.124.129.14 | 9ms  |
 
-* `ping ya.ru`:
+- `ping ya.ru`:
 
 ```
 PING ya.ru (93.158.134.3): 56 data bytes
@@ -125,7 +125,7 @@ PING ya.ru (93.158.134.3): 56 data bytes
 round-trip min/avg/max/stddev = 78.066/78.790/79.358/0.450 ms
 ```
 
-* `ping yandex.ru`:
+- `ping yandex.ru`:
 
 ```
 PING yandex.ru (5.255.255.55): 56 data bytes
@@ -140,7 +140,7 @@ PING yandex.ru (5.255.255.55): 56 data bytes
 round-trip min/avg/max/stddev = 62.885/65.180/67.250/1.456 ms
 ```
 
-* `ping tut.by`:
+- `ping tut.by`:
 
 ```
 PING tut.by (178.172.160.2): 56 data bytes
@@ -155,7 +155,7 @@ PING tut.by (178.172.160.2): 56 data bytes
 round-trip min/avg/max/stddev = 3.704/7.786/18.421/5.460 ms
 ```
 
-* `ping -c 19 -s 1000 onliner.by`:
+- `ping -c 19 -s 1000 onliner.by`:
 
 ```
 PING onliner.by (178.124.129.14): 1000 data bytes
@@ -184,7 +184,7 @@ PING onliner.by (178.124.129.14): 1000 data bytes
 round-trip min/avg/max/stddev = 3.085/7.241/27.734/5.891 ms
 ```
 
-* `ping localhost`:
+- `ping localhost`:
 
 ```
 PING localhost (127.0.0.1): 56 data bytes
@@ -201,7 +201,7 @@ round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
 
 ## 4. `traceroute`
 
-* `traceroute -d tut.by:`
+- `traceroute -d tut.by:`
 
 ```
  1  open.wifi.bsu (10.160.0.1)  2.691 ms  1.205 ms  1.151 ms
@@ -215,7 +215,7 @@ round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
  9  178-172-160-2.hosterby.com (178.172.160.2)  2.664 ms  2.034 ms  1.870 ms
 ```
 
-* `traceroute -m 8 onliner.by`
+- `traceroute -m 8 onliner.by`
 
 ```
  1  open.wifi.bsu (10.160.0.1)  3.157 ms  3.358 ms  3.689 ms
@@ -230,7 +230,7 @@ round-trip min/avg/max/stddev = 0.042/0.117/0.152/0.039 ms
 
 ## 5. `arp`
 
-* `arp -a`
+- `arp -a`
 
 ```
 open.wifi.bsu (10.160.0.1) at 0:21:a0:c1:19:40 on en0 ifscope [ethernet]
@@ -241,7 +241,7 @@ open.wifi.bsu (10.160.0.1) at 0:21:a0:c1:19:40 on en0 ifscope [ethernet]
 
 ## 6. `netstat`
 
-* `netstat -p TCP`
+- `netstat -p TCP`
 
 ```
 Active Internet connections
@@ -287,7 +287,7 @@ tcp4       0      0  10.160.56.63.54533     janus2.intuit.ru.http  TIME_WAIT
 tcp4       0      0  10.160.56.63.54526     104.40.208.40.https    TIME_WAIT
 ```
 
-* `netstat -np TCP`
+- `netstat -np TCP`
 
 ```
 Active Internet connections
@@ -315,7 +315,7 @@ tcp4       0      0  10.160.56.63.55529     91.190.216.53.12350    ESTABLISHED
 tcp4       0      0  10.160.56.63.54662     192.30.253.125.443     ESTABLISHED
 ```
 
-* `netstat –a –s –r`
+- `netstat –a –s –r`
 
 `netstat -r` - Show the routing tables. Use with `-a` to show protocol-cloned
 routes. When `-s` is also present, show routing statistics instead
@@ -548,7 +548,7 @@ kctl       0      0      1     13 com.checkpoint.cpfw.ctl
 
 ## 7. `nslookup`
 
-* `nslookup 10.150.5.44`
+- `nslookup 10.150.5.44`
 
 ```
 Server:		10.0.0.20
@@ -559,7 +559,7 @@ Address:	10.0.0.20#53
 
 ## 8. `route`
 
-* `netstat -rn`
+- `netstat -rn`
 
 ```
 Routing tables

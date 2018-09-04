@@ -2,7 +2,7 @@
 
 Pazhitnykh Ivan
 
-* Solve **Travelling Salesman Problem**, with matrix:
+- Solve **Travelling Salesman Problem**, with matrix:
 
 ```
 [[ inf   2.   4.   0.   3.   7.   1.]
@@ -14,9 +14,9 @@ Pazhitnykh Ivan
  [  2.   7.   8.   0.   6.   5.  inf]]
 ```
 
-* Branch and bound tree:
+- Branch and bound tree:
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492168988/ds-lab5.png)
-* Graph with Hamilton cycle for TSP:
+- Graph with Hamilton cycle for TSP:
   ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab5/out/lab5.gv.png)
 
-* Minimal cost: `C = 2 + 4 + 0 + 2 + 0 + 4 + 2 = 14`
+- Minimal cost: `C = 2 + 4 + 0 + 2 + 0 + 4 + 2 = 14`

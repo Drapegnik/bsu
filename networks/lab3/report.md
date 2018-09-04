@@ -1,8 +1,8 @@
 # lab3
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab3)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab3)
 
 ## task 1
 
@@ -29,7 +29,7 @@ Router(config-if)#exit
 Router(config)#enable secret abcd1234
 ```
 
-* check login:
+- check login:
 
 ```
 Router#disable
@@ -53,7 +53,7 @@ MainRouter#
 
 ### 5. config
 
-* `MainRouter#show running-config`:
+- `MainRouter#show running-config`:
 
 ```
 Building configuration...
@@ -114,9 +114,9 @@ end
 
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1487602662/networks-2-1.png"/>
 
-* check network connection from `PC0`:
+- check network connection from `PC0`:
 
-  * `PC>ipconfig /all`
+  - `PC>ipconfig /all`
 
   ```
     Physical Address................: 0000.0CD3.A902
@@ -126,7 +126,7 @@ end
     DNS Servers.....................: 0.0.0.0
   ```
 
-  * `PC>ping 172.17.30.26`
+  - `PC>ping 172.17.30.26`
 
   ```
     Pinging 172.17.30.26 with 32 bytes of data:
@@ -141,9 +141,9 @@ end
       Minimum = 93ms, Maximum = 234ms, Average = 140ms
   ```
 
-* check network connection from `PC5`:
+- check network connection from `PC5`:
 
-  * `PC>ipconfig /all`:
+  - `PC>ipconfig /all`:
 
   ```
     Physical Address................: 0090.2104.3EE1
@@ -153,7 +153,7 @@ end
     DNS Servers.....................: 0.0.0.0
   ```
 
-  * `PC>ping 172.17.10.21`:
+  - `PC>ping 172.17.10.21`:
 
   ```
     Pinging 172.17.10.21 with 32 bytes of data:
@@ -188,11 +188,11 @@ S0(config-vlan)#exit
 S0(config)#exit
 ```
 
-* on `S1` and `S2` the same way
+- on `S1` and `S2` the same way
 
 ### 3. Проверить конфигурацию `VLANs` на всех коммутаторах
 
-* `S0#show vlan brief`: (for `S1` and `S2` the same)
+- `S0#show vlan brief`: (for `S1` and `S2` the same)
 
 ```
 VLAN Name                             Status    Ports
@@ -227,12 +227,12 @@ S1(config-if)#switchport mode access
 S1(config-if)#switchport access vlan 30
 ```
 
-* Аналогичная настройка для `S2`
-* Пакеты не доходят, т.к. `VLANs` не настроены на портах `S0`
+- Аналогичная настройка для `S2`
+- Пакеты не доходят, т.к. `VLANs` не настроены на портах `S0`
 
 ### 5. Конфигурирование `trunk` портов
 
-* for `S0`:
+- for `S0`:
 
 ```
   S0(config)#interface fastEthernet 0/1
@@ -250,7 +250,7 @@ S1(config-if)#switchport access vlan 30
   S0(config)#exit
 ```
 
-* for `S1` and `S2`:
+- for `S1` and `S2`:
 
 ```
   S2(config)#interface fastEthernet 0/4
@@ -270,7 +270,7 @@ S1(config-if)#switchport access vlan 30
 
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1487602662/networks-2-2.png"/>
 
-* `S1>show vlan brief`:
+- `S1>show vlan brief`:
 
 ```
   10   Faculty/Staff                    active    Fa0/3

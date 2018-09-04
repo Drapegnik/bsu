@@ -1,12 +1,12 @@
 # lab9
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab10)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab10)
 
 ## task1 - nets:
 
-* `net1`:
+- `net1`:
 
 | name      | value             |
 | --------- | ----------------- |
@@ -18,7 +18,7 @@
 | max addr  | `176.141.64.62`   |
 | broadcast | `176.141.64.63`   |
 
-* `net2`:
+- `net2`:
 
 | name      | value             |
 | --------- | ----------------- |
@@ -30,7 +30,7 @@
 | max addr  | `176.141.0.62`    |
 | broadcast | `176.141.0.63`    |
 
-* `net3`:
+- `net3`:
 
 | name      | value              |
 | --------- | ------------------ |
@@ -50,7 +50,7 @@
 
 ### `net1`:
 
-* `PC-64-3`
+- `PC-64-3`
 
 ```
    Link-local IPv6 Address.........: FE80::201:43FF:FE8D:D82
@@ -59,7 +59,7 @@
    Default Gateway.................: 176.141.64.1
 ```
 
-* `PC-64-4`
+- `PC-64-4`
 
 ```
    Link-local IPv6 Address.........: FE80::20A:F3FF:FE46:638D
@@ -68,7 +68,7 @@
    Default Gateway.................: 176.141.64.1
 ```
 
-* `PC-64-5`
+- `PC-64-5`
 
 ```
    Link-local IPv6 Address.........: FE80::260:3EFF:FEB4:E130
@@ -77,7 +77,7 @@
    Default Gateway.................: 176.141.64.1
 ```
 
-* `PC-64-6`
+- `PC-64-6`
 
 ```
    Link-local IPv6 Address.........: FE80::230:A3FF:FE0D:862C
@@ -88,7 +88,7 @@
 
 ### `net2`:
 
-* `PC-0-3`
+- `PC-0-3`
 
 ```
    Link-local IPv6 Address.........: FE80::201:96FF:FE60:215D
@@ -97,7 +97,7 @@
    Default Gateway.................: 176.141.0.1
 ```
 
-* `PC-0-4`
+- `PC-0-4`
 
 ```
    Link-local IPv6 Address.........: FE80::260:2FFF:FE98:DE11
@@ -108,7 +108,7 @@
 
 ### `net3`:
 
-* `PC-128-3`
+- `PC-128-3`
 
 ```
    Link-local IPv6 Address.........: FE80::206:2AFF:FE82:4C16
@@ -117,7 +117,7 @@
    Default Gateway.................: 176.141.128.1
 ```
 
-* `PC-128-4`
+- `PC-128-4`
 
 ```
    Link-local IPv6 Address.........: FE80::2D0:BCFF:FE6D:EAE2
@@ -128,7 +128,7 @@
 
 ## task4 - switch vlan config:
 
-* `net1`:
+- `net1`:
 
 ```
 S0(config)#interface vlan1
@@ -136,7 +136,7 @@ S0(config-if)#ip addres 176.141.64.2 255.255.255.192
 S0(config-if)#no shutdown
 ```
 
-* `net2` & `net3`:
+- `net2` & `net3`:
 
 ```
 S0(config)#vlan 10
@@ -149,9 +149,9 @@ S0(config-vlan)#name Faculty-141-128
 S0(config-vlan)#exit
 ```
 
-* default gateway: `ip default-gateway 176.141.64.1`
+- default gateway: `ip default-gateway 176.141.64.1`
 
-* `Fa0/5` & `Fa0/6` to `VLAN 10`:
+- `Fa0/5` & `Fa0/6` to `VLAN 10`:
 
 ```
 S0(config)#interface FastEthernet0/5
@@ -162,7 +162,7 @@ S0(config-if)#switchport mode access
 S0(config-if)#switchport access vlan 10
 ```
 
-* `Fa0/7` & `Fa0/8` to `VLAN 20`:
+- `Fa0/7` & `Fa0/8` to `VLAN 20`:
 
 ```
 S0(config)#interface FastEthernet0/7
@@ -173,9 +173,9 @@ S0(config-if)#switchport mode access
 S0(config-if)#switchport access vlan 20
 ```
 
-* save configs: `S0#copy running-config startup-config`
+- save configs: `S0#copy running-config startup-config`
 
-* `show vlan brief`:
+- `show vlan brief`:
 
 ```
 	VLAN Name                             Status    Ports
@@ -203,7 +203,7 @@ S0(config-if)#switchport access vlan 20
    FastEthernet0/8.**
 4. _Выполните эхо-запрос с ПК на коммутатор с адресом 176.141.64.2_
 
-   * `ping 176.141.64.2` from `PC-64-3`:
+   - `ping 176.141.64.2` from `PC-64-3`:
 
    ```
    	Ping statistics for 176.141.64.2:
@@ -212,14 +212,14 @@ S0(config-if)#switchport access vlan 20
    	    Minimum = 0ms, Maximum = 0ms, Average = 0ms
    ```
 
-   * `ping 176.141.64.2` from `PC-0-3`:
+   - `ping 176.141.64.2` from `PC-0-3`:
 
    ```
    	Ping statistics for 176.141.64.2:
        Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)
    ```
 
-   * `ping 176.141.64.2` from `PC-128-3`:
+   - `ping 176.141.64.2` from `PC-128-3`:
 
    ```
    	Ping statistics for 176.141.64.2:
@@ -228,14 +228,14 @@ S0(config-if)#switchport access vlan 20
 
 5. _Выполните эхо-запрос с `PC-64-3` на `PC-0-4` и `PC-128-4`_
 
-   * `ping 176.141.0.4` from `PC-64-3`:
+   - `ping 176.141.0.4` from `PC-64-3`:
 
    ```
    	Ping statistics for 176.141.0.4:
        Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)
    ```
 
-   * `ping 176.141.128.4` from `PC-64-3`:
+   - `ping 176.141.128.4` from `PC-64-3`:
 
    ```
    	Ping statistics for 176.141.128.4:
@@ -250,14 +250,14 @@ S0(config-if)#switchport access vlan 20
 
 ## task6 - router config
 
-* switch to router config:
+- switch to router config:
 
 ```
 S0(config)#interface FastEthernet0/9
 S0(config-if)#switchport mode trunk
 ```
 
-* `R0` in `net1`:
+- `R0` in `net1`:
 
 ```
 R0(config)#interface FastEthernet0/0
@@ -266,7 +266,7 @@ R0(config-if)#no shutdown
 R0(config-if)#exit
 ```
 
-* `R0` in `net2`:
+- `R0` in `net2`:
 
 ```
 R0(config)#interface FastEthernet0/0.10
@@ -275,7 +275,7 @@ R0(config-subif)#ip address 176.141.0.1 255.255.255.192
 R0(config-subif)#exit
 ```
 
-* `R0` in `net3`:
+- `R0` in `net3`:
 
 ```
 R0(config)#interface FastEthernet0/0.20
@@ -286,7 +286,7 @@ R0(config-subif)#exit
 
 ## task7 - check router configs
 
-* `S0#show interfaces trunk`:
+- `S0#show interfaces trunk`:
 
 ```
 	Port        Mode         Encapsulation  Status        Native vlan
@@ -302,7 +302,7 @@ R0(config-subif)#exit
 	Fa0/9       1,10,20
 ```
 
-* `R0#show ip interface`:
+- `R0#show ip interface`:
 
 ```
 	FastEthernet0/0 is up, line protocol is up (connected)
@@ -326,7 +326,7 @@ R0(config-subif)#exit
 	  Internet protocol processing disabled
 ```
 
-* `R0#show ip interface brief`:
+- `R0#show ip interface brief`:
 
 ```
 	Interface              IP-Address      OK? Method Status                Protocol
@@ -337,7 +337,7 @@ R0(config-subif)#exit
 	Vlan1                  unassigned      YES unset  administratively down down
 ```
 
-* `R0#show ip route`:
+- `R0#show ip route`:
 
 ```
 	     176.141.0.0/26 is subnetted, 3 subnets
@@ -350,7 +350,7 @@ R0(config-subif)#exit
 
 ### `net1` -> `net2` (`PC-64-3` -> `PC-0-3`)
 
-* `ping 176.141.0.3`
+- `ping 176.141.0.3`
 
 ```
 	Reply from 176.141.0.3: bytes=32 time=0ms TTL=127
@@ -366,7 +366,7 @@ R0(config-subif)#exit
 
 ### `net1` -> `net3` (`PC-64-3` -> `PC-128-3`)
 
-* `ping 176.141.128.3`
+- `ping 176.141.128.3`
 
 ```
 	Reply from 176.141.128.3: bytes=32 time=0ms TTL=127
@@ -382,7 +382,7 @@ R0(config-subif)#exit
 
 ### `net3` -> `net1` (`PC-128-4` -> `PC-64-6`)
 
-* `ping 176.141.64.6`
+- `ping 176.141.64.6`
 
 ```
 	Reply from 176.141.64.6: bytes=32 time=0ms TTL=127

@@ -4,13 +4,13 @@ Pazhitnykh Ivan
 
 # task1
 
-* Find shortest ways for all nodes from `v1` using
+- Find shortest ways for all nodes from `v1` using
   [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490977440/ds-lab3-task1.png)
 
 ## input
 
-* [`task1.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task1.in)
+- [`task1.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task1.in)
 
 ## result table
 
@@ -22,17 +22,17 @@ Pazhitnykh Ivan
 
 # task2
 
-* Find shortest ways for all nodes using
+- Find shortest ways for all nodes using
   [Floyd–Warshall algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1495483184/ds-lab3-task2.png)
 
 ## input
 
-* [`task2.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task2.in)
+- [`task2.in`](https://github.com/Drapegnik/bsu/tree/master/decision-science/lab3/task2.in)
 
 ## result matrices
 
-* `k=0`:
+- `k=0`:
 
 ```
 D=
@@ -51,7 +51,7 @@ T=
  [0 1 2 3 4 5]]
 ```
 
-* `k=1`:
+- `k=1`:
 
 ```
 D=
@@ -70,7 +70,7 @@ T=
  [1 1 1 1 4 5]]
 ```
 
-* `k=2`:
+- `k=2`:
 
 ```
 D=
@@ -89,7 +89,7 @@ T=
  [1 1 1 1 4 5]]
 ```
 
-* `k=3`:
+- `k=3`:
 
 ```
 D=
@@ -108,7 +108,7 @@ T=
  [1 1 1 1 4 5]]
 ```
 
-* `k=4`:
+- `k=4`:
 
 ```
 D=
@@ -127,7 +127,7 @@ T=
  [4 1 1 4 4 5]]
 ```
 
-* `k=5`:
+- `k=5`:
 
 ```
 D=

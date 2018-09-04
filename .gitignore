@@ -1,5 +1,5 @@
 # mac os temp files
-**.DS_Store
+*.DS_Store
 
 # JetBrains IDE .idea/ folder
 **/.idea/

@@ -19,7 +19,7 @@
 
 ### Выполнение
 
-* [`Lab2_PazhitnykhIP.pdf`](https://drapegnik.github.io/bsu/networks/lab2/Lab2_PazhitnykhIP.pdf) -
+- [`Lab2_PazhitnykhIP.pdf`](https://drapegnik.github.io/bsu/networks/lab2/Lab2_PazhitnykhIP.pdf) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab2/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab2/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

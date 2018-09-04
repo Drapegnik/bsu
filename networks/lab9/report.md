@@ -1,8 +1,8 @@
 # lab9
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab9)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab9)
 
 # part1
 
@@ -10,7 +10,7 @@
 
 ## task1 - subnets:
 
-* `net1` ~ `50`
+- `net1` ~ `50`
 
 | name      | value               |
 | --------- | ------------------- |
@@ -22,7 +22,7 @@
 | max addr  | `176.141.64.190`    |
 | broadcast | `176.141.64.191`    |
 
-* `net2` ~ `2`
+- `net2` ~ `2`
 
 | name      | value               |
 | --------- | ------------------- |
@@ -34,7 +34,7 @@
 | max addr  | `176.141.64.194`    |
 | broadcast | `176.141.64.195`    |
 
-* `net3` ~ `100`
+- `net3` ~ `100`
 
 | name      | value             |
 | --------- | ----------------- |
@@ -48,7 +48,7 @@
 
 ## task2 - ip configs
 
-* `PC0` in `net1`
+- `PC0` in `net1`
 
 ```
    Link-local IPv6 Address.........: FE80::201:97FF:FE28:C205
@@ -57,7 +57,7 @@
    Default Gateway.................: 176.141.64.129
 ```
 
-* `PC1` in `net1`
+- `PC1` in `net1`
 
 ```
    Link-local IPv6 Address.........: FE80::203:E4FF:FE42:1323
@@ -66,28 +66,28 @@
    Default Gateway.................: 176.141.64.129
 ```
 
-* `R0` in `net1`
+- `R0` in `net1`
 
 ```
 R0(config)#interface FastEthernet0/0
 R0(config-if)#ip address 176.141.64.129 255.255.255.192
 ```
 
-* `R0` in `net2`
+- `R0` in `net2`
 
 ```
 R0(config)#interface Serial0/2
 R0(config-if)#ip address 176.141.64.193 255.255.255.252
 ```
 
-* `R1` in `net2`
+- `R1` in `net2`
 
 ```
 R1(config)#interface Serial0/1
 R1(config-if)#ip address 176.141.64.194 255.255.255.252
 ```
 
-* `R1` in `net3`
+- `R1` in `net3`
 
 ```
 R1(config)#interface FastEthernet0/0
@@ -96,13 +96,13 @@ R1(config-if)#ip address 176.141.64.1 255.255.255.128
 
 ## task3 - routes
 
-* `R0` -> `net3`
+- `R0` -> `net3`
 
 ```
 R0(config)#ip route 0.0.0.0 0.0.0.0 176.141.64.194
 ```
 
-* `R1` -> `net1`
+- `R1` -> `net1`
 
 ```
 R1(config)#ip route 0.0.0.0 0.0.0.0 176.141.64.193
@@ -121,7 +121,7 @@ R1(dhcp-config)#exit
 R1(config)#exit
 ```
 
-* `show running-config`:
+- `show running-config`:
 
 ```
     Current configuration : 931 bytes
@@ -156,7 +156,7 @@ R1(config)#exit
 
 ### `R0`
 
-* `show ip route`:
+- `show ip route`:
 
 ```
          176.141.0.0/16 is variably subnetted, 2 subnets, 2 masks
@@ -166,7 +166,7 @@ R1(config)#exit
 
 ### `R1`
 
-* `show ip route`:
+- `show ip route`:
 
 ```
          176.141.0.0/16 is variably subnetted, 3 subnets, 3 masks
@@ -177,7 +177,7 @@ R1(config)#exit
 
 ## task 6 `dhcp` `pc` addressing
 
-* `PC2`
+- `PC2`
 
 ```
 PC>ipconfig
@@ -208,7 +208,7 @@ PC>ipconfig
 
 ### `net1` -> `net3` (`PC0` -> `PC2`)
 
-* `ping 176.141.64.3`
+- `ping 176.141.64.3`
 
 ```
     Reply from 176.141.64.3: bytes=32 time=1ms TTL=126
@@ -224,7 +224,7 @@ PC>ipconfig
 
 ### `net3` -> `net1` (`PC2` -> `PC0`)
 
-* `ping 176.141.64.130`
+- `ping 176.141.64.130`
 
 ```
     Pinging 176.141.64.130 with 32 bytes of data:
@@ -263,7 +263,7 @@ R0(config)#end
 
 ## task2 check config
 
-* `sh run`
+- `sh run`
 
 ```
     !

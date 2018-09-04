@@ -10,8 +10,7 @@
 4. Создать схему _IP_-адресации для указанных требований по количеству хостов
    для каждого из офисов. Заполнить таблицу согласно вашего варианта.
 5. Настроить статические маршруты между узлами, используя _CLI_.
-6. Просмотреть таблицы маршрутизации всех маршрутизаторов (команда `show ip
-   route`);
+6. Просмотреть таблицы маршрутизации всех маршрутизаторов (команда `show ip route`);
 7. Используя команды `ping`проверить взаимодостижимость всех оконечных узлов
    пользователей.
 
@@ -19,7 +18,7 @@
 
 ### Выполнение
 
-* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab6/report.md) -
+- [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab6/report.md) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab6/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab6/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

@@ -1,8 +1,8 @@
 # lab5
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab5)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab5)
 
 # part1
 
@@ -10,24 +10,24 @@
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489702414/networks-4-1.png)
 
-* `net1`:
-  * ip/mask: `176.141.64.0/26`
-  * ip: `176.141.64.0`
-  * mask: `255.255.255.192`
-* `net2`:
-  * ip/mask: `176.141.0.0/26`
-  * ip: `176.141.0.0`
-  * mask: `255.255.255.192`
-* `net3`:
-  * ip/mask: `176.141.128.0/26`
-  * ip: `176.141.128.0`
-  * mask: `255.255.255.192`
+- `net1`:
+  - ip/mask: `176.141.64.0/26`
+  - ip: `176.141.64.0`
+  - mask: `255.255.255.192`
+- `net2`:
+  - ip/mask: `176.141.0.0/26`
+  - ip: `176.141.0.0`
+  - mask: `255.255.255.192`
+- `net3`:
+  - ip/mask: `176.141.128.0/26`
+  - ip: `176.141.128.0`
+  - mask: `255.255.255.192`
 
 ## task2
 
 ### Routers Serial config
 
-* `R1` with `net2`
+- `R1` with `net2`
 
 ```
 Router>enable
@@ -42,7 +42,7 @@ R1(config)#exit
 %SYS-5-CONFIG_I: Configured from console by console
 ```
 
-* `R2` with `net2`
+- `R2` with `net2`
 
 ```
 Router>enable
@@ -56,7 +56,7 @@ R2(config)#exit
 %SYS-5-CONFIG_I: Configured from console by console
 ```
 
-* check connection `R1` -> `R2`:
+- check connection `R1` -> `R2`:
 
 ```
 R1#ping 176.141.0.2
@@ -67,7 +67,7 @@ Sending 5, 100-byte ICMP Echos to 176.141.0.2, timeout is 2 seconds:
 Success rate is 100 percent (5/5), round-trip min/avg/max = 15/28/46 ms
 ```
 
-* check connection `R2` -> `R1`:
+- check connection `R2` -> `R1`:
 
 ```
 R2#ping 176.141.0.1
@@ -80,7 +80,7 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 31/31/32 ms
 
 ### Routers FastEthernet config
 
-* `R1` with `net1`
+- `R1` with `net1`
 
 ```
 R1(config)#interface FastEthernet 0/0
@@ -93,7 +93,7 @@ Building configuration...
 [OK]
 ```
 
-* `R2` with `net3`
+- `R2` with `net3`
 
 ```
 R2(config)#interface FastEthernet 0/0
@@ -106,7 +106,7 @@ Building configuration...
 [OK]
 ```
 
-* check connection `PC1` -> `R1`:
+- check connection `PC1` -> `R1`:
 
 ```
 PC>ipconfig
@@ -127,7 +127,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 31ms, Maximum = 63ms, Average = 39ms
 ```
 
-* check connection `PC2` -> `R2`:
+- check connection `PC2` -> `R2`:
 
 ```
 PC>ipconfig
@@ -150,7 +150,7 @@ Approximate round trip times in milli-seconds:
 
 ## task 3
 
-* set default gateway for `R1` (`net1` & `net2`)
+- set default gateway for `R1` (`net1` & `net2`)
 
 ```
 R1(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
@@ -166,7 +166,7 @@ C       176.141.64.0 is directly connected, FastEthernet0/0
 S*   0.0.0.0/0 [1/0] via 176.141.0.2
 ```
 
-* set default gateway for `R2` (`net2` & `net3`)
+- set default gateway for `R2` (`net2` & `net3`)
 
 ```
 R2(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.1
@@ -182,7 +182,7 @@ C       176.141.128.0 is directly connected, FastEthernet0/0
 S*   0.0.0.0/0 [1/0] via 176.141.0.1
 ```
 
-* check connection `PC1` -> `PC2`:
+- check connection `PC1` -> `PC2`:
 
 ```
 PC>ipconfig
@@ -203,7 +203,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 93ms, Maximum = 94ms, Average = 93ms
 ```
 
-* check connection `PC2` -> `PC1`:
+- check connection `PC2` -> `PC1`:
 
 ```
 PC>ipconfig
@@ -230,17 +230,17 @@ Approximate round trip times in milli-seconds:
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1489793123/networks-4-2.png)
 
-* `net1` - `192.168.1.0/24`
-* `net2` - `192.168.2.0/24`
-* `net3` - `192.168.3.0/24`
-* `net4` - `192.168.4.0/24`
-* `net5` - `192.168.5.0/24`
-* `net6` - `192.168.6.0/24`
-* `net7` - `192.168.7.0/24`
+- `net1` - `192.168.1.0/24`
+- `net2` - `192.168.2.0/24`
+- `net3` - `192.168.3.0/24`
+- `net4` - `192.168.4.0/24`
+- `net5` - `192.168.5.0/24`
+- `net6` - `192.168.6.0/24`
+- `net7` - `192.168.7.0/24`
 
 ## task2
 
-* `PC1` config
+- `PC1` config
 
 ```
    Link-local IPv6 Address.........: FE80::20D:BDFF:FE14:59EC
@@ -249,7 +249,7 @@ Approximate round trip times in milli-seconds:
    Default Gateway.................: 192.168.1.1
 ```
 
-* `PC3` config
+- `PC3` config
 
 ```
    Link-local IPv6 Address.........: FE80::260:47FF:FE6A:C31C
@@ -258,7 +258,7 @@ Approximate round trip times in milli-seconds:
    Default Gateway.................: 192.168.4.1
 ```
 
-* `PC4` config
+- `PC4` config
 
 ```
    Link-local IPv6 Address.........: FE80::260:47FF:FE4E:857A
@@ -267,7 +267,7 @@ Approximate round trip times in milli-seconds:
    Default Gateway.................: 192.168.6.1
 ```
 
-* `R1` FastEthernet config
+- `R1` FastEthernet config
 
 ```
 R1(config)#interface FastEthernet 0/0
@@ -281,7 +281,7 @@ R1(config-if)#ip address 192.168.2.1 255.255.255.0
 R1(config-if)#no shutdown
 ```
 
-* `R2` FastEthernet & Serial config
+- `R2` FastEthernet & Serial config
 
 ```
 R2(config)#interface FastEthernet 0/0
@@ -301,7 +301,7 @@ R2(config-if)#ip address 192.168.3.1 255.255.255.0
 R2(config-if)#no shutdown
 ```
 
-* `R3` FastEthernet & Serial config
+- `R3` FastEthernet & Serial config
 
 ```
 R3(config)#interface FastEthernet 0/0
@@ -321,7 +321,7 @@ R3(config-if)#ip address 192.168.3.2 255.255.255.0
 R3(config-if)#no shutdown
 ```
 
-* `R4` FastEthernet & Serial config
+- `R4` FastEthernet & Serial config
 
 ```
 R4(config)#interface FastEthernet 0/0
@@ -343,14 +343,14 @@ R4(config-if)#no shutdown
 
 ## task3
 
-* set static routes for `R1`
+- set static routes for `R1`
 
 ```
 R1(config)#ip route 192.168.4.0 255.255.255.0 192.168.2.2
 R1(config)#ip route 192.168.6.0 255.255.255.0 192.168.2.2
 ```
 
-* set static routes for `R2`
+- set static routes for `R2`
 
 ```
 R2(config)#ip route 192.168.1.0 255.255.255.0 192.168.2.1
@@ -358,14 +358,14 @@ R2(config)#ip route 192.168.4.0 255.255.255.0 192.168.3.2
 R2(config)#ip route 192.168.6.0 255.255.255.0 192.168.7.2
 ```
 
-* set static routes for `R3`
+- set static routes for `R3`
 
 ```
 R3(config)#ip route 192.168.1.0 255.255.255.0 192.168.3.1
 R3(config)#ip route 192.168.6.0 255.255.255.0 192.168.5.2
 ```
 
-* set static routes for `R4`
+- set static routes for `R4`
 
 ```
 R4(config)#ip route 192.168.1.0 255.255.255.0 192.168.7.1
@@ -374,7 +374,7 @@ R4(config)#ip route 192.168.4.0 255.255.255.0 192.168.5.1
 
 ## task4
 
-* `show ip route` for `R1`
+- `show ip route` for `R1`
 
 ```
     C    192.168.1.0/24 is directly connected, FastEthernet0/0
@@ -384,7 +384,7 @@ R4(config)#ip route 192.168.4.0 255.255.255.0 192.168.5.1
     S*   0.0.0.0/0 [1/0] via 192.168.2.2
 ```
 
-* `show ip route` for `R2`
+- `show ip route` for `R2`
 
 ```
     S    192.168.1.0/24 [1/0] via 192.168.2.1
@@ -395,7 +395,7 @@ R4(config)#ip route 192.168.4.0 255.255.255.0 192.168.5.1
     C    192.168.7.0/24 is directly connected, Serial0/0/0
 ```
 
-* `show ip route` for `R3`
+- `show ip route` for `R3`
 
 ```
     S    192.168.1.0/24 [1/0] via 192.168.3.1
@@ -405,7 +405,7 @@ R4(config)#ip route 192.168.4.0 255.255.255.0 192.168.5.1
     S    192.168.6.0/24 [1/0] via 192.168.5.2
 ```
 
-* `show ip route` for `R4`
+- `show ip route` for `R4`
 
 ```
     S    192.168.1.0/24 [1/0] via 192.168.7.1
@@ -419,7 +419,7 @@ R4(config)#ip route 192.168.4.0 255.255.255.0 192.168.5.1
 
 ### `PC1` -> `PC3`
 
-* `ping 192.168.4.10`
+- `ping 192.168.4.10`
 
 ```
 Pinging 192.168.4.10 with 32 bytes of data:
@@ -433,7 +433,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 1ms, Average = 1ms
 ```
 
-* `tracert 192.168.4.10`
+- `tracert 192.168.4.10`
 
 ```
 Tracing route to 192.168.4.10 over a maximum of 30 hops:
@@ -446,7 +446,7 @@ Trace complete.
 
 ### `PC1` -> `PC4`
 
-* `ping 192.168.6.10`
+- `ping 192.168.6.10`
 
 ```
 Pinging 192.168.6.10 with 32 bytes of data:
@@ -460,7 +460,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 2ms, Average = 1ms
 ```
 
-* `tracert 192.168.6.10`
+- `tracert 192.168.6.10`
 
 ```
 Tracing route to 192.168.6.10 over a maximum of 30 hops:
@@ -473,7 +473,7 @@ Trace complete.
 
 ### `PC3` -> `PC1`
 
-* `ping 192.168.1.10`
+- `ping 192.168.1.10`
 
 ```
 Pinging 192.168.1.10 with 32 bytes of data:
@@ -487,7 +487,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 8ms, Average = 3ms
 ```
 
-* `tracert 192.168.1.10`
+- `tracert 192.168.1.10`
 
 ```
 Tracing route to 192.168.1.10 over a maximum of 30 hops:
@@ -500,7 +500,7 @@ Trace complete.
 
 ### `PC3` -> `PC4`
 
-* `ping 192.168.6.10`
+- `ping 192.168.6.10`
 
 ```
 Pinging 192.168.6.10 with 32 bytes of data:
@@ -514,7 +514,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 6ms, Average = 3ms
 ```
 
-* `tracert 192.168.6.10`
+- `tracert 192.168.6.10`
 
 ```
 Tracing route to 192.168.6.10 over a maximum of 30 hops:
@@ -526,7 +526,7 @@ Trace complete.
 
 ### `PC4` -> `PC1`
 
-* `ping 192.168.1.10`
+- `ping 192.168.1.10`
 
 ```
 Pinging 192.168.1.10 with 32 bytes of data:
@@ -540,7 +540,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 6ms, Average = 2ms
 ```
 
-* `tracert 192.168.1.10`
+- `tracert 192.168.1.10`
 
 ```
 Tracing route to 192.168.1.10 over a maximum of 30 hops:
@@ -553,7 +553,7 @@ Trace complete.
 
 ### `PC4` -> `PC3`
 
-* `ping 192.168.4.10`
+- `ping 192.168.4.10`
 
 ```
 Pinging 192.168.4.10 with 32 bytes of data:
@@ -567,7 +567,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 2ms, Average = 1ms
 ```
 
-* `tracert 192.168.4.10`
+- `tracert 192.168.4.10`
 
 ```
 Tracing route to 192.168.4.10 over a maximum of 30 hops:

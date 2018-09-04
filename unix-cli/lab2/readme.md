@@ -4,7 +4,7 @@ low-level file write/open on `C++`, `dtrace` command
 
 ## result
 
-* `bash run.sh`:
+- `bash run.sh`:
 
 ```
 #compiled.

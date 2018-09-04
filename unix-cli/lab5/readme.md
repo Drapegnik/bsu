@@ -26,21 +26,8 @@ own `shell`
 
 > `wheel` + `shell` = `sheel` :no_bicycles: :bug: :laughing:
 
-* **simple**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5
-  (master *)$ make run rm -rf build mkdir build g++ -Wall sheel.cpp utils.cpp -o
-  build/sheel ./build/sheel sheel> echo lets start lets start sheel> npx cowsay
-  -- my shell is work! npx: installed 9 in 2.339s ___________________ < my shell
-  is work! > ------------------- \ ^__^ \ (oo)\_______ (__)\ )\/\ ||----w | ||
-  || sheel> q bye! Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5
-  (master *)$`
+- **simple**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run rm -rf build mkdir build g++ -Wall sheel.cpp utils.cpp -o build/sheel ./build/sheel sheel> echo lets start lets start sheel> npx cowsay -- my shell is work! npx: installed 9 in 2.339s ___________________ < my shell is work! > ------------------- \ ^__^ \ (oo)\_______ (__)\ )\/\ ||----w | || || sheel> q bye! Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$`
 
-* **pipe**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master
-  *)$ make run rm -rf build mkdir build g++ -Wall -std=c++11 sheel.cpp utils.cpp
-  -o build/sheel ./build/sheel sheel> ls | grep .cpp sheel.cpp utils.cpp sheel>
-  exit bye! Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$`
+- **pipe**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run rm -rf build mkdir build g++ -Wall -std=c++11 sheel.cpp utils.cpp -o build/sheel ./build/sheel sheel> ls | grep .cpp sheel.cpp utils.cpp sheel> exit bye! Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$`
 
-* **redirect**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5
-  (master *)$ make run rm -rf build mkdir build g++ -Wall -std=c++11 sheel.cpp
-  utils.cpp -o build/sheel ./build/sheel sheel> echo test redirect > test.txt
-  sheel> cat test.txt test redirect sheel> ^D
-  Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$`
+- **redirect**: `sh Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$ make run rm -rf build mkdir build g++ -Wall -std=c++11 sheel.cpp utils.cpp -o build/sheel ./build/sheel sheel> echo test redirect > test.txt sheel> cat test.txt test redirect sheel> ^D Drapegnik@MacBook-Pro-Ivan:~/projects/bsu/unix-cli/lab5 (master *)$`

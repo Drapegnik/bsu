@@ -1,12 +1,12 @@
 # lab6
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab6)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab6)
 
 ## task1 - nets size and adressing
 
-* `net1` ~ `5000`
+- `net1` ~ `5000`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -18,7 +18,7 @@
 | max addr  | `173.213.223.254`  |
 | broadcast | `173.213.223.255`  |
 
-* `net2` ~ `2000`
+- `net2` ~ `2000`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -30,7 +30,7 @@
 | max addr  | `173.213.231.254`  |
 | broadcast | `173.213.231.255`  |
 
-* `net3` ~ `1950`
+- `net3` ~ `1950`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -42,7 +42,7 @@
 | max addr  | `173.213.239.254`  |
 | broadcast | `173.213.239.255`  |
 
-* `net4` ~ `800`
+- `net4` ~ `800`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -54,7 +54,7 @@
 | max addr  | `173.213.243.254`  |
 | broadcast | `173.213.243.255`  |
 
-* `net5` ~ `2`
+- `net5` ~ `2`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -66,7 +66,7 @@
 | max addr  | `173.213.244.2`    |
 | broadcast | `173.213.244.3`    |
 
-* `net6` ~ `2`
+- `net6` ~ `2`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -78,7 +78,7 @@
 | max addr  | `173.213.244.6`    |
 | broadcast | `173.213.244.7`    |
 
-* `net7` ~ `2`
+- `net7` ~ `2`
 
 | name      | value              |
 | --------- | ------------------ |
@@ -112,7 +112,7 @@ do same with `R2`, `R3`, `S1`, `S2`, `S3`
 
 ## task4 - ip configs
 
-* `PC0` in `net1`
+- `PC0` in `net1`
 
 ```
    Link-local IPv6 Address.........: FE80::2D0:BCFF:FEC7:C1BC
@@ -121,7 +121,7 @@ do same with `R2`, `R3`, `S1`, `S2`, `S3`
    Default Gateway.................: 173.213.192.4
 ```
 
-* `PC1` in `net1`
+- `PC1` in `net1`
 
 ```
    Link-local IPv6 Address.........: FE80::290:CFF:FEBA:3B20
@@ -130,7 +130,7 @@ do same with `R2`, `R3`, `S1`, `S2`, `S3`
    Default Gateway.................: 173.213.192.4
 ```
 
-* `PC2` in `net1`
+- `PC2` in `net1`
 
 ```
    Link-local IPv6 Address.........: FE80::260:70FF:FE70:A577
@@ -139,7 +139,7 @@ do same with `R2`, `R3`, `S1`, `S2`, `S3`
    Default Gateway.................: 173.213.192.4
 ```
 
-* `R4` in `net1`
+- `R4` in `net1`
 
 ```
 R4(config)#interface FastEthernet0/0
@@ -148,7 +148,7 @@ R4(config-if)#no shutdown
 R4(config-if)#exit
 ```
 
-* `PC3` in `net2`
+- `PC3` in `net2`
 
 ```
    Link-local IPv6 Address.........: FE80::210:11FF:FE8A:2C21
@@ -157,7 +157,7 @@ R4(config-if)#exit
    Default Gateway.................: 173.213.224.4
 ```
 
-* `PC4` in `net2`
+- `PC4` in `net2`
 
 ```
    Link-local IPv6 Address.........: FE80::260:3EFF:FE48:C5E
@@ -166,7 +166,7 @@ R4(config-if)#exit
    Default Gateway.................: 173.213.224.4
 ```
 
-* `PC5` in `net2`
+- `PC5` in `net2`
 
 ```
    Link-local IPv6 Address.........: FE80::260:47FF:FE31:C766
@@ -175,7 +175,7 @@ R4(config-if)#exit
    Default Gateway.................: 173.213.224.4
 ```
 
-* `R2` in `net2`
+- `R2` in `net2`
 
 ```
 R2(config)#interface FastEthernet0/0
@@ -184,7 +184,7 @@ R2(config-if)#no shutdown
 R2(config-if)#exit
 ```
 
-* `PC6` in `net3`
+- `PC6` in `net3`
 
 ```
    Link-local IPv6 Address.........: FE80::201:96FF:FE12:8E6E
@@ -193,7 +193,7 @@ R2(config-if)#exit
    Default Gateway.................: 173.213.232.4
 ```
 
-* `PC7` in `net3`
+- `PC7` in `net3`
 
 ```
    Link-local IPv6 Address.........: FE80::202:17FF:FEB4:861
@@ -202,7 +202,7 @@ R2(config-if)#exit
    Default Gateway.................: 173.213.232.4
 ```
 
-* `PC8` in `net3`
+- `PC8` in `net3`
 
 ```
    Link-local IPv6 Address.........: FE80::2D0:BAFF:FE19:210E
@@ -211,7 +211,7 @@ R2(config-if)#exit
    Default Gateway.................: 173.213.232.4
 ```
 
-* `R3` in `net3`
+- `R3` in `net3`
 
 ```
 R3(config)#interface FastEthernet0/0
@@ -220,7 +220,7 @@ R3(config-if)#no shutdown
 R3(config-if)#exit
 ```
 
-* `PC9` in `net4`
+- `PC9` in `net4`
 
 ```
    Link-local IPv6 Address.........: FE80::201:96FF:FE12:8E6E
@@ -229,7 +229,7 @@ R3(config-if)#exit
    Default Gateway.................: 173.213.240.4
 ```
 
-* `PC10` in `net4`
+- `PC10` in `net4`
 
 ```
    Link-local IPv6 Address.........: FE80::203:E4FF:FE0B:6199
@@ -238,7 +238,7 @@ R3(config-if)#exit
    Default Gateway.................: 173.213.240.4
 ```
 
-* `PC11` in `net4`
+- `PC11` in `net4`
 
 ```
    Link-local IPv6 Address.........: FE80::260:2FFF:FEB8:47D
@@ -247,7 +247,7 @@ R3(config-if)#exit
    Default Gateway.................: 173.213.240.4
 ```
 
-* `R1` in `net4`
+- `R1` in `net4`
 
 ```
 R1(config)#interface FastEthernet0/0
@@ -256,7 +256,7 @@ R1(config-if)#no shutdown
 R1(config-if)#exit
 ```
 
-* `R1` in `net5`
+- `R1` in `net5`
 
 ```
 R1(config)#interface Serial0/0
@@ -265,7 +265,7 @@ R1(config-if)#no shutdown
 R1(config-if)#exit
 ```
 
-* `R3` in `net5`
+- `R3` in `net5`
 
 ```
 R3(config)#interface Serial0/3
@@ -274,7 +274,7 @@ R3(config-if)#no shutdown
 R3(config-if)#exit
 ```
 
-* `R2` in `net6`
+- `R2` in `net6`
 
 ```
 R2(config)#interface Serial0/0
@@ -283,7 +283,7 @@ R2(config-if)#no shutdown
 R2(config-if)#exit
 ```
 
-* `R3` in `net6`
+- `R3` in `net6`
 
 ```
 R3(config)#interface Serial0/0
@@ -292,7 +292,7 @@ R3(config-if)#no shutdown
 R3(config-if)#exit
 ```
 
-* `R4` in `net7`
+- `R4` in `net7`
 
 ```
 R4(config)#interface Serial0/0
@@ -301,7 +301,7 @@ R4(config-if)#no shutdown
 R4(config-if)#exit
 ```
 
-* `R3` in `net7`
+- `R3` in `net7`
 
 ```
 R3(config)#interface Serial0/2
@@ -312,7 +312,7 @@ R3(config-if)#exit
 
 ## task5 - static routes
 
-* set routes from `R1` to `net1`, `net2`, `net3` via `R3` :
+- set routes from `R1` to `net1`, `net2`, `net3` via `R3` :
 
 ```
 R1(config)#ip route 173.213.192.0 255.255.224.0 173.213.244.2
@@ -320,7 +320,7 @@ R1(config)#ip route 173.213.224.0 255.255.248.0 173.213.244.2
 R1(config)#ip route 173.213.232.0 255.255.248.0 173.213.244.2
 ```
 
-* `show ip route` for `R1`
+- `show ip route` for `R1`
 
 ```
         173.213.0.0/16 is variably subnetted, 5 subnets, 4 masks
@@ -331,7 +331,7 @@ R1(config)#ip route 173.213.232.0 255.255.248.0 173.213.244.2
    C       173.213.244.0/30 is directly connected, Serial0/0
 ```
 
-* set routes from `R2` to `net1`, `net3`, `net4` via `R3`:
+- set routes from `R2` to `net1`, `net3`, `net4` via `R3`:
 
 ```
 R2(config)#ip route 173.213.192.0 255.255.224.0 173.213.244.6
@@ -339,7 +339,7 @@ R2(config)#ip route 173.213.232.0 255.255.248.0 173.213.244.6
 R2(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.6
 ```
 
-* `show ip route` for `R2`
+- `show ip route` for `R2`
 
 ```
         173.213.0.0/16 is variably subnetted, 5 subnets, 4 masks
@@ -350,7 +350,7 @@ R2(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.6
    C       173.213.244.4/30 is directly connected, Serial0/0
 ```
 
-* set routes from `R4` to `net2`, `net3`, `net4` via `R3`:
+- set routes from `R4` to `net2`, `net3`, `net4` via `R3`:
 
 ```
 R4(config)#ip route 173.213.224.0 255.255.248.0 173.213.244.10
@@ -358,7 +358,7 @@ R4(config)#ip route 173.213.232.0 255.255.248.0 173.213.244.10
 R4(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.10
 ```
 
-* `show ip route` for `R2`
+- `show ip route` for `R2`
 
 ```
         173.213.0.0/16 is variably subnetted, 5 subnets, 4 masks
@@ -369,7 +369,7 @@ R4(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.10
    C       173.213.244.8/30 is directly connected, Serial0/0
 ```
 
-* set routes from `R3` to `net1`, `net2`, `net4` via `R4`, `R2` and `R1`
+- set routes from `R3` to `net1`, `net2`, `net4` via `R4`, `R2` and `R1`
   respectively:
 
 ```
@@ -378,7 +378,7 @@ R3(config)#ip route 173.213.224.0 255.255.248.0 173.213.244.5
 R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 ```
 
-* `show ip route` for `R3`
+- `show ip route` for `R3`
 
 ```
         173.213.0.0/16 is variably subnetted, 7 subnets, 4 masks
@@ -395,7 +395,7 @@ R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 
 ### `net1` -> `net2` (`PC0` -> `PC3`)
 
-* `ping 173.213.224.1`
+- `ping 173.213.224.1`
 
 ```
    Ping statistics for 173.213.224.1:
@@ -406,7 +406,7 @@ R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 
 ### `net1` -> `net3` (`PC0` -> `PC7`)
 
-* `ping 173.213.232.2`
+- `ping 173.213.232.2`
 
 ```
    Ping statistics for 173.213.232.2:
@@ -417,7 +417,7 @@ R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 
 ### `net1` -> `net4` (`PC1` -> `PC11`)
 
-* `ping 173.213.240.3`
+- `ping 173.213.240.3`
 
 ```
    Ping statistics for 173.213.240.3:
@@ -428,7 +428,7 @@ R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 
 ### `net4` -> `net2` (`PC10` -> `PC5`)
 
-* `ping 173.213.224.3`
+- `ping 173.213.224.3`
 
 ```
    Ping statistics for 173.213.224.3:
@@ -439,7 +439,7 @@ R3(config)#ip route 173.213.240.0 255.255.252.0 173.213.244.1
 
 ### `net3` -> `net1` (`PC6` -> `PC0`)
 
-* `ping 173.213.192.1`
+- `ping 173.213.192.1`
 
 ```
    Ping statistics for 173.213.192.1:

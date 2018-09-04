@@ -4,10 +4,10 @@
 
 ## Цели
 
-* Настроить преобразование адресов портов (_NAPT_ или _PAT_) для преобразования
+- Настроить преобразование адресов портов (_NAPT_ или _PAT_) для преобразования
   внутренних _IP_-адресов, как правило, частных, во внешние публичные адреса.
-* Проверить соединение.
-* Проверить статистику _NAPT_.
+- Проверить соединение.
+- Проверить статистику _NAPT_.
 
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1494845131/networks-11-1.png)
 
@@ -33,14 +33,14 @@
 
 ## Вариант
 
-* `net` ~ `10.162.140.0/24`
-* `Gateway` ~ `176.141.0.1/30`
-* `ISP` ~ `176.141.0.2/30`
-* `loopback` ~ `172.16.1.18/32`
+- `net` ~ `10.162.140.0/24`
+- `Gateway` ~ `176.141.0.1/30`
+- `ISP` ~ `176.141.0.2/30`
+- `loopback` ~ `172.16.1.18/32`
 
 ### Выполнение
 
-* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab11/report.md) -
+- [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab11/report.md) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab11/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab11/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

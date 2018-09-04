@@ -10,4 +10,4 @@
 *.layout
 
 .idea/
-**build**/
+*build*/

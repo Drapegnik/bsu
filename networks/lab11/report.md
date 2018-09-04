@@ -1,8 +1,8 @@
 # lab11
 
-* _Пажитных Иван Павлович_
-* _3 курс, 1 группа, МСС_
-* [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab11)
+- _Пажитных Иван Павлович_
+- _3 курс, 1 группа, МСС_
+- [github lab link](https://github.com/Drapegnik/bsu/tree/master/networks/lab11)
 
 ## task0 - schema
 
@@ -10,7 +10,7 @@
 
 ## task1 - ip configs
 
-* `PC1`:
+- `PC1`:
 
 ```
    Link-local IPv6 Address.........: FE80::260:2FFF:FE42:BC29
@@ -19,7 +19,7 @@
    Default Gateway.................: 10.162.140.1
 ```
 
-* `PC2`:
+- `PC2`:
 
 ```
    Link-local IPv6 Address.........: FE80::204:9AFF:FEAB:C88
@@ -28,7 +28,7 @@
    Default Gateway.................: 10.162.140.1
 ```
 
-* `Gateway`:
+- `Gateway`:
 
 ```
 Gateway#config tGateway(config)#interface fast
@@ -43,7 +43,7 @@ Gateway(config-if)#ip address 176.141.0.1 255.255.255.252
 Gateway(config-if)#exit
 ```
 
-* `ISP`:
+- `ISP`:
 
 ```
 ISP(config)#interface serial0/1
@@ -59,7 +59,7 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 
 ### `PC1` -> `Gateway`:
 
-* `ping 10.162.140.1`
+- `ping 10.162.140.1`
 
 ```
 	Reply from 10.162.140.1: bytes=32 time=2ms TTL=255
@@ -74,7 +74,7 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 
 ### `PC2` -> `Gateway`:
 
-* `ping 10.162.140.1`
+- `ping 10.162.140.1`
 
 ```
 	Reply from 10.162.140.1: bytes=32 time=1ms TTL=255
@@ -97,13 +97,13 @@ ISP(config-if)#ip address 172.16.1.18 255.255.255.255
 
 ### `Gateway`:
 
-* default gateway:
+- default gateway:
 
 ```
 Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 ```
 
-* `show ip route`:
+- `show ip route`:
 
 ```
 	Gateway of last resort is 176.141.0.2 to network 0.0.0.0
@@ -116,7 +116,7 @@ Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 
 #### `PC1` -> `ISP`
 
-* `ping 176.141.0.2`:
+- `ping 176.141.0.2`:
 
 ```
 	Request timed out.
@@ -129,7 +129,7 @@ Gateway(config)#ip route 0.0.0.0 0.0.0.0 176.141.0.2
 
 ### `ISP`
 
-* static route:
+- static route:
 
 ```
 ISP(config)#ip route 10.162.140.0 255.255.255.0 176.141.0.1
@@ -137,7 +137,7 @@ ISP(config)#ip route 10.162.140.0 255.255.255.0 176.141.0.1
 
 #### `PC1` -> `ISP`
 
-* `ping 176.141.0.2`:
+- `ping 176.141.0.2`:
 
 ```
 	Reply from 176.141.0.2: bytes=32 time=5ms TTL=255
@@ -152,7 +152,7 @@ ISP(config)#ip route 10.162.140.0 255.255.255.0 176.141.0.1
 
 ## task4 - _NAT_ config
 
-* `Gateway`:
+- `Gateway`:
 
 ```
 Gateway(config)#ip nat pool public_access 176.141.0.1 176.141.0.1 netmask 255.255.255.252
@@ -169,7 +169,7 @@ Gateway(config-if)#exit
 
 ### `PC1` -> `loopback`:
 
-* `ping 172.16.1.18`:
+- `ping 172.16.1.18`:
 
 ```
 Reply from 172.16.1.18: bytes=32 time=94ms TTL=254
@@ -185,7 +185,7 @@ Approximate round trip times in milli-seconds:
 
 ### `PC2` -> `loopback`:
 
-* `ping 172.16.1.18`:
+- `ping 172.16.1.18`:
 
 ```
 Reply from 172.16.1.18: bytes=32 time=93ms TTL=254
@@ -203,7 +203,7 @@ Approximate round trip times in milli-seconds:
 
 ### Gateway
 
-* `show ip nat statistics`
+- `show ip nat statistics`
 
 ```
 	Total translations: 0 (0 static, 0 dynamic, 0 extended)

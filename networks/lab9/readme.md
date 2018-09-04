@@ -8,7 +8,7 @@
 
 Конфигурирование _DHCP_-сервера. 18 варинат
 
-* net ~ `176.141.64.0/24`
+- net ~ `176.141.64.0/24`
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491837213/networks9-1.png)
 
 1. Реализовать схему подключения группы компьютеров сети 3 к _DHCP_-серверу.
@@ -20,8 +20,8 @@
    который будет распределяться между узлами в сетях и выдаваемую
    _DHCP_-сервером. Скриншотами укажите настройки _DHCP_-сервера.
 5. Приведите скриншоты таблиц маршрутизации.
-6. На одном из `PC` освободите *IP*–адрес и обновите его. Отразите в отчете,
-   какой *IP*–адрес был до обновления и какой _IP_-адрес стал после обновления.
+6. На одном из `PC` освободите _IP_–адрес и обновите его. Отразите в отчете,
+   какой _IP_–адрес был до обновления и какой _IP_-адрес стал после обновления.
 
 ### part2
 
@@ -40,7 +40,7 @@
 
 ### Выполнение
 
-* [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab9/report.md) -
+- [`report.md`](https://github.com/drapegnik/bsu/tree/master/networks/lab9/report.md) -
   отчёт
-* [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab9/src) -
+- [`src/`](https://github.com/drapegnik/bsu/tree/master/networks/lab9/src) -
   `.pkt` сценарии для **_Packet Tracer'a_**

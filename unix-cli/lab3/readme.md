@@ -10,7 +10,7 @@ bash redirections & pipelines
 
 ## result
 
-* `sh run.sh`:
+- `sh run.sh`:
 
 ```
   	std::cout << "" is true! ())))))"

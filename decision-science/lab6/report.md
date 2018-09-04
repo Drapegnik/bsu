@@ -4,7 +4,7 @@ Pazhitnykh Ivan
 
 ## task1
 
-* Build net graphics and find all time params for:
+- Build net graphics and find all time params for:
 
 | Job Name | time | depends of    |
 | -------- | ---- | ------------- |
@@ -18,7 +18,7 @@ Pazhitnykh Ivan
 | `H`      | `5`  | `B`, `C`, `E` |
 | `I`      | `7`  | `B`, `C`, `E` |
 
-* result:
+- result:
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab6/task1.in.gv.png)
 
@@ -126,7 +126,7 @@ Jobs guaranteed reserves:
 
 ## task2
 
-* Find all time params for net graphics:
+- Find all time params for net graphics:
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1492564649/ds-lab6-task2.png)
 
 ```

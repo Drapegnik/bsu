@@ -4,9 +4,9 @@ Pazhitnykh Ivan
 
 ## task1
 
-* Find maximum flow in graph:
+- Find maximum flow in graph:
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task1.png)
-* table with marks by iteration:
+- table with marks by iteration:
 
 | s             | t         | v1       | v2       | v3        |
 | ------------- | --------- | -------- | -------- | --------- |
@@ -16,7 +16,7 @@ Pazhitnykh Ivan
 | `(None, inf)` | `(v3, 1)` | `None`   | `(s, 1)` | `(v2, 1)` |
 | `(None, inf)` | `None`    | `None`   | `None`   | `None`    |
 
-* maximal flow = 6:
+- maximal flow = 6:
 
 ```
 	(s)-2->(v1) - [2]
@@ -34,9 +34,9 @@ Pazhitnykh Ivan
 
 ## task2
 
-* Find maximum flow in graph:
+- Find maximum flow in graph:
   ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491579189/ds-lab4-task2.png)
-* initial flow:
+- initial flow:
 
 ```
 	(s)-9->(v1) - [7]
@@ -55,7 +55,7 @@ Pazhitnykh Ivan
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task2-1.gv.png)
 
-* table with marks by iteration:
+- table with marks by iteration:
 
 | s             | t         | v1       | v2       | v3        | v4        | v5        |
 | ------------- | --------- | -------- | -------- | --------- | --------- | --------- |
@@ -63,7 +63,7 @@ Pazhitnykh Ivan
 | `(None, inf)` | `(v3, 1)` | `(s, 2)` | `(s, 2)` | `(v5, 1)` | `(v1, 2)` | `(v1, 2)` |
 | `(None, inf)` | `None`    | `(s, 1)` | `(s, 2)` | `None`    | `(v1, 1)` | `(v1, 1)` |
 
-* maximal flow = 14:
+- maximal flow = 14:
 
 ```
 	(s)-9->(v1) - [8]
@@ -84,7 +84,7 @@ Pazhitnykh Ivan
 
 ## task3
 
-* Solve Assignment problem with coast matrix:
+- Solve Assignment problem with coast matrix:
 
 ```
 [[8 9 7 5 0 4]
@@ -95,7 +95,7 @@ Pazhitnykh Ivan
  [2 4 6 8 3 7]]
 ```
 
-* simplified matrix:
+- simplified matrix:
 
 ```
 [[8 9 7 5 0 4]
@@ -106,7 +106,7 @@ Pazhitnykh Ivan
  [0 2 4 6 1 5]]
 ```
 
-* table with marks on last iterations of Ford-Fulkerson:
+- table with marks on last iterations of Ford-Fulkerson:
 
 | s             | s0        | s1        | s2     | s3       | s4       | s5     | t      | t0     | t1     | t2     | t3     | t4        | t5        |
 | ------------- | --------- | --------- | ------ | -------- | -------- | ------ | ------ | ------ | ------ | ------ | ------ | --------- | --------- |
@@ -115,7 +115,7 @@ Pazhitnykh Ivan
 | `(None, inf)` | `(t4, 1)` | `(t5, 1)` | `None` | `(s, 1)` | `None`   | `None` | `None` | `None` | `None` | `None` | `None` | `(s3, 1)` | `(s3, 1)` |
 | `(None, inf)` | `None`    | `None`    | `None` | `None`   | `None`   | `None` | `None` | `None` | `None` | `None` | `None` | `None`    | `None`    |
 
-* iteration 1, flow=3:
+- iteration 1, flow=3:
 
 ```
 [[8 9 7 5 0 4]
@@ -128,7 +128,7 @@ Pazhitnykh Ivan
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task3-1.gv.png)
 
-* iteration 2, flow=5:
+- iteration 2, flow=5:
 
 ```
 [[5 6 4 2 0 1]
@@ -141,7 +141,7 @@ Pazhitnykh Ivan
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task3-2.gv.png)
 
-* iteration 3, flow=5:
+- iteration 3, flow=5:
 
 ```
 [[4 5 3 1 0 0]
@@ -154,7 +154,7 @@ Pazhitnykh Ivan
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task3-3.gv.png)
 
-* iteration 4, flow=6:
+- iteration 4, flow=6:
 
 ```
 [[3 4 2 0 0 0]
@@ -167,7 +167,7 @@ Pazhitnykh Ivan
 
 ![](https://raw.githubusercontent.com/drapegnik/bsu/master/decision-science/lab4/out/task3-4.gv.png)
 
-* cost value:
+- cost value:
 
 ```
 (s0)-1->(t3)
