@@ -1,8 +1,8 @@
-# radasm
+# 👴🏻 RadAsm
 
 Оконные приложения на ассемблере
 
-> Coming soon...
+> check out tasks on [cloud](https://cloud.mail.ru/public/6dHi/UugEXFtoH/semester-2/RadASM/)
 
 ---
 

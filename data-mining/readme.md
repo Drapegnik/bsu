@@ -1,4 +1,4 @@
-# Introduction to Computer and Data Mining
+# ⛏️ Introduction to Computer and Data Mining
 
 Введение в компьютерный и интеллектуальный анализ данных
 

@@ -9,93 +9,93 @@
 
 ---
 
-- [Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B)
-- [Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript)
-- [Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`Assembly`](https://github.com/Drapegnik/bsu/search?l=Assembly)
-- [Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
-- [Функциональный Анализ (Functional analysis)](https://github.com/Drapegnik/bsu/tree/master/fun) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
-- [Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
-- [Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `mpi`
-- [Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - [`R`](https://github.com/Drapegnik/bsu/search?l=R)
-- [Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
-- [Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - `UML`, [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`MEAN`](http://mean.io/) stack with [`TypeScript`](https://github.com/Drapegnik/bsu/search?l=TypeScript)
-- [Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python)
-- [Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
-- [Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
-- [Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
-- [Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`](https://facebook.github.io/react-native/)
-- [Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
-- [Интелектуальныеинформационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
+- [⏱️ Теория Алгоритмов (Theory of algorithms)](https://github.com/Drapegnik/algorithms) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B)
+- [🕹️ Учебная практика (Educational Practice)](https://github.com/Drapegnik/educational_practice) - [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript)
+- [💾 Программирование (Programming)](https://github.com/Drapegnik/bsu/tree/master/programming) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Java`](https://github.com/Drapegnik/bsu/search?l=java), [`Assembly`](https://github.com/Drapegnik/bsu/search?l=Assembly)
+- [💯 Вычислительные Методы Алгебры & Методы Численного Анализа (Numerical Analysis)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+- [🕴️ Функциональный Анализ (Functional analysis)](https://github.com/Drapegnik/bsu/tree/master/fun) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+- [📃 Научные работы (Science works)](https://github.com/Drapegnik/bsu/tree/master/science-works) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX)
+- [🏠 Архитектура Компьютеров (Architecture)](https://github.com/Drapegnik/bsu/tree/master/architecture) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), `mpi`
+- [⛏️ Интеллектуальный анализ данных (Data Mining)](https://github.com/Drapegnik/bsu/tree/master/data-mining) - [`R`](https://github.com/Drapegnik/bsu/search?l=R)
+- [🌐 Компьютерные сети (Networks)](https://github.com/Drapegnik/bsu/tree/master/networks) - [Cisco Packet Tracer](https://en.wikipedia.org/wiki/Packet_Tracer), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+- [📜 Технология программирования (Programming Technology)](https://github.com/Drapegnik/bsu/tree/master/technology) - `UML`, [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`MEAN`](http://mean.io/) stack with [`TypeScript`](https://github.com/Drapegnik/bsu/search?l=TypeScript)
+- [🔍 Исследование операций (Decision Science)](https://github.com/Drapegnik/bsu/tree/master/decision-science) - [`TeX`](https://github.com/Drapegnik/bsu/search?l=TeX), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python)
+- [📟 Спецкурс по Linux, командной строке (Linux, unix, cli, git)](https://github.com/Drapegnik/bsu/tree/master/unix-cli) - `C`, [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`bash`](https://github.com/Drapegnik/bsu/search?l=Shell)
+- [🗄️ Системы управления базами данных (Database managment systems)](https://github.com/Drapegnik/bsu/tree/master/dms) - `Oracle`, [`SQL`](https://github.com/Drapegnik/bsu/search?l=SQL), `UML`
+- [🗿 Имитационное и статистическое моделирование (Statistical Modeling)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
+- [🔏 Компьютерная безопасность распределенных систем (Cryptography)](https://github.com/Drapegnik/bsu/tree/master/cryptography) - [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React Native`](https://facebook.github.io/react-native/)
+- [📈 Параллельные и распределенные вычисления (Parallel Computing)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing) - [`C++`](https://github.com/Drapegnik/bsu/search?l=C%2B%2B), [`Python`](https://github.com/Drapegnik/bsu/search?l=Python), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook), `openmp`, `mpi`
+- [🧠 Интеллектуальные информационные системы (Artificial Intelligence)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence) - [`JavaScript`](https://github.com/Drapegnik/bsu/search?l=JavaScript) with [`React`](https://reactjs.org/), [`ipython`](https://github.com/Drapegnik/bsu/search?l=Jupyter%20Notebook)
 
 ---
 
 <details>
-<summary>semester 1</summary>
+<summary>1️⃣ semester 1</summary>
 
-- [C++ Core](https://github.com/Drapegnik/bsu/tree/master/programming/c++)
-- [WinApi (_Программирование оконных приложений для Windows_)](https://github.com/Drapegnik/bsu/tree/master/programming/winapi)
-
-</details>
-
-<details>
-<summary>semester 2</summary>
-
-- [Inline Assembly (_Ассемблерные вставки_)](https://github.com/Drapegnik/bsu/tree/master/programming/inline-assembly)
-- [Floating-point unit programming (_Программирование на сопроцессоре_)](https://github.com/Drapegnik/bsu/tree/master/programming/fpu)
+- [⚙️ C++ Core](https://github.com/Drapegnik/bsu/tree/master/programming/c++)
+- [📦 WinApi (_Программирование оконных приложений для Windows_)](https://github.com/Drapegnik/bsu/tree/master/programming/winapi)
 
 </details>
 
 <details>
-<summary>semester 3</summary>
+<summary>2️⃣ semester 2</summary>
 
-- [Assembly window applications (_Оконные приложения на ассемблере_)](https://github.com/Drapegnik/bsu/tree/master/programming/radasm)
-- [Java Core](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)
-- [Data Mining (_Интеллектуальный анализ данных_)](https://github.com/Drapegnik/bsu/tree/master/data-mining)
-- [Numerical analysis (_Вычислительные Методы Алгебры_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem3)
+- [💉 Inline Assembly (_Ассемблерные вставки_)](https://github.com/Drapegnik/bsu/tree/master/programming/inline-assembly)
+- [🏊‍ Floating-point unit programming (_Программирование на сопроцессоре_)](https://github.com/Drapegnik/bsu/tree/master/programming/fpu)
 
 </details>
 
 <details>
-<summary>semester 4</summary>
+<summary>3️⃣ semester 3</summary>
 
-- [Algorithms (_Теория Алгоритмов_)](https://github.com/Drapegnik/algorithms)
-- [Educational Practice (_Учебная практика_)](https://github.com/Drapegnik/educational_practice)
-- [Numerical analysis (_Методы Численного Анализа_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem4)
-- [Functional analysis (_Функциональный Анализ_)](https://github.com/Drapegnik/bsu/tree/master/fun)
-
-</details>
-
-<details>
-<summary>semester 5</summary>
-
-- [Architecture (_Архитектура Компьютеров_)](https://github.com/Drapegnik/bsu/tree/master/architecture)
-- [Numerical analysis (_Методы Численного Анализа_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem5)
-- [Java Threads](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)
-- [Course project (_Курсовой проект_)](https://github.com/Drapegnik/bsu-science/releases/tag/v1.0.0)
+- [👴🏻 Assembly window applications (**RadAsm**) (_Оконные приложения на ассемблере_)](https://github.com/Drapegnik/bsu/tree/master/programming/radasm)
+- [♨️ Java Core](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem3)
+- [⛏️ Data Mining (_Интеллектуальный анализ данных_)](https://github.com/Drapegnik/bsu/tree/master/data-mining)
+- [💯 Numerical analysis (_Вычислительные Методы Алгебры_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem3)
 
 </details>
 
 <details>
-<summary>semester 6</summary>
+<summary>4️⃣ semester 4</summary>
 
-- [Java Web (_Спецкурс МСС_)](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6)
-- [Parallel Systems (_Распределенные и параллельные системы_)](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems)
-- [Networks (_Компьютерные сети_)](https://github.com/Drapegnik/bsu/tree/master/networks)
-- [Programming Technology (_Технология программирования_)](https://github.com/Drapegnik/bsu/tree/master/technology)
-- [Decision Science (_Исследование операций_)](https://github.com/Drapegnik/bsu/tree/master/decision-science)
-- [Course work (_Курсовая работа_)](https://github.com/lybros/Appa)
+- [⏱️ Algorithms (_Теория Алгоритмов_)](https://github.com/Drapegnik/algorithms)
+- [🕹️ Educational Practice (_Учебная практика_)](https://github.com/Drapegnik/educational_practice)
+- [💯 Numerical analysis (_Методы Численного Анализа_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem4)
+- [🕴️ Functional analysis (_Функциональный Анализ_)](https://github.com/Drapegnik/bsu/tree/master/fun)
 
 </details>
 
 <details>
-<summary>semester 7</summary>
+<summary>5️⃣ semester 5</summary>
 
-- [Unix-cli (_Спецкурс МСС_)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
-- [DMS (_СУБД_)](https://github.com/Drapegnik/bsu/tree/master/dms)
-- [Statistical Modeling (_Имитационное и статистическое моделирование_)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
-- [Cryptography (_Компьютерная безопасность распределенных систем_)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
-- [Parallel Computing (_Параллельные и распределенные вычисления_)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
-- [Artificial Intelligence (_Интелектуальныеинформационные системы_)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence)
+- [🏠 Architecture (_Архитектура Компьютеров_)](https://github.com/Drapegnik/bsu/tree/master/architecture)
+- [💯 Numerical analysis (_Методы Численного Анализа_)](https://github.com/Drapegnik/bsu/tree/master/numerical-analysis/sem5)
+- [♨️ Java Threads](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem5)
+- [📃 Course project (_Курсовой проект_)](https://github.com/Drapegnik/bsu-science/releases/tag/v1.0.0)
+
+</details>
+
+<details>
+<summary>6️⃣ semester 6</summary>
+
+- [♨️ Java Web (_Спецкурс МСС_)](https://github.com/Drapegnik/bsu/tree/master/programming/java/sem6)
+- [📈 Parallel Systems (_Распределенные и параллельные системы_)](https://github.com/Drapegnik/bsu/tree/master/programming/parallel-systems)
+- [🌐 Networks (_Компьютерные сети_)](https://github.com/Drapegnik/bsu/tree/master/networks)
+- [📜 Programming Technology (_Технология программирования_)](https://github.com/Drapegnik/bsu/tree/master/technology)
+- [🔍 Decision Science (_Исследование операций_)](https://github.com/Drapegnik/bsu/tree/master/decision-science)
+- [📃 Course work (_Курсовая работа_)](https://github.com/lybros/Appa)
+
+</details>
+
+<details>
+<summary>7️⃣ semester 7</summary>
+
+- [📟 Unix-cli (_Спецкурс МСС_)](https://github.com/Drapegnik/bsu/tree/master/unix-cli)
+- [🗄️ DMS (_СУБД_)](https://github.com/Drapegnik/bsu/tree/master/dms)
+- [🗿 Statistical Modeling (_Имитационное и статистическое моделирование_)](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling)
+- [🔏 Cryptography (_Компьютерная безопасность распределенных систем_)](https://github.com/Drapegnik/bsu/tree/master/cryptography)
+- [📈 Parallel Computing (_Параллельные и распределенные вычисления_)](https://github.com/Drapegnik/bsu/tree/master/parallel-computing)
+- [🧠 Artificial Intelligence (_Интелектуальныеинформационные системы_)](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence)
 
 </details>
 

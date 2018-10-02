@@ -1,4 +1,4 @@
-# Decision Science
+# 🔍 Decision Science
 
 Исследование операций
 

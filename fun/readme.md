@@ -1,4 +1,4 @@
-# Functional analysis
+# 🕴️ Functional analysis
 
 Функциональный анализ
 
