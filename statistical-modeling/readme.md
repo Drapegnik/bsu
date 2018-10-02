@@ -8,7 +8,10 @@
   Моделирование дискретных случайных величин
 - [lab3](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling/lab3) -
   Моделирование непрерывных случайных величин
+- [lab4](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling/lab4) - Метод Монте-Карло
+- [lab5](https://github.com/Drapegnik/bsu/tree/master/statistical-modeling/lab5) -
+  Система массового обслуживания **GPSS**
 
 ---
 
-_by [**@drapegnik**](https://github.com/Drapegnik), september'17 - may'18_
+_by [**@drapegnik**](https://github.com/Drapegnik), september'17 - december'17_

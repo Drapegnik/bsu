@@ -3,7 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e389bfae1c764befaa148dc378b7ed2a)](https://www.codacy.com/app/Drapegnik/bsu?utm_source=github.com&utm_medium=referral&utm_content=Drapegnik/bsu&utm_campaign=badger)
 [![Code Climate](https://codeclimate.com/github/Drapegnik/bsu/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/bsu)
 
-:mortar_board: Repository for university labs on
+🎓 Repository for university labs on
 [FAMCS](http://www.fpmi.bsu.by/en/main.aspx),
 [BSU](http://www.bsu.by/en/main.aspx)
 
@@ -139,14 +139,12 @@
 ---
 
 <details>
-<summary>cospects, books, lectures and exam answers</summary>
+<summary>my clouds: cospects, books, lectures and exam answers</summary>
 
-- [@**drapegnik**/dropbox/course1](https://www.dropbox.com/s/86aqcvrszo4po4a/1%20%D0%BA%D1%83%D1%80%D1%81.zip?dl=0)
-- [@**drapegnik**/dropbox/course2](https://www.dropbox.com/sh/wu8j7gnr6vy1rgx/AAAevmPlHhWM9RMC-PCNoa0ra?dl=0)
-- [@**drapegnik**/dropbox/course3](https://www.dropbox.com/sh/zn0zybhzrhuyt9v/AABTX7uIyH_5DxM3qQsV9aXba?dl=0)
-- [@**drapegnik**/dropbox/course4](https://www.dropbox.com/sh/8qwf8bdp0xdkiam/AABcWjfItB6tMAu1aZ7r9-qTa?dl=0)
+- [@**drapegnik**/cloud](http://bit.ly/bsu-famcs) - http://bit.ly/bsu-famcs
 - [@**cloud**/mailru/course1-course3](https://cloud.mail.ru/public/bvEP/tvuGNXiUZ/)
 - [@**isu**/gdrive/semester6](https://drive.google.com/drive/folders/0B7H3L_LmtN1HOVo1QXM3d1JvcVk)
+- [@**gdrive**/gos](https://drive.google.com/drive/folders/0B9CvVTgUiigZOS1tS2FCaVRoaG8)
 - [@**yadisk**](https://yadi.sk/d/FsMqju0sfn7Dp)
   </details>
 
