@@ -14,6 +14,8 @@
 
 > formatting `sql` with [sqlformat](https://sqlformat.org)
 
+> check out materials on [cloud](https://cloud.mail.ru/public/6dHi/UugEXFtoH/semester-7/%D0%A1%D0%A3%D0%91%D0%94/)
+
 ---
 
 _by [**@drapegnik**](https://github.com/Drapegnik), september'17 - december'17_

@@ -2,10 +2,10 @@
 
 Интелектуальныеинформационные системы
 
-- [lab1](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence/lab1) - Expert System.
-  Inference Engine (_База знаний. Машина логического вывода_)
-- [lab2](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence/lab2) - Recognition
-  problem (_Принятие решений по прецендентности. Задача распознавания_)
+- [lab1](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence/lab1) - Expert System. Inference Engine (_База знаний. Машина логического вывода_)
+- [lab2](https://github.com/Drapegnik/bsu/tree/master/artificial-intelligence/lab2) - Recognition problem (_Принятие решений по прецендентности. Задача распознавания_)
+
+> check out materials on [cloud](https://cloud.mail.ru/public/6dHi/UugEXFtoH/semester-7/%D0%98%D0%98%D0%A1/)
 
 ---
 
