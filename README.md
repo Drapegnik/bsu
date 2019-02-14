@@ -127,6 +127,7 @@
 - [@**mantergo**/BSU](https://github.com/mantergo/BSU) - _labs_
 - [@**daksenik**/FAMCS](https://github.com/daksenik/FAMCS) - _labs_
 - [@**TDiva**/FAN](https://github.com/TDiva/FAN) - _functional analysis homeworks_
+- [@**isysoi3**/BSU](https://github.com/isysoi3/BSU) - _labs_
 
 </details>
 
