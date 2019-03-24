@@ -10,3 +10,5 @@ from src.PolyLine import PolyLine
 from src.Ray import Ray
 from src.RegularShape import RegularShape
 from src.SymmetricShape import SymmetricShape
+
+shapes = [LineSegment, Line, Ray, PolyLine, AsymmetricShape, RegularShape, SymmetricShape, Circle, Ellipse]

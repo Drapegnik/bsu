@@ -8,17 +8,20 @@ from PyQt5.QtWidgets import QWidget
 
 from src import *
 
-
 class DrawArea(QWidget):
     def __init__(self, parent):
         super().__init__(parent)
         self.parent = parent
         self.setToolTip('This is a Draw Area!')
+        self.reset()
+        self.show()
+
+    def reset(self):
         self.points = []
         self.figures = []
         self.last_point = None
         self.drawling = False
-        self.show()
+        self.update()
 
     def paintEvent(self, e):
         qp = QPainter()

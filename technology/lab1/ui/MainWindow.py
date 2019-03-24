@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import sys
-
-from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QWidget
 
 from ui.DrawArea import DrawArea
@@ -27,9 +24,3 @@ class MainWindow(QWidget):
         self.draw_area.resize(self.size())
 
         self.show()
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = MainWindow()
-    sys.exit(app.exec_())
