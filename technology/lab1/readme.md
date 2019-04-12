@@ -47,3 +47,6 @@ I use [StarUML](http://staruml.io/). Model saved in
 - Модель, синхронизированная с проектом, включая классы _GUI_ (c распечаткой
   модели).
 - Демонстрация работы программы.
+
+
+> check out [@Drapegnik/bsuir/oop](https://github.com/Drapegnik/bsuir/tree/master/oop)
