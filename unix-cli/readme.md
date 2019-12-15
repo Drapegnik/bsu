@@ -27,9 +27,7 @@ completed my course "Linux, command line and Git" at Belarussian
 State University in 2017.
 The student showed reasonable diligence and was in top 3 of students
 in the class roster for this course.
----
-
---BEGIN PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
 
 iQIzBAEBCAAdFiEEXPKH+U7o7Na2irCsD/WL+T17ll8FAlo5L9sACgkQD/WL+T17
 ll8Rvg//X5tTLiICY4r7inesJexoNgSwGp7W0rlSPjtzwScflNs+AH/EHusug5LB
