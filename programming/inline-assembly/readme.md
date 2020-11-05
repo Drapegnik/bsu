@@ -11,6 +11,8 @@
 - [lab7](https://github.com/Drapegnik/bsu/tree/master/programming/inline-assembly/lab7) - Длинная арифметика (_Long arithmetic_)
 - [exam](https://github.com/Drapegnik/bsu/tree/master/programming/inline-assembly/exam) - Экзаменационная задача (_Exam task_)
 
+> check out tasks on [cloud](https://cloud.mail.ru/public/6dHi/UugEXFtoH/semester-2/C%2BAsm/)
+
 ---
 
 _by [@drapegnik](https://github.com/Drapegnik), may'15 - june'15_
