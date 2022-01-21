@@ -2,7 +2,7 @@ appnope==0.1.0
 cycler==0.10.0
 decorator==4.1.2
 ipykernel==4.6.1
-ipython==6.2.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.11.0
 jupyter-client==5.1.0
